@@ -56,11 +56,13 @@ public class PlayerMovement : MonoBehaviour
     void Shoot(){
         Vector3 upVector = new Vector3(0, 1, 0);
         Vector3 bulletDir = (joystick.Horizontal==0 && joystick.Vertical==0) ? upVector : new Vector3(joystick.Horizontal, joystick.Vertical, 0).normalized;
+        /*
         GameObject bulletInstance = Instantiate(bulletPrefab, transform.position + bulletDir*myRadius, transform.rotation);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletDir * bulletSpd;
-
         rb2d.AddForce(bulletDir * -1 * recoil);
-        //Debug.Log(bulletInstance.name);
         Destroy(bulletInstance,DeathTime);
+        */
+        GameManager.SpawnBullet(transform.position + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
+        rb2d.AddForce(bulletDir * -1 * recoil);
     }
 }

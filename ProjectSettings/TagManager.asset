@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: WallLayer
+    uniqueID: 1768501905
+    locked: 0
+  - name: MapLayer
+    uniqueID: 518165437
+    locked: 0
+  - name: BulletLayer
+    uniqueID: 25196303
+    locked: 0
+  - name: Charlayer
+    uniqueID: 1913458783
+    locked: 0
