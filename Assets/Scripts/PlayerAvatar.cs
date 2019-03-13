@@ -3,22 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class PlayerAvatar : MonoBehaviourPunCallbacks
+public class PlayerAvatar : MonoBehaviourPun
 {
-    [HideInInspector]
-    public InputStr Input;
-    public struct InputStr
-    {
-        public float moveX;
-        public float moveY;
-    }
-
-    public const float speed = 10;
-
-    protected Rigidbody2D rb2d;
 
     private void Awake(){
-        rb2d = GetComponent<Rigidbody2D>();
+        if(!photonView.IsMine && GetComponent<PlayerMovement>() != null){
+            Destroy(GetComponent<PlayerMovement>());
+        }
     }
 
     // Start is called before the first frame update
@@ -30,18 +21,24 @@ public class PlayerAvatar : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        if(rb2d == null){
-            return;
-        }
+        
         // Animate stuff here
     }
 
     void FixedUpdate()
     {
-        if(rb2d == null){
-            return;
-        }
-        rb2d.AddForce(new Vector3(Input.moveX, Input.moveY, 0));
+        
 
+    }
+
+    public static void RefreshInstance(ref PlayerAvatar player, PlayerAvatar prefab){
+        var position = Vector3.zero;
+        var rotation = Quaternion.identity;
+        if(player != null){
+            position = player.transform.position;
+            rotation = player.transform.rotation;
+            PhotonNetwork.Destroy(player.gameObject);
+        }
+        player = PhotonNetwork.Instantiate(prefab.gameObject.name, position, rotation).GetComponent<PlayerAvatar>();
     }
 }

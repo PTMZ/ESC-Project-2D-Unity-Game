@@ -47,6 +47,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void LateUpdate(){
+        Vector3 upVector = new Vector3(0, 0, -1);
+        float camDistance = 10;
+        Camera.main.transform.position = transform.position + upVector*camDistance;
+    }
+
     void Shoot(){
         Vector3 upVector = new Vector3(0, 1, 0);
         Vector3 bulletDir = (joystick.Horizontal==0 && joystick.Vertical==0) ? upVector : new Vector3(joystick.Horizontal, joystick.Vertical, 0).normalized;
