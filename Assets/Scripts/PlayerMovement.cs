@@ -40,8 +40,12 @@ public class PlayerMovement : MonoBehaviour
         //Vector3 tilt = Input.acceleration;
 
         // tilt = Quaternion.Euler(90, 0, 0) * tilt;
-
-        rb2d.AddForce(new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0) * speed);
+        if(Application.isEditor){
+            rb2d.AddForce(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed);
+        }
+        else{
+            rb2d.AddForce(new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0) * speed);
+        }
 
         //Debug.Log(new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude);
         if(Time.time > cooldownTimeStamp && new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude > 0.5){
