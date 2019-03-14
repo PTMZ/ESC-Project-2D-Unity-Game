@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ConstrictLevel.unity
     guid: de73842de325f124faed60cff2f761d2
   - enabled: 1
+    path: Assets/Scenes/PuzzleLevel.unity
+    guid: 4cfd2b06b8affb947adb4fe2be313c38
+  - enabled: 1
     path: Assets/Scenes/SneakyLevel.unity
     guid: 479cca1200bc96d4a811e6bbc0d4d234
   - enabled: 1
