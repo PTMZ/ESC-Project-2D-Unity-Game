@@ -31,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
         joystickMove = GameObject.Find("JoystickMove").GetComponent<Joystick>();
         joystickShoot = GameObject.Find("JoystickShoot").GetComponent<Joystick>();
         cooldownTimeStamp = Time.time;
-        offsetY = new Vector3(0,1,0);
+        offsetY = new Vector3(0,1.5f,0);
+        //Camera.main.orthographicSize = 7.0f;
     }
 
     // Update is called once per frame
