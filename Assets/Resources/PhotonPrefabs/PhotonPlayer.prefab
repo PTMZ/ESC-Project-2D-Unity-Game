@@ -116,12 +116,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
-  myRadius: 0.7
+  myRadius: 1.25
   bulletPrefab: {fileID: 7660789902638988858, guid: 965cf90a88b3803449ed0025f4e5100a,
     type: 3}
   DeathTime: 1
   bulletSpd: 10
   recoil: 20
+  cooldown: 0.3
 --- !u!114 &3162012306475875567
 MonoBehaviour:
   m_ObjectHideFlags: 0

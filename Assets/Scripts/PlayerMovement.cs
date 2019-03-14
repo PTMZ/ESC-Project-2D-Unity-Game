@@ -6,8 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
 
     Rigidbody2D rb2d;
-    protected Joystick joystick;
-    protected MyButton button;
+    protected Joystick joystickMove;
+    protected Joystick joystickShoot;
+    //protected MyButton button;
     public float speed;
     public float myRadius;
 
@@ -17,24 +18,38 @@ public class PlayerMovement : MonoBehaviour
     public float bulletSpd;
     public float recoil;
 
-    private bool prevButton = false;
+    private float cooldownTimeStamp;
+    public float cooldown = 0.2f;
+    Vector3 offsetY;
+    //private bool prevButton = false;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        joystick = FindObjectOfType<Joystick>();
-        button = FindObjectOfType<MyButton>();
+        //joystick = FindObjectOfType<Joystick>();
+        //button = FindObjectOfType<MyButton>();
+        joystickMove = GameObject.Find("JoystickMove").GetComponent<Joystick>();
+        joystickShoot = GameObject.Find("JoystickShoot").GetComponent<Joystick>();
+        cooldownTimeStamp = Time.time;
+        offsetY = new Vector3(0,1,0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 tilt = Input.acceleration;
+        //Vector3 tilt = Input.acceleration;
 
         // tilt = Quaternion.Euler(90, 0, 0) * tilt;
 
-        rb2d.AddForce(tilt * speed);
+        rb2d.AddForce(new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0) * speed);
 
+        //Debug.Log(new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude);
+        if(Time.time > cooldownTimeStamp && new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude > 0.5){
+            cooldownTimeStamp = Time.time + cooldown;
+            Shoot();
+        }
+
+        /* 
         if(!button.pressed){
             if(prevButton){
                 prevButton = false;
@@ -45,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         else{
             prevButton = true;
         }
+        */
     }
 
     void LateUpdate(){
@@ -54,15 +70,20 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Shoot(){
-        Vector3 upVector = new Vector3(0, 1, 0);
-        Vector3 bulletDir = (joystick.Horizontal==0 && joystick.Vertical==0) ? upVector : new Vector3(joystick.Horizontal, joystick.Vertical, 0).normalized;
+        //Vector3 upVector = new Vector3(0, 1, 0);
+        //Vector3 bulletDir = (joystick.Horizontal==0 && joystick.Vertical==0) ? upVector : new Vector3(joystick.Horizontal, joystick.Vertical, 0).normalized;
         /*
         GameObject bulletInstance = Instantiate(bulletPrefab, transform.position + bulletDir*myRadius, transform.rotation);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletDir * bulletSpd;
         rb2d.AddForce(bulletDir * -1 * recoil);
         Destroy(bulletInstance,DeathTime);
         */
-        GameManager.SpawnBullet(transform.position + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
+        //GameManager.SpawnBullet(transform.position + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
+        //rb2d.AddForce(bulletDir * -1 * recoil);
+
+        Vector3 bulletDir = new Vector3(joystickShoot.Horizontal, joystickShoot.Vertical, 0).normalized;
+        GameManager.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
         rb2d.AddForce(bulletDir * -1 * recoil);
+
     }
 }

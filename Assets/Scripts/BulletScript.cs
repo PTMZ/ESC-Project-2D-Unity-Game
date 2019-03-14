@@ -22,16 +22,18 @@ public class BulletScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.name != "Player"){
-            if(col.gameObject.GetComponent<PlayerMovement>() != null && col.gameObject.GetComponent<PlayerAvatar>() != null){
-                col.gameObject.GetComponent<PlayerAvatar>().getHit();
-            }
-            Debug.Log("OnCollisionEnter2D");
-            Vector2 hitPoint = col.GetContact(0).point;
-            Rigidbody2D other = col.otherRigidbody;
-            AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
-            Destroy(gameObject);
+        if(col.gameObject.GetComponent<PlayerMovement>() != null){
+            return;
         }
+        if(col.gameObject.GetComponent<PlayerAvatar>() != null){
+            Debug.Log("I am hit, my name is " + col.gameObject.name);
+            col.gameObject.GetComponent<PlayerAvatar>().getHit();
+        }
+        //Debug.Log("OnCollisionEnter2D");
+        Vector2 hitPoint = col.GetContact(0).point;
+        Rigidbody2D other = col.otherRigidbody;
+        AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
+        Destroy(gameObject);
 
     }
 
