@@ -1,0 +1,4 @@
+https://opengameart.org/content/10-basic-message-boxes
+
+
+Can use the above link, but make the inside translucent.
