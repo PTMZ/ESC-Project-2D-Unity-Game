@@ -50,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
         else{
             myself.change = new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0);
         }
-        rb2d.AddForce(myself.change * speed);
 
         //Debug.Log(new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude);
         if(Time.time > cooldownTimeStamp && new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude > 0.5){
@@ -70,6 +69,10 @@ public class PlayerMovement : MonoBehaviour
             prevButton = true;
         }
         */
+    }
+
+    void FixedUpdate(){
+        rb2d.AddForce(myself.change * speed);
     }
 
     void LateUpdate(){
