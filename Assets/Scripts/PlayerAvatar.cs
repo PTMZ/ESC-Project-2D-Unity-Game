@@ -13,6 +13,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+    private SpriteRenderer mySpriteRenderer;
 
 
 
@@ -29,6 +30,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         // for animations //
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -44,21 +46,32 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     void UpdateAnimation()
     {
-
+        
 
         if (change != Vector3.zero)
         {
-            animator.SetFloat("moveX", change.x);
-            animator.SetFloat("moveY", change.y);
-            animator.SetBool("moving", true);
-            
-        }
+            //animator.SetFloat("moveX", change.x);
+            //animator.SetFloat("moveY", change.y);
 
+            
+            if (change.x < 0)
+            {
+                mySpriteRenderer.flipX = true;
+            } else
+            {
+                mySpriteRenderer.flipX = false;
+            }
+            animator.SetBool("moving", true);
+
+        }
 
 
         else
         {
+
             animator.SetBool("moving", false);
+        
+            
         }
     }
 
