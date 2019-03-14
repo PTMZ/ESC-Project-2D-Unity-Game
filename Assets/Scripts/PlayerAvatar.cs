@@ -39,52 +39,31 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
         // Animate stuff here
         change = Vector3.zero;
-        change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
+        if(photonView.IsMine){
+            change.x = Input.GetAxisRaw("Horizontal");
+            change.y = Input.GetAxisRaw("Vertical");
+        }
+
         UpdateAnimation();
+        
     }
 
-    void UpdateAnimation()
-    {
-        
-
-        if (change != Vector3.zero)
-        {
-            //animator.SetFloat("moveX", change.x);
-            //animator.SetFloat("moveY", change.y);
-
-            
-            if (change.x < 0)
-            {
-                mySpriteRenderer.flipX = true;
-            } else
-            {
-                mySpriteRenderer.flipX = false;
-            }
-            animator.SetBool("moving", true);
-
-        }
-
-
-        else
-        {
-
-            animator.SetBool("moving", false);
-        
-            
-        }
+    void UpdateAnimation(){
+        mySpriteRenderer.flipX = (change.x < 0);
+        animator.SetBool("moving", (change != Vector3.zero));
     }
-
-
-
 
     void FixedUpdate()
     {
-        
-
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){
+        if(stream.IsWriting){
+            stream.SendNext(change);
+        }
+        else{
+            change = (Vector3)stream.ReceiveNext();
+        }
 
     }
 
