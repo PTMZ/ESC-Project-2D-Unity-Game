@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PortalToContrictLevel : MonoBehaviour
+public class PortalToSneakyLevel : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("ConstrictLevel");
+            SceneManager.LoadScene("SneakyLevel");
         }
     }
 }

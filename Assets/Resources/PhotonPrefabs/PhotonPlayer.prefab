@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 7498444737713846984}
   m_Layer: 0
   m_Name: PhotonPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  change: {x: 0, y: 0, z: 0}
 --- !u!114 &8991627783951586577
 MonoBehaviour:
   m_ObjectHideFlags: 0
