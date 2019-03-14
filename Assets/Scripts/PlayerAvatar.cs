@@ -49,12 +49,26 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     }
 
     void UpdateAnimation(){
-        mySpriteRenderer.flipX = (change.x < 0);
-        animator.SetBool("moving", (change != Vector3.zero));
+        if (change != Vector3.zero){
+            mySpriteRenderer.flipX = (change.x < 0);
+            animator.SetBool("moving", true);
+        }
+        else{
+            animator.SetBool("moving", false);
+        }
     }
+
+    void SyncAnimation(){
+
+    }
+
+
+
 
     void FixedUpdate()
     {
+        
+
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){
@@ -63,6 +77,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         }
         else{
             change = (Vector3)stream.ReceiveNext();
+            UpdateAnimation();
         }
 
     }
