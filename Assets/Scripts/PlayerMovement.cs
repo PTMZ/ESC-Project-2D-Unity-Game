@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private float cooldownTimeStamp;
     public float cooldown = 0.2f;
     Vector3 offsetY;
+    private PlayerAvatar myself;
     //private bool prevButton = false;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
         joystickShoot = GameObject.Find("JoystickShoot").GetComponent<Joystick>();
         cooldownTimeStamp = Time.time;
         offsetY = new Vector3(0,1.5f,0);
+
+        myself = GetComponent<PlayerAvatar>();
         //Camera.main.orthographicSize = 7.0f;
     }
 
@@ -42,11 +45,12 @@ public class PlayerMovement : MonoBehaviour
 
         // tilt = Quaternion.Euler(90, 0, 0) * tilt;
         if(Application.isEditor){
-            rb2d.AddForce(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed);
+            myself.change = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         }
         else{
-            rb2d.AddForce(new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0) * speed);
+            myself.change = new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0);
         }
+        rb2d.AddForce(myself.change * speed);
 
         //Debug.Log(new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude);
         if(Time.time > cooldownTimeStamp && new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude > 0.5){

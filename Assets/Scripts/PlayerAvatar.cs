@@ -11,7 +11,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     // for animations //
     private Rigidbody2D myRigidbody;
-    private Vector3 change;
+    public Vector3 change;
     private Animator animator;
     private SpriteRenderer mySpriteRenderer;
 
@@ -31,6 +31,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        change = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -38,12 +39,13 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     {
 
         // Animate stuff here
+        /*
         change = Vector3.zero;
         if(photonView.IsMine){
             change.x = Input.GetAxisRaw("Horizontal");
             change.y = Input.GetAxisRaw("Vertical");
         }
-
+        */
         UpdateAnimation();
         
     }
