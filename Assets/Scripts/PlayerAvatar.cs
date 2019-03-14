@@ -8,6 +8,15 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     public float health = 100;
 
+
+    // for animations //
+    private Rigidbody2D myRigidbody;
+    private Vector3 change;
+    private Animator animator;
+
+
+
+
     private void Awake(){
         if(!photonView.IsMine && GetComponent<PlayerMovement>() != null){
             Destroy(GetComponent<PlayerMovement>());
@@ -17,15 +26,44 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
-        
+        // for animations //
+        animator = GetComponent<Animator>();
+        myRigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         // Animate stuff here
+        change = Vector3.zero;
+        change.x = Input.GetAxisRaw("Horizontal");
+        change.y = Input.GetAxisRaw("Vertical");
+        UpdateAnimation();
     }
+
+    void UpdateAnimation()
+    {
+
+
+        if (change != Vector3.zero)
+        {
+            animator.SetFloat("moveX", change.x);
+            animator.SetFloat("moveY", change.y);
+            animator.SetBool("moving", true);
+            
+        }
+
+
+
+        else
+        {
+            animator.SetBool("moving", false);
+        }
+    }
+
+
+
 
     void FixedUpdate()
     {
