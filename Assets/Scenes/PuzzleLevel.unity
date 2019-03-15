@@ -414,6 +414,11 @@ PrefabInstance:
       propertyPath: InstantiationId
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f0b467a56e2da46a446d16965c089e, type: 3}
 --- !u!1 &132256844
@@ -507,7 +512,7 @@ GameObject:
   - component: {fileID: 161964963}
   - component: {fileID: 161964962}
   - component: {fileID: 161964961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Portal (2)
   m_TagString: Cone
   m_Icon: {fileID: 0}
@@ -629,7 +634,7 @@ PrefabInstance:
     - target: {fileID: 983765761472854826, guid: 21f0b467a56e2da46a446d16965c089e,
         type: 3}
       propertyPath: m_TagString
-      value: Cone1
+      value: Cone
       objectReference: {fileID: 0}
     - target: {fileID: 983765761472854999, guid: 21f0b467a56e2da46a446d16965c089e,
         type: 3}
@@ -695,6 +700,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InstantiationId
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f0b467a56e2da46a446d16965c089e, type: 3}
@@ -898,7 +908,7 @@ GameObject:
   - component: {fileID: 803740329}
   - component: {fileID: 803740328}
   - component: {fileID: 803740327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Portal (1)
   m_TagString: Cone
   m_Icon: {fileID: 0}
@@ -1454,7 +1464,7 @@ GameObject:
   - component: {fileID: 1209450419}
   - component: {fileID: 1209450418}
   - component: {fileID: 1209450417}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Portal
   m_TagString: Cone
   m_Icon: {fileID: 0}
@@ -2249,7 +2259,7 @@ PrefabInstance:
     - target: {fileID: 983765761472854826, guid: 21f0b467a56e2da46a446d16965c089e,
         type: 3}
       propertyPath: m_TagString
-      value: Cone2
+      value: Cone
       objectReference: {fileID: 0}
     - target: {fileID: 983765761472854999, guid: 21f0b467a56e2da46a446d16965c089e,
         type: 3}
@@ -2315,6 +2325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InstantiationId
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f0b467a56e2da46a446d16965c089e, type: 3}
