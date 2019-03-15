@@ -12,7 +12,7 @@ public class PortalToSneakyLevel : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if ((other.CompareTag("Cone"))){
-            //Debug.Log("CONE IN");
+            Debug.Log("CONE IN");
             withCone = true;
             count ++;
         }
