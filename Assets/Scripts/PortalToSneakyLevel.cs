@@ -5,111 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class PortalToSneakyLevel : MonoBehaviour
 {
+
+    bool withCone = false;
+    static int count = 0;
+    
     void OnTriggerEnter2D(Collider2D other)
     {
-
-        int count = 0;
-
-        if ((other.CompareTag("Cone")))
-        {
-            count += 1;
+        if ((other.CompareTag("Cone"))){
+            //Debug.Log("CONE IN");
+            withCone = true;
+            count ++;
         }
-        if (count == 4)
-        {
+        if(count == 3){
             SceneManager.LoadScene("SneakyLevel");
         }
     }
-}
-        /*if ((other.CompareTag("Cone")))
 
-        {
-            if ((other.CompareTag("Cone1")))
-
-            {
-                if ((other.CompareTag("Cone2")))
-
-                {
-                    SceneManager.LoadScene("SneakyLevel");
-                }
-            }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if ((other.CompareTag("Cone"))){
+            withCone = true;
+            count --;
         }
-
-        if ((other.CompareTag("Cone")))
-
-        {
-            if ((other.CompareTag("Cone2")))
-
-            {
-                if ((other.CompareTag("Cone1")))
-
-                {
-                    SceneManager.LoadScene("SneakyLevel");
-                }
-            }
-        }
-
-        if ((other.CompareTag("Cone1")))
-
-        {
-            if ((other.CompareTag("Cone0")))
-
-            {
-                if ((other.CompareTag("Cone2")))
-
-                {
-                    SceneManager.LoadScene("SneakyLevel");
-                }
-            }
-        }
-
-        if ((other.CompareTag("Cone1")))
-
-        {
-            if ((other.CompareTag("Cone2")))
-
-            {
-                if ((other.CompareTag("Cone0")))
-
-                {
-                    SceneManager.LoadScene("SneakyLevel");
-                }
-            }
-        }
-
-        if ((other.CompareTag("Cone2")))
-
-        {
-            if ((other.CompareTag("Cone0")))
-
-            {
-                if ((other.CompareTag("Cone1")))
-
-                {
-                    SceneManager.LoadScene("SneakyLevel");
-                }
-            }
-        }
-
-        if ((other.CompareTag("Cone2")))
-
-        {
-            if ((other.CompareTag("Cone1")))
-
-            {
-                if ((other.CompareTag("Cone0")))
-
-                {
-                    SceneManager.LoadScene("SneakyLevel");
-                }
-            }
-        }*/
-
-
-            /*if (other.CompareTag("Player"))
-
-            {
-                SceneManager.LoadScene("PuzzleLevel");
-            }*/
+    }
     
+}
 
 
