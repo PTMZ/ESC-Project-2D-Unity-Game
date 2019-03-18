@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         offsetY = new Vector3(0,1.5f,0);
 
         myself = GetComponent<PlayerAvatar>();
-        //Camera.main.orthographicSize = 7.0f;
+        Camera.main.orthographicSize = 7.0f;
     }
 
     // Update is called once per frame
