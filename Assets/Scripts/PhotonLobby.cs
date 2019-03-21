@@ -9,6 +9,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public static PhotonLobby lobby;
     RoomInfo[] rooms;
 
+    public GameObject offlineButton;
     public GameObject battleButton;
     public GameObject cancelButton;
 
@@ -25,6 +26,7 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster(){
         Debug.Log("Connected to master");
         PhotonNetwork.AutomaticallySyncScene = true;
+        offlineButton.SetActive(false);
         battleButton.SetActive(true);
     }
 

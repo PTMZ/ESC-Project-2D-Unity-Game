@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     void Awake(){
         if(!PhotonNetwork.IsConnected){
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("TitleScreen");
             return;
         }
     }
