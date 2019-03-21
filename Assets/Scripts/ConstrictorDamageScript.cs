@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConstrictorScript : MonoBehaviour
+public class ConstrictorDamageScript : MonoBehaviour
 {
     float ConstrictorDmg = 100;
     void OnCollisionEnter2D(Collision2D col)
