@@ -52,13 +52,14 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     }
 
     void UpdateAnimation(){
-
-        if (change != Vector3.zero){
-            mySpriteRenderer.flipX = (change.x < 0);
-            animator.SetBool("moving", true);
-        }
-        else{
-            animator.SetBool("moving", false);
+        if(animator != null){
+            if (change != Vector3.zero){
+                mySpriteRenderer.flipX = (change.x < 0);
+                animator.SetBool("moving", true);
+            }
+            else{
+                animator.SetBool("moving", false);
+            }
         }
     }
 
