@@ -10,6 +10,7 @@ public class BulletScript : MonoBehaviourPunCallbacks
     public float impactRadius = 2;
     public float impactPower = 5;
     public float DeathTime = 2f;
+    float bulletDmg = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -33,16 +34,18 @@ public class BulletScript : MonoBehaviourPunCallbacks
         */
         if(col.gameObject.GetComponent<PlayerAvatar>() != null){
             Debug.Log("I am hit, my name is " + col.gameObject.name);
-            col.gameObject.GetComponent<PlayerAvatar>().getHit();
+            col.gameObject.GetComponent<PlayerAvatar>().getHit(bulletDmg);
+        }
+        if(col.gameObject.GetComponent<EnemyAvatar>() != null){
+            //Debug.Log("Enemy hit is " + col.gameObject.name);
+            col.gameObject.GetComponent<EnemyAvatar>().getHit(bulletDmg);
         }
         //Debug.Log("OnCollisionEnter2D");
         Vector2 hitPoint = col.GetContact(0).point;
         Rigidbody2D other = col.otherRigidbody;
         AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
         //Destroy(gameObject);
-         if (PhotonNetwork.IsMasterClient){
-             PhotonNetwork.Destroy(gameObject);
-         }
+        PhotonNetwork.Destroy(gameObject);
 
     }
 
@@ -59,7 +62,7 @@ public class BulletScript : MonoBehaviourPunCallbacks
     private IEnumerator NetworkDestroyEnum(float DeathTime)
     {
         yield return new WaitForSeconds(DeathTime);
-        if (PhotonNetwork.IsMasterClient && gameObject != null){
+        if (gameObject != null){
              PhotonNetwork.Destroy(gameObject);
          }
        

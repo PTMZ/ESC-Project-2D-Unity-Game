@@ -18,7 +18,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         change = Vector3.zero;
@@ -27,10 +27,10 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        UpdateAnimation();
+        //UpdateAnimation();
         
     }
-
+    /*
     void UpdateAnimation(){
 
         if (change != Vector3.zero){
@@ -41,21 +41,18 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             animator.SetBool("moving", false);
         }
     }
+    */
 
-    public void getHit(){
+    public void getHit(float damage){
         if(isDead){
-            Debug.Log("DEAD alr");
             return;
         }
-        health -= 10;
+        health -= damage;
         if(health<=0){
             isDead = true;
             transform.Rotate(0, 0, 90, Space.Self);
-            if(photonView.IsMine && GetComponent<PlayerMovement>() != null){
-                Destroy(GetComponent<PlayerMovement>());
-            }
         }
-        Debug.Log("I am hit, health is = " + health);
+        Debug.Log("Enemy hit, health is = " + health);
     }
 
 
@@ -66,9 +63,13 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         }
         else{
             change = (Vector3)stream.ReceiveNext();
-            UpdateAnimation();
+            //UpdateAnimation();
             health = (float)stream.ReceiveNext();
         }
 
+    }
+
+    public bool getDead(){
+        return isDead;
     }
 }

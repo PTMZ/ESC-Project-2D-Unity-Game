@@ -89,12 +89,12 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     }
 
-    public void getHit(){
+    public void getHit(float damage){
         if(isDead){
             Debug.Log("DEAD alr");
             return;
         }
-        health -= 10;
+        health -= damage;
         if(health<=0){
             isDead = true;
             transform.Rotate(0, 0, 90, Space.Self);
