@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class BulletScript : MonoBehaviour
+public class BulletScript : MonoBehaviourPunCallbacks
 {
 
     public float impactRadius = 2;
     public float impactPower = 5;
+    public float DeathTime = 2f;
 
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(NetworkDestroyEnum(DeathTime));
         
     }
 
@@ -35,7 +39,8 @@ public class BulletScript : MonoBehaviour
         Vector2 hitPoint = col.GetContact(0).point;
         Rigidbody2D other = col.otherRigidbody;
         AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
 
     }
 
@@ -48,4 +53,12 @@ public class BulletScript : MonoBehaviour
 
             body.AddForce (dir.normalized * expForce * calc);
     }
+
+    private IEnumerator NetworkDestroyEnum(float DeathTime)
+    {
+        yield return new WaitForSeconds(DeathTime);
+        PhotonNetwork.Destroy(gameObject);
+       
+    }
+
 }

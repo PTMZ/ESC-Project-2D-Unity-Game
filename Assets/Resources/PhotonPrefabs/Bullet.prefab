@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactRadius: 2
   impactPower: 5
+  DeathTime: 2
 --- !u!114 &1936775224213374412
 MonoBehaviour:
   m_ObjectHideFlags: 0
