@@ -14,6 +14,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     public Vector3 change;
     private Animator animator;
     private SpriteRenderer mySpriteRenderer;
+    private bool isDead = false;
 
 
 
@@ -51,6 +52,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     }
 
     void UpdateAnimation(){
+
         if (change != Vector3.zero){
             mySpriteRenderer.flipX = (change.x < 0);
             animator.SetBool("moving", true);
@@ -76,16 +78,29 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){
         if(stream.IsWriting){
             stream.SendNext(change);
+            stream.SendNext(health);
         }
         else{
             change = (Vector3)stream.ReceiveNext();
             UpdateAnimation();
+            health = (float)stream.ReceiveNext();
         }
 
     }
 
     public void getHit(){
+        if(isDead){
+            Debug.Log("DEAD alr");
+            return;
+        }
         health -= 10;
+        if(health<=0){
+            isDead = true;
+            transform.Rotate(0, 0, 90, Space.Self);
+            if(photonView.IsMine && GetComponent<PlayerMovement>() != null){
+                Destroy(GetComponent<PlayerMovement>());
+            }
+        }
         Debug.Log("I am hit, health is = " + health);
     }
 

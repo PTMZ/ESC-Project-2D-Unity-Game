@@ -40,7 +40,9 @@ public class BulletScript : MonoBehaviourPunCallbacks
         Rigidbody2D other = col.otherRigidbody;
         AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
         //Destroy(gameObject);
-        PhotonNetwork.Destroy(gameObject);
+         if (PhotonNetwork.IsMasterClient){
+             PhotonNetwork.Destroy(gameObject);
+         }
 
     }
 
@@ -57,7 +59,9 @@ public class BulletScript : MonoBehaviourPunCallbacks
     private IEnumerator NetworkDestroyEnum(float DeathTime)
     {
         yield return new WaitForSeconds(DeathTime);
-        PhotonNetwork.Destroy(gameObject);
+        if (PhotonNetwork.IsMasterClient && gameObject != null){
+             PhotonNetwork.Destroy(gameObject);
+         }
        
     }
 
