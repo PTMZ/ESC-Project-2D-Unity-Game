@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
     void Shoot(){
 
         Vector3 bulletDir = new Vector3(joystickShoot.Horizontal, joystickShoot.Vertical, 0).normalized;
-        if(SceneManager.GetActiveScene().name == "MultiplayerLevel"){
+        if(SceneManager.GetActiveScene().name == "MultiPlayer"){
             GameManager.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
         }
         else{
