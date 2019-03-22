@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConstrictorDamageScript : MonoBehaviour
 {
-    float ConstrictorDmg = 100;
+    float ConstrictorDmg = 50;
     void OnCollisionEnter2D(Collision2D col)
     {
         /*
