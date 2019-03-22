@@ -18,7 +18,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     // Start is called before the first frame update
     void Start()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         change = Vector3.zero;
@@ -27,10 +27,11 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        //UpdateAnimation();
+        UpdateAnimation();
+        Debug.Log(change);
         
     }
-    /*
+    
     void UpdateAnimation(){
 
         if (change != Vector3.zero){
@@ -41,7 +42,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             animator.SetBool("moving", false);
         }
     }
-    */
+    
 
     public void getHit(float damage){
         if(isDead){
@@ -63,7 +64,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         }
         else{
             change = (Vector3)stream.ReceiveNext();
-            //UpdateAnimation();
+            UpdateAnimation();
             health = (float)stream.ReceiveNext();
         }
 

@@ -26,17 +26,25 @@ public class EnemyMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        
+    }
+
     void FixedUpdate()
     {
         if(myself.getDead()){
             return;
         }
+        Vector3 updPos = mypos.position - transform.position;
+        myself.change = updPos;
+
         transform.position = mypos.position;
         if(player != null){
             target.transform.position = player.transform.position;
         }
 
-        if(pAvatar != null && (transform.position - player.transform.position).magnitude <= hitRadius){
+        if (pAvatar != null && (transform.position - player.transform.position).magnitude <= hitRadius){
 
             if(Time.time > cooldownTimeStamp){
                 cooldownTimeStamp = Time.time + cooldown;
