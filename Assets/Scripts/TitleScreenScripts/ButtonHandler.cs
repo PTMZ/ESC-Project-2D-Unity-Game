@@ -8,6 +8,6 @@ public class ButtonHandler : MonoBehaviour
 {
     public void nextScene()
     {
-        SceneManager.LoadScene("EscapeLevel");
+        SceneManager.LoadScene("Prologue");
     }
 }

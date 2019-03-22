@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text nameText;
+    //public Text nameText;
     public Text dialogueText;
 
     //public Animator animator;
@@ -22,7 +23,7 @@ public class DialogueManager : MonoBehaviour
     {
         //animator.setBool("IsOpen",true);
 
-        nameText.text = dialogue.name;
+//        nameText.text = dialogue.name;
 
         sentences.Clear();
 
@@ -54,13 +55,16 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null; //returns a single frame
+            yield return null; //returns a single frame;
         }
     }
 
+
     void EndDialogue()
     {
+        SceneManager.LoadScene("EscapeLevel");
         //animator.setBool("IsOpen", false);
         //Debug.Log("End of conversation.");
+
     }
 }
