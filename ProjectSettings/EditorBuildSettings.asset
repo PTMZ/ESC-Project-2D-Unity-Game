@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PvPLobby.unity
     guid: b9825146fb6f1eb4784d3671d47f3d9a
   - enabled: 1
+    path: Assets/Scenes/MultiPlayer.unity
+    guid: b5470caa9f78b41d187e41345066be06
+  - enabled: 1
     path: Assets/Scenes/EscapeLevel.unity
     guid: f6afe4d5464a77f47a7347d1e1dc85de
   - enabled: 1
