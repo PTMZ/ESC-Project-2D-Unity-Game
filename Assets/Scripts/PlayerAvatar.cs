@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 {
-
+    public GameObject FloatingTextPrefab;
     public float health = 100;
 
 
@@ -106,6 +106,17 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             }
         }
         Debug.Log("I am hit, health is = " + health);
+
+        if (FloatingTextPrefab)
+        {
+            ShowFloatingText();
+        }
+
+        void ShowFloatingText()
+        {
+            var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+            go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
+        }
     }
 
     /*

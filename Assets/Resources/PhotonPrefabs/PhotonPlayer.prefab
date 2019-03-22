@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56098bc6d3b5b2f49be391de90a393fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloatingTextPrefab: {fileID: 3807610573064024986, guid: b11404f2b66e07143b968fe74b4156c1,
+    type: 3}
   health: 100
   change: {x: 0, y: 0, z: 0}
 --- !u!114 &8991627783951586577

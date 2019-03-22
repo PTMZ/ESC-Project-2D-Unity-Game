@@ -708,7 +708,7 @@ MonoBehaviour:
   delayStart: 0
   maxPlayers: 10
   menuScene: 0
-  multiplayerScene: 2
+  multiplayerScene: 0
 --- !u!4 &1501693785
 Transform:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 {
-
+    public GameObject FloatingTextPrefab;
     public float health = 100;
 
 
@@ -54,6 +54,17 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             transform.Rotate(0, 0, 90, Space.Self);
         }
         Debug.Log("Enemy hit, health is = " + health);
+
+        if(FloatingTextPrefab)
+        {
+            ShowFloatingText();
+        }
+    }
+
+    void ShowFloatingText()
+    {
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
     }
 
 
