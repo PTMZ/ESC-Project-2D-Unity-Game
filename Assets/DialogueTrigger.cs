@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
-{
-    public DialogueTrigger dialogue;
+{ 
+    public Dialogue dialogue;
+
+    public void TriggerDialogue()
+    {
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+    }
 
 }
