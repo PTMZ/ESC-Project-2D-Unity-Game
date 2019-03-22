@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public float cooldown = 0.2f;
     Vector3 offsetY;
     private PlayerAvatar myself;
+
     //private bool prevButton = false;
     // Start is called before the first frame update
     void Start()
@@ -82,19 +84,16 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Shoot(){
-        //Vector3 upVector = new Vector3(0, 1, 0);
-        //Vector3 bulletDir = (joystick.Horizontal==0 && joystick.Vertical==0) ? upVector : new Vector3(joystick.Horizontal, joystick.Vertical, 0).normalized;
-        /*
-        GameObject bulletInstance = Instantiate(bulletPrefab, transform.position + bulletDir*myRadius, transform.rotation);
-        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletDir * bulletSpd;
-        rb2d.AddForce(bulletDir * -1 * recoil);
-        Destroy(bulletInstance,DeathTime);
-        */
-        //GameManager.SpawnBullet(transform.position + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
-        //rb2d.AddForce(bulletDir * -1 * recoil);
 
         Vector3 bulletDir = new Vector3(joystickShoot.Horizontal, joystickShoot.Vertical, 0).normalized;
-        GameManager.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
+        if(SceneManager.GetActiveScene().name == "MultiplayerLevel"){
+            GameManager.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
+        }
+        else{
+            GameObject bulletInstance = Instantiate(bulletPrefab, transform.position + offsetY + bulletDir*myRadius, transform.rotation);
+            bulletInstance.GetComponent<BulletScript>().isOnline = false;
+            bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletDir * bulletSpd;
+        }
         rb2d.AddForce(bulletDir * -1 * recoil);
 
     }

@@ -20,6 +20,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
 
     private void Awake(){
+        if(!PhotonNetwork.IsConnected){
+            return;
+        }
         if(!photonView.IsMine && GetComponent<PlayerMovement>() != null){
             Destroy(GetComponent<PlayerMovement>());
         }
