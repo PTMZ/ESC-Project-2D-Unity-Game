@@ -47,10 +47,10 @@ public class PlayerMovement : MonoBehaviour
 
         // tilt = Quaternion.Euler(90, 0, 0) * tilt;
         if(Application.isEditor){
-            myself.change = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            myself.change = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0).normalized;
         }
         else{
-            myself.change = new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0);
+            myself.change = new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0).normalized;
         }
 
         //Debug.Log(new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude);
