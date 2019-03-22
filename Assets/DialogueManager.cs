@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
 
-    public Animator animator;
+    //public Animator animator;
 
     private Queue<string> sentences;
 
@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.setBool("IsOpen",true);
+        //animator.setBool("IsOpen",true);
 
         nameText.text = dialogue.name;
 
@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
 
         foreach(string sentence in dialogue.sentences)
         {
-            sentences.E nqueue(sentence);
+            sentences.Enqueue(sentence);
         }
 
         DisplayNextSentence();
@@ -60,7 +60,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        animator.setBool("IsOpen", false);
+        //animator.setBool("IsOpen", false);
         //Debug.Log("End of conversation.");
     }
 }
