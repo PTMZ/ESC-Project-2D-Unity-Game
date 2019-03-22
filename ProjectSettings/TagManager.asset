@@ -54,6 +54,9 @@ TagManager:
   - name: BulletLayer
     uniqueID: 25196303
     locked: 0
+  - name: WeaponLayer
+    uniqueID: 1918332471
+    locked: 0
   - name: Charlayer
     uniqueID: 1913458783
     locked: 0
