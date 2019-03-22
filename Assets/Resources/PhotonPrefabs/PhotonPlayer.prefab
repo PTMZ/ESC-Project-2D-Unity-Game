@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   myRadius: 1.75
-  bulletPrefab: {fileID: 7660789902638988858, guid: 965cf90a88b3803449ed0025f4e5100a,
+  bulletPrefab: {fileID: 7660789902638988858, guid: 4fa35d71fc6944f4fa6f8a663a5ca903,
     type: 3}
   DeathTime: 1
   bulletSpd: 10

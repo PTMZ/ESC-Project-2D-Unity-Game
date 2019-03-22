@@ -11,11 +11,14 @@ public class BulletScript : MonoBehaviourPunCallbacks
     public float impactPower = 5;
     public float DeathTime = 2f;
     float bulletDmg = 10;
+    public bool isOnline = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(NetworkDestroyEnum(DeathTime));
+        if(isOnline){
+            StartCoroutine(NetworkDestroyEnum(DeathTime));
+        }
         
     }
 
@@ -45,7 +48,12 @@ public class BulletScript : MonoBehaviourPunCallbacks
         Rigidbody2D other = col.otherRigidbody;
         AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
         //Destroy(gameObject);
-        PhotonNetwork.Destroy(gameObject);
+        if(isOnline){
+            PhotonNetwork.Destroy(gameObject);
+        }
+        else{
+            Destroy(gameObject);
+        }
 
     }
 
