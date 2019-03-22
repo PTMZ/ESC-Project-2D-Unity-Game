@@ -8,31 +8,31 @@ public class AudioScript : MonoBehaviour
 {
     public AudioClip MusicClip;
     public AudioSource MusicSource;
+    public static int startCount = 0;
+    public static int awakeCount = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        MusicSource.clip = MusicClip;
-        MusicSource.Play();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        MusicSource.clip = MusicClip;
+
+        if (startCount == 0)
         {
             MusicSource.Play();
+            startCount++;
         }
+        
     }
+
     void Awake()
     {
-        int count = 0;
         //string currentScene = SceneManager.GetActiveScene().name;
-        if (count == 0)
+        if (awakeCount == 0)
         {
             DontDestroyOnLoad(this.gameObject);
-            count++;
+            awakeCount++;
         }
     }
 }
