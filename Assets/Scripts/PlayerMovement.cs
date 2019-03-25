@@ -9,8 +9,10 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb2d;
     protected Joystick joystickMove;
     protected Joystick joystickShoot;
-    //protected MyButton button;
+    protected MyButton button;
+
     public float speed;
+    public float dashSpeed;
     public float myRadius;
 
     public GameObject bulletPrefab;
@@ -21,19 +23,23 @@ public class PlayerMovement : MonoBehaviour
 
     private float cooldownTimeStamp;
     public float cooldown = 0.2f;
+    private float dashTimeStamp;
+    public float dashCooldown = 0.5f;
     Vector3 offsetY;
     private PlayerAvatar myself;
 
-    //private bool prevButton = false;
+    private bool prevButton = false;
+
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         //joystick = FindObjectOfType<Joystick>();
-        //button = FindObjectOfType<MyButton>();
+        button = FindObjectOfType<MyButton>();
         joystickMove = GameObject.Find("JoystickMove").GetComponent<Joystick>();
         joystickShoot = GameObject.Find("JoystickShoot").GetComponent<Joystick>();
         cooldownTimeStamp = Time.time;
+        dashTimeStamp = Time.time;
         offsetY = new Vector3(0,1.5f,0);
 
         myself = GetComponent<PlayerAvatar>();
@@ -59,18 +65,18 @@ public class PlayerMovement : MonoBehaviour
             Shoot();
         }
 
-        /* 
+        
         if(!button.pressed){
             if(prevButton){
                 prevButton = false;
-                Shoot();
-                //Debug.Log("Button release");
+                Debug.Log("Button release");
+                Dash();
             }
         }
         else{
             prevButton = true;
         }
-        */
+        
     }
 
     void FixedUpdate(){
@@ -96,5 +102,15 @@ public class PlayerMovement : MonoBehaviour
         }
         rb2d.AddForce(bulletDir * -1 * recoil);
 
+    }
+
+    void Dash(){
+        if(Time.time > dashTimeStamp){
+            //Debug.Log("DASH");
+            //Vector3 upVector = new Vector3(0, 1, 0);
+            //rb2d.AddForce(upVector * dashSpeed);
+            rb2d.AddForce(myself.change * dashSpeed);
+            dashTimeStamp = Time.time + dashCooldown;
+        }
     }
 }
