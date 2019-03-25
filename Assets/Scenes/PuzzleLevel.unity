@@ -483,6 +483,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8991627783951586577, guid: 21f0b467a56e2da46a446d16965c089e,
         type: 3}
       propertyPath: viewIdField
@@ -492,11 +497,6 @@ PrefabInstance:
         type: 3}
       propertyPath: InstantiationId
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f0b467a56e2da46a446d16965c089e, type: 3}
@@ -770,6 +770,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8991627783951586577, guid: 21f0b467a56e2da46a446d16965c089e,
         type: 3}
       propertyPath: viewIdField
@@ -779,11 +784,6 @@ PrefabInstance:
         type: 3}
       propertyPath: InstantiationId
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f0b467a56e2da46a446d16965c089e, type: 3}
@@ -839,7 +839,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2422,6 +2422,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8991627783951586577, guid: 21f0b467a56e2da46a446d16965c089e,
         type: 3}
       propertyPath: viewIdField
@@ -2431,11 +2436,6 @@ PrefabInstance:
         type: 3}
       propertyPath: InstantiationId
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 983765761472854824, guid: 21f0b467a56e2da46a446d16965c089e,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f0b467a56e2da46a446d16965c089e, type: 3}

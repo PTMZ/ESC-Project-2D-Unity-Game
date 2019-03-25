@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 
-    Rigidbody2D rb2d;
     protected Joystick joystickMove;
     protected Joystick joystickShoot;
     protected MyButton button;
@@ -14,36 +13,40 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float dashSpeed;
     public float myRadius;
-
-    public GameObject bulletPrefab;
     
-    public float DeathTime = 1;
-    public float bulletSpd;
     public float recoil;
 
     private float cooldownTimeStamp;
-    public float cooldown = 0.2f;
+    public float cooldown;
     private float dashTimeStamp;
     public float dashCooldown = 0.5f;
+
     Vector3 offsetY;
     private PlayerAvatar myself;
+    Rigidbody2D rb2d;
 
     private bool prevButton = false;
 
+    private OfflineGameManager offlineGM;
     // Start is called before the first frame update
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
         //joystick = FindObjectOfType<Joystick>();
         button = FindObjectOfType<MyButton>();
         joystickMove = GameObject.Find("JoystickMove").GetComponent<Joystick>();
         joystickShoot = GameObject.Find("JoystickShoot").GetComponent<Joystick>();
+
         cooldownTimeStamp = Time.time;
         dashTimeStamp = Time.time;
         offsetY = new Vector3(0,1.5f,0);
 
         myself = GetComponent<PlayerAvatar>();
+        rb2d = GetComponent<Rigidbody2D>();
+
+        offlineGM = FindObjectOfType<OfflineGameManager>();
         Camera.main.orthographicSize = 7.0f;
+
+        cooldown = offlineGM.curCooldown;
     }
 
     // Update is called once per frame
@@ -69,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         if(!button.pressed){
             if(prevButton){
                 prevButton = false;
-                Debug.Log("Button release");
+                //Debug.Log("Button release");
                 Dash();
             }
         }
@@ -93,12 +96,13 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 bulletDir = new Vector3(joystickShoot.Horizontal, joystickShoot.Vertical, 0).normalized;
         if(SceneManager.GetActiveScene().name == "MultiPlayer"){
-            GameManager.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir * bulletSpd, DeathTime);
+            GameManager.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir);
         }
         else{
-            GameObject bulletInstance = Instantiate(bulletPrefab, transform.position + offsetY + bulletDir*myRadius, transform.rotation);
-            bulletInstance.GetComponent<BulletScript>().isOnline = false;
-            bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletDir * bulletSpd;
+            //GameObject bulletInstance = Instantiate(bulletPrefab, transform.position + offsetY + bulletDir*myRadius, transform.rotation);
+            //bulletInstance.GetComponent<BulletScript>().isOnline = false;
+            //bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletDir * bulletSpd;
+            offlineGM.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir);
         }
         rb2d.AddForce(bulletDir * -1 * recoil);
 
