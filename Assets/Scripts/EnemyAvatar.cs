@@ -14,21 +14,24 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     public Vector3 change;
     private Animator animator;
     private SpriteRenderer mySpriteRenderer;
+    private WeaponAnim weaponAnim;
     private bool isDead = false;
+    
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        weaponAnim = GetComponent<WeaponAnim>();
         change = Vector3.zero;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateAnimation();
-        Debug.Log(change);
         
     }
     
