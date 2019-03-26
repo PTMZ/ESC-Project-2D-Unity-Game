@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 offset;
     private EnemyAvatar myself;
     private PlayerAvatar pAvatar;
-    private WeaponAnim weaponAnim;
+    public WeaponAnim weaponAnim;
 
     private float cooldownTimeStamp;
     public float cooldown = 0.5f;
@@ -40,6 +40,7 @@ public class EnemyMovement : MonoBehaviour
         }
         Vector3 updPos = mypos.position - transform.position;
         myself.change = updPos;
+        
 
         transform.position = mypos.position;
         if(player != null){
@@ -54,7 +55,7 @@ public class EnemyMovement : MonoBehaviour
                 pAvatar.getHit(meleeDmg);   // Comment this line out to stop enemy from attacking
                 Debug.Log("ENEMY ATTACK");
                 // Play attack animation here
-                weaponAnim.animator.SetBool("attack", true);
+                weaponAnim.weaponAnimator.SetBool("attack", true);
                 //
             }
         }

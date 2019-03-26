@@ -12,9 +12,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     // for animations //
     private Rigidbody2D myRigidbody;
     public Vector3 change;
-    private Animator animator;
+    public Animator animator;
     private SpriteRenderer mySpriteRenderer;
-    private WeaponAnim weaponAnim;
+    public WeaponAnim weaponAnim;
     private bool isDead = false;
     
     // Start is called before the first frame update
@@ -38,11 +38,16 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     void UpdateAnimation(){
 
         if (change != Vector3.zero){
+            
             mySpriteRenderer.flipX = (change.x < 0);
+            weaponAnim.mySpriteRenderer.flipX = (change.x < 0);
             animator.SetBool("moving", true);
+            weaponAnim.weaponAnimator.SetBool("weapmoving", true);
+            
         }
         else{
             animator.SetBool("moving", false);
+            weaponAnim.weaponAnimator.SetBool("weapmoving", false);
         }
     }
     

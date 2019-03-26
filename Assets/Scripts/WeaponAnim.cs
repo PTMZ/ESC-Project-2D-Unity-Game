@@ -5,36 +5,44 @@ using UnityEngine;
 public class WeaponAnim : MonoBehaviour
 {
 
-    public Animator animator;
-    private SpriteRenderer mySpriteRenderer;
-    public Vector3 change;
+    //public Vector3 change;
+    public Animator weaponAnimator;
+    public SpriteRenderer mySpriteRenderer;
+    //private Vector3 enemyChange;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        weaponAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-        change = Vector3.zero;
+        //enemyChange = GetComponent<EnemyAvatar>().change;
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateAnimation();
+        //mySpriteRenderer.flipX = (enemyChange.x < 0);
+        //UpdateAnimation();
+        
     }
 
     void UpdateAnimation()
     {
+        /*
 
-        if (change != Vector3.zero)
+        if (enemyChange != Vector3.zero)
+        //if (enemy.animator.GetBool("moving") == true) 
         {
-            mySpriteRenderer.flipX = (change.x < 0);
-            animator.SetBool("moving", true);
-            //Debug.Log("i am moving");
+            //mySpriteRenderer.flipX = (enemy.change.x < 0);
+            weaponAnimator.SetBool("weapmoving", true);
         }
         else
         {
-            animator.SetBool("moving", false);
+            weaponAnimator.SetBool("weapmoving", false);
         }
+
+        */
     }
 }
