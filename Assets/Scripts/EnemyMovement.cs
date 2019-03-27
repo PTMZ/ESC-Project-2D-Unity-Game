@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour
 
     private float cooldownTimeStamp;
     public float cooldown = 0.5f;
-    public float hitRadius = 2;
+    public float hitRadius = 3;
     public float meleeDmg = 10;
     // Start is called before the first frame update
     void Start()
@@ -48,7 +48,8 @@ public class EnemyMovement : MonoBehaviour
             //target.transform.position = transform.position;  // Comment above line and uncomment this line to make enemy stationary
         }
 
-        if (pAvatar != null && (transform.position - player.transform.position).magnitude <= hitRadius){
+        Vector3 midPos = transform.position + new Vector3(0, 1, 0);
+        if (pAvatar != null && (midPos - player.transform.position).magnitude <= hitRadius){
 
             if(Time.time > cooldownTimeStamp){
                 cooldownTimeStamp = Time.time + cooldown;

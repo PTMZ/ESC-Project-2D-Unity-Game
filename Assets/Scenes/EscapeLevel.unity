@@ -895,7 +895,7 @@ MonoBehaviour:
   target: {fileID: 748229197}
   weaponAnim: {fileID: 0}
   cooldown: 0.5
-  hitRadius: 2
+  hitRadius: 3
   meleeDmg: 10
 --- !u!212 &535329109
 SpriteRenderer:
@@ -1754,8 +1754,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921100571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.28, y: 6.4, z: 0.41010627}
-  m_LocalScale: {x: 2.77, y: -15.3, z: 1}
+  m_LocalPosition: {x: -9.286, y: 6.245, z: 0.41010627}
+  m_LocalScale: {x: 3.0852733, y: -15.606862, z: 1}
   m_Children: []
   m_Father: {fileID: 962101173}
   m_RootOrder: 6
@@ -2639,8 +2639,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269220930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.14, y: -19.522764, z: 0.41010627}
-  m_LocalScale: {x: 12.428384, y: 6.4635944, z: 1}
+  m_LocalPosition: {x: -20.14, y: -19.654, z: 0.41010627}
+  m_LocalScale: {x: 12.428384, y: 6.728602, z: 1}
   m_Children: []
   m_Father: {fileID: 962101173}
   m_RootOrder: 8
@@ -2984,7 +2984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 1.5
+  radius: 1.6
   height: 0.01
   repathRate: 0.5
   canSearch: 1
@@ -3000,9 +3000,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 2
   pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  endReachedDistance: 2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -4428,8 +4428,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029346343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.61, y: -12.3, z: 0.41010627}
-  m_LocalScale: {x: 3.4427657, y: 15, z: 1}
+  m_LocalPosition: {x: -12.61, y: -12.174, z: 0.41010627}
+  m_LocalScale: {x: 3.4427657, y: 15.254999, z: 1}
   m_Children: []
   m_Father: {fileID: 962101173}
   m_RootOrder: 7

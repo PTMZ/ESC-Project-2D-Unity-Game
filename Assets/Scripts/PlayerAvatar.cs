@@ -82,7 +82,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting)
+        if (stream.IsWriting && photonView.IsMine)
         {
             stream.SendNext(change);
             stream.SendNext(health);
