@@ -32,7 +32,6 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     void Update()
     {
         UpdateAnimation();
-        Debug.Log(weaponAnim.weaponAnimator.GetBool("attack"));
         
     }
     
