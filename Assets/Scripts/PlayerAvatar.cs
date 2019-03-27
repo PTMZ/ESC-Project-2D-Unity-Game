@@ -6,8 +6,8 @@ using Photon.Pun;
 public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 {
     public GameObject FloatingTextPrefab;
+    public int points = 20;
     public float health = 100;
-
 
     // for animations //
     private Rigidbody2D myRigidbody;
@@ -16,14 +16,14 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     private SpriteRenderer mySpriteRenderer;
     private bool isDead = false;
 
-
-
-
-    private void Awake(){
-        if(!PhotonNetwork.IsConnected){
+    private void Awake()
+    {
+        if (!PhotonNetwork.IsConnected)
+        {
             return;
         }
-        if(!photonView.IsMine && GetComponent<PlayerMovement>() != null){
+        if (!photonView.IsMine && GetComponent<PlayerMovement>() != null)
+        {
             Destroy(GetComponent<PlayerMovement>());
         }
     }
@@ -51,40 +51,44 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         }
         */
         UpdateAnimation();
-        
+
     }
 
-    void UpdateAnimation(){
-        if(animator != null){
-            if (change != Vector3.zero){
+    void UpdateAnimation()
+    {
+        if (animator != null)
+        {
+            if (change != Vector3.zero)
+            {
                 mySpriteRenderer.flipX = (change.x < 0);
                 animator.SetBool("moving", true);
             }
-            else{
+            else
+            {
                 animator.SetBool("moving", false);
             }
         }
     }
 
-    void SyncAnimation(){
+    void SyncAnimation()
+    {
 
     }
-
-
-
 
     void FixedUpdate()
     {
-        
 
     }
 
-    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info){
-        if(stream.IsWriting){
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
             stream.SendNext(change);
             stream.SendNext(health);
         }
-        else{
+        else
+        {
             change = (Vector3)stream.ReceiveNext();
             UpdateAnimation();
             health = (float)stream.ReceiveNext();
@@ -92,16 +96,43 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     }
 
-    public void getHit(float damage){
-        if(isDead){
+    public void getPoints()
+    {
+        health += points;
+        if (health >= 100)
+        {
+            health = 100;
+        }
+
+        Debug.Log("get " + points + " points");
+        if (FloatingTextPrefab)
+        {
+            ShowFloatingTextPoints();
+        }
+
+        void ShowFloatingTextPoints()
+        {
+            var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+            go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
+
+        }
+    }
+
+    public void getHit(float damage)
+    {
+        if (isDead)
+        {
             Debug.Log("DEAD alr");
             return;
         }
         health -= damage;
-        if(health<=0){
+        if (health <= 0)
+        {
             isDead = true;
+            //var health = int.Parse("dead");
             transform.Rotate(0, 0, 90, Space.Self);
-            if((photonView.IsMine || !PhotonNetwork.IsConnected) && GetComponent<PlayerMovement>() != null){
+            if ((photonView.IsMine || !PhotonNetwork.IsConnected) && GetComponent<PlayerMovement>() != null)
+            {
                 Destroy(GetComponent<PlayerMovement>());
             }
         }
@@ -109,13 +140,18 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
         if (FloatingTextPrefab)
         {
-            ShowFloatingText();
+            ShowFloatingTextHealth();
         }
 
-        void ShowFloatingText()
+        void ShowFloatingTextHealth()
         {
             var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
             go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
+            if (health <= 0)
+            {
+                go.GetComponent<TMPro.TextMeshPro>().text = "dead";
+
+            }
         }
     }
 
