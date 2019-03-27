@@ -9,13 +9,15 @@ public class BulletScript : MonoBehaviourPunCallbacks
 
     public float impactRadius = 2;
     public float impactPower = 5;
-    public float DeathTime = 2f;
-    float bulletDmg = 10;
+    private float DeathTime;
+    private float bulletDmg;
     public bool isOnline = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        DeathTime = GetComponent<AttackStats>().deathTime;
+        bulletDmg = GetComponent<AttackStats>().damage;
         if(isOnline){
             StartCoroutine(NetworkDestroyEnum(DeathTime));
         }
@@ -36,7 +38,7 @@ public class BulletScript : MonoBehaviourPunCallbacks
         }
         */
         if(col.gameObject.GetComponent<PlayerAvatar>() != null){
-            Debug.Log("I am hit, my name is " + col.gameObject.name);
+            //Debug.Log("I am hit, my name is " + col.gameObject.name);
             col.gameObject.GetComponent<PlayerAvatar>().getHit(bulletDmg);
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){

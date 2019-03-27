@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 offset;
     private EnemyAvatar myself;
     private PlayerAvatar pAvatar;
+    public WeaponAnim weaponAnim;
 
     private float cooldownTimeStamp;
     public float cooldown = 0.5f;
@@ -23,6 +24,7 @@ public class EnemyMovement : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         myself = GetComponent<EnemyAvatar>();
         pAvatar = player.GetComponent<PlayerAvatar>();
+        weaponAnim = GetComponent<WeaponAnim>();
     }
 
     // Update is called once per frame
@@ -38,19 +40,22 @@ public class EnemyMovement : MonoBehaviour
         }
         Vector3 updPos = mypos.position - transform.position;
         myself.change = updPos;
+        
 
         transform.position = mypos.position;
         if(player != null){
             target.transform.position = player.transform.position;
+            //target.transform.position = transform.position;  // Comment above line and uncomment this line to make enemy stationary
         }
 
         if (pAvatar != null && (transform.position - player.transform.position).magnitude <= hitRadius){
 
             if(Time.time > cooldownTimeStamp){
                 cooldownTimeStamp = Time.time + cooldown;
-                pAvatar.getHit(meleeDmg);
+                pAvatar.getHit(meleeDmg);   // Comment this line out to stop enemy from attacking
                 Debug.Log("ENEMY ATTACK");
                 // Play attack animation here
+                weaponAnim.weaponAnimator.SetBool("attack", true);
                 //
             }
         }

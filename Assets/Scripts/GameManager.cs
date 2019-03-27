@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviourPunCallbacks
     }
     
 
-    public static void SpawnBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector, float DeathTime){
+    public static void SpawnBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
         GameObject bulletInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bullet"), spawnPos, rotation);
-        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector;
+        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * bulletInstance.GetComponent<AttackStats>().bulletSpeed;
 
         //Destroy(bulletInstance,DeathTime);
         //StartCoroutine(bulletInstance.GetComponent<BulletScript>().NetworkDestroyEnum(DeathTime));
