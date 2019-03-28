@@ -5,20 +5,21 @@ using UnityEngine;
 public class prologueScript : MonoBehaviour
 {
     public Dialogue dialogue;
-    public int count = 0;
-    // Start is called before the first frame update
+    public int c = 0;
+
     void Start()
-    {        
-       
+    {
+       //FindObjectOfType<prologueDialogueManager>().StartDialogue(dialogue);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (count == 0)
+        if (c == 0)
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            count++;
+            FindObjectOfType<prologueDialogueManager>().StartDialogue(dialogue);
+            c++;
         }
+
     }
 }
