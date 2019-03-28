@@ -7,6 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class Pickups : MonoBehaviour
 {
+
+    public int type;
+    private OfflineGameManager offlineGM;
+
+    public void Start(){
+        offlineGM = FindObjectOfType<OfflineGameManager>();
+    }
+
     private void Update()
     {
         transform.Rotate(0, 0, 90 * Time.deltaTime);
@@ -16,8 +24,16 @@ public class Pickups : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerAvatar>().getPoints();
-            Destroy(gameObject);
+            if(type == 0){
+                other.GetComponent<PlayerAvatar>().getPoints();
+                Destroy(gameObject);
+            }
+            if(type == 1){
+                offlineGM.UpdateWeapon(1);
+            }
+            if(type == 2){
+                offlineGM.UpdateWeapon(0);
+            }
             //SceneManager.LoadScene("ConstrictLevel");
         }
 

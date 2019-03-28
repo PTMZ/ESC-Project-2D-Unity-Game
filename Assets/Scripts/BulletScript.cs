@@ -13,9 +13,12 @@ public class BulletScript : MonoBehaviourPunCallbacks
     private float bulletDmg;
     public bool isOnline = true;
 
+    private OfflineGameManager offlineGM;
+
     // Start is called before the first frame update
     void Start()
     {
+        offlineGM = FindObjectOfType<OfflineGameManager>();
         DeathTime = GetComponent<AttackStats>().deathTime;
         bulletDmg = GetComponent<AttackStats>().damage;
         if(isOnline){
@@ -40,16 +43,16 @@ public class BulletScript : MonoBehaviourPunCallbacks
         */
         if(col.gameObject.GetComponent<PlayerAvatar>() != null){
             //Debug.Log("I am hit, my name is " + col.gameObject.name);
-            col.gameObject.GetComponent<PlayerAvatar>().getHit(bulletDmg);
+            col.gameObject.GetComponent<PlayerAvatar>().getHit(offlineGM.curDamage);
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<EnemyAvatar>().getHit(bulletDmg);
+            col.gameObject.GetComponent<EnemyAvatar>().getHit(offlineGM.curDamage);
         }
         if (col.gameObject.GetComponent<Destroyable>() != null)
         {
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<Destroyable>().getHit(bulletDmg);
+            col.gameObject.GetComponent<Destroyable>().getHit(offlineGM.curDamage);
         }
         //Debug.Log("OnCollisionEnter2D");
         Vector2 hitPoint = col.GetContact(0).point;
