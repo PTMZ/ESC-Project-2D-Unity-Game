@@ -16,6 +16,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     private SpriteRenderer mySpriteRenderer;
     public WeaponAnim weaponAnim;
     private bool isDead = false;
+    private bool facingLeft = false;
     
     // Start is called before the first frame update
     void Start()
@@ -37,12 +38,25 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     
     void UpdateAnimation(){
 
+
         if (change != Vector3.zero){
-            
-            mySpriteRenderer.flipX = (change.x < 0);
-            weaponAnim.mySpriteRenderer.flipX = (change.x < 0);
+
+            if (change.x < 0 && facingLeft==false)
+            {
+                facingLeft = true;
+                animator.transform.Rotate(0, 180, 0);
+            }
+            if (change.x > 0 && facingLeft == true)
+            {
+                facingLeft = false;
+                animator.transform.Rotate(0, 180, 0);
+            }
+
+            //mySpriteRenderer.flipX = (change.x < 0);
+            //weaponAnim.mySpriteRenderer.flipX = (change.x < 0);
             animator.SetBool("moving", true);
             weaponAnim.weaponAnimator.SetBool("weapmoving", true);
+            
             
         }
         else{
@@ -59,7 +73,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         health -= damage;
         if(health<=0){
             isDead = true;
-            transform.Rotate(0, 0, 90, Space.Self);
+            //transform.Rotate(0, 0, 90, Space.Self);
+            animator.SetBool("dead", true);
+            weaponAnim.mySpriteRenderer.enabled = false;
         }
         Debug.Log("Enemy hit, health is = " + health);
 
@@ -87,6 +103,11 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             health = (float)stream.ReceiveNext();
         }
 
+    }
+
+    void LateUpdate()
+    {
+        mySpriteRenderer.sortingOrder = (int)Camera.main.WorldToScreenPoint(mySpriteRenderer.bounds.min).y * -1;
     }
 
     public bool getDead(){

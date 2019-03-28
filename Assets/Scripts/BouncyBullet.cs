@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class BulletScript : MonoBehaviourPunCallbacks
+public class BouncyBullet : MonoBehaviourPunCallbacks
 {
 
     public float impactRadius = 2;
@@ -13,12 +13,9 @@ public class BulletScript : MonoBehaviourPunCallbacks
     private float bulletDmg;
     public bool isOnline = true;
 
-    private OfflineGameManager offlineGM;
-
     // Start is called before the first frame update
     void Start()
     {
-        offlineGM = FindObjectOfType<OfflineGameManager>();
         DeathTime = GetComponent<AttackStats>().deathTime;
         bulletDmg = GetComponent<AttackStats>().damage;
         if(isOnline){
@@ -43,28 +40,24 @@ public class BulletScript : MonoBehaviourPunCallbacks
         */
         if(col.gameObject.GetComponent<PlayerAvatar>() != null){
             //Debug.Log("I am hit, my name is " + col.gameObject.name);
-            col.gameObject.GetComponent<PlayerAvatar>().getHit(offlineGM.curDamage);
+            col.gameObject.GetComponent<PlayerAvatar>().getHit(bulletDmg);
+            DestroyThis();
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<EnemyAvatar>().getHit(offlineGM.curDamage);
+            col.gameObject.GetComponent<EnemyAvatar>().getHit(bulletDmg);
+            DestroyThis();
         }
         if (col.gameObject.GetComponent<Destroyable>() != null)
         {
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<Destroyable>().getHit(offlineGM.curDamage);
+            //col.gameObject.GetComponent<Destroyable>().getHit(bulletDmg);
         }
         //Debug.Log("OnCollisionEnter2D");
-        Vector2 hitPoint = col.GetContact(0).point;
-        Rigidbody2D other = col.otherRigidbody;
-        AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
+        //Vector2 hitPoint = col.GetContact(0).point;
+        //Rigidbody2D other = col.otherRigidbody;
+        //AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
         //Destroy(gameObject);
-        if(isOnline){
-            PhotonNetwork.Destroy(gameObject);
-        }
-        else{
-            Destroy(gameObject);
-        }
 
     }
 
@@ -85,6 +78,15 @@ public class BulletScript : MonoBehaviourPunCallbacks
              PhotonNetwork.Destroy(gameObject);
          }
        
+    }
+
+    private void DestroyThis(){
+        if(isOnline){
+            PhotonNetwork.Destroy(gameObject);
+        }
+        else{
+            Destroy(gameObject);
+        }
     }
 
 }

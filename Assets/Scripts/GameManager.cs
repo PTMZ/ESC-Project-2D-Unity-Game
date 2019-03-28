@@ -45,6 +45,4 @@ public class GameManager : MonoBehaviourPunCallbacks
         PlayerAvatar.RefreshInstance(ref LocalPlayer, PlayerPrefab);
     }
     */
-
-    
 }

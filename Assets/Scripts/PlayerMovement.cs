@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Debug.Log(new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude);
         if(Time.time > cooldownTimeStamp && new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude > 0.5){
-            cooldownTimeStamp = Time.time + cooldown;
+            cooldownTimeStamp = Time.time + offlineGM.curCooldown;
             Shoot();
         }
 

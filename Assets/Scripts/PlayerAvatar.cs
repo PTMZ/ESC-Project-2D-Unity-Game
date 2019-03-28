@@ -118,6 +118,12 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         }
     }
 
+    void LateUpdate()
+    {
+        mySpriteRenderer.sortingOrder = (int)Camera.main.WorldToScreenPoint(mySpriteRenderer.bounds.min).y * -1;
+    }
+
+
     public void getHit(float damage)
     {
         if (isDead)
@@ -130,7 +136,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         {
             isDead = true;
             //var health = int.Parse("dead");
-            transform.Rotate(0, 0, 90, Space.Self);
+            //transform.Rotate(0, 0, 90, Space.Self);
+            animator.SetBool("dead", true);
+
             if ((photonView.IsMine || !PhotonNetwork.IsConnected) && GetComponent<PlayerMovement>() != null)
             {
                 Destroy(GetComponent<PlayerMovement>());
