@@ -46,6 +46,11 @@ public class BulletScript : MonoBehaviourPunCallbacks
             //Debug.Log("Enemy hit is " + col.gameObject.name);
             col.gameObject.GetComponent<EnemyAvatar>().getHit(bulletDmg);
         }
+        if (col.gameObject.GetComponent<Destroyable>() != null)
+        {
+            //Debug.Log("Enemy hit is " + col.gameObject.name);
+            col.gameObject.GetComponent<Destroyable>().getHit(bulletDmg);
+        }
         //Debug.Log("OnCollisionEnter2D");
         Vector2 hitPoint = col.GetContact(0).point;
         Rigidbody2D other = col.otherRigidbody;

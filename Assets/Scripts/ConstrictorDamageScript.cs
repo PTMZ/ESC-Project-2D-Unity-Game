@@ -17,6 +17,7 @@ public class ConstrictorDamageScript : MonoBehaviour
             Debug.Log("I am hit, my name is " + col.gameObject.name);
             col.gameObject.GetComponent<PlayerAvatar>().getHit(ConstrictorDmg);
         }
+
         if (col.gameObject.GetComponent<EnemyAvatar>() != null)
         {
             //Debug.Log("Enemy hit is " + col.gameObject.name);
