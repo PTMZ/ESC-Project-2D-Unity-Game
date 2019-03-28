@@ -130,7 +130,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         {
             isDead = true;
             //var health = int.Parse("dead");
-            transform.Rotate(0, 0, 90, Space.Self);
+            //transform.Rotate(0, 0, 90, Space.Self);
+            animator.SetBool("dead", true);
+
             if ((photonView.IsMine || !PhotonNetwork.IsConnected) && GetComponent<PlayerMovement>() != null)
             {
                 Destroy(GetComponent<PlayerMovement>());
