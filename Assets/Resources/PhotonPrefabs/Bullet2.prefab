@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4458959040214147666}
   - component: {fileID: 4435045380204924369}
   - component: {fileID: 1963175432631445373}
-  - component: {fileID: 7425010323377054820}
   - component: {fileID: 8785651376005595122}
   - component: {fileID: 6301971682415914312}
   - component: {fileID: 2935881713551120330}
   - component: {fileID: 6704780421337573404}
   - component: {fileID: 8718097957035434153}
+  - component: {fileID: 3469949522575542604}
   m_Layer: 0
   m_Name: Bullet2
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 1840396686924460243}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,28 +95,13 @@ CircleCollider2D:
   m_GameObject: {fileID: 1840396686924460243}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 84bb4ec86a1e57d41874e8f83e3628c2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7425010323377054820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840396686924460243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29cc4e4dbf873a04a84a1362cab3bb8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  impactRadius: 2
-  impactPower: 5
-  isOnline: 1
 --- !u!114 &8785651376005595122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +153,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -204,7 +189,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 498cb5c6f37fe2f4e92796228bc2791d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  playerid: 0
   damage: 20
-  bulletSpeed: 5
-  deathTime: 1
-  cooldown: 0.5
+  bulletSpeed: 10
+  deathTime: 3
+  cooldown: 1.5
+  followMelee: {fileID: 0}
+  dir: {x: 0, y: 0, z: 0}
+  onDeathSpawn: {fileID: 0}
+--- !u!114 &3469949522575542604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840396686924460243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef7702af7f1f298469ca2b13aabacac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactRadius: 2
+  impactPower: 5
+  isOnline: 0

@@ -534,7 +534,7 @@ MonoBehaviour:
   curDamage: 0
   curBulletSpeed: 0
   curCooldown: 0
-  curAttack: 0
+  curAttack: 1
 --- !u!4 &306061727
 Transform:
   m_ObjectHideFlags: 0
