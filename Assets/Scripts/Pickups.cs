@@ -20,5 +20,10 @@ public class Pickups : MonoBehaviour
             Destroy(gameObject);
             //SceneManager.LoadScene("ConstrictLevel");
         }
+
+        if (other.CompareTag("Constrict"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
