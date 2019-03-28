@@ -118,10 +118,6 @@ MonoBehaviour:
   speed: 30
   dashSpeed: 700
   myRadius: 1.75
-  bulletPrefab: {fileID: 7660789902638988858, guid: 4fa35d71fc6944f4fa6f8a663a5ca903,
-    type: 3}
-  DeathTime: 1
-  bulletSpd: 10
   recoil: 20
   cooldown: 0.3
   dashCooldown: 0.5
@@ -139,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloatingTextPrefab: {fileID: 3807610573064024986, guid: b11404f2b66e07143b968fe74b4156c1,
     type: 3}
+  points: 20
   health: 100
   change: {x: 0, y: 0, z: 0}
 --- !u!114 &8991627783951586577

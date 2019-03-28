@@ -16,6 +16,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     private SpriteRenderer mySpriteRenderer;
     public WeaponAnim weaponAnim;
     private bool isDead = false;
+    private bool facingLeft = false;
     
     // Start is called before the first frame update
     void Start()
@@ -37,12 +38,25 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     
     void UpdateAnimation(){
 
+
         if (change != Vector3.zero){
-            
-            mySpriteRenderer.flipX = (change.x < 0);
-            weaponAnim.mySpriteRenderer.flipX = (change.x < 0);
+
+            if (change.x < 0 && facingLeft==false)
+            {
+                facingLeft = true;
+                animator.transform.Rotate(0, 180, 0);
+            }
+            if (change.x > 0 && facingLeft == true)
+            {
+                facingLeft = false;
+                animator.transform.Rotate(0, 180, 0);
+            }
+
+            //mySpriteRenderer.flipX = (change.x < 0);
+            //weaponAnim.mySpriteRenderer.flipX = (change.x < 0);
             animator.SetBool("moving", true);
             weaponAnim.weaponAnimator.SetBool("weapmoving", true);
+            
             
         }
         else{
