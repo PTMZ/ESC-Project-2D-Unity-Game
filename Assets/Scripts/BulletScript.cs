@@ -21,6 +21,7 @@ public class BulletScript : MonoBehaviourPunCallbacks
         if(isOnline){
             StartCoroutine(NetworkDestroyEnum(DeathTime));
         }
+        Destroy(gameObject, DeathTime);
         
     }
 
