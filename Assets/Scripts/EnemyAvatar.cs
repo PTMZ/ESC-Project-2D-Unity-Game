@@ -73,7 +73,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         health -= damage;
         if(health<=0){
             isDead = true;
-            transform.Rotate(0, 0, 90, Space.Self);
+            //transform.Rotate(0, 0, 90, Space.Self);
+            animator.SetBool("dead", true);
+            weaponAnim.mySpriteRenderer.enabled = false;
         }
         Debug.Log("Enemy hit, health is = " + health);
 
@@ -101,6 +103,11 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             health = (float)stream.ReceiveNext();
         }
 
+    }
+
+    void LateUpdate()
+    {
+        mySpriteRenderer.sortingOrder = (int)Camera.main.WorldToScreenPoint(mySpriteRenderer.bounds.min).y * -1;
     }
 
     public bool getDead(){

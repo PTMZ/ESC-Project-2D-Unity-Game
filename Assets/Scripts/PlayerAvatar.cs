@@ -118,6 +118,12 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         }
     }
 
+    void LateUpdate()
+    {
+        mySpriteRenderer.sortingOrder = (int)Camera.main.WorldToScreenPoint(mySpriteRenderer.bounds.min).y * -1;
+    }
+
+
     public void getHit(float damage)
     {
         if (isDead)
