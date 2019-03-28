@@ -16,6 +16,8 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     private SpriteRenderer mySpriteRenderer;
     private bool isDead = false;
 
+    private OfflineGameManager offlineGM;
+
     private void Awake()
     {
         if (!PhotonNetwork.IsConnected)
@@ -36,6 +38,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         change = Vector3.zero;
+        offlineGM = FindObjectOfType<OfflineGameManager>();
     }
 
     // Update is called once per frame
@@ -143,8 +146,11 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             {
                 Destroy(GetComponent<PlayerMovement>());
             }
+
+            offlineGM.respawnPlayer(gameObject);
         }
-        Debug.Log("I am hit, health is = " + health);
+
+        //Debug.Log("I am hit, health is = " + health);
 
         if (FloatingTextPrefab)
         {

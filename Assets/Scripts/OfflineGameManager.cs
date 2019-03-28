@@ -52,6 +52,26 @@ public class OfflineGameManager : MonoBehaviour
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * curBulletSpeed;
     }
 
+    public void respawnPlayer(GameObject obj)
+    {
+        Destroy(obj, 2);
+        StartCoroutine(DelayLoad(2));
+    }
+
+    public void respawnEnemy(GameObject obj)
+    {
+        Destroy(obj, 2);
+        //StartCoroutine(DelayLoad(2));
+    }
+
+
+    private IEnumerator DelayLoad(float timing)
+    {
+        yield return new WaitForSeconds(timing);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+
     /*
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer){
         base.OnPlayerEnteredRoom(newPlayer);
@@ -59,5 +79,5 @@ public class OfflineGameManager : MonoBehaviour
     }
     */
 
-    
+
 }
