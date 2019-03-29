@@ -17,7 +17,7 @@ public class Pickups : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(0, 0, 90 * Time.deltaTime);
+        //transform.Rotate(0, 0, 90 * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other)
