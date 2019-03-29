@@ -12,6 +12,7 @@ public class BulletScript : MonoBehaviourPunCallbacks
     private float DeathTime;
     private float bulletDmg;
     public bool isOnline = true;
+    public GameObject explosion;
 
     private OfflineGameManager offlineGM;
 
@@ -59,6 +60,10 @@ public class BulletScript : MonoBehaviourPunCallbacks
         Rigidbody2D other = col.otherRigidbody;
         AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
         //Destroy(gameObject);
+        GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(exp, 0.3f);
+
+
         if(isOnline){
             PhotonNetwork.Destroy(gameObject);
         }
