@@ -70,17 +70,22 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 
     public void getHit(float damage){
         if(isDead){
-            return;
+            //return;
         }
         health -= damage;
-        if(health<=0){
+        if (health <= 0)
+        {
             isDead = true;
             //transform.Rotate(0, 0, 90, Space.Self);
             animator.SetBool("dead", true);
-            weaponAnim.mySpriteRenderer.enabled = false;
+            weaponAnim.mySpriteRenderer.enabled = true;
+        }
 
+        if (health < -30)
+        {
             offlineGM.respawnEnemy(gameObject);
         }
+        
         //Debug.Log("Enemy hit, health is = " + health);
 
         if (FloatingTextPrefab)
@@ -92,7 +97,15 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     void ShowFloatingText()
     {
         var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
+        if (health >= 0)
+        {
+            go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
+        }
+        else
+        {
+            go.GetComponent<TMPro.TextMeshPro>().text = null;
+        }
+        
     }
 
 

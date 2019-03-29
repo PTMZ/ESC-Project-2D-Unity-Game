@@ -60,7 +60,7 @@ public class OfflineGameManager : MonoBehaviour
 
     public void respawnEnemy(GameObject obj)
     {
-        Destroy(obj, 2);
+        Destroy(obj, 0);
         //StartCoroutine(DelayLoad(2));
     }
 
