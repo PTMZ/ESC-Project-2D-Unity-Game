@@ -17,7 +17,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     public WeaponAnim weaponAnim;
     private bool isDead = false;
     private bool facingLeft = false;
-    
+
+    private OfflineGameManager offlineGM;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         weaponAnim = GetComponent<WeaponAnim>();
         change = Vector3.zero;
-        
+        offlineGM = FindObjectOfType<OfflineGameManager>();
     }
 
     // Update is called once per frame
@@ -76,10 +78,12 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             //transform.Rotate(0, 0, 90, Space.Self);
             animator.SetBool("dead", true);
             weaponAnim.mySpriteRenderer.enabled = false;
-        }
-        Debug.Log("Enemy hit, health is = " + health);
 
-        if(FloatingTextPrefab)
+            offlineGM.respawnEnemy(gameObject);
+        }
+        //Debug.Log("Enemy hit, health is = " + health);
+
+        if (FloatingTextPrefab)
         {
             ShowFloatingText();
         }
