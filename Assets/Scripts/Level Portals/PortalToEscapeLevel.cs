@@ -9,7 +9,7 @@ public class PortalToEscapeLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("EscapeLevel");
+            SceneManager.LoadScene("B5_AVHQ");
         }
     }
 }

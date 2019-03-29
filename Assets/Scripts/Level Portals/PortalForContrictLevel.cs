@@ -9,11 +9,11 @@ public class PortalForContrictLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("PuzzleLevel");
+            SceneManager.LoadScene("B3_AVHQ");
         }
         if (other.CompareTag("Constrict"))
         {
-            SceneManager.LoadScene("ConstrictLevel");
+            SceneManager.LoadScene("B4_AVHQ");
         }
     }
 }

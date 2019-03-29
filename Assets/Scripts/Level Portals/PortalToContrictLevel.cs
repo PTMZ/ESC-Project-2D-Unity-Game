@@ -9,7 +9,7 @@ public class PortalToContrictLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("ConstrictLevel");
+            SceneManager.LoadScene("B4_AVHQ");
         }
     }
 }

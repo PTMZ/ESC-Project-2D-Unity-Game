@@ -9,7 +9,7 @@ public class PortalToSneakyLevelSkip : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("SneakyLevel");
+            SceneManager.LoadScene("B2_AVHQ");
         }
     }
 }

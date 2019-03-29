@@ -76,7 +76,7 @@ public class prologueDialogueManager : MonoBehaviour
     void EndDialogue()
     {
 
-        SceneManager.LoadScene("EscapeLevel");
+        SceneManager.LoadScene("B5_AVHQ");
         //animator.setBool("IsOpen", false);
         //Debug.Log("End of conversation.");
     }

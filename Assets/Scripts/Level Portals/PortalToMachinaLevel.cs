@@ -9,7 +9,7 @@ public class PortalToMachinaLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("MachinaLevel");
+            SceneManager.LoadScene("B1_AVHQ");
         }
     }
 }
