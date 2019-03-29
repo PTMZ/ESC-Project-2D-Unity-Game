@@ -7,6 +7,7 @@ public class PvPButton : MonoBehaviour
 {
     public void nextScene()
     {
+        FindObjectOfType<AudioManager>().Play("Select");
         SceneManager.LoadScene("PvPLobby");
     }
 }

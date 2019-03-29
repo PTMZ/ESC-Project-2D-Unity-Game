@@ -48,12 +48,14 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
     }
 
     public void OnBattleButtonClicked(){
+        FindObjectOfType<AudioManager>().Play("Select");
         battleButton.SetActive(false);
         cancelButton.SetActive(true);
         PhotonNetwork.JoinRandomRoom();
     }
 
     public void OnCanceButtonClicked(){
+        FindObjectOfType<AudioManager>().Play("Back");
         cancelButton.SetActive(false);
         battleButton.SetActive(true);
         PhotonNetwork.LeaveRoom();
