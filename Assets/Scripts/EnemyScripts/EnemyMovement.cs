@@ -17,6 +17,12 @@ public class EnemyMovement : MonoBehaviour
     public float cooldown = 0.5f;
     public float hitRadius = 3;
     public float meleeDmg = 10;
+
+    public Transform[] patrolPoints;
+    private bool patrolState = true;
+    private int curPatrol = 0;
+    private float closeDist = 1.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +36,17 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        
+        if(patrolState){
+            target.transform.position = patrolPoints[curPatrol].position;
+            if(reachedPatrol()){
+                curPatrol = (curPatrol + 1) % 3;
+                Debug.Log("REACHED");
+                Debug.Log(curPatrol);
+            }
+        }
+        else{
+            target.transform.position = player.transform.position;
+        }
     }
 
     void FixedUpdate()
@@ -44,7 +60,7 @@ public class EnemyMovement : MonoBehaviour
 
         transform.position = mypos.position;
         if(player != null){
-            target.transform.position = player.transform.position;
+            //target.transform.position = player.transform.position;
             //target.transform.position = transform.position;  // Comment above line and uncomment this line to make enemy stationary
         }
 
@@ -63,5 +79,14 @@ public class EnemyMovement : MonoBehaviour
                 //
             }
         }
+    }
+    
+    public void changePatrol(bool newState){
+        patrolState = newState;
+    }
+
+    private bool reachedPatrol(){
+        //Debug.Log((transform.position - patrolPoints[curPatrol].position).magnitude);
+        return ( (transform.position - patrolPoints[curPatrol].position).magnitude < closeDist );
     }
 }
