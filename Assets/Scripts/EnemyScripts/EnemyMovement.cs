@@ -39,7 +39,7 @@ public class EnemyMovement : MonoBehaviour
         if(patrolState){
             target.transform.position = patrolPoints[curPatrol].position;
             if(reachedPatrol()){
-                curPatrol = (curPatrol + 1) % 3;
+                curPatrol = (curPatrol + 1) % patrolPoints.Length;
                 Debug.Log("REACHED");
                 Debug.Log(curPatrol);
             }
