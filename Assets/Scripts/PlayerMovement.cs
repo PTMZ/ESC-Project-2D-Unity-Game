@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb2d;
 
     private bool prevButton = false;
+    public float camSize = 11.0f;
 
     private OfflineGameManager offlineGM;
     // Start is called before the first frame update
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
 
         offlineGM = FindObjectOfType<OfflineGameManager>();
-        Camera.main.orthographicSize = 7.0f;
+        Camera.main.orthographicSize = camSize;
 
         cooldown = offlineGM.curCooldown;
     }
