@@ -912,19 +912,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1538017163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63be125882ee40042b9d3bcaf4b2a9b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d900134a1fc39d41bbc0f58a9a12103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
   - name: TitleScreen
     clip: {fileID: 8300000, guid: ef32f8699998e99459a14651a02e7553, type: 3}
-    volume: 0.6
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Select
     clip: {fileID: 8300000, guid: 730f937c98410ec4f9f8bf7faf14db43, type: 3}
-    volume: 0.519
+    volume: 0.593
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Back
+    clip: {fileID: 8300000, guid: 10df7b5d39e93e44a937143094f77e5d, type: 3}
+    volume: 0.573
     pitch: 1
     loop: 0
     source: {fileID: 0}
