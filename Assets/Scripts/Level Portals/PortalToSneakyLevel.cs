@@ -17,7 +17,7 @@ public class PortalToSneakyLevel : MonoBehaviour
             count ++;
         }
         if(count == 3){
-            SceneManager.LoadScene("SneakyLevel");
+            SceneManager.LoadScene("B2_AVHQ");
         }
     }
 

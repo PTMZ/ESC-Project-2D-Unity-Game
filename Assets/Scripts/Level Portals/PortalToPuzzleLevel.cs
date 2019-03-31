@@ -9,7 +9,7 @@ public class PortalToPuzzleLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("PuzzleLevel");
+            SceneManager.LoadScene("B3_AVHQ");
         }
     }
 }
