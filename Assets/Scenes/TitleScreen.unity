@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d900134a1fc39d41bbc0f58a9a12103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
+  areaSounds:
   - name: TitleScreen
     clip: {fileID: 8300000, guid: ef32f8699998e99459a14651a02e7553, type: 3}
     volume: 1
@@ -924,16 +924,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Select
     clip: {fileID: 8300000, guid: 730f937c98410ec4f9f8bf7faf14db43, type: 3}
-    volume: 0.593
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Back
     clip: {fileID: 8300000, guid: 10df7b5d39e93e44a937143094f77e5d, type: 3}
-    volume: 0.573
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  playerSounds: []
+  enemySounds: []
 --- !u!4 &1538017165
 Transform:
   m_ObjectHideFlags: 0
