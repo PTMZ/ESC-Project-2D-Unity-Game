@@ -9,6 +9,7 @@ public class PortalToPuzzleLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.Play("EnterPortal");
             SceneManager.LoadScene("PuzzleLevel");
         }
     }

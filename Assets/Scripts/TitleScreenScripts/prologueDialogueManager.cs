@@ -75,7 +75,7 @@ public class prologueDialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-
+        Destroy(GameObject.Find("TitleAudioManager"));
         SceneManager.LoadScene("B5_AVHQ");
         //animator.setBool("IsOpen", false);
         //Debug.Log("End of conversation.");

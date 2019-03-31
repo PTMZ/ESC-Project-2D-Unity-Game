@@ -72,7 +72,7 @@ public class EnemyMovement : MonoBehaviour
                 pAvatar.getHit(meleeDmg);   // Comment this line out to stop enemy from attacking
                 Debug.Log("ENEMY ATTACK");
                 // Play attack animation here
-
+                AudioManager.instance.Play("GuardMelee");
                 weaponAnim.weaponAnimator.Play("baton_attack", -1);
 
                 

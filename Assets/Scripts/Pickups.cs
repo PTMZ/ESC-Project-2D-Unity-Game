@@ -26,12 +26,15 @@ public class Pickups : MonoBehaviour
         {
             if(type == 0){
                 other.GetComponent<PlayerAvatar>().getPoints();
+                AudioManager.instance.Play("HPPickup");
                 Destroy(gameObject);
             }
             if(type == 1){
+                AudioManager.instance.Play("FormPickup");
                 offlineGM.UpdateWeapon(1);
             }
             if(type == 2){
+                AudioManager.instance.Play("FormPickup");
                 offlineGM.UpdateWeapon(0);
             }
             //SceneManager.LoadScene("ConstrictLevel");

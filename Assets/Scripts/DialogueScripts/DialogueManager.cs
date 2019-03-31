@@ -24,15 +24,15 @@ public class DialogueManager : MonoBehaviour
     {
         //animator.setBool("IsOpen",true);
 
-//        nameText.text = dialogue.name;
-
+        //        nameText.text = dialogue.name;
+       
         sentences.Clear();
 
         foreach(string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-
+        timeStop();
         DisplayNextSentence();
     }
 
@@ -63,8 +63,19 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        SceneManager.LoadScene("EscapeLevel");
+        timeStart();
+        //SceneManager.LoadScene("EscapeLevel");
         //animator.setBool("IsOpen", false);
         //Debug.Log("End of conversation.");
+    }
+
+    void timeStart()
+    {
+        Time.timeScale = 1.0f;
+    }
+
+    void timeStop()
+    {
+        Time.timeScale = 0.0f;
     }
 }

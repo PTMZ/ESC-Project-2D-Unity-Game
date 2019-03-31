@@ -22,7 +22,6 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
 
         DontDestroyOnLoad(gameObject);
         //AudioManager.instance.Play("xyz") //this code can be used to replace FindObjectOfType<AudioManager>().Play("xyz") 

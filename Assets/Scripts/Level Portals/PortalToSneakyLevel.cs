@@ -17,6 +17,7 @@ public class PortalToSneakyLevel : MonoBehaviour
             count ++;
         }
         if(count == 3){
+            AudioManager.instance.Play("EnterPortal");
             SceneManager.LoadScene("SneakyLevel");
         }
     }

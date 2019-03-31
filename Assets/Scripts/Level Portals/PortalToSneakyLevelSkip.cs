@@ -9,6 +9,7 @@ public class PortalToSneakyLevelSkip : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.Play("EnterPortal");
             SceneManager.LoadScene("B2_AVHQ");
         }
     }

@@ -103,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
             //GameObject bulletInstance = Instantiate(bulletPrefab, transform.position + offsetY + bulletDir*myRadius, transform.rotation);
             //bulletInstance.GetComponent<BulletScript>().isOnline = false;
             //bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletDir * bulletSpd;
+            AudioManager.instance.Play("CookieRange");
             offlineGM.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir);
         }
         rb2d.AddForce(bulletDir * -1 * recoil);
@@ -114,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log("DASH");
             //Vector3 upVector = new Vector3(0, 1, 0);
             //rb2d.AddForce(upVector * dashSpeed);
+            AudioManager.instance.Play("CookieMelee");
             rb2d.AddForce(myself.change * dashSpeed);
             dashTimeStamp = Time.time + dashCooldown;
         }

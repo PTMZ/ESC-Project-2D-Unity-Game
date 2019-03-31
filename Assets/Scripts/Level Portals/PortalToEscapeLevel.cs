@@ -9,6 +9,7 @@ public class PortalToEscapeLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.Play("EnterPortal");
             SceneManager.LoadScene("B5_AVHQ");
         }
     }

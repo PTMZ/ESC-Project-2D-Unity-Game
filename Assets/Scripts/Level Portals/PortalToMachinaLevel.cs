@@ -9,6 +9,7 @@ public class PortalToMachinaLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.Play("EnterPortal");
             SceneManager.LoadScene("B1_AVHQ");
         }
     }

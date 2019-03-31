@@ -176,7 +176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &171201536
 GameObject:
@@ -547,7 +547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &328420677
 GameObject:
@@ -875,6 +875,88 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &425443471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425443473}
+  - component: {fileID: 425443472}
+  m_Layer: 0
+  m_Name: InGameAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &425443472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425443471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d900134a1fc39d41bbc0f58a9a12103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaSounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 38f448c999e05b94db935d677a9cbaa5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: EnterPortal
+    clip: {fileID: 8300000, guid: da00e99e0b13d964c8577446b19f1520, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HPPickup
+    clip: {fileID: 8300000, guid: 571345da87394d743aa3176933253692, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  playerSounds:
+  - name: CookieMelee
+    clip: {fileID: 8300000, guid: f0edd02c8a7e99648aa7bcf8fd81089d, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CookieRange
+    clip: {fileID: 8300000, guid: 5cd23acbab10ca8408b920c870375248, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  enemySounds:
+  - name: GuardMelee
+    clip: {fileID: 8300000, guid: 7c71f04e7dc73db478ad77845598fca7, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &425443473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425443471}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &535329107
@@ -985,7 +1067,7 @@ Transform:
   - {fileID: 2008227084}
   - {fileID: 990124367}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &535329111
 Rigidbody2D:
@@ -1297,7 +1379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &676172361
 GameObject:
@@ -1332,7 +1414,7 @@ Transform:
   - {fileID: 376729338}
   - {fileID: 1371003101}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677540148
 GameObject:
@@ -1574,7 +1656,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &841958585
 GameObject:
@@ -1607,7 +1689,7 @@ Transform:
   - {fileID: 1177738101}
   - {fileID: 1718972169}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &867275169
 GameObject:
@@ -1976,7 +2058,7 @@ Transform:
   - {fileID: 295470320}
   - {fileID: 1846881569}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &981132682
 GameObject:
@@ -2328,7 +2410,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165374663
 GameObject:
@@ -3207,7 +3289,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1458903949
 GameObject:
@@ -3368,7 +3450,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1458903955
 MonoBehaviour:
@@ -3462,7 +3544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538874180
 GameObject:
@@ -3669,7 +3751,7 @@ Transform:
   m_LocalScale: {x: 2.806655, y: 2.1465535, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1686675190
 GameObject:
@@ -3765,7 +3847,7 @@ RectTransform:
   - {fileID: 1988858056}
   - {fileID: 1538874181}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5106,5 +5188,5 @@ Transform:
   m_LocalScale: {x: 1.3331611, y: 1.7443538, z: 0.475}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
