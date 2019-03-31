@@ -74,9 +74,6 @@ public class EnemyMovement : MonoBehaviour
                 // Play attack animation here
                 AudioManager.instance.Play("GuardMelee");
                 weaponAnim.weaponAnimator.Play("baton_attack", -1);
-
-                
-                //
             }
         }
     }
