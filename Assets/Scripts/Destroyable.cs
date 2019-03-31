@@ -24,11 +24,6 @@ public class Destroyable : MonoBehaviour
         {
             var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
             go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
-            if (health <= 0)
-            {
-                go.GetComponent<TMPro.TextMeshPro>().text = "dead";
-
-            }
         }
     }
 }
