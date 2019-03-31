@@ -9,6 +9,7 @@ TagManager:
   - Cone2
   - Constrict
   - DestroyableBox
+  - Enemy
   layers:
   - Default
   - TransparentFX

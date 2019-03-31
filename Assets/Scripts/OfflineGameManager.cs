@@ -21,6 +21,11 @@ public class OfflineGameManager : MonoBehaviour
     [HideInInspector]
     public float curCooldown;
 
+    [HideInInspector]
+    public float moveMult = 1;
+    [HideInInspector]
+    public float dmgMult = 1;
+
     public int curAttack;
 
     void Awake(){
@@ -41,6 +46,11 @@ public class OfflineGameManager : MonoBehaviour
         curDamage = bulletPrefabs[curAttack].GetComponent<AttackStats>().damage;
         curBulletSpeed = bulletPrefabs[curAttack].GetComponent<AttackStats>().bulletSpeed;
         curCooldown = bulletPrefabs[curAttack].GetComponent<AttackStats>().cooldown;
+    }
+
+    public void UpdatePlayerStats(float m, float d){
+        moveMult = m;
+        dmgMult = d;
     }
 
     public void SpawnBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){

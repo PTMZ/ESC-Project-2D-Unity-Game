@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 offsetY;
     private PlayerAvatar myself;
+    private TriggerMelee melee;
     Rigidbody2D rb2d;
 
     private bool prevButton = false;
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         myself = GetComponent<PlayerAvatar>();
         rb2d = GetComponent<Rigidbody2D>();
+        melee = GetComponentInChildren<TriggerMelee>();
 
         offlineGM = FindObjectOfType<OfflineGameManager>();
         Camera.main.orthographicSize = camSize;
@@ -84,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate(){
-        rb2d.AddForce(myself.change * speed);
+        rb2d.AddForce(myself.change * speed * offlineGM.moveMult);
     }
 
     void LateUpdate(){
@@ -116,6 +118,8 @@ public class PlayerMovement : MonoBehaviour
             //rb2d.AddForce(upVector * dashSpeed);
             rb2d.AddForce(myself.change * dashSpeed);
             dashTimeStamp = Time.time + dashCooldown;
+
+            melee.startMelee();
         }
     }
 }
