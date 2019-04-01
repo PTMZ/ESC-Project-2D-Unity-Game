@@ -8,9 +8,9 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    //public Text nameText;
+    public TMP_Text nameText;
     public TMP_Text dialogueText;
-
+    public GameObject dialogueBox;
     //public Animator animator;
 
     private Queue<string> sentences;
@@ -24,8 +24,8 @@ public class DialogueManager : MonoBehaviour
     {
         //animator.setBool("IsOpen",true);
 
-        //        nameText.text = dialogue.name;
-       
+        nameText.text = dialogue.name;
+        dialogueBox.SetActive(true);
         sentences.Clear();
 
         foreach(string sentence in dialogue.sentences)
@@ -63,7 +63,9 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        timeStart();
+        //timeStart();
+        timeStop();
+        dialogueBox.SetActive(false);
         //SceneManager.LoadScene("EscapeLevel");
         //animator.setBool("IsOpen", false);
         //Debug.Log("End of conversation.");
@@ -71,11 +73,13 @@ public class DialogueManager : MonoBehaviour
 
     void timeStart()
     {
+        Debug.Log("Game time restarted at end of dialogue.");
         Time.timeScale = 1.0f;
     }
 
     void timeStop()
     {
+        Debug.Log("Game time stoppped for dialogue.");
         Time.timeScale = 0.0f;
     }
 }
