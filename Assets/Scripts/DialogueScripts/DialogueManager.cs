@@ -63,8 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        //timeStart();
-        timeStop();
+        timeStart();
         dialogueBox.SetActive(false);
         //SceneManager.LoadScene("EscapeLevel");
         //animator.setBool("IsOpen", false);
