@@ -28,16 +28,35 @@ public class OfflineGameManager : MonoBehaviour
 
     public int curAttack;
 
+    public static OfflineGameManager instance;
+    public AudioManager AMPrefab;
+
     void Awake(){
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+
+        if(AudioManager.instance == null){
+            AudioManager.instance = (AudioManager)Instantiate(AMPrefab, Vector3.zero, Quaternion.identity);
+            AudioManager.instance.Play("Theme");
+        }
+
+        //Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity);
+        UpdateWeapon(curAttack);
+        //InstantiateAM();
     }
 
     void Start(){
         //PlayerAvatar.RefreshInstance(ref LocalPlayer, PlayerPrefab);
         //LocalPlayer = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), Vector3.zero, Quaternion.identity).GetComponent<PlayerAvatar>();
-        Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity);
         //curAttack = 0;
-        UpdateWeapon(curAttack);
         
     }
 

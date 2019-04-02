@@ -28,7 +28,8 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         weaponAnim = GetComponent<WeaponAnim>();
         change = Vector3.zero;
-        offlineGM = FindObjectOfType<OfflineGameManager>();
+        //offlineGM = FindObjectOfType<OfflineGameManager>();
+        offlineGM = OfflineGameManager.instance;
     }
 
     // Update is called once per frame

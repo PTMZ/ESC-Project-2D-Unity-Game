@@ -12,9 +12,6 @@ public class PortalForContrictLevel : MonoBehaviour
             AudioManager.instance.Play("EnterPortal");
             SceneManager.LoadScene("B3_AVHQ");
         }
-        if (other.CompareTag("Constrict"))
-        {
-            SceneManager.LoadScene("B4_AVHQ");
-        }
+        
     }
 }

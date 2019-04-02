@@ -10,9 +10,11 @@ public class AudioManager : MonoBehaviour
 
 
     public static AudioManager instance;
+    public string curTheme = "";
 
     void Awake()
     {
+
         if (instance == null)
         {
             instance = this;
@@ -54,6 +56,42 @@ public class AudioManager : MonoBehaviour
         }
     }
     
+    public void PlayTheme(string name){
+        curTheme = name;
+        Sound s1 = Array.Find(areaSounds,sound => sound.name==name);
+
+        if (s1 == null)
+        {
+            //Debug.LogWarning("Sound: " + name + " is not found in areaSounds.");
+        }
+        else
+        {
+            s1.source.Play();
+        }
+    }
+
+    public void PlaySound(string name){
+        Sound s2 = Array.Find(playerSounds, sound => sound.name == name);
+        if (s2 == null)
+        {
+            //Debug.LogWarning("Sound: " + name + " is not found playerSounds.");
+        }
+        else
+        {
+            s2.source.Play();
+        }
+
+        Sound s3 = Array.Find(enemySounds, sound => sound.name == name);
+        if (s3 == null)
+        {
+            //Debug.LogWarning("Sound: " + name + " is not found enemySounds.");
+            return;
+        }
+        else
+        {
+            s3.source.Play();
+        }
+    }
 
     public void Play(string name)
     {
@@ -91,7 +129,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void StopPlaying(string name)
+    public void Stop(string name)
     {
         Sound z1 = Array.Find(areaSounds, sound => sound.name == name);
         if (z1 == null)
@@ -129,5 +167,6 @@ public class AudioManager : MonoBehaviour
 
         
     }
+
 
 }

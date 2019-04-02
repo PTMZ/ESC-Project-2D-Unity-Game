@@ -62,6 +62,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Theme2
+    clip: {fileID: 8300000, guid: 225f73bd79895554fb3d5a1d54001426, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   playerSounds:
   - name: CookieMelee
     clip: {fileID: 8300000, guid: f0edd02c8a7e99648aa7bcf8fd81089d, type: 3}
@@ -82,3 +88,4 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  curTheme: 
