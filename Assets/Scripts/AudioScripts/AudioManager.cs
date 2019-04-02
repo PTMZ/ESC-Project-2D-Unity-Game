@@ -61,7 +61,7 @@ public class AudioManager : MonoBehaviour
 
         if (s1 == null)
         {
-            Debug.LogWarning("Sound: " + name + " is not found in areaSounds.");
+            //Debug.LogWarning("Sound: " + name + " is not found in areaSounds.");
         }
         else
         {
@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour
         Sound s2 = Array.Find(playerSounds, sound => sound.name == name);
         if (s2 == null)
         {
-            Debug.LogWarning("Sound: " + name + " is not found playerSounds.");
+            //Debug.LogWarning("Sound: " + name + " is not found playerSounds.");
         }
         else
         {
@@ -81,7 +81,7 @@ public class AudioManager : MonoBehaviour
         Sound s3 = Array.Find(enemySounds, sound => sound.name == name);
         if (s3 == null)
         {
-            Debug.LogWarning("Sound: " + name + " is not found enemySounds.");
+            //Debug.LogWarning("Sound: " + name + " is not found enemySounds.");
             return;
         }
         else
@@ -96,7 +96,7 @@ public class AudioManager : MonoBehaviour
         Sound z1 = Array.Find(areaSounds, sound => sound.name == name);
         if (z1 == null)
         {
-            Debug.LogWarning("Sound: " + name + " is not found in areaSounds.");
+            //Debug.LogWarning("Sound: " + name + " is not found in areaSounds.");
         }
         else
         {
@@ -106,7 +106,7 @@ public class AudioManager : MonoBehaviour
         Sound z2 = Array.Find(playerSounds, sound => sound.name == name);
         if (z2 == null)
         {
-            Debug.LogWarning("Sound: " + name + " is not found playerSounds.");
+            //Debug.LogWarning("Sound: " + name + " is not found playerSounds.");
         }
         else
         {
@@ -116,7 +116,7 @@ public class AudioManager : MonoBehaviour
         Sound z3 = Array.Find(enemySounds, sound => sound.name == name);
         if (z3 == null)
         {
-            Debug.LogWarning("Sound: " + name + " is not found enemySounds.");
+            //Debug.LogWarning("Sound: " + name + " is not found enemySounds.");
             return;
         }
         else

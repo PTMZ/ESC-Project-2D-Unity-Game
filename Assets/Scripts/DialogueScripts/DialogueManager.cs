@@ -13,10 +13,25 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     //public Animator animator;
 
+    public static DialogueManager instance;
+
     private Queue<string> sentences;
 
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-    void Start()
+        DontDestroyOnLoad(gameObject);
+    }
+        void Start()
     {
         sentences = new Queue<string>();
     }
@@ -56,7 +71,11 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+
+            for (int i = 0; i < 3; i++)
+            {
+                yield return null;
+            }
         }
     }
 
