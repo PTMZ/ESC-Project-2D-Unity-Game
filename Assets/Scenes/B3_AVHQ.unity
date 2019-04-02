@@ -415,9 +415,8 @@ MonoBehaviour:
   hitRadius: 3
   meleeDmg: 10
   patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1305655838}
+  - {fileID: 1554476329}
 --- !u!212 &31388127
 SpriteRenderer:
   m_ObjectHideFlags: 0
