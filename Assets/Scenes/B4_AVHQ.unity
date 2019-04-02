@@ -565,7 +565,6 @@ GameObject:
   - component: {fileID: 426743393}
   - component: {fileID: 426743398}
   - component: {fileID: 426743396}
-  - component: {fileID: 426743397}
   m_Layer: 0
   m_Name: Constrict Wall Left
   m_TagString: Constrict
@@ -676,27 +675,6 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1617599590}
   speed: 0.1
---- !u!50 &426743397
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426743392}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &426743398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,7 +835,6 @@ GameObject:
   - component: {fileID: 582442143}
   - component: {fileID: 582442144}
   - component: {fileID: 582442142}
-  - component: {fileID: 582442145}
   m_Layer: 0
   m_Name: Constrict Wall Top
   m_TagString: Constrict
@@ -980,27 +957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa15e29697f3b6847b5108bc4c715e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &582442145
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582442139}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &605789483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,7 +2039,6 @@ GameObject:
   - component: {fileID: 1548205235}
   - component: {fileID: 1548205238}
   - component: {fileID: 1548205234}
-  - component: {fileID: 1548205233}
   m_Layer: 0
   m_Name: Constrict Wall Right
   m_TagString: Constrict
@@ -2091,27 +2046,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &1548205233
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548205232}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &1548205234
 MonoBehaviour:
   m_ObjectHideFlags: 0
