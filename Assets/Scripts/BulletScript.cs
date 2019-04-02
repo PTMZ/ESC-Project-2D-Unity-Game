@@ -56,6 +56,7 @@ public class BulletScript : MonoBehaviourPunCallbacks
             col.gameObject.GetComponent<Destroyable>().getHit(offlineGM.curDamage);
         }
         //Debug.Log("OnCollisionEnter2D");
+        //Put Sound here
         Vector2 hitPoint = col.GetContact(0).point;
         Rigidbody2D other = col.otherRigidbody;
         AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);

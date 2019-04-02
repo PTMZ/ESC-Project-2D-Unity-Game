@@ -1414,8 +1414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8d19c860193de48bf44422573d9819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curSceneTheme: Theme
-  nextSceneTheme: Theme2
+  curSceneTheme: TutorialTheme
+  nextSceneTheme: TutorialTheme
   nextSceneName: B3_AVHQ
 --- !u!61 &867059704
 BoxCollider2D:

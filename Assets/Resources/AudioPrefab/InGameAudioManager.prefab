@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaSounds:
-  - name: Theme
+  - name: TutorialTheme
     clip: {fileID: 8300000, guid: 38f448c999e05b94db935d677a9cbaa5, type: 3}
     volume: 1
     pitch: 1
@@ -62,7 +62,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Theme2
+  - name: MineSweeperTheme
     clip: {fileID: 8300000, guid: 225f73bd79895554fb3d5a1d54001426, type: 3}
     volume: 1
     pitch: 1

@@ -121,6 +121,7 @@ MonoBehaviour:
   recoil: 20
   cooldown: 0.3
   dashCooldown: 0.5
+  camSize: 11
 --- !u!114 &3162012306475875567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +227,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 83b345a5e2a9d444889ef8bc25ef1fa7, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
