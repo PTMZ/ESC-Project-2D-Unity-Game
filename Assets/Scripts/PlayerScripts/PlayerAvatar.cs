@@ -38,7 +38,8 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         change = Vector3.zero;
-        offlineGM = FindObjectOfType<OfflineGameManager>();
+        //offlineGM = FindObjectOfType<OfflineGameManager>();
+        offlineGM = OfflineGameManager.instance;
     }
 
     // Update is called once per frame
@@ -167,6 +168,10 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
             }
         }
+    }
+
+    public bool getIsDead(){
+        return isDead;
     }
 
     /*

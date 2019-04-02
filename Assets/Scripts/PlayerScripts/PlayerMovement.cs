@@ -46,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         melee = GetComponentInChildren<TriggerMelee>();
 
-        offlineGM = FindObjectOfType<OfflineGameManager>();
+        //offlineGM = FindObjectOfType<OfflineGameManager>();
+        offlineGM = OfflineGameManager.instance;
         Camera.main.orthographicSize = camSize;
 
         cooldown = offlineGM.curCooldown;
