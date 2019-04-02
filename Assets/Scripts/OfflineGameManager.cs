@@ -28,8 +28,14 @@ public class OfflineGameManager : MonoBehaviour
 
     public int curAttack;
 
+    public AudioManager AMPrefab;
+
     void Awake(){
-        
+        if(AudioManager.instance == null){
+            AudioManager.instance = (AudioManager)Instantiate(AMPrefab, Vector3.zero, Quaternion.identity);
+            AudioManager.instance.Play("Theme");
+        }
+        //InstantiateAM();
     }
 
     void Start(){
