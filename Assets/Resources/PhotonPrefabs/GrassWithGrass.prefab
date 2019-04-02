@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1672378720667361737}
   - component: {fileID: 8408147299999243141}
   - component: {fileID: 4173867945580519580}
+  - component: {fileID: 9073249521897062951}
   - component: {fileID: 6628503833830461269}
   m_Layer: 0
   m_Name: GrassWithGrass
@@ -92,7 +93,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -120,15 +121,27 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 500
-  m_LinearDrag: 500
-  m_AngularDrag: 500
+  m_Mass: 5
+  m_LinearDrag: 5
+  m_AngularDrag: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9073249521897062951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672378720667361735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5709f76c0fcb52d419f5f164e6a5b580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6628503833830461269
 MonoBehaviour:
   m_ObjectHideFlags: 0

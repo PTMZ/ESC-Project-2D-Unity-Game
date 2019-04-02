@@ -32,10 +32,12 @@ public class Pickups : MonoBehaviour
             if(type == 1){
                 AudioManager.instance.Play("FormPickup");
                 offlineGM.UpdateWeapon(1);
+                Destroy(gameObject);
             }
             if(type == 2){
                 AudioManager.instance.Play("FormPickup");
                 offlineGM.UpdateWeapon(0);
+                Destroy(gameObject);
             }
             //SceneManager.LoadScene("ConstrictLevel");
         }
