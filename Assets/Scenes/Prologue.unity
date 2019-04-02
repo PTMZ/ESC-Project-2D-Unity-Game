@@ -259,7 +259,7 @@ MonoBehaviour:
     sentences:
     - Have you ever wondered where cookie viruses go?
     - Have you ever asked yourself what happens to them?
-    - This is only but the beginning...
+    - This is only the beginning...
   c: 0
 --- !u!1 &997189023
 GameObject:
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4026531839
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
