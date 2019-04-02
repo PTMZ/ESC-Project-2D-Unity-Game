@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4748511869161183130}
   - component: {fileID: 8030295770934134895}
   - component: {fileID: 2497474916852984432}
+  - component: {fileID: 6866231279721694437}
   - component: {fileID: 4131368340734958713}
   m_Layer: 0
   m_Name: GrassPlain
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1768501905
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b6b368f9723ce4f6588660592c2136d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -92,7 +93,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -120,15 +121,27 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 500
-  m_LinearDrag: 500
-  m_AngularDrag: 500
+  m_Mass: 5
+  m_LinearDrag: 5
+  m_AngularDrag: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6866231279721694437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4748511869161183128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5709f76c0fcb52d419f5f164e6a5b580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4131368340734958713
 MonoBehaviour:
   m_ObjectHideFlags: 0
