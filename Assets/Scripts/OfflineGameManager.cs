@@ -93,6 +93,10 @@ public class OfflineGameManager : MonoBehaviour
         //StartCoroutine(DelayLoad(2));
     }
 
+    public void loadScene()
+    {
+        StartCoroutine(DelayLoad(2));
+    }
 
     private IEnumerator DelayLoad(float timing)
     {
@@ -100,6 +104,8 @@ public class OfflineGameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
+
+
 
     /*
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer){

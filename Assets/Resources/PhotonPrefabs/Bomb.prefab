@@ -95,11 +95,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomb: {fileID: 7188316109911052366}
-  explosionDelay: 5
   explosionRate: 1
   explosionMaxSize: 10
   explosionSpeed: 1
-  currentRadius: 1
+  explosionForce: 500
+  currentRadius: 0.5
 --- !u!50 &7188316109911052361
 Rigidbody2D:
   serializedVersion: 4

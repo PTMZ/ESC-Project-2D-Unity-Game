@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bomb : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Bomb : MonoBehaviour
 
     bool exploded = false;
     CircleCollider2D explosionRadius;
+    private OfflineGameManager offlineGM;
 
     void Start()
     {
@@ -50,10 +52,12 @@ public class Bomb : MonoBehaviour
             if (currentRadius < explosionMaxSize)
             {
                 currentRadius += explosionRate;
+                //offlineGM.loadScene();
             }
             else
             {
                 Destroy(gameObject);
+                //SceneManager.GetActiveScene();
             }
             explosionRadius.radius = currentRadius;
         }
