@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public class SaveGameScript : MonoBehaviour
+public class SaveGameScript
 {
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class SaveGameScript : MonoBehaviour
         
     }
 
-    public void SaveGame()
+    public static void SaveGame()
     {
         // 1
         Save save = CreateSaveGameObject();
@@ -37,17 +37,17 @@ public class SaveGameScript : MonoBehaviour
         Debug.Log("Game Saved");
     }
 
-    private Save CreateSaveGameObject(){
+    private static Save CreateSaveGameObject(){
         Save save = new Save();
 
-        save.health = FindObjectOfType<PlayerAvatar>().health;
+        save.health = OfflineGameManager.instance.curHealth;
         save.curAttack = OfflineGameManager.instance.curAttack;
         save.curScene = SceneManager.GetActiveScene().name;
 
         return save;
     }
 
-    public void LoadGame()
+    public static void LoadGame()
     { 
         // 1
         if (File.Exists(Application.persistentDataPath + "/gamesave.save"))
@@ -59,6 +59,9 @@ public class SaveGameScript : MonoBehaviour
             file.Close();
 
             // Update Game state
+            OfflineGameManager.instance.curHealth = save.health;
+            OfflineGameManager.instance.curAttack = save.curAttack;
+            SceneManager.LoadScene(save.curScene);
             Debug.Log("Game Loaded");
         }
         else

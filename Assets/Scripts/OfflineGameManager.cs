@@ -15,6 +15,8 @@ public class OfflineGameManager : MonoBehaviour
     [HideInInspector]
     public PlayerAvatar LocalPlayer;
     [HideInInspector]
+    public float curHealth = 100;
+    [HideInInspector]
     public float curDamage;
     [HideInInspector]
     public float curBulletSpeed;
@@ -84,6 +86,7 @@ public class OfflineGameManager : MonoBehaviour
     public void respawnPlayer(GameObject obj)
     {
         Destroy(obj, 2);
+        curHealth = 100;
         StartCoroutine(DelayLoad(2));
     }
 

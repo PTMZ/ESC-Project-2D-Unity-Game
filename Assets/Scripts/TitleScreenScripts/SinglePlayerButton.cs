@@ -35,6 +35,7 @@ public class SinglePlayerButton : MonoBehaviour
     public void continueFromSave()
     {
         FindObjectOfType<AudioManager>().Play("Select");
+        SaveGameScript.LoadGame();
         return;//to add save data here.
     }
 
