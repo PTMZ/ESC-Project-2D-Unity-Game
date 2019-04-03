@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7188316109911052364}
   - component: {fileID: 7188316109911052363}
   - component: {fileID: 7188316109911052361}
-  - component: {fileID: 7188316109911052362}
+  - component: {fileID: 3435537303821686656}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7188316109911052366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.61, y: -15.55, z: 0}
-  m_LocalScale: {x: 2.6458797, y: 2.6458797, z: 2.6458797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomb: {fileID: 7188316109911052366}
-  explosionRate: 1
-  explosionMaxSize: 10
-  explosionSpeed: 1
-  explosionForce: 500
-  currentRadius: 0.5
+  explosionRate: 100
+  explosionMaxSize: 100
+  explosionSpeed: 10
+  explosionForce: 1200
+  currentRadius: 1
 --- !u!50 &7188316109911052361
 Rigidbody2D:
   serializedVersion: 4
@@ -121,8 +121,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &7188316109911052362
-CircleCollider2D:
+--- !u!61 &3435537303821686656
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,5 +135,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0075471, y: 1.0075471}
+    newSize: {x: 1.0075471, y: 1.0075471}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.50377357
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
