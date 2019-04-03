@@ -1,0 +1,1287 @@
+fileFormatVersion: 2
+guid: de7d3ba18511a461bab30f55667b6e9f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ExportTiles123_0
+    21300002: ExportTiles123_1
+    21300004: ExportTiles123_2
+    21300006: ExportTiles123_3
+    21300008: ExportTiles123_4
+    21300010: ExportTiles123_5
+    21300012: ExportTiles123_6
+    21300014: ExportTiles123_7
+    21300016: ExportTiles123_8
+    21300018: ExportTiles123_9
+    21300020: ExportTiles123_10
+    21300022: ExportTiles123_11
+    21300024: ExportTiles123_12
+    21300026: ExportTiles123_13
+    21300028: ExportTiles123_14
+    21300030: ExportTiles123_15
+    21300032: ExportTiles123_16
+    21300034: ExportTiles123_17
+    21300036: ExportTiles123_18
+    21300038: ExportTiles123_19
+    21300040: ExportTiles123_20
+    21300042: ExportTiles123_21
+    21300044: ExportTiles123_22
+    21300046: ExportTiles123_23
+    21300048: ExportTiles123_24
+    21300050: ExportTiles123_25
+    21300052: ExportTiles123_26
+    21300054: ExportTiles123_27
+    21300056: ExportTiles123_28
+    21300058: ExportTiles123_29
+    21300060: ExportTiles123_30
+    21300062: ExportTiles123_31
+    21300064: ExportTiles123_32
+    21300066: ExportTiles123_33
+    21300068: ExportTiles123_34
+    21300070: ExportTiles123_35
+    21300072: ExportTiles123_36
+    21300074: ExportTiles123_37
+    21300076: ExportTiles123_38
+    21300078: ExportTiles123_39
+    21300080: ExportTiles123_40
+    21300082: ExportTiles123_41
+    21300084: ExportTiles123_42
+    21300086: ExportTiles123_43
+    21300088: ExportTiles123_44
+    21300090: ExportTiles123_45
+    21300092: ExportTiles123_46
+    21300094: ExportTiles123_47
+    21300096: ExportTiles123_48
+    21300098: ExportTiles123_49
+    21300100: ExportTiles123_50
+    21300102: ExportTiles123_51
+    21300104: ExportTiles123_52
+    21300106: ExportTiles123_53
+    21300108: ExportTiles123_54
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 267
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ExportTiles123_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c53f2f0d82a34f49830bb6978b2fe8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_1
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1600.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf497d49b3f14136988c3da1a21530a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_2
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1600.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223cd01623de14fe097bd425b1a6629f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_3
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1600.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b94d3bd2cc74571ac995cbe8f72b89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_4
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1600.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f4ea9199da945a69dd175d4a8c6837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_5
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1600.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f222c469961dd45f1863a87c76cf2a4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_6
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1600.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86859010043c74d79a7772d3f48c7459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_7
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1600.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b72c4c8c1ae4ac38820cd02b39dc2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1334.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e93d8ad2e2f42f6ac61962d811c512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1334.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4598349dce3246beb701bf0c9a3ba27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_10
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1334.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c4ad7211319492a8c5eef95e4cff99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_11
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1334.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657cee89d4c464a7e9b1e57ea482e814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_12
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1334.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b74644d210ea48eb9a4e57bf427b4b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_13
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1334.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86671679eff6d400fa108102f6b0f928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_14
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1334.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4421c5c8ed60144dbba09f6dc4b26fc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1068.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57fafef888d84544a50e6ccd0c95cda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1068.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24711e8d0dea84a608c7a743939ff213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_17
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1068.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3577bda335f994b0fbd00cb0cb7c68d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_18
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1068.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed1372f2dc7c43938b7570dd44b9c85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_19
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1068.2856
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c22cfda8f8dc403da369e08e9141566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 802.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621639305b6c443cab13114a16b4dcbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_21
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 802.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff58035172ee4e54b1f66a39ac34660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_22
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 802.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b054e319e814af0a550ddccd8c7c33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_23
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 802.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d1c3854df394c1892161b5cb6bc5f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_24
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 802.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6cbe54cd6b44770945cfe46a56c09a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_25
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 802.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871bb37f7abcf47dcbac52964b95a2f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_26
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 802.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f29e49deb65474a8b3ffb9ba8d8cf3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_27
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 802.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2afc9fe06b6746a1969bf9247b22195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc76321ad7354e15840c8e8c2b22d0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_29
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c4bf9602a2e46f19e3ea9d881da200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_30
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecfe275bc8bd463aaf57ad82988ce42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_31
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a522d584730439daa214f911d5b773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_32
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd19fca64c4c4b96bbca9dab606971b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_33
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5db0ef6c7ffb4146afe6ba9f3b4064a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_34
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63ec32b9dc4f48e098007e81073e79f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_35
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdfc4bd12057410c886484136ad67f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_36
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 536.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bbd14697bc04256b909e1d596518e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6bfc7ab13bb04fa09bb2d987dfa4452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_38
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3599f4272c8c4a89a25f50732c7f8be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_39
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a7058590fce4969ae8579f1fad30db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_40
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c95c98b4ee64407be32861bdd29b08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_41
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29da079222f2149b9aa00df71cf09661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_42
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bb26408c292482992ba2c3ca16d79d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_43
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c47ee02c895a447e978bc48f1f88ef6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_44
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1343df47a0f24edb8f083ef8df6c9ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_45
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 270.2857
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6562ea9daad7d477d90c15135170c93d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27431ecca323b485d9c22a3d85e2b106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_47
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcafb2812f03d40f683680e0dae1d86f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_48
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b3f88c48aea4cc99c68d3e8d847f0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_49
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df55eebb087294c58a556d52a6fafeee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_50
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e86a33f3516741aaad42eb479085a97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_51
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8d165332df04a519f3be3e7aa5aad9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_52
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e8ad0b5041a47b886808ecc4dfcba0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_53
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4b4456501c048cab53477fdcbb6f76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExportTiles123_54
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 4.2857056
+        width: 266.7
+        height: 266.7143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa79debb507834d71b66b7fad1734da5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 74feae42ce4624dd08e702b1b21f23e9
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

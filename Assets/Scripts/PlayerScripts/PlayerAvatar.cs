@@ -7,7 +7,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 {
     public GameObject FloatingTextPrefab;
     public int points = 20;
-    public float health = 100;
+    public float health;
 
     // for animations //
     private Rigidbody2D myRigidbody;
@@ -40,6 +40,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         change = Vector3.zero;
         //offlineGM = FindObjectOfType<OfflineGameManager>();
         offlineGM = OfflineGameManager.instance;
+        health = offlineGM.curHealth;
     }
 
     // Update is called once per frame
@@ -89,37 +90,31 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         if (stream.IsWriting && photonView.IsMine)
         {
             stream.SendNext(change);
-            stream.SendNext(health);
+            stream.SendNext(offlineGM.curHealth);
         }
         else
         {
             change = (Vector3)stream.ReceiveNext();
             UpdateAnimation();
-            health = (float)stream.ReceiveNext();
+            offlineGM.curHealth = (float)stream.ReceiveNext();
         }
 
     }
 
     public void getPoints()
     {
-        health += points;
-        if (health >= 100)
+        offlineGM.curHealth += points;
+        if (offlineGM.curHealth >= 100)
         {
-            health = 100;
+            offlineGM.curHealth = 100;
         }
 
         Debug.Log("get " + points + " points");
         if (FloatingTextPrefab)
         {
-            ShowFloatingTextPoints();
+            ShowFloatingTextHealth();
         }
 
-        void ShowFloatingTextPoints()
-        {
-            var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-            go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
-
-        }
     }
 
     void LateUpdate()
@@ -135,8 +130,8 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             Debug.Log("DEAD alr");
             return;
         }
-        health -= damage;
-        if (health <= 0)
+        offlineGM.curHealth -= damage;
+        if (offlineGM.curHealth <= 0)
         {
             isDead = true;
             //var health = int.Parse("dead");
@@ -158,15 +153,16 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             ShowFloatingTextHealth();
         }
 
-        void ShowFloatingTextHealth()
-        {
-            var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-            go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
-            if (health <= 0)
-            {
-                go.GetComponent<TMPro.TextMeshPro>().text = "dead";
+    }
 
-            }
+    void ShowFloatingTextHealth()
+    {
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TMPro.TextMeshPro>().text = offlineGM.curHealth.ToString();
+        if (offlineGM.curHealth <= 0)
+        {
+            go.GetComponent<TMPro.TextMeshPro>().text = "dead";
+
         }
     }
 

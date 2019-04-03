@@ -18,6 +18,7 @@ public class GeneralPortal : MonoBehaviour
             AudioManager.instance.curTheme = curSceneTheme;
             AudioManager.instance.Play(curSceneTheme);
         }
+        SaveGameScript.SaveGame();
     }
 
     void OnTriggerEnter2D(Collider2D other)

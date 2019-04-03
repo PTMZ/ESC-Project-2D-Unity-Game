@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bomb : MonoBehaviour
 {
@@ -14,11 +15,12 @@ public class Bomb : MonoBehaviour
     public float currentRadius = 1f;
 
     bool exploded = false;
-    CircleCollider2D explosionRadius;
+    BoxCollider2D explosionRadius;
+    private OfflineGameManager offlineGM;
 
     void Start()
     {
-        explosionRadius = gameObject.GetComponent<CircleCollider2D>();
+        explosionRadius = gameObject.GetComponent<BoxCollider2D>();
 
     }
 
@@ -50,12 +52,14 @@ public class Bomb : MonoBehaviour
             if (currentRadius < explosionMaxSize)
             {
                 currentRadius += explosionRate;
+                //offlineGM.loadScene();
             }
             else
             {
                 Destroy(gameObject);
+                //SceneManager.GetActiveScene();
             }
-            explosionRadius.radius = currentRadius;
+            explosionRadius.edgeRadius = currentRadius;
         }
     }
 
@@ -66,7 +70,7 @@ public class Bomb : MonoBehaviour
             exploded = true;
         }
 
-        if (collision.gameObject.GetComponent<Rigidbody2D>() != null)
+        if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
         {
             Vector2 target = collision.gameObject.transform.position;
             Vector2 bomb = gameObject.transform.position;
