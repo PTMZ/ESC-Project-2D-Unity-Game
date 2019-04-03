@@ -10,6 +10,9 @@ public class TileSpawner : MonoBehaviour
     public float tileWidth;
     public string fileName;
     public GameObject[] TilePrefabs;
+    public float xOffset = 7.5f;
+    public float yOffset = 5.0f;
+
 
     void Start()
     {
@@ -21,7 +24,7 @@ public class TileSpawner : MonoBehaviour
             string[] vals = lines[i].Split(',');
             for(int j=0; j<columns; j++){
                 int val = int.Parse(vals[j]);
-                Vector3 spawnPos = new Vector3(j*tileWidth,i*tileWidth,0);
+                Vector3 spawnPos = new Vector3(j*tileWidth-xOffset,i*tileWidth-yOffset,0);
                 if(val != -1){
                     Instantiate(TilePrefabs[val], spawnPos, Quaternion.identity);
                 }

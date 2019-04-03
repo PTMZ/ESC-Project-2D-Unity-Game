@@ -97,9 +97,9 @@ MonoBehaviour:
   bomb: {fileID: 7188316109911052366}
   explosionRate: 100
   explosionMaxSize: 100
-  explosionSpeed: 10
+  explosionSpeed: 100
   explosionForce: 1200
-  currentRadius: 1
+  currentRadius: 10
 --- !u!50 &7188316109911052361
 Rigidbody2D:
   serializedVersion: 4
