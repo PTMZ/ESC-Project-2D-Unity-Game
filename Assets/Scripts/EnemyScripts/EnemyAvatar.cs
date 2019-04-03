@@ -79,7 +79,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             isDead = true;
             //transform.Rotate(0, 0, 90, Space.Self);
             animator.SetBool("dead", true);
-            weaponAnim.mySpriteRenderer.enabled = true;
+            weaponAnim.mySpriteRenderer.enabled = false;
         }
 
         if (health < -30)
