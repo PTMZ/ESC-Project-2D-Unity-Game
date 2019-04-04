@@ -3,21 +3,53 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
-{ 
+{
+    public int SceneNumber;
     public Dialogue dialogue;
+
+    //public OfflineGameManager OfflineGM;
+
+    [HideInInspector]
+    public int storyProgress;
 
     void Start()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        storyProgress = OfflineGameManager.instance.storyProgress;
     }
+
     public void TriggerDialogue()
     {
-        StartCoroutine(wait());
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        Debug.Log("Scene is "+SceneNumber);
+        Debug.Log("Story is" + storyProgress);
+        //Checks if is story dialogue
+        if((SceneNumber) == storyProgress)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            storyProgress++;
+            Debug.Log("Story Progressed.");
+        }
+        //else //if not story dialogue
+        //{
+        //    FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        //}
     }
 
     IEnumerator wait()
     {
         yield return null;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.CompareTag("Player"))
+        {
+            if (other.gameObject.GetComponent<PlayerAvatar>().getIsDead())
+            {
+                return;
+            }
+            TriggerDialogue();
+        }
+
     }
 }
