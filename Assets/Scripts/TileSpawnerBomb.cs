@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileSpawner : MonoBehaviour
+public class TileSpawnerBomb : MonoBehaviour
 {
     // Start is called before the first frame update
     public int columns;
@@ -20,15 +20,17 @@ public class TileSpawner : MonoBehaviour
         TextAsset textFile = (TextAsset)Resources.Load(fileName);
         string info = textFile.text;
         string[] lines = info.Split('\n');
-        for(int i=0; i<rows; i++){
+        for (int i = 0; i < rows; i++)
+        {
             string[] vals = lines[i].Split(',');
-            for(int j=0; j<columns; j++){
+            for (int j = 0; j < columns; j++)
+            {
                 int val = int.Parse(vals[j]);
-                if(val != -1){
-                    Vector3 spawnPos = new Vector3(j * tileWidth - xOffset, i * tileWidth - yOffset, 0);
+                Vector3 spawnPos = new Vector3(j * tileWidth - xOffset, i * tileWidth - yOffset, 0);
+                if (val != -1)
+                {
                     Instantiate(TilePrefabs[val], spawnPos, Quaternion.identity);
                 }
-               
 
             }
         }
