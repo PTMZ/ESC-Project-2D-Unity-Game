@@ -22,6 +22,8 @@ public class OfflineGameManager : MonoBehaviour
     public float curBulletSpeed;
     [HideInInspector]
     public float curCooldown;
+    [HideInInspector]
+    public int storyProgress;
 
     [HideInInspector]
     public float moveMult = 1;

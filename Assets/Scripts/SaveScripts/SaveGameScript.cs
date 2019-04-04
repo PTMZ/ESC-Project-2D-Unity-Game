@@ -8,17 +8,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveGameScript
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public static void SaveGame()
     {
@@ -27,6 +16,7 @@ public class SaveGameScript
 
         // 2
         BinaryFormatter bf = new BinaryFormatter();
+        //Debug.Log(Application.persistentDataPath);
         FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
         bf.Serialize(file, save);
         file.Close();
@@ -43,6 +33,7 @@ public class SaveGameScript
         save.health = OfflineGameManager.instance.curHealth;
         save.curAttack = OfflineGameManager.instance.curAttack;
         save.curScene = SceneManager.GetActiveScene().name;
+        save.storyProgress = OfflineGameManager.instance.storyProgress;
 
         return save;
     }
@@ -62,6 +53,8 @@ public class SaveGameScript
             OfflineGameManager.instance.curHealth = save.health;
             OfflineGameManager.instance.curAttack = save.curAttack;
             SceneManager.LoadScene(save.curScene);
+            OfflineGameManager.instance.storyProgress = save.storyProgress;
+
             AudioManager.instance.StopAll();
             Debug.Log("Game Loaded");
         }

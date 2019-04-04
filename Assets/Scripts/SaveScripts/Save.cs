@@ -8,4 +8,5 @@ public class Save
     public float health;
     public int curAttack;
     public string curScene;
+    public int storyProgress;
 }
