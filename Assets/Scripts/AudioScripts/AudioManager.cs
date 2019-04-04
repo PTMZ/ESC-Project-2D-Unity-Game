@@ -168,5 +168,20 @@ public class AudioManager : MonoBehaviour
         
     }
 
+    //currently only stops areasounds
+    public void StopAll()
+    {
+        foreach (Sound s in areaSounds)
+        {
+            try
+            {
+                s.source.Stop();
+            }catch(Exception e)
+            {
+
+            }
+        }
+    }
+
 
 }

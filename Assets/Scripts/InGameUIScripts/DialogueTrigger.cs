@@ -12,7 +12,12 @@ public class DialogueTrigger : MonoBehaviour
     }
     public void TriggerDialogue()
     {
+        StartCoroutine(wait());
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
+    IEnumerator wait()
+    {
+        yield return null;
+    }
 }

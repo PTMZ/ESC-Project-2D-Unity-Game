@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public GameObject dialogueBox;
     //public Animator animator;
-
+    public GameObject pauseButton;
     public static DialogueManager instance;
 
     private Queue<string> sentences;
@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueText.text += letter;
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 yield return null;
             }
@@ -92,12 +92,14 @@ public class DialogueManager : MonoBehaviour
     void timeStart()
     {
         Debug.Log("Game time restarted at end of dialogue.");
+        pauseButton.SetActive(true);
         Time.timeScale = 1.0f;
     }
 
     void timeStop()
     {
         Debug.Log("Game time stoppped for dialogue.");
+        pauseButton.SetActive(false);
         Time.timeScale = 0.0f;
     }
 }
