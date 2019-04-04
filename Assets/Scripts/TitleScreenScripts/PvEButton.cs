@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 
 [System.Serializable]
-public class SinglePlayerButton : MonoBehaviour
+public class PvEButton : MonoBehaviour
 {
     public GameObject NewGameBut;
     public GameObject ContinueBut;
     public GameObject SinglePlayerBut;
     public GameObject MultiplayerBut;
-    public int count = 0;
+    public int count;
 
 
     void Start()
@@ -21,22 +21,9 @@ public class SinglePlayerButton : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("TitleScreen");
             count++;
+            Debug.Log("Played once");
         }
 
-    }
-
-    public void toPrologue()
-    {
-        FindObjectOfType<AudioManager>().Play("Select");
-        StartCoroutine(wait(2));
-
-    }
-
-    public void continueFromSave()
-    {
-        FindObjectOfType<AudioManager>().Play("Select");
-        SaveGameScript.LoadGame();
-        return;//to add save data here.
     }
 
     public void ClickSinglePlayer()
@@ -48,15 +35,5 @@ public class SinglePlayerButton : MonoBehaviour
         NewGameBut.SetActive(true);
     }
 
-    private IEnumerator wait(float Time)
-    {
-        Time = Time / 3;
-        yield return new WaitForSeconds(Time);
-        SceneManager.LoadScene("Prologue");
-        //if (gameObject != null)
-        //{
-        //    PhotonNetwork.Destroy(gameObject);
-        //}
 
-    }
 }
