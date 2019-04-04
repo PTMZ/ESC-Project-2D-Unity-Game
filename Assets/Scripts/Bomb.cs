@@ -17,7 +17,6 @@ public class Bomb : MonoBehaviour
 
     bool exploded = false;
     BoxCollider2D explosionRadius;
-    private OfflineGameManager offlineGM;
 
     void Start()
     {
