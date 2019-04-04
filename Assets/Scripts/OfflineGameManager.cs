@@ -47,7 +47,7 @@ public class OfflineGameManager : MonoBehaviour
 
         if(AudioManager.instance == null){
             AudioManager.instance = (AudioManager)Instantiate(AMPrefab, Vector3.zero, Quaternion.identity);
-            AudioManager.instance.Play("Theme");
+            //AudioManager.instance.Play("Theme");
         }
 
         //Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity);

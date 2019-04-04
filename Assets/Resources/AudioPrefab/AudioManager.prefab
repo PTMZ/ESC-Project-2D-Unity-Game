@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7505711939213581932}
   - component: {fileID: 7505711939213581933}
   m_Layer: 0
-  m_Name: InGameAudioManager
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,6 +67,24 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: TitleScreen
+    clip: {fileID: 8300000, guid: ef32f8699998e99459a14651a02e7553, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Select
+    clip: {fileID: 8300000, guid: b6dd18c276335414d8355ba0a9998f6a, type: 3}
+    volume: 0.529
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Back
+    clip: {fileID: 8300000, guid: 10df7b5d39e93e44a937143094f77e5d, type: 3}
+    volume: 0.529
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
   playerSounds:
   - name: CookieMelee

@@ -62,6 +62,7 @@ public class SaveGameScript
             OfflineGameManager.instance.curHealth = save.health;
             OfflineGameManager.instance.curAttack = save.curAttack;
             SceneManager.LoadScene(save.curScene);
+            AudioManager.instance.StopAll();
             Debug.Log("Game Loaded");
         }
         else
