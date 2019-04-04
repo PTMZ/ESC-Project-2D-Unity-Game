@@ -8,6 +8,7 @@ public class Bomb : MonoBehaviour
     public GameObject bomb;
 
     //public float explosionDelay = 1f;
+    public float bombDamage = 100;
     public float explosionRate = 10f;
     public float explosionMaxSize = 1f;
     public float explosionSpeed = 1f;
@@ -70,7 +71,15 @@ public class Bomb : MonoBehaviour
             exploded = true;
         }
 
-        if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
+
+        if (collision.gameObject.GetComponent<PlayerAvatar>() != null)
+        {
+            //Debug.Log("I am hit, my name is " + collision.gameObject.name);
+            collision.gameObject.GetComponent<PlayerAvatar>().getHit(bombDamage);
+
+        }
+
+            if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
         {
             Vector2 target = collision.gameObject.transform.position;
             Vector2 bomb = gameObject.transform.position;
