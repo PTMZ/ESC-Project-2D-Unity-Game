@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
         cooldownTimeStamp = Time.time;
         dashTimeStamp = Time.time;
-        offsetY = new Vector3(0,1.5f,0);
+        offsetY = new Vector3(0,0.4f,0);
 
         myself = GetComponent<PlayerAvatar>();
         rb2d = GetComponent<Rigidbody2D>();
@@ -92,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate(){
         rb2d.AddForce(myself.change * speed * offlineGM.moveMult);
+        //rb2d.velocity = myself.change * speed * offlineGM.moveMult;
+        //rb2d.velocity *= 0.9f;
     }
 
     void LateUpdate(){

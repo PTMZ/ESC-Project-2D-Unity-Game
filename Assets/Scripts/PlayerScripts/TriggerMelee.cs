@@ -14,6 +14,10 @@ public class TriggerMelee : MonoBehaviour
             active = false;
             other.gameObject.GetComponent<EnemyAvatar>().getHit(5);
         }
+        if (other.CompareTag("DestroyableBox") && active){
+            active = false;
+            other.gameObject.GetComponent<Destroyable>().getHit(5);
+        }
     }
 
     public void startMelee(){
