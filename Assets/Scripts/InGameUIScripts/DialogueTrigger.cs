@@ -19,8 +19,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        Debug.Log("Scene is "+SceneNumber);
-        Debug.Log("Story is" + storyProgress);
+        Debug.Log("Current scene is " + SceneNumber);
+        Debug.Log("Current story is " + storyProgress);
         //Checks if is story dialogue
         if((SceneNumber) == storyProgress)
         {
