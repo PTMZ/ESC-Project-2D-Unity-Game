@@ -867,7 +867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rawImage: {fileID: 548581224}
-  prologue: {fileID: 548581223}
+  prologueVid: {fileID: 548581223}
+  prologueText: {fileID: 672920793}
   videoPlayer: {fileID: 1652898844}
   audioSource: {fileID: 1652898847}
 --- !u!82 &1652898847
