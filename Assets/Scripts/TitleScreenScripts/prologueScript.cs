@@ -13,7 +13,7 @@ public class prologueScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void TriggerDialogue()
     {
         if (c == 0)
         {

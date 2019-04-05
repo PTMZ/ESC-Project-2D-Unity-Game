@@ -8,7 +8,8 @@ using UnityEngine.Video;
 public class streamVideo : MonoBehaviour
 {
     public RawImage rawImage;
-    public GameObject prologue;
+    public GameObject prologueVid;
+    public prologueScript prologueText;
     public VideoPlayer videoPlayer;
     public AudioSource audioSource;
 
@@ -36,16 +37,23 @@ public class streamVideo : MonoBehaviour
         videoPlayer.Play();
         audioSource.Play();
 
+        StartCoroutine(AfterPrologueVid());
+
+    }
+
+    IEnumerator AfterPrologueVid()
+    {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(1);
         while (videoPlayer.isPlaying)
         {
             yield return waitForSeconds;
         }
-        prologue.SetActive(false);
-
+        prologueVid.SetActive(false);
+        prologueText.TriggerDialogue();     
     }
-
-    //IEnumerator VideoIsPrepared()
-    //{
-
-    //}
+    private IEnumerator wait(float Time)
+    {
+        Time = Time / 6;
+        yield return new WaitForSeconds(Time);
+    }
 }
