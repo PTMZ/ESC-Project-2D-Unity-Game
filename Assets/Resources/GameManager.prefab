@@ -46,12 +46,14 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 3162012306475875567, guid: 6ccf10a20e24ba94b9e53a05c44c8dc9,
     type: 3}
   bulletPrefabs:
-  - {fileID: 7660789902638988858, guid: 4fa35d71fc6944f4fa6f8a663a5ca903, type: 3}
+  - {fileID: 5599429497765469887, guid: 5b70de8960d7c754785c8b80c28d27f2, type: 3}
   - {fileID: 1840396686924460243, guid: 4497437b39074f2419f886a4a5567c98, type: 3}
   LocalPlayer: {fileID: 0}
+  curHealth: 100
   curDamage: 0
   curBulletSpeed: 0
   curCooldown: 0
+  storyProgress: 0
   moveMult: 1
   dmgMult: 1
   curAttack: 0

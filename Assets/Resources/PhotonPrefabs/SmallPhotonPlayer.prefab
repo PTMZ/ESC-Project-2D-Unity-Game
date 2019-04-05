@@ -35,7 +35,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.175, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.883}
-  m_Children: []
+  m_Children:
+  - {fileID: 2335787962836831835}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -115,13 +116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aced311c4aedf074f8b25110b6952456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  dashSpeed: 700
-  myRadius: 1.75
+  speed: 15
+  dashSpeed: 350
+  myRadius: 1
   recoil: 20
   cooldown: 0.3
   dashCooldown: 0.5
-  camSize: 4
+  camSize: 3
   OGMPrefab: {fileID: 5124912877195135947, guid: ac24cd021392a844ead5895b789da0c6,
     type: 3}
 --- !u!114 &3162012306475875567
@@ -141,6 +142,8 @@ MonoBehaviour:
   points: 20
   health: 100
   change: {x: 0, y: 0, z: 0}
+  OGMPrefab: {fileID: 5124912877195135947, guid: ac24cd021392a844ead5895b789da0c6,
+    type: 3}
 --- !u!114 &8991627783951586577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,3 +239,64 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &2650794310923402733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2335787962836831835}
+  - component: {fileID: 6023192009018099684}
+  - component: {fileID: 601070488619041004}
+  m_Layer: 0
+  m_Name: MeleeCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2335787962836831835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650794310923402733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 983765761472854999}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6023192009018099684
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650794310923402733}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.7}
+  serializedVersion: 2
+  m_Radius: 1.8
+--- !u!114 &601070488619041004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650794310923402733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a67eaf34140377448b5efca1c5ae4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
