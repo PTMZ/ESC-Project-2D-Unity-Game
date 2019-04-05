@@ -27,9 +27,10 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb2d;
 
     private bool prevButton = false;
-    public float camSize = 11.0f;
+    public float camSize = 4.0f;
 
     private OfflineGameManager offlineGM;
+    public OfflineGameManager OGMPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,9 @@ public class PlayerMovement : MonoBehaviour
         melee = GetComponentInChildren<TriggerMelee>();
 
         //offlineGM = FindObjectOfType<OfflineGameManager>();
+        if(OfflineGameManager.instance == null){
+            Instantiate(OGMPrefab);
+        }
         offlineGM = OfflineGameManager.instance;
         Camera.main.orthographicSize = camSize;
 

@@ -17,6 +17,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     private bool isDead = false;
 
     private OfflineGameManager offlineGM;
+    public OfflineGameManager OGMPrefab;
 
     private void Awake()
     {
@@ -39,6 +40,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         change = Vector3.zero;
         //offlineGM = FindObjectOfType<OfflineGameManager>();
+        if(OfflineGameManager.instance == null){
+            Instantiate(OGMPrefab);
+        }
         offlineGM = OfflineGameManager.instance;
         health = offlineGM.curHealth;
     }

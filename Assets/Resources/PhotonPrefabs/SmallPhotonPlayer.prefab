@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1913458783
-  m_SortingLayer: 4
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eb4eb2b8f05a7934fa9b6e368366e9b5, type: 3}
   m_Color: {r: 0.9843138, g: 0.9843138, b: 0.9843138, a: 1}
@@ -121,7 +121,9 @@ MonoBehaviour:
   recoil: 20
   cooldown: 0.3
   dashCooldown: 0.5
-  camSize: 11
+  camSize: 4
+  OGMPrefab: {fileID: 5124912877195135947, guid: ac24cd021392a844ead5895b789da0c6,
+    type: 3}
 --- !u!114 &3162012306475875567
 MonoBehaviour:
   m_ObjectHideFlags: 0

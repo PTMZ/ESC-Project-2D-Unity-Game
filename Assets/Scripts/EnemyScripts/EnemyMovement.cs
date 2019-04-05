@@ -21,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
     public Transform[] patrolPoints;
     private bool patrolState = true;
     private int curPatrol = 0;
-    private float closeDist = 1.5f;
+    private float closeDist = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,11 @@ public class EnemyMovement : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         myself = GetComponent<EnemyAvatar>();
         pAvatar = player.GetComponent<PlayerAvatar>();
+        Debug.Log(pAvatar.points);
         weaponAnim = GetComponent<WeaponAnim>();
+        if(patrolPoints.Length == 0){
+            patrolState = false;
+        }
     }
 
     // Update is called once per frame
@@ -64,9 +68,10 @@ public class EnemyMovement : MonoBehaviour
             //target.transform.position = transform.position;  // Comment above line and uncomment this line to make enemy stationary
         }
 
-        Vector3 midPos = transform.position + new Vector3(0, 1, 0);
+        Vector3 midPos = transform.position + new Vector3(0, 0.5f, 0);
+        //Debug.Log((midPos - player.transform.position).magnitude);
+        Debug.Log(pAvatar == null);
         if (pAvatar != null && (midPos - player.transform.position).magnitude <= hitRadius){
-
             if(Time.time > cooldownTimeStamp){
                 cooldownTimeStamp = Time.time + cooldown;
                 pAvatar.getHit(meleeDmg);   // Comment this line out to stop enemy from attacking
