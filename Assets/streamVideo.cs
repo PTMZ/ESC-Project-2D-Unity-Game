@@ -17,6 +17,7 @@ public class streamVideo : MonoBehaviour
     void Awake()
     {
         StartCoroutine(PlayVideo());
+        //prologue.SetActive(false);
     }
 
     IEnumerator PlayVideo()
@@ -39,7 +40,7 @@ public class streamVideo : MonoBehaviour
         {
             yield return waitForSeconds;
         }
-        prologue.SetActive(true);
+        prologue.SetActive(false);
 
     }
 
