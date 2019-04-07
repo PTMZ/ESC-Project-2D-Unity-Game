@@ -62,6 +62,9 @@ TagManager:
   - name: GrassLayer
     uniqueID: 1670636489
     locked: 0
+  - name: Splash
+    uniqueID: 2395574715
+    locked: 0
   - name: BulletLayer
     uniqueID: 25196303
     locked: 0
@@ -70,4 +73,7 @@ TagManager:
     locked: 0
   - name: Charlayer
     uniqueID: 1913458783
+    locked: 0
+  - name: Lighting Layer
+    uniqueID: 3945738559
     locked: 0
