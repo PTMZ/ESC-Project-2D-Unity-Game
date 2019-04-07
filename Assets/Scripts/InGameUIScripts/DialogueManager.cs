@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
 
     private Queue<string> sentences;
+    private Queue<string> names;
 
     void Awake()
     {
@@ -34,19 +35,28 @@ public class DialogueManager : MonoBehaviour
         void Start()
     {
         sentences = new Queue<string>();
+        names = new Queue<string>();
     }
     public void StartDialogue(Dialogue dialogue)
     {
         //animator.setBool("IsOpen",true);
 
-        nameText.text = dialogue.name;
+        //nameText.text = dialogue.name.First();
         dialogueBox.SetActive(true);
         sentences.Clear();
+        names.Clear();
 
-        foreach(string sentence in dialogue.sentences)
+        foreach (string name in dialogue.name)
+        {
+            names.Enqueue(name);
+        }
+        //string name1 = names.Dequeue();
+        //nameText.text = name1;
+        foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
+
         timeStop();
         DisplayNextSentence();
     }
@@ -58,7 +68,8 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-
+        string name = names.Dequeue();
+        nameText.text = name;
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
