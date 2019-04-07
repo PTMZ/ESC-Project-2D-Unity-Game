@@ -19,14 +19,14 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        Debug.Log("Current scene is " + SceneNumber);
-        Debug.Log("Current story is " + storyProgress);
+        //Debug.Log("Current scene is " + SceneNumber);
+        //Debug.Log("Current story is " + storyProgress);
         //Checks if is story dialogue
         if((SceneNumber) == storyProgress)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             storyProgress++;
-            Debug.Log("Story Progressed.");
+            //Debug.Log("Story Progressed.");
         }
         //else //if not story dialogue
         //{

@@ -52,10 +52,10 @@ public class SaveGameScript
             // Update Game state
             OfflineGameManager.instance.curHealth = save.health;
             OfflineGameManager.instance.curAttack = save.curAttack;
-            SceneManager.LoadScene(save.curScene);
             OfflineGameManager.instance.storyProgress = save.storyProgress;
 
             AudioManager.instance.StopAll();
+            SceneManager.LoadScene(save.curScene);
             Debug.Log("Game Loaded");
         }
         else

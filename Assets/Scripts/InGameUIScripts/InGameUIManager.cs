@@ -26,9 +26,11 @@ public class InGameUIManager : MonoBehaviour
 
     public void ReturnToTitleScreen()
     {
+
         AudioManager.instance.StopAll();
         //Destroy(AudioManager.instance);
         //Destroy(OfflineGameManager.instance);
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("TitleScreen");
     }
 }

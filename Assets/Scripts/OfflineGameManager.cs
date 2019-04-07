@@ -101,7 +101,8 @@ public class OfflineGameManager : MonoBehaviour
 
     public void loadScene()
     {
-        StartCoroutine(DelayLoad(2));
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //StartCoroutine(DelayLoad(2));
     }
 
     private IEnumerator DelayLoad(float timing)
