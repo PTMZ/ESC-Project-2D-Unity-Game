@@ -17,6 +17,7 @@ public class streamVideo : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        StopAllCoroutines();
         StartCoroutine(PlayVideo());
         //prologue.SetActive(false);
     }
@@ -29,6 +30,7 @@ public class streamVideo : MonoBehaviour
         while (!videoPlayer.isPrepared)
         {
             yield return waitForSeconds;
+            Debug.Log("Preparing Video");
         }
 
         rawImage.texture = videoPlayer.texture;
@@ -37,7 +39,15 @@ public class streamVideo : MonoBehaviour
         videoPlayer.Play();
         audioSource.Play();
 
-        StartCoroutine(AfterPrologueVid());
+        //StartCoroutine(AfterPrologueVid());
+        //WaitForSeconds waitForSeconds = new WaitForSeconds(1);
+        while (videoPlayer.isPlaying)
+        {
+            Debug.Log("Video is playing");
+            yield return waitForSeconds;
+        }
+        prologueVid.SetActive(false);
+        prologueText.TriggerDialogue();
 
     }
 

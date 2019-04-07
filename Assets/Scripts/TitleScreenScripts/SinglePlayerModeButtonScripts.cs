@@ -9,7 +9,10 @@ public class SinglePlayerModeButtonScripts : MonoBehaviour
     public void toPrologue()
     {
         FindObjectOfType<AudioManager>().Play("Select");
-        StartCoroutine(wait(2));
+        Debug.Log("New game button is clicked.");
+        //StartCoroutine(wait(2));
+        StopAllCoroutines();
+        SceneManager.LoadScene("Prologue");
 
     }
 
@@ -24,6 +27,7 @@ public class SinglePlayerModeButtonScripts : MonoBehaviour
     {
         Time = Time / 3;
         yield return new WaitForSeconds(Time);
+        Debug.Log("Finished wait");
         SceneManager.LoadScene("Prologue");
         //if (gameObject != null)
         //{

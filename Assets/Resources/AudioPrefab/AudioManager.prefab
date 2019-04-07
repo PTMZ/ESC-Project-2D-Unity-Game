@@ -70,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: TitleScreen
     clip: {fileID: 8300000, guid: ef32f8699998e99459a14651a02e7553, type: 3}
-    volume: 1
+    volume: 0.702
     pitch: 1
     loop: 1
     source: {fileID: 0}
