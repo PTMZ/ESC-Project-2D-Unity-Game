@@ -7709,7 +7709,7 @@ GameObject:
   - component: {fileID: 1381500350}
   - component: {fileID: 1381500349}
   m_Layer: 0
-  m_Name: TileSpawner
+  m_Name: TileSpawnerGrass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8100,7 +8100,7 @@ GameObject:
   - component: {fileID: 2131198509}
   - component: {fileID: 2131198508}
   m_Layer: 0
-  m_Name: TileSpawner (1)
+  m_Name: TileSpawnerBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

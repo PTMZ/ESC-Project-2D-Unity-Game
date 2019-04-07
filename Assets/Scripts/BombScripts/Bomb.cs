@@ -78,12 +78,12 @@ public class Bomb : MonoBehaviour
 
         }
 
-            if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
+        if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
         {
             Vector2 target = collision.gameObject.transform.position;
             Vector2 bomb = gameObject.transform.position;
             Vector2 direction = explosionForce * (target - bomb);
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction);   
         }
 
     }

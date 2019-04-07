@@ -19,6 +19,11 @@ public class MinesweeperGrass : MonoBehaviour
         }
     }
 
+    public void getBombed()
+    {
+        Destroy(gameObject);
+    }
+
     void LateUpdate()
     {
         mySpriteRenderer.sortingOrder = (int)Camera.main.WorldToScreenPoint(mySpriteRenderer.bounds.min).y * -1;
