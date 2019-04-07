@@ -9,8 +9,13 @@ public class GeneralPortal : MonoBehaviour
     public string nextSceneTheme;
     public string nextSceneName;
 
+    public AudioManager AMPrefab;
+
     void Start(){
         Debug.Log("Portal Start code");
+        if(AudioManager.instance == null){
+            Instantiate(AMPrefab);
+        }
         Debug.Log(AudioManager.instance.curTheme);
         Debug.Log(string.Compare(AudioManager.instance.curTheme, ""));
         if(string.Compare(AudioManager.instance.curTheme, "") == 0){

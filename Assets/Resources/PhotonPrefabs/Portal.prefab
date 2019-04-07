@@ -74,6 +74,8 @@ MonoBehaviour:
   curSceneTheme: Theme
   nextSceneTheme: Theme
   nextSceneName: tut2
+  AMPrefab: {fileID: 7505711939213581933, guid: bee3cd2c2b2a5bd4ba947cc139d5d966,
+    type: 3}
 --- !u!212 &9117138169387218341
 SpriteRenderer:
   m_ObjectHideFlags: 0

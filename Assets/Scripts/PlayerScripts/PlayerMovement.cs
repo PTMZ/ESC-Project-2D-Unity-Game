@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         Camera.main.orthographicSize = camSize;
 
         cooldown = offlineGM.curCooldown;
+        Debug.Log("Player finished starting");
     }
 
     // Update is called once per frame
