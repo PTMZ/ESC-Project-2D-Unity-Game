@@ -18,11 +18,16 @@ public class GeneralPortal : MonoBehaviour
         }
         Debug.Log(AudioManager.instance.curTheme);
         Debug.Log(string.Compare(AudioManager.instance.curTheme, ""));
+        /*
         if(string.Compare(AudioManager.instance.curTheme, "") == 0){
             Debug.Log("Start Theme");
             AudioManager.instance.curTheme = curSceneTheme;
             AudioManager.instance.Play(curSceneTheme);
         }
+        */
+        Debug.Log("Start Theme");
+        AudioManager.instance.curTheme = curSceneTheme;
+        AudioManager.instance.Play(curSceneTheme);
         SaveGameScript.SaveGame();
     }
 
