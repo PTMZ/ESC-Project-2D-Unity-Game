@@ -8354,5 +8354,15 @@ PrefabInstance:
       propertyPath: nextSceneName
       value: B4_AVHQ
       objectReference: {fileID: 0}
+    - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
+        type: 3}
+      propertyPath: curSceneTheme
+      value: TutorialTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
+        type: 3}
+      propertyPath: nextSceneTheme
+      value: TutorialTheme
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 911ae7e4e60f519449a75df4f9b943e7, type: 3}
