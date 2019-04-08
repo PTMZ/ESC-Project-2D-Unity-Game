@@ -74,6 +74,9 @@ TagManager:
   - name: Charlayer
     uniqueID: 1913458783
     locked: 0
+  - name: WeaponLayer2
+    uniqueID: 1570159731
+    locked: 0
   - name: Lighting Layer
     uniqueID: 3945738559
     locked: 0
