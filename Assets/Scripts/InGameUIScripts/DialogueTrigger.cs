@@ -14,19 +14,19 @@ public class DialogueTrigger : MonoBehaviour
 
     void Start()
     {
-        storyProgress = OfflineGameManager.instance.storyProgress;
+        //storyProgress = OfflineGameManager.instance.storyProgress;
     }
 
     public void TriggerDialogue()
     {
-        //Debug.Log("Current scene is " + SceneNumber);
-        //Debug.Log("Current story is " + storyProgress);
+        Debug.Log("Current scene is " + SceneNumber);
+        Debug.Log("Current story is " + OfflineGameManager.instance.storyProgress);
         //Checks if is story dialogue
-        if((SceneNumber) == storyProgress)
+        if ((SceneNumber) == OfflineGameManager.instance.storyProgress)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            storyProgress++;
-            //Debug.Log("Story Progressed.");
+            OfflineGameManager.instance.storyProgress++;
+            Debug.Log("Story Progressed. Story is now " + OfflineGameManager.instance.storyProgress);
         }
         //else //if not story dialogue
         //{
@@ -48,6 +48,7 @@ public class DialogueTrigger : MonoBehaviour
             {
                 return;
             }
+            Debug.Log("Triggering Dialogue " + SceneNumber);
             TriggerDialogue();
         }
 
