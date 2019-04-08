@@ -39,6 +39,11 @@ public class Pickups : MonoBehaviour
                 offlineGM.UpdateWeapon(0);
                 Destroy(gameObject);
             }
+            if(type == 3){
+                GameObject door = GameObject.Find("MyDoor");
+                door.SetActive(false);
+                Destroy(gameObject);
+            }
             //SceneManager.LoadScene("ConstrictLevel");
         }
 
