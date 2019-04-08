@@ -17,6 +17,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     public WeaponAnim weaponAnim;
     private bool isDead = false;
     private bool facingLeft = false;
+    public Animator exMarkAnim;
 
     private OfflineGameManager offlineGM;
 
@@ -130,5 +131,10 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 
     public bool getDead(){
         return isDead;
+    }
+
+    public void TriggerExclamationMark()
+    {
+        exMarkAnim.Play("exmark", -1, 1.0f);
     }
 }

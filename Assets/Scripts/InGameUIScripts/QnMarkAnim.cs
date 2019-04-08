@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class punctuationMarkAnim : MonoBehaviour
+public class QnMarkAnim : MonoBehaviour
 {
-    public Animator qnMarkAnimator;
-    public Animator exMarkAnimator;
+    public Animator puncMarkAnimator;
     //public SpriteRenderer qnMarkRenderer;
     //public SpriteRenderer exMarkRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        qnMarkAnimator = GetComponent<Animator>();
-        exMarkAnimator = GetComponent<Animator>();
+        puncMarkAnimator = GetComponent<Animator>();
         //qnMarkRenderer = GetComponent<SpriteRenderer>();
         //exMarkRenderer = GetComponent<SpriteRenderer>();
 
