@@ -9,7 +9,8 @@ public class TriggerVision : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
-            enemyMovement.changePatrol(false);
+            //enemyMovement.changePatrol(false);
+            enemyMovement.inVisionRange = true;
         }
     }
 }

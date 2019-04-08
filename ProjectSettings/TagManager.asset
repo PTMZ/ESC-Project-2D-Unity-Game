@@ -10,6 +10,7 @@ TagManager:
   - Constrict
   - DestroyableBox
   - Enemy
+  - Trail
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - 
   - Portal
-  - 
-  - 
+  - Bullet
+  - Walls
   - 
   - 
   - 

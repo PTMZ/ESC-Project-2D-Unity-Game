@@ -15,9 +15,13 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     private Animator animator;
     private SpriteRenderer mySpriteRenderer;
     private bool isDead = false;
+    private punctuationMarkAnim puncAnim;
 
     private OfflineGameManager offlineGM;
     public OfflineGameManager OGMPrefab;
+
+    public GameObject[] trails;
+    public int curTrail = -1;
 
     private void Awake()
     {
@@ -38,6 +42,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        puncAnim = GetComponent<punctuationMarkAnim>();
         change = Vector3.zero;
         //offlineGM = FindObjectOfType<OfflineGameManager>();
         if(OfflineGameManager.instance == null){
@@ -45,6 +50,10 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         }
         offlineGM = OfflineGameManager.instance;
         health = offlineGM.curHealth;
+
+        foreach(GameObject t in trails){
+            t.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -172,6 +181,42 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     public bool getIsDead(){
         return isDead;
+    }
+
+
+    public void TriggerExclamationMark()
+    {
+        puncAnim.exMarkAnimator.SetBool("setExMark", true);
+        StartCoroutine(setExFalseAfter(0.5f));
+    }
+    IEnumerator setExFalseAfter(float x)
+    {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(x);
+        yield return waitForSeconds;
+        puncAnim.exMarkAnimator.SetBool("setExMark", false);
+    }
+
+    public void TriggerQuestionMark()
+    {
+        puncAnim.qnMarkAnimator.SetBool("setQnMark", true);
+        StartCoroutine(setQnFalseAfter(0.5f));
+
+    }
+
+    IEnumerator setQnFalseAfter(float x)
+    {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(x);
+        yield return waitForSeconds;
+        puncAnim.qnMarkAnimator.SetBool("setQnMark", false);
+    }
+    public void updateTrail(int trailNum){
+        if(curTrail != -1){
+            trails[curTrail].SetActive(false);
+        }
+        if(trailNum != -1){
+            trails[trailNum].SetActive(true);
+        }
+        curTrail = trailNum;
     }
 
     /*
