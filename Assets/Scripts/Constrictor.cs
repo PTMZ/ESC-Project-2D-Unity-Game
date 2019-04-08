@@ -4,22 +4,39 @@ using UnityEngine;
 
 public class Constrictor : MonoBehaviour
 {
-    public GameObject[] waypoints;
-    int current = 0;
     public float speed;//speed of the game object
-    double WPradius = 0.5;
+
+    Vector3 rightDir = new Vector3(100, 0, 0);
+
+    private bool isHit = false;
+    private float cooldownTimeStamp;
+    public float cooldown = 0.1f;
+
+    public float dmg = 100;
+    private PlayerAvatar pAvatar;
+
     // Start is called before the first frame update
-    void Update()
+    void Start(){
+        pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();
+    }
+
+    void FixedUpdate()
     {
-        if (Vector2.Distance(waypoints[current].transform.position, transform.position) < WPradius)//distance between waypoint and player within radius
-        {
-            current++;
-            if (current >= waypoints.Length)
-            {
-                current = 0;
-            }
+        transform.position = Vector2.MoveTowards(transform.position, transform.position + rightDir, Time.deltaTime * speed);
+        if(isHit && Time.time > cooldownTimeStamp){
+            cooldownTimeStamp = Time.time + cooldown;
+            pAvatar.getHit(dmg);
         }
-        transform.position = Vector2.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);//moving the object towards the waypoint
         
+        void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Player"))
+            isHit = true;
+        }
+        void OnTriggerExit2D(Collider2D other){
+            if(other.CompareTag("Player"))
+                isHit = false;
+        }
     }
 }
+
+
