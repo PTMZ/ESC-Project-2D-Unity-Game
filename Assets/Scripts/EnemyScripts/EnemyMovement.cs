@@ -25,6 +25,15 @@ public class EnemyMovement : MonoBehaviour
     private int curPatrol = 0;
     private float closeDist = 0.5f;
 
+    private LayerMask maskLayer;
+    public float visionRadius;
+    public bool isBlocked = true;
+    public bool inVisionRange = false;
+    public bool inHitRange = false;
+
+    public bool cd;
+    private Vector3 midPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +46,9 @@ public class EnemyMovement : MonoBehaviour
         if(patrolPoints.Length == 0){
             patrolState = false;
         }
+
+
+        maskLayer = LayerMask.GetMask("TransparentFX");
     }
 
     // Update is called once per frame
@@ -63,17 +75,27 @@ public class EnemyMovement : MonoBehaviour
         Vector3 updPos = mypos.position - transform.position;
         myself.change = updPos;
         
-
-        transform.position = mypos.position;
+        midPos = mypos.position;
+        transform.position = midPos - new Vector3(0, 0.5f, 0);
+        //transform.position = mypos.position - new Vector3(0, 0.5f, 0);
         if(player != null){
             //target.transform.position = player.transform.position;
             //target.transform.position = transform.position;  // Comment above line and uncomment this line to make enemy stationary
         }
 
-        Vector3 midPos = transform.position + new Vector3(0, 0.5f, 0);
+        //Vector3 midPos = transform.position + new Vector3(0, 0.5f, 0);
         //Debug.Log((midPos - player.transform.position).magnitude);
+        RaycastHit2D hitInfo = Physics2D.Raycast(midPos, player.transform.position - midPos, visionRadius, maskLayer);
+        isBlocked = (hitInfo.collider != null);
+
         Debug.Log(pAvatar == null);
-        if (pAvatar != null && (midPos - player.transform.position).magnitude <= hitRadius){
+        if(inVisionRange && !isBlocked){
+            changePatrol(false);
+        }
+        if(!inVisionRange){
+            changePatrol(true);
+        }
+        if (inHitRange){
             if(Time.time > cooldownTimeStamp){
                 cooldownTimeStamp = Time.time + cooldown;
                 pAvatar.getHit(meleeDmg);   // Comment this line out to stop enemy from attacking
@@ -83,6 +105,7 @@ public class EnemyMovement : MonoBehaviour
                 weaponAnim.weaponAnimator.Play("baton_attack", -1);
             }
         }
+        cd = (Time.time > cooldownTimeStamp);
     }
     
     public void changePatrol(bool newState){
@@ -94,6 +117,6 @@ public class EnemyMovement : MonoBehaviour
 
     private bool reachedPatrol(){
         //Debug.Log((transform.position - patrolPoints[curPatrol].position).magnitude);
-        return ( (transform.position - patrolPoints[curPatrol].position).magnitude < closeDist );
+        return ( (midPos - patrolPoints[curPatrol].position).magnitude < closeDist );
     }
 }

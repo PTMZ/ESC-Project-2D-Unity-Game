@@ -8,7 +8,8 @@ public class TriggerEscape : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other){
         if (other.CompareTag("Player")){
-            enemyMovement.changePatrol(true);
+            //enemyMovement.changePatrol(true);
+            enemyMovement.inVisionRange = false;
         }
     }
 }
