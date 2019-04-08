@@ -10,6 +10,7 @@ public class TriggerEscape : MonoBehaviour
         if (other.CompareTag("Player")){
             //enemyMovement.changePatrol(true);
             enemyMovement.inVisionRange = false;
+            //other.gameObject.GetComponent<PlayerAvatar>().updateTrail(0);
         }
     }
 }
