@@ -10,10 +10,10 @@ public class Bomb : MonoBehaviour
     //public float explosionDelay = 1f;
     public float bombDamage = 100;
     public float explosionRate = 10f;
-    public float explosionMaxSize = 1f;
-    public float explosionSpeed = 1f;
+    public float explosionMaxSize = 10f;
+    public float explosionSpeed = 1000f;
     public float explosionForce = 1000f;
-    public float currentRadius = 1f;
+    public float currentRadius = 0.1f;
 
     bool exploded = false;
     BoxCollider2D explosionRadius;
@@ -82,8 +82,13 @@ public class Bomb : MonoBehaviour
         {
             Vector2 target = collision.gameObject.transform.position;
             Vector2 bomb = gameObject.transform.position;
-            Vector2 direction = explosionForce * (target - bomb);
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction);
+            Vector2 direction1 =  explosionForce * (target - bomb);
+            Vector2 direction2 = - 0.5f * explosionForce * (target - bomb);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction1);
+            //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction2);
+            //new WaitForSecondsRealtime(1);
+            //Vector2 direction2 = -0.5f * explosionForce * (collision.gameObject.transform.position - gameObject.transform.position);
+            //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction2);
         }
 
     }

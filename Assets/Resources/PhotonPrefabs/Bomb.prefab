@@ -95,12 +95,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomb: {fileID: 7188316109911052366}
-  bombDamage: 10
+  bombDamage: 100
   explosionRate: 100
   explosionMaxSize: 100
   explosionSpeed: 100
   explosionForce: 1200
-  currentRadius: 1
+  currentRadius: 0.1
 --- !u!50 &7188316109911052361
 Rigidbody2D:
   serializedVersion: 4
@@ -146,5 +146,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.01, y: 1.01}
   m_EdgeRadius: 0
