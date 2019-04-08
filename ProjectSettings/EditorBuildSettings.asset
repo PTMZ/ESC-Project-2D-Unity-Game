@@ -56,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MSP_04.unity
     guid: 55e6ad1e1a2d3436998929e547d3bea7
+  - enabled: 1
+    path: Assets/Scenes/PW_01.unity
+    guid: 04000c6eeff5140a8b190c595092d62e
+  - enabled: 1
+    path: Assets/Scenes/PW_02.unity
+    guid: f45d49e66deab4d9e9608e8c59e38b64
   m_configObjects: {}
