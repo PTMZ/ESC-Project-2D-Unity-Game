@@ -20,6 +20,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     private OfflineGameManager offlineGM;
     public OfflineGameManager OGMPrefab;
 
+    public GameObject[] trails;
+    public int curTrail = -1;
+
     private void Awake()
     {
         if (!PhotonNetwork.IsConnected)
@@ -47,6 +50,10 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         }
         offlineGM = OfflineGameManager.instance;
         health = offlineGM.curHealth;
+
+        foreach(GameObject t in trails){
+            t.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -176,6 +183,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         return isDead;
     }
 
+
     public void TriggerExclamationMark()
     {
         puncAnim.exMarkAnimator.SetBool("setExMark", true);
@@ -200,6 +208,15 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         WaitForSeconds waitForSeconds = new WaitForSeconds(x);
         yield return waitForSeconds;
         puncAnim.qnMarkAnimator.SetBool("setQnMark", false);
+    }
+    public void updateTrail(int trailNum){
+        if(curTrail != -1){
+            trails[curTrail].SetActive(false);
+        }
+        if(trailNum != -1){
+            trails[trailNum].SetActive(true);
+        }
+        curTrail = trailNum;
     }
 
     /*
