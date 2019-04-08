@@ -85,6 +85,9 @@ public class EnemyMovement : MonoBehaviour
     
     public void changePatrol(bool newState){
         patrolState = newState;
+        if(patrolState == false){
+            // Instantiate Exlamation mark here
+        }
     }
 
     private bool reachedPatrol(){

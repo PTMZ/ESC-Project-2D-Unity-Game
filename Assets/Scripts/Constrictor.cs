@@ -18,6 +18,7 @@ public class Constrictor : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();
+        cooldownTimeStamp = Time.time;
     }
 
     void FixedUpdate()
@@ -28,14 +29,15 @@ public class Constrictor : MonoBehaviour
             pAvatar.getHit(dmg);
         }
         
-        void OnTriggerEnter2D(Collider2D other){
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player"))
             isHit = true;
-        }
-        void OnTriggerExit2D(Collider2D other){
-            if(other.CompareTag("Player"))
-                isHit = false;
-        }
+    }
+    void OnTriggerExit2D(Collider2D other){
+        if(other.CompareTag("Player"))
+            isHit = false;
     }
 }
 
