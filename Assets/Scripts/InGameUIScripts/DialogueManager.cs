@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string name = names.Dequeue();
-        nameText.text = name;
+        nameText.text =  name + ":";
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
