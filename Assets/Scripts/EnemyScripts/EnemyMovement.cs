@@ -11,6 +11,8 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 offset;
     private EnemyAvatar myself;
     private PlayerAvatar pAvatar;
+
+    [HideInInspector]
     public WeaponAnim weaponAnim;
 
     private float cooldownTimeStamp;

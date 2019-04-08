@@ -3701,9 +3701,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 865407527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750d9d8322d08314a8b37f72d5b1f168, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dbab74ae1e53c643b0029b4680cca45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punctuationAnimator: {fileID: 0}
+  mySpriteRenderer: {fileID: 0}
 --- !u!1001 &916105346
 PrefabInstance:
   m_ObjectHideFlags: 0

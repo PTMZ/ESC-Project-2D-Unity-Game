@@ -15,6 +15,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     private Animator animator;
     private SpriteRenderer mySpriteRenderer;
     private bool isDead = false;
+    private punctuationMarkAnim puncAnim;
 
     private OfflineGameManager offlineGM;
     public OfflineGameManager OGMPrefab;
@@ -38,6 +39,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        puncAnim = GetComponent<punctuationMarkAnim>();
         change = Vector3.zero;
         //offlineGM = FindObjectOfType<OfflineGameManager>();
         if(OfflineGameManager.instance == null){
@@ -172,6 +174,32 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     public bool getIsDead(){
         return isDead;
+    }
+
+    public void TriggerExclamationMark()
+    {
+        puncAnim.exMarkAnimator.SetBool("setExMark", true);
+        StartCoroutine(setExFalseAfter(0.5f));
+    }
+    IEnumerator setExFalseAfter(float x)
+    {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(x);
+        yield return waitForSeconds;
+        puncAnim.exMarkAnimator.SetBool("setExMark", false);
+    }
+
+    public void TriggerQuestionMark()
+    {
+        puncAnim.qnMarkAnimator.SetBool("setQnMark", true);
+        StartCoroutine(setQnFalseAfter(0.5f));
+
+    }
+
+    IEnumerator setQnFalseAfter(float x)
+    {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(x);
+        yield return waitForSeconds;
+        puncAnim.qnMarkAnimator.SetBool("setQnMark", false);
     }
 
     /*

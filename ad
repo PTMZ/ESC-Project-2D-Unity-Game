@@ -1,0 +1,130 @@
+[33med57bf6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m HEAD@{0}: commit: Exclaimation mark anim state diagram edfixed.
+[33m1c374a6[m HEAD@{1}: commit: Exclaimation mark anim state diagram edfixed.
+[33ma37b0f0[m HEAD@{2}: commit: B3 dialogue completed
+[33mb55d5f7[m HEAD@{3}: commit: dialogue for constricting tut completed
+[33m644b25f[m HEAD@{4}: pull: Fast-forward
+[33mfb9df7c[m HEAD@{5}: commit: B4 dialogues written
+[33m6c87111[m HEAD@{6}: pull: Fast-forward
+[33m0f8f94c[m HEAD@{7}: commit: Dialogue trigger fixed
+[33mb60246b[m HEAD@{8}: pull: Fast-forward
+[33m4374bf5[m HEAD@{9}: reset: moving to HEAD
+[33m4374bf5[m HEAD@{10}: pull: Merge made by the 'recursive' strategy.
+[33m18bfd81[m HEAD@{11}: reset: moving to HEAD
+[33m18bfd81[m HEAD@{12}: commit: editing dialogue
+[33m7e45534[m HEAD@{13}: commit: Moved obsolete scenes into obsolete folder
+[33me9ad76d[m HEAD@{14}: pull: Fast-forward
+[33m32315d2[m HEAD@{15}: reset: moving to HEAD
+[33m32315d2[m HEAD@{16}: pull: Merge made by the 'recursive' strategy.
+[33m9c29924[m HEAD@{17}: reset: moving to HEAD
+[33m9c29924[m HEAD@{18}: commit: dialogue improved. Now can have two names.
+[33m7f29f94[m HEAD@{19}: pull: Fast-forward
+[33m3c6b930[m HEAD@{20}: commit (merge): project version Merge branch 'master' of https://github.com/PTMZ/ESC-Project
+[33m3d033e2[m HEAD@{21}: commit: edits to prologue video
+[33m8c56dea[m HEAD@{22}: reset: moving to HEAD
+[33m8c56dea[m HEAD@{23}: reset: moving to HEAD
+[33m8c56dea[m HEAD@{24}: reset: moving to HEAD
+[33m8c56dea[m HEAD@{25}: pull: Merge made by the 'recursive' strategy.
+[33m38cae56[m HEAD@{26}: reset: moving to HEAD
+[33m38cae56[m HEAD@{27}: commit: Prologue vid finalised, but sometimes hang.
+[33m0e931ba[m HEAD@{28}: commit: Removed unneeded files
+[33m309d20c[m HEAD@{29}: pull: Merge made by the 'recursive' strategy.
+[33m67a2c73[m HEAD@{30}: commit: Prologue scene improved.
+[33m4dbaec9[m HEAD@{31}: commit: Prologue cutscene ready.
+[33m1003868[m HEAD@{32}: pull: Fast-forward
+[33m997f3ce[m HEAD@{33}: pull: Merge made by the 'recursive' strategy.
+[33mbd3f80b[m HEAD@{34}: commit: Story progress save added.
+[33m02cf9e3[m HEAD@{35}: pull: Fast-forward
+[33mb9637f3[m HEAD@{36}: commit: old dialogue box prefab put into donttouch folder
+[33m07422f3[m HEAD@{37}: pull: Merge made by the 'recursive' strategy.
+[33med8d2dc[m HEAD@{38}: commit: Ingameui prefab created. Dialogue manager object, dialogue box, pause menu, and game controls inside.
+[33mf1d248f[m HEAD@{39}: pull: Merge made by the 'recursive' strategy.
+[33m59b89ed[m HEAD@{40}: commit: pause menu completed. Next step is audio manager object control.
+[33m89d6bd6[m HEAD@{41}: reset: moving to 89d6bd6
+[33m993970e[m HEAD@{42}: reset: moving to HEAD
+[33m993970e[m HEAD@{43}: commit: pause menu completed.
+[33m89d6bd6[m HEAD@{44}: pull: Merge made by the 'recursive' strategy.
+[33mde3e2c2[m HEAD@{45}: commit: trying to make InGameUI prefab
+[33me619711[m HEAD@{46}: pull: Merge made by the 'recursive' strategy.
+[33m736b414[m HEAD@{47}: reset: moving to HEAD
+[33m736b414[m HEAD@{48}: commit: Trying to make InGameUI prefab
+[33m7effd09[m HEAD@{49}: commit: resize test
+[33m1ce05b8[m HEAD@{50}: pull: Merge made by the 'recursive' strategy.
+[33mbc91373[m HEAD@{51}: commit: Menu added new game and continue button
+[33m6a18ab3[m HEAD@{52}: pull: Merge made by the 'recursive' strategy.
+[33m87a19b4[m HEAD@{53}: commit: during pause, animation continues.
+[33mdaf1a48[m HEAD@{54}: pull: Merge made by the 'recursive' strategy.
+[33m3ad8f47[m HEAD@{55}: reset: moving to HEAD
+[33m3ad8f47[m HEAD@{56}: commit: Dialogue Box update ver 9999999
+[33mbdbf8b9[m HEAD@{57}: commit: Dialogue system bug fixed
+[33m3f9ded0[m HEAD@{58}: commit: Dialogue System completed, prefab created.
+[33m398de2b[m HEAD@{59}: reset: moving to HEAD
+[33m398de2b[m HEAD@{60}: commit: Dialogue structure up, only left to solve null reference.
+[33m768cb0b[m HEAD@{61}: commit: Dialogue structure up, only left to solve null reference.
+[33m27e4f1d[m HEAD@{62}: commit: conflicts fixed.
+[33ma5d6bab[m HEAD@{63}: commit (merge): Merge branch 'master' of https://github.com/PTMZ/ESC-Project
+[33m382c0c6[m HEAD@{64}: commit: Audio,withsome conflicting files
+[33mbab2133[m HEAD@{65}: commit: Audio manager revamped. More versatile
+[33ma979b20[m HEAD@{66}: pull: Fast-forward
+[33ma2f9b93[m HEAD@{67}: commit: audio fix try 2
+[33m3b22639[m HEAD@{68}: commit: Audio added back for titlescreen
+[33m566bf13[m HEAD@{69}: pull: Fast-forward
+[33m046eb4a[m HEAD@{70}: commit: Reorganised scripts for prologue,dialogue,and audio
+[33m49ad1a3[m HEAD@{71}: pull: Fast-forward
+[33mf309bbf[m HEAD@{72}: commit: Renamed stages to B1,B2,B3,B4,B5.
+[33m5582b2e[m HEAD@{73}: reset: moving to HEAD
+[33m5582b2e[m HEAD@{74}: pull: Merge made by the 'recursive' strategy.
+[33m523553c[m HEAD@{75}: commit: Audio scripts revamped, uses a manager now. Button SFX added for titlescreen.
+[33m496d95a[m HEAD@{76}: pull: Merge made by the 'recursive' strategy.
+[33m309e9de[m HEAD@{77}: commit: dialogue fading added. Font improved.
+[33m4783daf[m HEAD@{78}: pull: Merge made by the 'recursive' strategy.
+[33mc5028bb[m HEAD@{79}: pull: Merge made by the 'recursive' strategy.
+[33mcf07406[m HEAD@{80}: pull: Merge made by the 'recursive' strategy.
+[33m35fde01[m HEAD@{81}: reset: moving to HEAD
+[33m35fde01[m HEAD@{82}: pull: Merge made by the 'recursive' strategy.
+[33m58e96b5[m HEAD@{83}: reset: moving to HEAD
+[33m58e96b5[m HEAD@{84}: commit: prologue scene added.
+[33m5212a84[m HEAD@{85}: commit: Dialogue system script implemented with animation
+[33mc7b4228[m HEAD@{86}: commit: dialogue system script added.
+[33m67a4859[m HEAD@{87}: commit: gaussian bg for pvplobby
+[33meabe4de[m HEAD@{88}: pull: Merge made by the 'recursive' strategy.
+[33m7f469a9[m HEAD@{89}: pull: Merge made by the 'recursive' strategy.
+[33m2feb79e[m HEAD@{90}: commit: Dialogue added to escapeLevel
+[33m927c9ce[m HEAD@{91}: commit: gaussian blur for title screen
+[33m9f3bdf1[m HEAD@{92}: commit: removed duplicated files and meta
+[33m8b5cc08[m HEAD@{93}: commit: removed menu
+[33mfbc94ff[m HEAD@{94}: pull: Fast-forward
+[33mc82e254[m HEAD@{95}: commit: Upon pressing singlerplayer, no double count of music playing
+[33m06c2552[m HEAD@{96}: commit: music added. Need to find ways to stop/change music now.
+[33m63636f8[m HEAD@{97}: pull: Merge made by the 'recursive' strategy.
+[33mc7cbc24[m HEAD@{98}: commit: title screen and multiplayer lobby added.
+[33mcbfbab4[m HEAD@{99}: pull: Fast-forward
+[33m74a2de6[m HEAD@{100}: reset: moving to HEAD
+[33m74a2de6[m HEAD@{101}: pull: Fast-forward
+[33m8cff5d4[m HEAD@{102}: pull: Fast-forward
+[33mb8cf24b[m HEAD@{103}: pull: Fast-forward
+[33m018814e[m HEAD@{104}: reset: moving to HEAD
+[33m018814e[m HEAD@{105}: reset: moving to HEAD
+[33m018814e[m HEAD@{106}: reset: moving to HEAD
+[33m018814e[m HEAD@{107}: reset: moving to HEAD
+[33m018814e[m HEAD@{108}: commit: some bgm, sound effect, and bgm
+[33mefc2648[m HEAD@{109}: pull: Fast-forward
+[33ma9fff40[m HEAD@{110}: pull: Fast-forward
+[33m6ad4870[m HEAD@{111}: reset: moving to HEAD
+[33m6ad4870[m HEAD@{112}: pull: Fast-forward
+[33mf192def[m HEAD@{113}: pull: Fast-forward
+[33m4712e24[m HEAD@{114}: commit: Fonts and Dialogue boxes
+[33m274f736[m HEAD@{115}: commit: font and dialogue boxes added
+[33m0b0198c[m HEAD@{116}: pull -ff: Fast-forward
+[33mb423c7c[m HEAD@{117}: pull: Fast-forward
+[33m1bf4be2[m HEAD@{118}: pull: Fast-forward
+[33m34d284a[m HEAD@{119}: commit: rev03 of class diagram
+[33m28f7004[m HEAD@{120}: pull: Fast-forward
+[33mae642a2[m HEAD@{121}: pull: Fast-forward
+[33m0952ee5[m HEAD@{122}: pull: Fast-forward
+[33mf0d294f[m HEAD@{123}: pull: Fast-forward
+[33m7baf907[m HEAD@{124}: commit: rev02 of class diagram
+[33m1875bb9[m HEAD@{125}: pull: Fast-forward
+[33m15193b0[m HEAD@{126}: commit: Class Diagram.rev01 added.
+[33m92a28f0[m HEAD@{127}: commit: Meeting images added. Reorganised Folders.
+[33m5fc19e9[m HEAD@{128}: commit: Old Game Design, story, Brainstorm Added. Old Use Case Diagrams Added as well.
+[33m95811ac[m HEAD@{129}: clone: from https://github.com/PTMZ/ESC-Project.git
