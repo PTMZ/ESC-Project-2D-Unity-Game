@@ -5379,7 +5379,7 @@ GameObject:
   - component: {fileID: 1102945163}
   - component: {fileID: 1102945162}
   - component: {fileID: 1102945161}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: StoryProgDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8238,6 +8238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MachineBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 1414422507288687152, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6062daddf7e75684f993a924191b80f1, type: 2}
     - target: {fileID: 6787351499280437812, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8385,11 +8390,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6805acb4acc58d047883b7845922082d,
         type: 3}
-    - target: {fileID: 1414422507288687152, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6062daddf7e75684f993a924191b80f1, type: 2}
     - target: {fileID: 2734638694052709792, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
       propertyPath: weaponAnimator
@@ -8614,7 +8614,7 @@ GameObject:
   - component: {fileID: 1744282698}
   - component: {fileID: 1744282700}
   - component: {fileID: 1744282699}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
