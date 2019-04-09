@@ -1,0 +1,137 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyMovement : MonoBehaviour
+{
+
+    public Transform mypos;
+    public GameObject target;
+    private GameObject player;
+    private Vector3 offset;
+    private EnemyAvatar myself;
+    private PlayerAvatar pAvatar;
+    public WeaponAnim weaponAnim;
+
+    private float cooldownTimeStamp;
+    public float cooldown = 0.5f;
+    public float hitRadius = 3;
+    public float meleeDmg = 10;
+
+    public Transform[] patrolPoints;
+    private bool patrolState = true;
+    private int curPatrol = 0;
+    private float closeDist = 0.5f;
+
+    private LayerMask maskLayer;
+    public float visionRadius;
+    public bool isBlocked = true;
+    public bool inVisionRange = false;
+    public bool inHitRange = false;
+
+    public bool cd;
+    private Vector3 midPos;
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        offset = new Vector3(0, -1.7f, 0);
+        player = GameObject.FindWithTag("Player");
+        myself = GetComponent<EnemyAvatar>();
+        pAvatar = player.GetComponent<PlayerAvatar>();
+        Debug.Log(pAvatar.points);
+        weaponAnim = GetComponent<WeaponAnim>();
+        if(patrolPoints.Length == 0){
+            patrolState = false;
+        }
+
+        midPos = mypos.position;
+
+        maskLayer = LayerMask.GetMask("TransparentFX");
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+        if(patrolState){
+            target.transform.position = patrolPoints[curPatrol].position;
+            if(reachedPatrol()){
+                curPatrol = (curPatrol + 1) % patrolPoints.Length;
+                Debug.Log("REACHED");
+                Debug.Log(curPatrol);
+            }
+        }
+        else{
+            if (player != null)
+            {
+                target.transform.position = player.transform.position;
+            }   
+        }
+    }
+
+
+    private int triggerCount = 0;
+    void FixedUpdate()
+    {
+        if(myself.getDead()){
+            return;
+        }
+        Vector3 updPos = mypos.position - midPos;
+        myself.change = updPos;
+        
+        midPos = mypos.position;
+        transform.position = midPos - new Vector3(0, 0.5f, 0);
+        //transform.position = mypos.position - new Vector3(0, 0.5f, 0);
+        //if(player != null){
+            //target.transform.position = player.transform.position;
+            //target.transform.position = transform.position;  // Comment above line and uncomment this line to make enemy stationary
+        //}
+
+        //Vector3 midPos = transform.position + new Vector3(0, 0.5f, 0);
+        //Debug.Log((midPos - player.transform.position).magnitude);
+        if(player != null)
+        {
+            RaycastHit2D hitInfo = Physics2D.Raycast(midPos, player.transform.position - midPos, visionRadius, maskLayer);
+            isBlocked = (hitInfo.collider != null);
+        }
+
+
+        Debug.Log(pAvatar == null);
+        if(inVisionRange && !isBlocked){
+            if (triggerCount == 0)
+            {
+                myself.TriggerExclamationMark();
+                triggerCount++;
+            }
+            changePatrol(false);
+        }
+        if(!inVisionRange){
+            changePatrol(true);
+        }
+        if (inHitRange){
+            if(Time.time > cooldownTimeStamp){
+                cooldownTimeStamp = Time.time + cooldown;
+                pAvatar.getHit(meleeDmg);   // Comment this line out to stop enemy from attacking
+                Debug.Log("ENEMY ATTACK");
+                // Play attack animation here
+                //AudioManager.instance.Play("GuardMelee");
+                weaponAnim.weaponAnimator.Play("baton_attack", -1);
+            }
+        }
+        cd = (Time.time > cooldownTimeStamp);
+    }
+    
+    public void changePatrol(bool newState){
+        patrolState = newState;
+        if(patrolState == false){
+            // Instantiate Exlamation mark here
+        }
+    }
+
+    private bool reachedPatrol(){
+        //Debug.Log((transform.position - patrolPoints[curPatrol].position).magnitude);
+        return ( (midPos - patrolPoints[curPatrol].position).magnitude < closeDist );
+    }
+}
