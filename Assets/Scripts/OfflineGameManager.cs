@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class OfflineGameManager : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class OfflineGameManager : MonoBehaviour
     [HideInInspector]
     public PlayerAvatar LocalPlayer;
     [HideInInspector]
-    public float curHealth = 100;
+    public float curHealth = maxHealth;
+    [HideInInspector]
+    public static float maxHealth = 1;
     [HideInInspector]
     public float curDamage;
     [HideInInspector]
@@ -89,7 +92,7 @@ public class OfflineGameManager : MonoBehaviour
     public void respawnPlayer(GameObject obj)
     {
         Destroy(obj, 2);
-        curHealth = 100;
+        
         StartCoroutine(DelayLoad(2));
     }
 
@@ -108,7 +111,30 @@ public class OfflineGameManager : MonoBehaviour
     private IEnumerator DelayLoad(float timing)
     {
         yield return new WaitForSeconds(timing);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        if (File.Exists(Application.persistentDataPath + "/gamesave.save"))
+        {
+            // 2
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);
+            Save save = (Save)bf.Deserialize(file);
+            file.Close();
+
+            // Update Game state
+            OfflineGameManager.instance.curHealth = maxHealth;
+            OfflineGameManager.instance.curAttack = save.curAttack;
+            OfflineGameManager.instance.storyProgress = save.storyProgress;
+
+            AudioManager.instance.StopAll();
+            SceneManager.LoadScene(save.curScene);
+            Debug.Log("Player Respawned.");
+        }
+        else
+        {
+            curHealth = maxHealth;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
 
     }
 

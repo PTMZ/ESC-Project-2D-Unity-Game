@@ -66,7 +66,10 @@ public class EnemyMovement : MonoBehaviour
             }
         }
         else{
-            target.transform.position = player.transform.position;
+            if (player != null)
+            {
+                target.transform.position = player.transform.position;
+            }   
         }
     }
 
@@ -83,15 +86,19 @@ public class EnemyMovement : MonoBehaviour
         midPos = mypos.position;
         transform.position = midPos - new Vector3(0, 0.5f, 0);
         //transform.position = mypos.position - new Vector3(0, 0.5f, 0);
-        if(player != null){
+        //if(player != null){
             //target.transform.position = player.transform.position;
             //target.transform.position = transform.position;  // Comment above line and uncomment this line to make enemy stationary
-        }
+        //}
 
         //Vector3 midPos = transform.position + new Vector3(0, 0.5f, 0);
         //Debug.Log((midPos - player.transform.position).magnitude);
-        RaycastHit2D hitInfo = Physics2D.Raycast(midPos, player.transform.position - midPos, visionRadius, maskLayer);
-        isBlocked = (hitInfo.collider != null);
+        if(player != null)
+        {
+            RaycastHit2D hitInfo = Physics2D.Raycast(midPos, player.transform.position - midPos, visionRadius, maskLayer);
+            isBlocked = (hitInfo.collider != null);
+        }
+
 
         Debug.Log(pAvatar == null);
         if(inVisionRange && !isBlocked){

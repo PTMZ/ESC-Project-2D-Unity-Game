@@ -31,6 +31,7 @@ public class SaveGameScript
         Save save = new Save();
 
         save.health = OfflineGameManager.instance.curHealth;
+        save.maxHealth = OfflineGameManager.maxHealth;
         save.curAttack = OfflineGameManager.instance.curAttack;
         save.curScene = SceneManager.GetActiveScene().name;
         save.storyProgress = OfflineGameManager.instance.storyProgress;
@@ -51,6 +52,7 @@ public class SaveGameScript
 
             // Update Game state
             OfflineGameManager.instance.curHealth = save.health;
+            OfflineGameManager.maxHealth = save.maxHealth;
             OfflineGameManager.instance.curAttack = save.curAttack;
             OfflineGameManager.instance.storyProgress = save.storyProgress;
 

@@ -10,6 +10,7 @@ public class SinglePlayerModeButtonScripts : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Select");
         Debug.Log("New game button is clicked.");
+        OfflineGameManager.instance.storyProgress = 0;
         //StartCoroutine(wait(2));
         StopAllCoroutines();
         SceneManager.LoadScene("Prologue");

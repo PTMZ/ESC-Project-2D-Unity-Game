@@ -7,6 +7,8 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 {
     public GameObject FloatingTextPrefab;
     public int points = 20;
+
+    [HideInInspector]
     public float health;
 
     // for animations //
@@ -117,9 +119,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     public void getPoints()
     {
         offlineGM.curHealth += points;
-        if (offlineGM.curHealth >= 100)
+        if (offlineGM.curHealth >= OfflineGameManager.maxHealth)
         {
-            offlineGM.curHealth = 100;
+            offlineGM.curHealth = OfflineGameManager.maxHealth;
         }
 
         Debug.Log("get " + points + " points");
@@ -174,7 +176,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         go.GetComponent<TMPro.TextMeshPro>().text = offlineGM.curHealth.ToString();
         if (offlineGM.curHealth <= 0)
         {
-            go.GetComponent<TMPro.TextMeshPro>().text = "dead";
+            go.GetComponent<TMPro.TextMeshPro>().text = "-GAMEOVER-";
 
         }
     }
