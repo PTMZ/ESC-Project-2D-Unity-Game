@@ -12,6 +12,7 @@ public class Pickups : MonoBehaviour
     private OfflineGameManager offlineGM;
     public GameObject[] toActivate;
     public GameObject[] toDeactivate;
+    public DialogueTrigger dialogue;
 
     public void Start(){
         offlineGM = FindObjectOfType<OfflineGameManager>();
@@ -54,6 +55,9 @@ public class Pickups : MonoBehaviour
                     g.SetActive(false);
                 }
                 Destroy(gameObject);
+            }
+            if(dialogue != null){
+                dialogue.TriggerDialogue();
             }
             //SceneManager.LoadScene("ConstrictLevel");
         }
