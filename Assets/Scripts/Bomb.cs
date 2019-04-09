@@ -86,7 +86,14 @@ public class Bomb : MonoBehaviour
 
         }
 
-            if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
+        if (collision.gameObject.GetComponent<EnemyAvatar>() != null)
+        {
+            //Debug.Log("I am hit, my name is " + collision.gameObject.name);
+            collision.gameObject.GetComponent<EnemyAvatar>().getHit(20);
+            Destroy(gameObject);
+
+        }
+        if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
         {
             Vector2 target = collision.gameObject.transform.position;
             Vector2 bomb = gameObject.transform.position;
