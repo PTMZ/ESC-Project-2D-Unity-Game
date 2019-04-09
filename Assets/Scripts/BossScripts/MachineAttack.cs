@@ -19,6 +19,7 @@ public class MachineAttack : MonoBehaviour
 
     private Vector3[] targets = new Vector3[3];
     public LineRenderer[] lineRenderers;
+    private Vector3 offsetY;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class MachineAttack : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         cooldownTimeStamp = Time.time;
         Debug.Log(player.transform.position);
+        offsetY = new Vector3(0, 0.5f, 0);
     }
 
     // Update is called once per frame
@@ -50,7 +52,7 @@ public class MachineAttack : MonoBehaviour
         float dist2 = Random.Range(0.5f, randRadius);
 
         Debug.Log(player.transform.position);
-        targets[0] = player.transform.position;
+        targets[0] = player.transform.position + offsetY;
         targets[1] = targets[0] + new Vector3(Mathf.Cos(angle) * dist, Mathf.Sin(angle) * dist, 0);
         targets[2] = targets[0] + new Vector3(Mathf.Cos(angle2) * dist2, Mathf.Sin(angle2) * dist2, 0);
 
