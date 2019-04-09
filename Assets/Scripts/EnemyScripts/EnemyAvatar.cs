@@ -6,7 +6,7 @@ using Photon.Pun;
 public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 {
     public GameObject FloatingTextPrefab;
-    public float health = 100;
+    public float health;
 
 
     // for animations //

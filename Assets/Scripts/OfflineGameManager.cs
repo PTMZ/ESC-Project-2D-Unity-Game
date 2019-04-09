@@ -65,6 +65,10 @@ public class OfflineGameManager : MonoBehaviour
         //PlayerAvatar.RefreshInstance(ref LocalPlayer, PlayerPrefab);
         //LocalPlayer = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), Vector3.zero, Quaternion.identity).GetComponent<PlayerAvatar>();
         //curAttack = 0;
+        if (curHealth > maxHealth)
+        {
+            curHealth = maxHealth;
+        }
         
     }
 
@@ -114,6 +118,7 @@ public class OfflineGameManager : MonoBehaviour
 
         if (File.Exists(Application.persistentDataPath + "/gamesave.save"))
         {
+            Debug.Log(Application.persistentDataPath);
             // 2
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/gamesave.save", FileMode.Open);

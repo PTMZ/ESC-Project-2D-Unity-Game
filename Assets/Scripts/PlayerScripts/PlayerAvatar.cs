@@ -53,6 +53,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         offlineGM = OfflineGameManager.instance;
         health = offlineGM.curHealth;
 
+
         foreach(GameObject t in trails){
             t.SetActive(false);
         }
