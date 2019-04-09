@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogueText;
     public GameObject dialogueBox;
+    public GameObject dialogueButton;
     //public Animator animator;
     public GameObject pauseButton;
     public static DialogueManager instance;
@@ -32,7 +33,7 @@ public class DialogueManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
-        void Start()
+    void Start()
     {
         sentences = new Queue<string>();
         names = new Queue<string>();
@@ -69,16 +70,17 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         string name = names.Dequeue();
-        nameText.text =  name + ":";
+        nameText.text = name + ":";
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
         //Debug.Log(sentence);
     }
 
-    IEnumerator TypeSentence (string sentence)
+    IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
+        cantContinue();
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
@@ -88,6 +90,17 @@ public class DialogueManager : MonoBehaviour
                 yield return null;
             }
         }
+
+        canContinue();
+    }
+
+    void cantContinue()
+    {
+        dialogueButton.SetActive(false);
+    }
+    void canContinue()
+    {
+        dialogueButton.SetActive(true);
     }
 
 
