@@ -73,7 +73,11 @@ public class Bomb : MonoBehaviour
             exploded = true;
             animator.Play("bomb_explosion", -1);
         }
-
+        if (collision.CompareTag("Enemy"))
+        {
+            exploded = true;
+            animator.Play("bomb_explosion", -1);
+        }
 
         if (collision.gameObject.GetComponent<PlayerAvatar>() != null)
         {

@@ -32,9 +32,10 @@ public class MachineMove : MonoBehaviour
     void Update()
     {
         curStoryProg = OfflineGameManager.instance.storyProgress;
-        if(OfflineGameManager.instance.storyProgress == storyProgActivate){
+        if(OfflineGameManager.instance.storyProgress >= storyProgActivate){
             isActivated = true;
             GetComponent<MachineAttack>().isActivated = true;
+            Debug.Log("attack activated.");
         }
         if(!isActivated){
             return;
@@ -44,6 +45,7 @@ public class MachineMove : MonoBehaviour
     
     void FixedUpdate(){
         if(myself.getDead()){
+            Debug.Log("Machine boss dead?.");
             return;
         }
         Vector3 updPos = mypos.position - midPos;
