@@ -10,6 +10,8 @@ public class Pickups : MonoBehaviour
 
     public int type;
     private OfflineGameManager offlineGM;
+    public GameObject[] toActivate;
+    public GameObject[] toDeactivate;
 
     public void Start(){
         offlineGM = FindObjectOfType<OfflineGameManager>();
@@ -42,6 +44,15 @@ public class Pickups : MonoBehaviour
             if(type == 3){
                 GameObject door = GameObject.Find("MyDoor");
                 door.SetActive(false);
+                Destroy(gameObject);
+            }
+            if(type == 4){
+                foreach(GameObject g in toActivate){
+                    g.SetActive(true);
+                }
+                foreach(GameObject g in toDeactivate){
+                    g.SetActive(false);
+                }
                 Destroy(gameObject);
             }
             //SceneManager.LoadScene("ConstrictLevel");
