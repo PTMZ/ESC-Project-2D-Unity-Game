@@ -15,7 +15,8 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     private Animator animator;
     private SpriteRenderer mySpriteRenderer;
     private bool isDead = false;
-    private punctuationMarkAnim puncAnim;
+    public Animator exMarkAnim;
+    public Animator qnMarkAnim;
 
     private OfflineGameManager offlineGM;
     public OfflineGameManager OGMPrefab;
@@ -42,7 +43,6 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-        puncAnim = GetComponent<punctuationMarkAnim>();
         change = Vector3.zero;
         //offlineGM = FindObjectOfType<OfflineGameManager>();
         if(OfflineGameManager.instance == null){
@@ -186,39 +186,61 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     public void TriggerExclamationMark()
     {
-        puncAnim.exMarkAnimator.SetBool("setExMark", true);
-        StartCoroutine(setExFalseAfter(0.5f));
+        //exMarkAnim.SetBool("setExMark", true);
+        exMarkAnim.Play("exmark", -1, 1.0f);
+        //exMarkAnim.SetBool("setExMark", false);
+        //Debug.Log("Triggered ExMark");
+        //StartCoroutine(setExFalseAfter(0.4f));
+
     }
-    IEnumerator setExFalseAfter(float x)
-    {
-        WaitForSeconds waitForSeconds = new WaitForSeconds(x);
-        yield return waitForSeconds;
-        puncAnim.exMarkAnimator.SetBool("setExMark", false);
-    }
+    //IEnumerator setExFalseAfter(float x)
+    //{
+    //    WaitForSeconds waitForSeconds = new WaitForSeconds(x);
+    //    yield return waitForSeconds;
+    //    exMarkAnim.SetBool("setExMark", false);
+    //}
 
     public void TriggerQuestionMark()
     {
-        puncAnim.qnMarkAnimator.SetBool("setQnMark", true);
-        StartCoroutine(setQnFalseAfter(0.5f));
+        //qnMarkAnim.SetBool("setQnMark", true);
+        //StartCoroutine(setQnFalseAfter(0.4f));
+        qnMarkAnim.Play("qnsmark", -1, 1.0f);
+        //WaitForRealSeconds(0.5f);
+        //qnMarkAnim.SetBool("setQnMark", false);
+
 
     }
+    //IEnumerator setQnFalseAfter(float x)
+    //{
+    //    WaitForSeconds waitForSeconds = new WaitForSeconds(x);
+    //    yield return waitForSeconds;
+    //    qnMarkAnim.SetBool("setQnMark", false);
+    //}
 
-    IEnumerator setQnFalseAfter(float x)
+    //IEnumerator _WaitForRealSeconds(float aTime)
+    //{
+    //    while (aTime > 0f)
+    //    {
+    //        aTime -= Mathf.Clamp(Time.unscaledDeltaTime, 0, 0.2f);
+    //    }
+    //    yield return null;
+    //}
+    //Coroutine WaitForRealSeconds(float aTime)
+    //{
+    //    return StartCoroutine(_WaitForRealSeconds(aTime));
+    //}
+    public void updateTrail(int trailNum)
     {
-        WaitForSeconds waitForSeconds = new WaitForSeconds(x);
-        yield return waitForSeconds;
-        puncAnim.qnMarkAnimator.SetBool("setQnMark", false);
-    }
-    public void updateTrail(int trailNum){
-        if(curTrail != -1){
+        if (curTrail != -1)
+        {
             trails[curTrail].SetActive(false);
         }
-        if(trailNum != -1){
+        if (trailNum != -1)
+        {
             trails[trailNum].SetActive(true);
         }
         curTrail = trailNum;
     }
-
     /*
     public static void RefreshInstance(ref PlayerAvatar player, PlayerAvatar prefab){
         var position = Vector3.zero;

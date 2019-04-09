@@ -34,6 +34,8 @@ public class EnemyMovement : MonoBehaviour
     public bool cd;
     private Vector3 midPos;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +69,8 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+
+    private int triggerCount = 0;
     void FixedUpdate()
     {
         if(myself.getDead()){
@@ -90,6 +94,11 @@ public class EnemyMovement : MonoBehaviour
 
         Debug.Log(pAvatar == null);
         if(inVisionRange && !isBlocked){
+            if (triggerCount == 0)
+            {
+                myself.TriggerExclamationMark();
+                triggerCount++;
+            }
             changePatrol(false);
         }
         if(!inVisionRange){
