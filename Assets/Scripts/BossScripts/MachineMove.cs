@@ -14,12 +14,18 @@ public class MachineMove : MonoBehaviour
     public int storyProgActivate;
     public int curStoryProg;
 
+    private Vector3 midPos;
+    private Vector3 offsetY;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         myself = GetComponent<EnemyAvatar>();
         target.transform.position = transform.position;
+
+        offsetY = new Vector3(0, 1.5f, 0);
+        midPos = transform.position + offsetY;
     }
 
     // Update is called once per frame
@@ -40,10 +46,11 @@ public class MachineMove : MonoBehaviour
         if(myself.getDead()){
             return;
         }
-        Vector3 updPos = mypos.position - transform.position;
-        myself.change = updPos;
+        Vector3 updPos = mypos.position - midPos;
+        myself.change = midPos;
 
-        transform.position = mypos.position;
+        midPos = mypos.position;
+        transform.position = midPos - offsetY;
     }
 
 
