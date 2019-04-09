@@ -15,12 +15,15 @@ public class Bomb : MonoBehaviour
     public float explosionForce = 1000f;
     public float currentRadius = 0.1f;
 
+    public Animator animator;
+
     bool exploded = false;
     BoxCollider2D explosionRadius;
 
     void Start()
     {
         explosionRadius = gameObject.GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -68,6 +71,7 @@ public class Bomb : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             exploded = true;
+            animator.Play("bomb_explosion", -1);
         }
 
 
