@@ -320,6 +320,7 @@ MonoBehaviour:
   change: {x: 0, y: 0, z: 0}
   animator: {fileID: 7731299089577810547}
   weaponAnim: {fileID: 0}
+  exMarkAnim: {fileID: 0}
 --- !u!114 &4265010024831224978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
+  player: {fileID: 0}
   targetPrefab: {fileID: 1746466840000834443, guid: eb60dd43e982f144c97a4311cfd4c4fc,
     type: 3}
   laserHitPointPrefab: {fileID: 7335066356403487667, guid: 4f9e0f60cbfc7ae4f81a50a791410fa9,
@@ -804,6 +806,7 @@ MonoBehaviour:
   change: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   weaponAnim: {fileID: 0}
+  exMarkAnim: {fileID: 0}
 --- !u!1 &7070278628778560979
 GameObject:
   m_ObjectHideFlags: 0
