@@ -49,6 +49,7 @@ public class EnemyMovement : MonoBehaviour
             patrolState = false;
         }
 
+        midPos = mypos.position;
 
         maskLayer = LayerMask.GetMask("TransparentFX");
     }
@@ -76,7 +77,7 @@ public class EnemyMovement : MonoBehaviour
         if(myself.getDead()){
             return;
         }
-        Vector3 updPos = mypos.position - transform.position;
+        Vector3 updPos = mypos.position - midPos;
         myself.change = updPos;
         
         midPos = mypos.position;
