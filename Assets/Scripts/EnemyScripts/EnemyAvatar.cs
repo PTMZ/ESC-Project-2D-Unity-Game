@@ -17,6 +17,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     public WeaponAnim weaponAnim;
     private bool isDead = false;
     private bool facingLeft = false;
+    public bool isMachineBoss = false;
     public Animator exMarkAnim;
 
     private OfflineGameManager offlineGM;
@@ -80,6 +81,10 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             isDead = true;
             //transform.Rotate(0, 0, 90, Space.Self);
             animator.SetBool("dead", true);
+            if (isMachineBoss)
+            {
+                weaponAnim.weaponAnimator.Play("machine_explosion", -1);
+            }
             weaponAnim.mySpriteRenderer.enabled = false;
         }
 
