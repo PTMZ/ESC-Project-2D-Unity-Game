@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAvatar myself;
     //private TriggerMelee melee;
     public GameObject meleeObject;
+    public GameObject dashObject;
+    
     Rigidbody2D rb2d;
 
     private bool prevButton = false;
@@ -35,6 +37,13 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        float alpha = 0.5f;
+        Gradient gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(Color.white, 0.0f), new GradientColorKey(Color.white, 1.0f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
+        );
+        dashObject.GetComponent<TrailRenderer>().colorGradient = gradient;
         //joystick = FindObjectOfType<Joystick>();
         button = FindObjectOfType<MyButton>();
         joystickMove = GameObject.Find("JoystickMove").GetComponent<Joystick>();
@@ -123,6 +132,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Dash(){
+        //dashRenderer.renderer.material.SetColor("_TintColor", new Color(1, 1, 1, 0.5f));
+
         if(Time.time > dashTimeStamp){
             //Debug.Log("DASH");
             //Vector3 upVector = new Vector3(0, 1, 0);
