@@ -1478,6 +1478,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue9
       objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: SceneNumber
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Dead end? Hmmm...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[0]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[1]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: There should be loopholes in their firewall.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Also, be careful of traps created by the Anti-Virus Program.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[2]
+      value: Guide
+      objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1532,51 +1577,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: SceneNumber
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: Dead end? Hmmm...
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[0]
-      value: Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[1]
-      value: Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: There should be loopholes in their firewall.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[2]
-      value: Also, becareful of traps created by the Anti-Virus Program.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[2]
-      value: Guide
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608247, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -7930,6 +7930,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue10
       objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: SceneNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[0]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[1]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: What did I tell you?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Run!
+      objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7984,41 +8019,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: SceneNumber
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[0]
-      value: Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[1]
-      value: Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: What did I tell you?!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: Run!
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4576321564071608247, guid: e78d7652378dd6643b1fe245e7530baf, type: 3}
