@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 offsetY;
     private PlayerAvatar myself;
-    private TriggerMelee melee;
+    //private TriggerMelee melee;
+    public GameObject meleeObject;
     Rigidbody2D rb2d;
 
     private bool prevButton = false;
@@ -45,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
         myself = GetComponent<PlayerAvatar>();
         rb2d = GetComponent<Rigidbody2D>();
-        melee = GetComponentInChildren<TriggerMelee>();
+        //melee = GetComponentInChildren<TriggerMelee>();
+
 
         //offlineGM = FindObjectOfType<OfflineGameManager>();
         if(OfflineGameManager.instance == null){
@@ -129,7 +131,8 @@ public class PlayerMovement : MonoBehaviour
             rb2d.AddForce(myself.change * dashSpeed);
             dashTimeStamp = Time.time + dashCooldown;
 
-            melee.startMelee();
+            //melee.startMelee();
+            meleeObject.SetActive(true);
         }
     }
 }

@@ -22,10 +22,12 @@ public class BulletScript : MonoBehaviourPunCallbacks
         offlineGM = FindObjectOfType<OfflineGameManager>();
         DeathTime = GetComponent<AttackStats>().deathTime;
         bulletDmg = GetComponent<AttackStats>().damage;
-        if(isOnline){
+        if(isOnline && PhotonNetwork.IsMasterClient){
             StartCoroutine(NetworkDestroyEnum(DeathTime));
         }
-        Destroy(gameObject, DeathTime);
+        else{
+            Destroy(gameObject, DeathTime);
+        }
         
     }
 

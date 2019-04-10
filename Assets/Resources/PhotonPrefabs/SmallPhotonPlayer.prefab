@@ -956,6 +956,7 @@ MonoBehaviour:
   recoil: 20
   cooldown: 0.3
   dashCooldown: 0.5
+  meleeObject: {fileID: 5862707663544212867}
   camSize: 3
   OGMPrefab: {fileID: 5124912877195135947, guid: ac24cd021392a844ead5895b789da0c6,
     type: 3}

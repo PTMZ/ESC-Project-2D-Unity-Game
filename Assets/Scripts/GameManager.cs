@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 {
 
     public PlayerAvatar PlayerPrefab;
+    public PlayerAvatar[] playerList;
+
 
     [HideInInspector]
     public PlayerAvatar LocalPlayer;
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     void Start(){
         //PlayerAvatar.RefreshInstance(ref LocalPlayer, PlayerPrefab);
-        LocalPlayer = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer"), Vector3.zero, Quaternion.identity).GetComponent<PlayerAvatar>();
+        LocalPlayer = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SmallPhotonPlayer"), Vector3.zero, Quaternion.identity).GetComponent<PlayerAvatar>();
         if (PhotonNetwork.IsMasterClient){
             //Debug.Log("IS_MASTER");
             //PhotonNetwork.InstantiateSceneObject("Car", new Vector3(0, 1, 20), Quaternion.identity);
@@ -33,11 +35,12 @@ public class GameManager : MonoBehaviourPunCallbacks
     
 
     public static void SpawnBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
-        GameObject bulletInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bullet"), spawnPos, rotation);
+        GameObject bulletInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "SmallBullet"), spawnPos, rotation);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * bulletInstance.GetComponent<AttackStats>().bulletSpeed;
 
         //Destroy(bulletInstance,DeathTime);
         //StartCoroutine(bulletInstance.GetComponent<BulletScript>().NetworkDestroyEnum(DeathTime));
+        
     }
     /*
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer){

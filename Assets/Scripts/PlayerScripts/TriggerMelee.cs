@@ -8,6 +8,10 @@ public class TriggerMelee : MonoBehaviour
     public bool active = false;
     private float duration = 0.3f;
 
+    void OnEnable(){
+        startMelee();
+    }
+
     void OnTriggerEnter2D(Collider2D other){
         
         if (other.CompareTag("Enemy") && active){
@@ -28,5 +32,6 @@ public class TriggerMelee : MonoBehaviour
     private IEnumerator endMelee(){
         yield return new WaitForSeconds(duration);
         active = false;
+        gameObject.SetActive(false);
     }
 }

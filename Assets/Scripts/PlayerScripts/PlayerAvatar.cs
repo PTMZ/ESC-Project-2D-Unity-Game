@@ -158,9 +158,26 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             {
                 Destroy(GetComponent<PlayerMovement>());
             }
-
-            offlineGM.respawnPlayer(gameObject);
+            if (PhotonNetwork.IsConnected){
+                PhotonNetwork.LeaveRoom();
+            }
+            else{
+                offlineGM.respawnPlayer(gameObject);
+            }
+            
         }
+
+        void OnLeftRoom()
+        {
+            PhotonNetwork.Disconnect();
+        }
+
+        void OnDisconnectedFromPhoton()
+        {
+            Debug.Log("OnPhotonPlayerDisconnected");
+
+        }
+
 
         //Debug.Log("I am hit, health is = " + health);
 
