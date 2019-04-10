@@ -29,6 +29,10 @@ public class PhotonLobby : MonoBehaviourPunCallbacks
         
     }
 
+    void Update(){
+        
+    }
+
     public override void OnConnectedToMaster(){
         Debug.Log("Connected to master");
         PhotonNetwork.AutomaticallySyncScene = true;
