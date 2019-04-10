@@ -59,7 +59,7 @@ public class Bomb : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                Destroy(gameObject, 0.2f);
                 //SceneManager.GetActiveScene();
             }
             explosionRadius.edgeRadius = currentRadius;
