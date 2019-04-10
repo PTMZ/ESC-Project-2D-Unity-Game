@@ -710,6 +710,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ad5616fb51ae9a48b932a33aac3e0cf, type: 3}
+--- !u!224 &229898478 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5161427192424312712, guid: 2ad5616fb51ae9a48b932a33aac3e0cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 229898477}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &231253754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,7 +1971,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1496830105}
+  - {fileID: 229898478}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2041,11 +2047,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608247, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.name.Array.size
@@ -2090,6 +2091,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.name.Array.data[2]
       value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608247, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78d7652378dd6643b1fe245e7530baf, type: 3}
@@ -3811,7 +3817,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -6141,12 +6147,6 @@ Transform:
   m_Father: {fileID: 872468423}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &1496830105 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5462215573363200983, guid: 2ad5616fb51ae9a48b932a33aac3e0cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 229898477}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1498637645
 GameObject:
   m_ObjectHideFlags: 0
