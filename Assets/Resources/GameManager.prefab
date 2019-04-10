@@ -46,7 +46,7 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 3162012306475875567, guid: 6ccf10a20e24ba94b9e53a05c44c8dc9,
     type: 3}
   bulletPrefabs:
-  - {fileID: 2874911357803012228, guid: 5b70de8960d7c754785c8b80c28d27f2, type: 3}
+  - {fileID: 5599429497765469887, guid: 5b70de8960d7c754785c8b80c28d27f2, type: 3}
   LocalPlayer: {fileID: 0}
   curHealth: 100
   curDamage: 0
