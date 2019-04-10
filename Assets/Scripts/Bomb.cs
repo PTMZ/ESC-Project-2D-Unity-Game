@@ -97,7 +97,7 @@ public class Bomb : MonoBehaviour
         {
             Vector2 target = collision.gameObject.transform.position;
             Vector2 bomb = gameObject.transform.position;
-            Vector2 direction1 =  explosionForce * (target - bomb);
+            Vector2 direction1 =  2 * explosionForce * (target - bomb);
             Vector2 direction2 = - 0.5f * explosionForce * (target - bomb);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction1);
             //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction2);
