@@ -22,6 +22,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     private OfflineGameManager offlineGM;
     public OfflineGameManager OGMPrefab;
+    private bool isOnline = false;
 
     public GameObject[] trails;
     public int curTrail = -1;
@@ -32,6 +33,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         {
             return;
         }
+        isOnline = true;
         if (!photonView.IsMine && GetComponent<PlayerMovement>() != null)
         {
             Destroy(GetComponent<PlayerMovement>());
@@ -51,7 +53,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             Instantiate(OGMPrefab);
         }
         offlineGM = OfflineGameManager.instance;
-        health = offlineGM.curHealth;
+        health = isOnline ? 100 : offlineGM.curHealth;
 
 
         foreach(GameObject t in trails){
@@ -62,17 +64,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     // Update is called once per frame
     void Update()
     {
-
-        // Animate stuff here
-        /*
-        change = Vector3.zero;
-        if(photonView.IsMine){
-            change.x = Input.GetAxisRaw("Horizontal");
-            change.y = Input.GetAxisRaw("Vertical");
-        }
-        */
         UpdateAnimation();
-
     }
 
     void UpdateAnimation()
@@ -103,16 +95,16 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting && photonView.IsMine)
+        if (stream.IsWriting)
         {
             stream.SendNext(change);
-            stream.SendNext(offlineGM.curHealth);
+            stream.SendNext(health);
         }
         else
         {
-            change = (Vector3)stream.ReceiveNext();
-            UpdateAnimation();
-            offlineGM.curHealth = (float)stream.ReceiveNext();
+            this.change = (Vector3)stream.ReceiveNext();
+            this.health = (float)stream.ReceiveNext();
+            //UpdateAnimation();
         }
 
     }
@@ -128,7 +120,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         Debug.Log("get " + points + " points");
         if (FloatingTextPrefab)
         {
-            ShowFloatingTextHealth();
+            ShowFloatingTextHealth(offlineGM.curHealth);
         }
 
     }
@@ -146,25 +138,30 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             Debug.Log("DEAD alr");
             return;
         }
-        offlineGM.curHealth -= damage;
-        if (offlineGM.curHealth <= 0)
-        {
-            isDead = true;
-            //var health = int.Parse("dead");
-            //transform.Rotate(0, 0, 90, Space.Self);
-            animator.SetBool("dead", true);
-
-            if ((photonView.IsMine || !PhotonNetwork.IsConnected) && GetComponent<PlayerMovement>() != null)
+        if(isOnline){
+            health -= damage;
+            if(health <= 0){
+                isDead = true;
+                animator.SetBool("dead", true);
+                if (photonView.IsMine  && GetComponent<PlayerMovement>() != null)
+                {
+                    Destroy(GetComponent<PlayerMovement>());
+                }
+            }
+        }
+        else{
+            offlineGM.curHealth -= damage;
+            if (offlineGM.curHealth <= 0)
             {
-                Destroy(GetComponent<PlayerMovement>());
-            }
-            if (PhotonNetwork.IsConnected){
-                PhotonNetwork.LeaveRoom();
-            }
-            else{
+                isDead = true;
+                animator.SetBool("dead", true);
+                if ((photonView.IsMine || !PhotonNetwork.IsConnected) && GetComponent<PlayerMovement>() != null)
+                {
+                    Destroy(GetComponent<PlayerMovement>());
+                }
                 offlineGM.respawnPlayer(gameObject);
+                
             }
-            
         }
 
         void OnLeftRoom()
@@ -178,21 +175,23 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
         }
 
-
-        //Debug.Log("I am hit, health is = " + health);
-
         if (FloatingTextPrefab)
         {
-            ShowFloatingTextHealth();
+            if(isOnline){
+                ShowFloatingTextHealth(this.health);
+            }
+            else{
+                ShowFloatingTextHealth(offlineGM.curHealth);
+            }
         }
 
     }
 
-    void ShowFloatingTextHealth()
+    void ShowFloatingTextHealth(float h)
     {
         var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-        go.GetComponent<TMPro.TextMeshPro>().text = offlineGM.curHealth.ToString();
-        if (offlineGM.curHealth <= 0)
+        go.GetComponent<TMPro.TextMeshPro>().text = h.ToString();
+        if (h <= 0)
         {
             go.GetComponent<TMPro.TextMeshPro>().text = "-GAMEOVER-";
 
