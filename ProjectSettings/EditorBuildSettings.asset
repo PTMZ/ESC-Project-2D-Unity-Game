@@ -17,19 +17,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prologue.unity
     guid: 8a20a447493329c4cad51f5303541eed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Obsolete/B5_AVHQ_Old.unity
     guid: f6afe4d5464a77f47a7347d1e1dc85de
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Obsolete/B4_AVHQ_Old.unity
     guid: de73842de325f124faed60cff2f761d2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Obsolete/B3_AVHQ_Old.unity
     guid: 4cfd2b06b8affb947adb4fe2be313c38
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Obsolete/B2_AVHQ_Old.unity
     guid: 479cca1200bc96d4a811e6bbc0d4d234
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Obsolete/B1_AVHQ_Old.unity
     guid: de95408f2057f4f45a1caab64853b301
   - enabled: 1
