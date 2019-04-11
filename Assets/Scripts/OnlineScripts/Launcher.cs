@@ -140,14 +140,9 @@ namespace Photon.Pun.Demo.PunBasics
 		{
 			LogFeedback("<Color=Red>OnJoinRandomFailed</Color>: Next -> Create a new Room");
 			//Debug.Log("PUN Basics Tutorial/Launcher:OnJoinRandomFailed() was called by PUN. No random room available, so we create one.\nCalling: PhotonNetwork.CreateRoom");
-            if(failCount < 30){
-                PhotonNetwork.JoinRandomRoom(null,0);
-                failCount ++;
-                Debug.Log("Find room attempt: " + failCount);
-            }
-            else{
-                PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = this.maxPlayersPerRoom});
-            }
+            
+            PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = this.maxPlayersPerRoom});
+            
 			// #Critical: we failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
 		}
 
@@ -162,6 +157,7 @@ namespace Photon.Pun.Demo.PunBasics
 
 			isConnecting = false;
 
+			Connect();
 		}
 
 		/// <summary>
