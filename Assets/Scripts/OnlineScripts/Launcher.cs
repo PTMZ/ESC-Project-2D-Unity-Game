@@ -157,7 +157,7 @@ namespace Photon.Pun.Demo.PunBasics
 
 			isConnecting = false;
 
-			Connect();
+			//Connect();
 		}
 
 		/// <summary>
