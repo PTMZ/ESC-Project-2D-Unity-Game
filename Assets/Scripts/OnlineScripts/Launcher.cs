@@ -126,7 +126,8 @@ namespace Photon.Pun.Demo.PunBasics
 				Debug.Log("PUN Basics Tutorial/Launcher: OnConnectedToMaster() was called by PUN. Now this client is connected and could join a room.\n Calling: PhotonNetwork.JoinRandomRoom(); Operation will fail if no room found");
 		
 				// #Critical: The first we try to do is to join a potential existing room. If there is, good, else, we'll be called back with OnJoinRandomFailed()
-				PhotonNetwork.JoinRandomRoom(null, 0);
+				//PhotonNetwork.JoinRandomRoom(null, 0);
+				PhotonNetwork.JoinRoom("RoomName");
 			}
 		}
 
@@ -144,6 +145,14 @@ namespace Photon.Pun.Demo.PunBasics
             PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = this.maxPlayersPerRoom});
             
 			// #Critical: we failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
+		}
+
+		public override void OnJoinRoomFailed(short returnCode, string message){
+			PhotonNetwork.CreateRoom("RoomName", new RoomOptions { MaxPlayers = this.maxPlayersPerRoom});
+		}
+
+		public override void OnCreateRoomFailed(short returnCode, string message){
+			PhotonNetwork.JoinRoom("RoomName");
 		}
 
 
