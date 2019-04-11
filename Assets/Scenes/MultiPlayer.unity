@@ -841,13 +841,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1074535499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d64cbc604a7dd954392556b52d6db795, type: 3}
+  m_Script: {fileID: 11500000, guid: 41aaf452c5281bd4286e2bc115d90029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPrefab: {fileID: 6806275629946510465, guid: 6659bb3708aa85646b1549a2bcc52f6e,
+  playerPrefab: {fileID: 5979917708805483280, guid: 86c146fa052e1f647a5238179196f626,
     type: 3}
-  playerList: []
-  LocalPlayer: {fileID: 0}
 --- !u!4 &1074535501
 Transform:
   m_ObjectHideFlags: 0
