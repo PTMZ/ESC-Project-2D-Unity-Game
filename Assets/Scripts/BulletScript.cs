@@ -22,12 +22,15 @@ public class BulletScript : MonoBehaviourPunCallbacks
         offlineGM = FindObjectOfType<OfflineGameManager>();
         DeathTime = GetComponent<AttackStats>().deathTime;
         bulletDmg = GetComponent<AttackStats>().damage;
-        if(isOnline && PhotonNetwork.IsMasterClient){
+        /* 
+        if(PhotonNetwork.IsConnected && PhotonNetwork.IsMasterClient){
             StartCoroutine(NetworkDestroyEnum(DeathTime));
         }
         else{
             Destroy(gameObject, DeathTime);
         }
+        */
+        Destroy(gameObject, DeathTime);
         
     }
 
@@ -86,12 +89,12 @@ public class BulletScript : MonoBehaviourPunCallbacks
             body.AddForce (dir.normalized * expForce * calc);
     }
 
+
     private IEnumerator NetworkDestroyEnum(float DeathTime)
     {
+        Debug.Log("Destroy on network");
         yield return new WaitForSeconds(DeathTime);
-        if (gameObject != null){
-             PhotonNetwork.Destroy(gameObject);
-         }
+        PhotonNetwork.Destroy(gameObject);
        
     }
 

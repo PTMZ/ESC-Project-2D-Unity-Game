@@ -32,9 +32,14 @@ public class PlayerMovement : MonoBehaviour
     private bool prevButton = false;
     public float camSize = 4.0f;
 
-    private OfflineGameManager offlineGM;
     public OfflineGameManager OGMPrefab;
     // Start is called before the first frame update
+
+    void Awake(){
+        if(OfflineGameManager.instance == null){
+            Instantiate(OGMPrefab);
+        }
+    }
     void Start()
     {
         float alpha = 0.5f;
@@ -48,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
         button = FindObjectOfType<MyButton>();
         joystickMove = GameObject.Find("JoystickMove").GetComponent<Joystick>();
         joystickShoot = GameObject.Find("JoystickShoot").GetComponent<Joystick>();
+        Debug.Log("joystickMove : " + joystickMove == null);
+        Debug.Log("JoystickShoot : " + joystickShoot == null);
 
         cooldownTimeStamp = Time.time;
         dashTimeStamp = Time.time;
@@ -59,13 +66,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         //offlineGM = FindObjectOfType<OfflineGameManager>();
-        if(OfflineGameManager.instance == null){
-            Instantiate(OGMPrefab);
-        }
-        offlineGM = OfflineGameManager.instance;
+        //offlineGM = OfflineGameManager.instance;
         Camera.main.orthographicSize = camSize;
 
-        cooldown = offlineGM.curCooldown;
+        cooldown = OfflineGameManager.instance.curCooldown;
         Debug.Log("Player finished starting");
     }
 
@@ -81,10 +85,10 @@ public class PlayerMovement : MonoBehaviour
         else{
             myself.change = new Vector3(joystickMove.Horizontal, joystickMove.Vertical, 0).normalized;
         }
-
+        
         //Debug.Log(new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude);
         if(Time.time > cooldownTimeStamp && new Vector2(joystickShoot.Horizontal, joystickShoot.Vertical).magnitude > 0.5){
-            cooldownTimeStamp = Time.time + offlineGM.curCooldown;
+            cooldownTimeStamp = Time.time + OfflineGameManager.instance.curCooldown;
             Shoot();
         }
 
@@ -103,29 +107,31 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate(){
-        rb2d.AddForce(myself.change * speed * offlineGM.moveMult);
+        rb2d.AddForce(myself.change * speed * OfflineGameManager.instance.moveMult);
         //rb2d.velocity = myself.change * speed * offlineGM.moveMult;
         //rb2d.velocity *= 0.9f;
     }
 
     void LateUpdate(){
         Vector3 upVector = new Vector3(0, 0, -1);
-        float camDistance = 10;
-        Camera.main.transform.position = transform.position + upVector*camDistance;
+        //float camDistance = 10;
+        Camera.main.orthographicSize = camSize;
+        Camera.main.transform.position = transform.position + upVector;
     }
 
     void Shoot(){
 
         Vector3 bulletDir = new Vector3(joystickShoot.Horizontal, joystickShoot.Vertical, 0).normalized;
+        Debug.Log("is shooting");
         if(SceneManager.GetActiveScene().name == "MultiPlayer"){
-            GameManager.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir);
+            OnlineGameManager.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir);
         }
         else{
             //GameObject bulletInstance = Instantiate(bulletPrefab, transform.position + offsetY + bulletDir*myRadius, transform.rotation);
             //bulletInstance.GetComponent<BulletScript>().isOnline = false;
             //bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletDir * bulletSpd;
             AudioManager.instance.Play("CookieRange");
-            offlineGM.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir);
+            OfflineGameManager.instance.SpawnBullet(transform.position + offsetY + bulletDir*myRadius, transform.rotation, bulletDir);
         }
         rb2d.AddForce(bulletDir * -1 * recoil);
 

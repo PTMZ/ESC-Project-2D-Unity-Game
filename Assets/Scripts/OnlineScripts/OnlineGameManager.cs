@@ -13,6 +13,12 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private PlayerAvatar playerPrefab;
 
+    [SerializeField]
+    private GameObject[] bulletPrefabs;
+
+    [SerializeField]
+    private int curAttack;
+
     void Awake(){
         if(!PhotonNetwork.IsConnected){
             SceneManager.LoadScene("TitleScreen");
@@ -77,14 +83,13 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
             Debug.LogError( "PhotonNetwork : Trying to Load a level but we are not the master Client" );
         }
         Debug.LogFormat( "PhotonNetwork : Loading Level : {0}", PhotonNetwork.CurrentRoom.PlayerCount );
-        PhotonNetwork.LoadLevel("MultiPlayer");
+        //PhotonNetwork.LoadLevel("MultiPlayer");
     }
     
 
-    public static void SpawnBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector, float DeathTime){
-        GameObject bulletInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Bullet"), spawnPos, rotation);
-        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector;
-
+    public static void SpawnBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
+        GameObject bulletInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "OnlineBullet"), spawnPos, rotation);
+        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * bulletInstance.GetComponent<AttackStats>().bulletSpeed;
         //Destroy(bulletInstance,DeathTime);
         //StartCoroutine(bulletInstance.GetComponent<BulletScript>().NetworkDestroyEnum(DeathTime));
     }

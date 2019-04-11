@@ -45,6 +45,10 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
 
     bool IsFiring;
 
+    protected Joystick joystickMove;
+    protected Joystick joystickShoot;
+    protected MyButton button;
+
     #endregion
 
     #region MonoBehaviour CallBacks
@@ -72,6 +76,9 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
     /// </summary>
     public void Start()
     {
+        button = FindObjectOfType<MyButton>();
+        joystickMove = GameObject.Find("JoystickMove").GetComponent<Joystick>();
+        joystickShoot = GameObject.Find("JoystickShoot").GetComponent<Joystick>();
         /*
         CameraWork _cameraWork = gameObject.GetComponent<CameraWork>();
         if (_cameraWork != null)
