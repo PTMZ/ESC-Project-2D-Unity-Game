@@ -26,7 +26,8 @@ public class DialogueTrigger : MonoBehaviour
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             OfflineGameManager.instance.storyProgress++;
-            Debug.Log("Story Progressed. Story is now " + OfflineGameManager.instance.storyProgress);
+            SaveGameScript.SaveGame();
+            Debug.Log("Story Progressed. Game Saved. Story is now " + OfflineGameManager.instance.storyProgress);
         }
         //else //if not story dialogue
         //{

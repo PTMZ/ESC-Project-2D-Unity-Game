@@ -11,7 +11,7 @@ public class Dialogue2Script : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (OfflineGameManager.instance.storyProgress == sceneNum && !keySpawned)
+        if (OfflineGameManager.instance.storyProgress >= sceneNum && !keySpawned)
         {
             key.SetActive(true);
             keySpawned = true;

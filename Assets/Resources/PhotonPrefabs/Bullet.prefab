@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   playerid: 0
-  damage: 1
+  damage: 3
   bulletSpeed: 10
   deathTime: 1
   cooldown: 0.3

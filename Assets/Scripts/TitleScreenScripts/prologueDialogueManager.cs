@@ -71,6 +71,11 @@ public class prologueDialogueManager : MonoBehaviour
                 yield return null;
             }
         }
+        for (int i = 0; i < 10; i++)
+        {
+            yield return null;
+        }
+        DisplayNextSentence();
     }
 
     void EndDialogue()
