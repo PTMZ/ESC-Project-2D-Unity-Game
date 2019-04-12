@@ -11,6 +11,10 @@ public class MachineMove : MonoBehaviour
 
     public bool isActivated = false;
 
+    //Used for situational specific triggers.
+    public bool levelSpecificTrigger = false;
+
+
     public int storyProgActivate;
     public int curStoryProg;
 
@@ -35,6 +39,7 @@ public class MachineMove : MonoBehaviour
         if(OfflineGameManager.instance.storyProgress >= storyProgActivate){
             isActivated = true;
             GetComponent<MachineAttack>().isActivated = true;
+            levelSpecificTrigger = false;
             Debug.Log("attack activated.");
         }
         if(!isActivated){

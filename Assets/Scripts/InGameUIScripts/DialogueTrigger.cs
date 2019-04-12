@@ -6,7 +6,8 @@ public class DialogueTrigger : MonoBehaviour
 {
     public int SceneNumber;
     public Dialogue dialogue;
-
+    public int triggerLimit = 1;
+    private int triggerCount = 0;
     //public OfflineGameManager OfflineGM;
 
     [HideInInspector]
@@ -31,7 +32,13 @@ public class DialogueTrigger : MonoBehaviour
         }
         else if(SceneNumber == -1)
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            if (triggerCount < triggerLimit)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                triggerCount++;
+            }
+            
+            
         }
         //else //if not story dialogue
         //{
