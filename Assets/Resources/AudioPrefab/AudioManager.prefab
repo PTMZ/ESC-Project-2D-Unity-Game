@@ -86,6 +86,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: BossFight
+    clip: {fileID: 8300000, guid: 38f448c999e05b94db935d677a9cbaa5, type: 3}
+    volume: 0.529
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   playerSounds:
   - name: CookieMelee
     clip: {fileID: 8300000, guid: f0edd02c8a7e99648aa7bcf8fd81089d, type: 3}
