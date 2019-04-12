@@ -844,8 +844,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41aaf452c5281bd4286e2bc115d90029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curCooldown: 0
   playerPrefab: {fileID: 5979917708805483280, guid: 86c146fa052e1f647a5238179196f626,
     type: 3}
+  bulletPrefabs:
+  - {fileID: 8278695934209606926, guid: f6411c2928a967a418979f53a5b48773, type: 3}
+  curAttack: 0
 --- !u!4 &1074535501
 Transform:
   m_ObjectHideFlags: 0
