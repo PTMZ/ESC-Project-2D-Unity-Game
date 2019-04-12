@@ -9,6 +9,7 @@ using System.IO;
 public class OnlineGameManager : MonoBehaviourPunCallbacks
 {
     static public OnlineGameManager Instance;
+    public float curCooldown;
 
     [SerializeField]
     private PlayerAvatar playerPrefab;
@@ -44,8 +45,9 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
             }else {
                 // Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
             }
-
         }
+        this.curAttack = 0;
+        this.curCooldown = bulletPrefabs[curAttack].GetComponent<AttackStats>().cooldown;
     }
 
     public override void OnPlayerEnteredRoom( Player other  ) {
