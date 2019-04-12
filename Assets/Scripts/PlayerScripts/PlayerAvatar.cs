@@ -159,7 +159,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
                 {
                     Destroy(GetComponent<PlayerMovement>());
                 }
-                offlineGM.respawnPlayer(gameObject);
+                if(OnlineGameManager.Instance == null){
+                    offlineGM.respawnPlayer(gameObject);
+                }
                 
             }
         }
