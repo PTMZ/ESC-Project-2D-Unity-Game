@@ -119,7 +119,7 @@ public class EnemyMovement : MonoBehaviour
                 Debug.Log("ENEMY ATTACK");
                 // Play attack animation here
                 AudioManager.instance.Play("GuardMelee");
-                weaponAnim.weaponAnimator.Play("baton_attack", -1);
+                weaponAnim.weaponAnimator.Play("attack", -1);
             }
         }
         cd = (Time.time > cooldownTimeStamp);
