@@ -951,8 +951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aced311c4aedf074f8b25110b6952456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  dashSpeed: 350
+  speed: 40
+  dashSpeed: 400
   myRadius: 1
   recoil: 20
   cooldown: 0.3

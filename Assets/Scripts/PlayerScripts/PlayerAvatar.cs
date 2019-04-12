@@ -252,11 +252,11 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     //}
     public void updateTrail(int trailNum)
     {
-        if (curTrail != -1)
+        if (curTrail != -1) //if current trail is present
         {
-            trails[curTrail].SetActive(false);
+            trails[curTrail].SetActive(true);
         }
-        if (trailNum != -1)
+        if (trailNum != -1) //if trailnum is present
         {
             trails[trailNum].SetActive(true);
         }
