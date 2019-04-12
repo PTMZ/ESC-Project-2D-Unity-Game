@@ -327,7 +327,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 6c2dcd0edfcc7904bbf4c2fb309b31c5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
-  player: {fileID: 0}
+  player: {fileID: 8661001870505122628, guid: 6659bb3708aa85646b1549a2bcc52f6e, type: 3}
   targetPrefab: {fileID: 1746466840000834443, guid: eb60dd43e982f144c97a4311cfd4c4fc,
     type: 3}
   laserHitPointPrefab: {fileID: 7335066356403487667, guid: 4f9e0f60cbfc7ae4f81a50a791410fa9,

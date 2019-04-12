@@ -29,6 +29,10 @@ public class DialogueTrigger : MonoBehaviour
             SaveGameScript.SaveGame();
             Debug.Log("Story Progressed. Game Saved. Story is now " + OfflineGameManager.instance.storyProgress);
         }
+        else if(SceneNumber == -1)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        }
         //else //if not story dialogue
         //{
         //    FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

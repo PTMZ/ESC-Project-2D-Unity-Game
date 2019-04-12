@@ -10,7 +10,7 @@ public class Dialogue0Script : MonoBehaviour
 
     public void incrementDialogueCount()
     {
-        if (dialogueCount == 0)
+        if (dialogueCount == 0 && OfflineGameManager.instance.storyProgress<2)
         {
             player.TriggerQuestionMark();
         }
