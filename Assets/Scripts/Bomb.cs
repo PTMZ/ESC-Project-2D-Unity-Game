@@ -19,6 +19,8 @@ public class Bomb : MonoBehaviour
 
     bool exploded = false;
     BoxCollider2D explosionRadius;
+    private OfflineGameManager offlineGM;
+
 
     void Start()
     {
@@ -90,6 +92,7 @@ public class Bomb : MonoBehaviour
         {
             //Debug.Log("I am hit, my name is " + collision.gameObject.name);
             collision.gameObject.GetComponent<EnemyAvatar>().getHit(20);
+            animator.Play("bomb_explosion", -1);
             Destroy(gameObject);
 
         }
