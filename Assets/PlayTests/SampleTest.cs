@@ -64,6 +64,7 @@ namespace Tests
         {
             // Use the Assert class to test conditions.
             // Use yield to skip a frame.
+            Physics2D.gravity = Vector3.zero;
             GameObject player = new GameObject();
             var pBody = player.AddComponent<Rigidbody2D>();
             var pAva = player.AddComponent<PlayerAvatar>();
@@ -77,7 +78,8 @@ namespace Tests
             pMove.speed = 10;
 
             yield return new WaitForFixedUpdate();
-
+            //yield return new WaitForFixedUpdate();
+            Debug.Log(pBody.velocity.y);
             Assert.IsTrue(pBody.velocity.y > 0);
         }
         [UnityTest]
