@@ -1,0 +1,1602 @@
+fileFormatVersion: 2
+guid: f2e40562275674606a27241335787153
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sandarised tile 10x7_0
+    21300002: sandarised tile 10x7_1
+    21300004: sandarised tile 10x7_2
+    21300006: sandarised tile 10x7_3
+    21300008: sandarised tile 10x7_4
+    21300010: sandarised tile 10x7_5
+    21300012: sandarised tile 10x7_6
+    21300014: sandarised tile 10x7_7
+    21300016: sandarised tile 10x7_8
+    21300018: sandarised tile 10x7_9
+    21300020: sandarised tile 10x7_10
+    21300022: sandarised tile 10x7_11
+    21300024: sandarised tile 10x7_12
+    21300026: sandarised tile 10x7_13
+    21300028: sandarised tile 10x7_14
+    21300030: sandarised tile 10x7_15
+    21300032: sandarised tile 10x7_16
+    21300034: sandarised tile 10x7_17
+    21300036: sandarised tile 10x7_18
+    21300038: sandarised tile 10x7_19
+    21300040: sandarised tile 10x7_20
+    21300042: sandarised tile 10x7_21
+    21300044: sandarised tile 10x7_22
+    21300046: sandarised tile 10x7_23
+    21300048: sandarised tile 10x7_24
+    21300050: sandarised tile 10x7_25
+    21300052: sandarised tile 10x7_26
+    21300054: sandarised tile 10x7_27
+    21300056: sandarised tile 10x7_28
+    21300058: sandarised tile 10x7_29
+    21300060: sandarised tile 10x7_30
+    21300062: sandarised tile 10x7_31
+    21300064: sandarised tile 10x7_32
+    21300066: sandarised tile 10x7_33
+    21300068: sandarised tile 10x7_34
+    21300070: sandarised tile 10x7_35
+    21300072: sandarised tile 10x7_36
+    21300074: sandarised tile 10x7_37
+    21300076: sandarised tile 10x7_38
+    21300078: sandarised tile 10x7_39
+    21300080: sandarised tile 10x7_40
+    21300082: sandarised tile 10x7_41
+    21300084: sandarised tile 10x7_42
+    21300086: sandarised tile 10x7_43
+    21300088: sandarised tile 10x7_44
+    21300090: sandarised tile 10x7_45
+    21300092: sandarised tile 10x7_46
+    21300094: sandarised tile 10x7_47
+    21300096: sandarised tile 10x7_48
+    21300098: sandarised tile 10x7_49
+    21300100: sandarised tile 10x7_50
+    21300102: sandarised tile 10x7_51
+    21300104: sandarised tile 10x7_52
+    21300106: sandarised tile 10x7_53
+    21300108: sandarised tile 10x7_54
+    21300110: sandarised tile 10x7_55
+    21300112: sandarised tile 10x7_56
+    21300114: sandarised tile 10x7_57
+    21300116: sandarised tile 10x7_58
+    21300118: sandarised tile 10x7_59
+    21300120: sandarised tile 10x7_60
+    21300122: sandarised tile 10x7_61
+    21300124: sandarised tile 10x7_62
+    21300126: sandarised tile 10x7_63
+    21300128: sandarised tile 10x7_64
+    21300130: sandarised tile 10x7_65
+    21300132: sandarised tile 10x7_66
+    21300134: sandarised tile 10x7_67
+    21300136: sandarised tile 10x7_68
+    21300138: sandarised tile 10x7_69
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 267
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sandarised tile 10x7_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a994cff566bb4992aa15c4493b565c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_1
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7ec75b67527417eae359d83caa516b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_2
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc91a61fc19f41f2b91c43f2b6b7fdb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_3
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52fdf1cd7240140cca1e2cab47f2c09b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_4
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16941649c6d1045419df99c067d4eafa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_5
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65a65ec64a9e454eb4d8acc3c58b898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_6
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30051b59384b84b58bfa8bbd8566fcfd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_7
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f955cf79de664239a1cadfeba19269f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_8
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2722d51123dc846c69802821fb219a2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_9
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 1601.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd005cd91cfa42bcbaf1d1dff964211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d5db1d73d4d497e8c3019c5179850f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_11
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59baca500cfea4123baba63dc5a23b64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_12
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f8d807b6c2441c48d7729066bc46e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_13
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6da1c14226554878be3fc407239182a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_14
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fc7e7285c5044beae7f64988ee955a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_15
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f073b606e33bc4d6b9c189d0a070433d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_16
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d688a4b474e194142bc056cbfe4c6ad1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_17
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5d24f45b40e4702afb794b075c66b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_18
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9619a373e58e9406793a71877f6b12a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_19
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 1335.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afbff0e530db4c61944d58d75af4274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782632241d1be4d61ae0ac374ce9ef73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_21
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8d47441036940018db034984d5efe2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_22
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20fc9815be4d24d64938b4dae4bf6adf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_23
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04827acd2828f4b51a81543c86d36c90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_24
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97557bb65c17a4cc3b2c098888fd4852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_25
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2893b73dc9b84494b70830bdbb96cc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_26
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61a9b7f393d94da9b7a0a14a706bb27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_27
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54d09978dbc6439cb823cd71bf99c9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_28
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed202f03539b435e850a2137b6feb2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_29
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 1069.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aeaa787c49f148a294f73d6c4db235e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f02aa7677674039afee77225e839c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_31
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e2a658874ba47b6b7d22d85b6d020b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_32
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f861df3cde5438ea7f2e0ff31dd206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_33
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7d0e052b7de40b6a8213f72459192b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_34
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1925c8a139cf4a4eb31872d855787b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_35
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bdde80c7991448fb073cf069b9c83a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_36
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4008b70f7599497aa4eef7e0b4a7477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_37
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d518530f5e945fca25d23c70f434b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_38
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232d92a2bd67247749dad02174a60ce2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_39
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 803.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398fc24ae9d8846ddad050c0fb46516f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f9ff2f9bfec4902a14a0509fd9ca9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_41
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607cac8c472c9471fbf5ec1222f72cfc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_42
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411fea56b98ff439c9926bb973bfa668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_43
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5897925a4feb84f799c7817362868483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_44
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae081710ad244c8795c412fb9fc0cff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_45
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac386da0dd8f409fb3f25c45eb0d100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_46
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8707f9e203ef34764800c16d2517c976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_47
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c8060fc9d71496aad79a09241d940c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_48
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c1801a722ae4fed911446aeabd4ac1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_49
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 537.1428
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29549392697384981b0e53e3c2ba420f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ff6db876b634d678d9bab800c02abf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_51
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e955f5deec0b494d88cdf485c324b5d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_52
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb572e6621d6449c88e8e7943aeb3e14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_53
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aeedec54d0474c60b9bebd1fc4c766a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_54
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7b12a9d91cb4677853de8f4e76d283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_55
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719efea008c1140cd8651a9608c2618c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_56
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb5a6a3546fa4dc1b1472c2f641b874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_57
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a04ffea718b6491586a93ac70ee042a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_58
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dadf0610eb0624f10823367c1141e561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_59
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 271.14285
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdae6873976fe4cfbbc1a6e08945f957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630009ff7a5a14aec9e10a278bb363d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_61
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a132cc47fae244f5a9b4e2318e9176a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_62
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea208af7112244ec597f9f19d34ca42f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_63
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2eeb69057c1d41659260582976f9ccd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_64
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c30e26b32bc4bb59e4d8e2c322c3f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_65
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f761540597f02439f88884a01b73ee48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_66
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3958c960a385a4a569c9916aebfd5b83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_67
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3ff5b8ab3484515a870774e0c38248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_68
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3529a20ed443c490cb0d6832e601d669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sandarised tile 10x7_69
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 5.142853
+        width: 266.8
+        height: 266.85715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3658c199a25084b70bb566bc3d15c3d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 34cf0e526b21549c9961d852c1a85938
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
