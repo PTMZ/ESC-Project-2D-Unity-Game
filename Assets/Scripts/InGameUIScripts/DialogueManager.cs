@@ -14,8 +14,11 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueButton;
     //public Animator animator;
     public GameObject pauseButton;
+
+    public GameObject countTap;
     public static DialogueManager instance;
     private int clickNum = 0;
+
 
 
     private Queue<string> sentences;
@@ -82,16 +85,22 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
+
         cantContinue();
+        startClickCount();
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
-            //for (int i = 0; i < 0; i++)
-            //{
-            //    yield return null;
-            //}
+            if (clickNum == 1)
+            {
+                continue;
+            }
+            else
+            {
+                yield return null;
+            }
         }
+        stopClickCount();
         canContinue();
     }
 
@@ -108,7 +117,16 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueButton.SetActive(true);
     }
-
+    void startClickCount()
+    {
+        clickNum = 0;
+        countTap.SetActive(true);
+    }
+    void stopClickCount()
+    {
+        clickNum = 0;
+        countTap.SetActive(false);
+    }
 
     void EndDialogue()
     {
