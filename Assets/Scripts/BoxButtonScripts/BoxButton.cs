@@ -12,6 +12,7 @@ public class BoxButton : MonoBehaviour
     public GameObject tick;
     public GameObject cross;
     public GameObject laser;
+    public int colour;
     private int count = 0;
     private SpriteRenderer mySpriteRenderer;
 
@@ -27,7 +28,9 @@ public class BoxButton : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("DestroyableBox")){
-            count ++;
+            if(other.gameObject.GetComponent<Destroyable>().curSprite == colour){
+                count ++;
+            }
         }
         if(getPressed()){
             mySpriteRenderer.sprite = pressSprite;
@@ -41,7 +44,9 @@ public class BoxButton : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("DestroyableBox")){
-            count --;
+            if(other.gameObject.GetComponent<Destroyable>().curSprite == colour){
+                count --;
+            }
         }
         if(!getPressed()){
             mySpriteRenderer.sprite = normSprite;
