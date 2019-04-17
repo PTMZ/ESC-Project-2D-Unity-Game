@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueButton;
     //public Animator animator;
     public GameObject pauseButton;
-
+    public GameObject gameControls;
     public GameObject countTap;
     public static DialogueManager instance;
     private int clickNum = 0;
@@ -141,6 +141,7 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Game time restarted at end of dialogue.");
         pauseButton.SetActive(true);
+        gameControls.SetActive(true);
         Time.timeScale = 1.0f;
     }
 
@@ -148,6 +149,7 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Game time stoppped for dialogue.");
         pauseButton.SetActive(false);
+        gameControls.SetActive(false);
         Time.timeScale = 0.0f;
     }
 
