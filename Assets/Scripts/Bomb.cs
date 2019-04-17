@@ -9,10 +9,10 @@ public class Bomb : MonoBehaviour
 
     //public float explosionDelay = 1f;
     public float bombDamage = 100;
-    public float explosionRate = 10f;
-    public float explosionMaxSize = 10f;
-    public float explosionSpeed = 1000f;
-    public float explosionForce = 1000f;
+    public float explosionRate = 1f;
+    public float explosionMaxSize = 1f;
+    public float explosionSpeed = 10f;
+    public float explosionForce = 10f;
     public float currentRadius = 0.1f;
 
     public Animator animator;
@@ -21,11 +21,11 @@ public class Bomb : MonoBehaviour
     BoxCollider2D explosionRadius;
     private OfflineGameManager offlineGM;
 
-
     void Start()
     {
         explosionRadius = gameObject.GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        offlineGM = OfflineGameManager.instance;
 
     }
 
@@ -70,38 +70,41 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.CompareTag("Player"))
         {
             exploded = true;
             animator.Play("bomb_explosion", -1);
         }
+
+        
         if (collision.CompareTag("Enemy"))
         {
-            exploded = true;
-            animator.Play("bomb_explosion", -1);
+            //exploded = false;
+            //Debug.Log("HIT ENEMY");
+            //animator.Play("bomb_explosion", -1);
         }
-
+        
         if (collision.gameObject.GetComponent<PlayerAvatar>() != null)
         {
-            //Debug.Log("I am hit, my name is " + collision.gameObject.name);
             collision.gameObject.GetComponent<PlayerAvatar>().getHit(bombDamage);
 
         }
 
         if (collision.gameObject.GetComponent<EnemyAvatar>() != null)
         {
-            //Debug.Log("I am hit, my name is " + collision.gameObject.name);
-            collision.gameObject.GetComponent<EnemyAvatar>().getHit(20);
+            collision.gameObject.GetComponent<EnemyAvatar>().getHit(25);
             animator.Play("bomb_explosion", -1);
-            Destroy(gameObject);
+            //offlineGM.destroyBomb(gameObject);
+            Destroy(gameObject, 0.2f);
 
         }
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
         {
             Vector2 target = collision.gameObject.transform.position;
             Vector2 bomb = gameObject.transform.position;
-            Vector2 direction1 =  2 * explosionForce * (target - bomb);
-            Vector2 direction2 = - 0.5f * explosionForce * (target - bomb);
+            Vector2 direction1 =  explosionForce * (target - bomb);
+            //Vector2 direction2 = - 0.5f * explosionForce * (target - bomb);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction1);
             //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction2);
             //new WaitForSecondsRealtime(1);

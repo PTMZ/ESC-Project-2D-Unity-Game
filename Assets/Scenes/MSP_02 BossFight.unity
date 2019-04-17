@@ -7391,7 +7391,7 @@ PrefabInstance:
     - target: {fileID: 7817154205958685882, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6857552382229314029, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
@@ -7462,6 +7462,21 @@ PrefabInstance:
         type: 3}
       propertyPath: storyProgActivate
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2498775608128102367, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812620435867287064, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618576574360616216, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3a7b0bf1403dd4c984d0d1799dc281, type: 3}

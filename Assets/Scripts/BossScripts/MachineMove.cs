@@ -51,6 +51,8 @@ public class MachineMove : MonoBehaviour
     void FixedUpdate(){
         if(myself.getDead()){
             Debug.Log("Machine boss dead?.");
+            GetComponent<MachineAttack>().isActivated = false;
+            isActivated = false;
             return;
         }
         Vector3 updPos = mypos.position - midPos;

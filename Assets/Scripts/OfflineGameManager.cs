@@ -106,6 +106,11 @@ public class OfflineGameManager : MonoBehaviour
         //StartCoroutine(DelayLoad(2));
     }
 
+    public void destroyBomb(GameObject obj)
+    {
+        Destroy(obj, 0);
+    }
+
     public void loadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -142,7 +147,6 @@ public class OfflineGameManager : MonoBehaviour
 
 
     }
-
 
 
     /*
