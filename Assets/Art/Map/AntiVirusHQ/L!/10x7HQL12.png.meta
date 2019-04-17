@@ -306,8 +306,8 @@ TextureImporter:
       name: 10x7HQL12_6
       rect:
         serializedVersion: 2
-        x: 1599
-        y: 1600
+        x: 1600
+        y: 1599
         width: 267
         height: 267
       alignment: 9
@@ -527,7 +527,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1866
-        y: 1334
+        y: 1332
         width: 267
         height: 267
       alignment: 9
@@ -686,10 +686,10 @@ TextureImporter:
       name: 10x7HQL12_25
       rect:
         serializedVersion: 2
-        x: 1596
-        y: 1068.2856
-        width: 266.7
-        height: 266.7143
+        x: 1599
+        y: 1065
+        width: 267
+        height: 267
       alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -707,7 +707,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1866
-        y: 1068
+        y: 1065
         width: 267
         height: 267
       alignment: 9
