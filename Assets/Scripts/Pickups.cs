@@ -59,7 +59,11 @@ public class Pickups : MonoBehaviour
             if(dialogue != null){
                 dialogue.TriggerDialogue();
             }
-            AstarPath.active.Scan();
+            
+            if(AstarPath.active){
+                AstarPath.active.Scan();
+            }
+            
             //SceneManager.LoadScene("ConstrictLevel");
         }
 

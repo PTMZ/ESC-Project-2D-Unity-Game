@@ -5,16 +5,21 @@ using UnityEngine;
 public class Destroyable : MonoBehaviour
 {
     public GameObject FloatingTextPrefab;
+    public GameObject HPPrefab;
     public float health = 40;
 
     public Sprite[] spriteList;
     public int curSprite = 4;
+    public bool isHPBox = false;
 
     public void getHit(float damage)
     {
         health -= damage;
         if (health <= 0)
         {
+            if(isHPBox){
+                Instantiate(HPPrefab, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
 
