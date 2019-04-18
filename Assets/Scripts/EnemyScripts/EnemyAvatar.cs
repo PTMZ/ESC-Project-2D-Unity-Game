@@ -60,7 +60,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             //mySpriteRenderer.flipX = (change.x < 0);
             //weaponAnim.mySpriteRenderer.flipX = (change.x < 0);
             animator.SetBool("moving", true);
-            weaponAnim.weaponAnimator.SetBool("weapmoving", true);
+            if(weaponAnim.weaponAnimator){
+                weaponAnim.weaponAnimator.SetBool("weapmoving", true);
+            }
             
 
 

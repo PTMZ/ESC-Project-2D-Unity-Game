@@ -17,6 +17,16 @@ public class MachineAttack : MonoBehaviour
     public static float damage = 10;
     private float cooldownTimeStamp;
 
+    public GameObject warningAreaPrefab;
+    public GameObject bigAreaAttackPrefab;
+    public float cooldown2;
+    public float timeout2;
+    public static float damage2 = 10;
+    private float cooldownTimeStamp2;
+    public float laserWidth;
+    public float laserHeight;
+    public float areaXoffset;
+
     public Animator machineAnim;
 
     private Vector3[] targets = new Vector3[3];
@@ -45,6 +55,20 @@ public class MachineAttack : MonoBehaviour
             cooldownTimeStamp = Time.time + cooldown;
             SpawnTargets();
             DelayLaserAttack();
+        }
+        
+        if(warningAreaPrefab == null || bigAreaAttackPrefab == null){
+            return;
+        }
+        if(inLaserRange()){
+            if(Time.time > cooldownTimeStamp2){
+                Debug.Log("START LASER SHOOT");
+                //machineAnim.Play("machineboss_attack", -1);
+                cooldownTimeStamp2 = Time.time + cooldown2;
+                Vector3 areaPos = transform.position + new Vector3(areaXoffset * (player.transform.position.x > transform.position.x ? -1 : 1), 0, 0);
+                SpawnLaserArea(areaPos);
+                DelayBigAttack(areaPos);
+            }
         }
     }
 
@@ -87,6 +111,29 @@ public class MachineAttack : MonoBehaviour
             lineRenderers[i].enabled = false;
         }
 
+    }
+
+
+    void SpawnLaserArea(Vector3 areaPos){
+        GameObject t = Instantiate(warningAreaPrefab, areaPos, Quaternion.identity);
+        Destroy(t, timeout2);
+    }
+
+    void DelayBigAttack(Vector3 areaPos){
+        StartCoroutine(WaitAndBigAttack(areaPos));
+    }
+
+    private IEnumerator WaitAndBigAttack(Vector3 areaPos)
+    {
+        yield return new WaitForSeconds(timeout2);
+        Instantiate(bigAreaAttackPrefab, areaPos, Quaternion.identity);
+        //Destroy(go, 0.1f);
+    }
+
+
+    private bool inLaserRange(){
+        return (Mathf.Abs(player.transform.position.x - transform.position.x) <= laserWidth && 
+                Mathf.Abs(player.transform.position.y - transform.position.y) <= laserHeight);
     }
 
 }

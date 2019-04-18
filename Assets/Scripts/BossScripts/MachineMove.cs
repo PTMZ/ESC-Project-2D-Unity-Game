@@ -45,7 +45,9 @@ public class MachineMove : MonoBehaviour
         if(!isActivated){
             return;
         }
-        target.transform.position = player.transform.position;
+        if(player){
+            target.transform.position = player.transform.position;
+        }
     }
     
     void FixedUpdate(){
