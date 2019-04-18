@@ -17,6 +17,8 @@ public class MachineAttack : MonoBehaviour
     public static float damage = 10;
     private float cooldownTimeStamp;
 
+    public Animator machineAnim;
+
     private Vector3[] targets = new Vector3[3];
     public LineRenderer[] lineRenderers;
     private Vector3 offsetY;
@@ -24,6 +26,7 @@ public class MachineAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        machineAnim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         cooldownTimeStamp = Time.time;
         Debug.Log(player.transform.position);
@@ -38,6 +41,7 @@ public class MachineAttack : MonoBehaviour
         }
         if(Time.time > cooldownTimeStamp){
             Debug.Log("START SHOOT");
+            machineAnim.Play("machineboss_attack", -1);
             cooldownTimeStamp = Time.time + cooldown;
             SpawnTargets();
             DelayLaserAttack();
