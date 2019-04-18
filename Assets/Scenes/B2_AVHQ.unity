@@ -8064,6 +8064,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1487390209 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4253425233617637654, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+    type: 3}
+  m_PrefabInstance: {fileID: 1833654881}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61531599745b71c4faef8ce6223e2455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1508039552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8862,11 +8874,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4926626398530865049, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+    - target: {fileID: 561949740635492642, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
-      propertyPath: m_ApplyRootMotion
+      propertyPath: isMachineBoss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 561949740635492642, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: weaponAnim
+      value: 
+      objectReference: {fileID: 1487390209}
     - target: {fileID: 1882372341378953035, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
       propertyPath: player
@@ -8876,6 +8893,31 @@ PrefabInstance:
         type: 3}
       propertyPath: storyProgActivate
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190831062553862671, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816417474117775333, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816417474117775333, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816417474117775333, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926626398530865049, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3a7b0bf1403dd4c984d0d1799dc281, type: 3}
