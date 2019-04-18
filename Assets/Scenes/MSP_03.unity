@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4391a1b9481c1b14d8ce777d49e9c45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 3807610573064024986, guid: b11404f2b66e07143b968fe74b4156c1,
+  FloatingTextPrefab: {fileID: 179312774393334755, guid: f193c1bf0d0ad3a47bfb03fc0014d108,
     type: 3}
   health: 30
   spriteList: []
@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4391a1b9481c1b14d8ce777d49e9c45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 3807610573064024986, guid: b11404f2b66e07143b968fe74b4156c1,
+  FloatingTextPrefab: {fileID: 179312774393334755, guid: f193c1bf0d0ad3a47bfb03fc0014d108,
     type: 3}
   health: 30
   spriteList: []
@@ -5247,12 +5247,12 @@ PrefabInstance:
     - target: {fileID: 649472322207879998, guid: a1d0d400ae0f7fe418c78fa5f569ed7f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.649
+      value: 2.7957
       objectReference: {fileID: 0}
     - target: {fileID: 649472322207879998, guid: a1d0d400ae0f7fe418c78fa5f569ed7f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.11
+      value: 0.1098
       objectReference: {fileID: 0}
     - target: {fileID: 649472322207879998, guid: a1d0d400ae0f7fe418c78fa5f569ed7f,
         type: 3}
@@ -5302,7 +5302,7 @@ PrefabInstance:
     - target: {fileID: 649472322207879998, guid: a1d0d400ae0f7fe418c78fa5f569ed7f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5116985
+      value: 0.5851272
       objectReference: {fileID: 0}
     - target: {fileID: 649472322207879998, guid: a1d0d400ae0f7fe418c78fa5f569ed7f,
         type: 3}
