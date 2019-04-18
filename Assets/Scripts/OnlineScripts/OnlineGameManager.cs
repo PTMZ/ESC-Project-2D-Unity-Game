@@ -20,6 +20,9 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
     [SerializeField]
     private int curAttack;
 
+    [SerializeField]
+    private Transform[] respawnPoints;
+
     void Awake(){
         if(!PhotonNetwork.IsConnected){
             SceneManager.LoadScene("TitleScreen");
@@ -41,7 +44,8 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
         else {
             if (PlayerManager.LocalPlayerInstance==null) {
                 // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                PhotonNetwork.Instantiate(this.playerPrefab.name, Vector3.zero, Quaternion.identity, 0);
+                Transform t = respawnPoints[Random.Range(0, respawnPoints.Length)];
+                PhotonNetwork.Instantiate(this.playerPrefab.name, t.position, Quaternion.identity, 0);
             }else {
                 // Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
             }
