@@ -14,41 +14,17 @@ public class Bomb : MonoBehaviour
     public float explosionSpeed = 10f;
     public float explosionForce = 10f;
     public float currentRadius = 0.1f;
-
     public Animator animator;
 
     bool exploded = false;
     BoxCollider2D explosionRadius;
-    private OfflineGameManager offlineGM;
 
     void Start()
     {
         explosionRadius = gameObject.GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-        offlineGM = OfflineGameManager.instance;
 
     }
-
-    /*
-    void OnTriggerEnter2D(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
-    */
-
-    /*
-    void Update()
-    {
-        explosionDelay -= Time.deltaTime;
-        if (explosionDelay < 0)
-        {
-            exploded = true;
-        }
-    }
-    */
 
     void FixedUpdate()
     {
@@ -57,12 +33,10 @@ public class Bomb : MonoBehaviour
             if (currentRadius < explosionMaxSize)
             {
                 currentRadius += explosionRate;
-                //offlineGM.loadScene();
             }
             else
             {
                 Destroy(gameObject, 0.2f);
-                //SceneManager.GetActiveScene();
             }
             explosionRadius.edgeRadius = currentRadius;
         }
@@ -104,12 +78,7 @@ public class Bomb : MonoBehaviour
             Vector2 target = collision.gameObject.transform.position;
             Vector2 bomb = gameObject.transform.position;
             Vector2 direction1 =  explosionForce * (target - bomb);
-            //Vector2 direction2 = - 0.5f * explosionForce * (target - bomb);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction1);
-            //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction2);
-            //new WaitForSecondsRealtime(1);
-            //Vector2 direction2 = -0.5f * explosionForce * (collision.gameObject.transform.position - gameObject.transform.position);
-            //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction2);
         }
 
     }
