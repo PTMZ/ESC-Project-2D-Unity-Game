@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4748511869161183128
+--- !u!1 &5321710642647323885
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4748511869161183131}
-  - component: {fileID: 4748511869161183130}
-  - component: {fileID: 8030295770934134895}
-  - component: {fileID: 2497474916852984432}
-  - component: {fileID: 6866231279721694437}
-  - component: {fileID: 4131368340734958713}
+  - component: {fileID: 6661884334441501431}
+  - component: {fileID: 1511617255630648876}
+  - component: {fileID: 6098647573111548014}
+  - component: {fileID: 1990504692298707569}
+  - component: {fileID: 8442205136562922948}
+  - component: {fileID: 3151914409356399496}
   m_Layer: 0
-  m_Name: GrassPlain
+  m_Name: GrassPlainHeavy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4748511869161183131
+--- !u!4 &6661884334441501431
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748511869161183128}
+  m_GameObject: {fileID: 5321710642647323885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.63, y: 5.8, z: 0.0030975977}
   m_LocalScale: {x: 0.3846, y: 0.3746, z: 0}
@@ -35,13 +35,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4748511869161183130
+--- !u!212 &1511617255630648876
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748511869161183128}
+  m_GameObject: {fileID: 5321710642647323885}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -83,13 +83,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8030295770934134895
+--- !u!61 &6098647573111548014
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748511869161183128}
+  m_GameObject: {fileID: 5321710642647323885}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -109,46 +109,46 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.68, y: 2.68}
   m_EdgeRadius: 0
---- !u!50 &2497474916852984432
+--- !u!50 &1990504692298707569
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748511869161183128}
+  m_GameObject: {fileID: 5321710642647323885}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDrag: 1
-  m_AngularDrag: 1
+  m_Mass: 500
+  m_LinearDrag: 10
+  m_AngularDrag: 10
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6866231279721694437
+--- !u!114 &8442205136562922948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748511869161183128}
+  m_GameObject: {fileID: 5321710642647323885}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5709f76c0fcb52d419f5f164e6a5b580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4131368340734958713
+--- !u!114 &3151914409356399496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748511869161183128}
+  m_GameObject: {fileID: 5321710642647323885}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a013c951498efcc46bc3f8e303722115, type: 3}
