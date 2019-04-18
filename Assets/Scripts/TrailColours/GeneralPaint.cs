@@ -9,7 +9,7 @@ public class GeneralPaint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerAvatar>().updateTrail(colourNum);
+            //other.gameObject.GetComponent<PlayerAvatar>().updateTrail(colourNum);
         }
 
         if(other.CompareTag("DestroyableBox")){

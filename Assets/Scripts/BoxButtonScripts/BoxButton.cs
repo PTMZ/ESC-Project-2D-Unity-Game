@@ -19,11 +19,7 @@ public class BoxButton : MonoBehaviour
     void Start(){
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         mySpriteRenderer.sprite = normSprite;
-        trailLock.SetActive(true);
-        trailSignal.SetActive(false);
-        cross.SetActive(true);
-        tick.SetActive(false);
-        laser.SetActive(true);
+        setTrailState(false);
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -34,11 +30,7 @@ public class BoxButton : MonoBehaviour
         }
         if(getPressed()){
             mySpriteRenderer.sprite = pressSprite;
-            trailLock.SetActive(false);
-            trailSignal.SetActive(true);
-            cross.SetActive(false);
-            tick.SetActive(true);
-            laser.SetActive(false);
+            setTrailState(true);
         }
     }
 
@@ -50,15 +42,23 @@ public class BoxButton : MonoBehaviour
         }
         if(!getPressed()){
             mySpriteRenderer.sprite = normSprite;
-            trailLock.SetActive(true);
-            trailSignal.SetActive(false);
-            cross.SetActive(true);
-            tick.SetActive(false);
-            laser.SetActive(true);
+            setTrailState(false);
         }
     }
 
     public bool getPressed(){
         return count>0;
+    }
+
+    private void setTrailState(bool state){
+        if(trailLock){
+            trailLock.SetActive(!state);
+            trailSignal.SetActive(state);
+        }
+        if(cross){
+            cross.SetActive(!state);
+            tick.SetActive(state);
+        }
+        laser.SetActive(!state);
     }
 }
