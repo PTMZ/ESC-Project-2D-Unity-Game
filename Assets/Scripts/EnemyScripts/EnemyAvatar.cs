@@ -17,7 +17,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     public WeaponAnim weaponAnim;
     private bool isDead = false;
     private bool facingLeft = false;
-    //public bool isMachineBoss = false;
+    public bool isMachineBoss = false;
     public Animator exMarkAnim;
 
     private OfflineGameManager offlineGM;
@@ -62,7 +62,8 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             animator.SetBool("moving", true);
             weaponAnim.weaponAnimator.SetBool("weapmoving", true);
             
-            
+
+
         }
         else{
             animator.SetBool("moving", false);
@@ -81,13 +82,21 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             isDead = true;
             //transform.Rotate(0, 0, 90, Space.Self);
             animator.SetBool("dead", true);
-            /*
+            
             if (isMachineBoss)
             {
-                weaponAnim.weaponAnimator.Play("machine_explosion", -1);
+                Debug.Log("MACHINE IS DEAD");
+                weaponAnim.weaponAnimator.SetBool("explode", true);
+                //weaponAnim.weaponAnimator.Play("machine_explosion", -1);
+                //weaponAnim.weaponAnimator.SetBool("hide", true);
+                Destroy(gameObject, 1.3f);
             }
-            */
-            weaponAnim.mySpriteRenderer.enabled = false;
+            else
+            {
+                weaponAnim.mySpriteRenderer.enabled = false;
+            }
+            
+            
         }
 
         if (health < -30)
