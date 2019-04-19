@@ -964,17 +964,17 @@ PrefabInstance:
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: nextSceneName
-      value: MSP_01
+      value: PW_03
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: curSceneTheme
-      value: TutorialTheme
+      value: MinesweeperTheme
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: nextSceneTheme
-      value: TutorialTheme
+      value: MinesweeperTheme
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 911ae7e4e60f519449a75df4f9b943e7, type: 3}
@@ -11245,7 +11245,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 2ad5616fb51ae9a48b932a33aac3e0cf, type: 3}
 --- !u!224 &1723212043 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5161427192424312712, guid: 2ad5616fb51ae9a48b932a33aac3e0cf,
+  m_CorrespondingSourceObject: {fileID: 4961132417041682985, guid: 2ad5616fb51ae9a48b932a33aac3e0cf,
     type: 3}
   m_PrefabInstance: {fileID: 1723212042}
   m_PrefabAsset: {fileID: 0}
