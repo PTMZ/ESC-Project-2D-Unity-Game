@@ -65,6 +65,11 @@ public class BulletScript : MonoBehaviourPunCallbacks
             //Debug.Log("Enemy hit is " + col.gameObject.name);
             col.gameObject.GetComponent<DestroyableWall>().getHit(offlineGM.curDamage);
         }
+        if (col.gameObject.GetComponent<ShootBomb>() != null)
+        {
+            //Debug.Log("Enemy hit is " + col.gameObject.name);
+            col.gameObject.GetComponent<ShootBomb>().getHit(offlineGM.curDamage);
+        }
         //Debug.Log("OnCollisionEnter2D");
         //Put Sound here
         Vector2 hitPoint = col.GetContact(0).point;

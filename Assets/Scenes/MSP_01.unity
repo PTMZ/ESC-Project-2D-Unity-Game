@@ -7744,7 +7744,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1441738469
 PrefabInstance:
@@ -7796,7 +7796,7 @@ PrefabInstance:
     - target: {fileID: 9117138169387218340, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218340, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
@@ -7919,7 +7919,7 @@ Transform:
   - {fileID: 559744262}
   - {fileID: 446162190}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841002869
 GameObject:
@@ -8077,7 +8077,7 @@ PrefabInstance:
     - target: {fileID: 7505711939213581932, guid: bee3cd2c2b2a5bd4ba947cc139d5d966,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7505711939213581932, guid: bee3cd2c2b2a5bd4ba947cc139d5d966,
         type: 3}
@@ -8200,7 +8200,7 @@ MonoBehaviour:
   columns: 16
   rows: 11
   tileWidth: 1
-  fileName: bomb
+  fileName: bombs
   TilePrefabs:
   - {fileID: 4748511869161183128, guid: 024d99b23225cd74493f1074c5fcd0a5, type: 3}
   - {fileID: 1228711734000234990, guid: c5be74e5909fe644fb4e45bae3251470, type: 3}
