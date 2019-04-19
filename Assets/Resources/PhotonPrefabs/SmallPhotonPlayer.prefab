@@ -1011,7 +1011,7 @@ MonoBehaviour:
   - {fileID: 6278481612881911552}
   - {fileID: 6806275629946510465}
   viewIdField: 0
-  InstantiationId: 1
+  InstantiationId: 2
   isRuntimeInstantiated: 0
 --- !u!50 &7681946498128574647
 Rigidbody2D:
