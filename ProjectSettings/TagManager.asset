@@ -16,6 +16,7 @@ TagManager:
   - DestroyableBoxBlue
   - DestroyableBoxYellow
   - DestroyableBoxOrange
+  - SpawnManager
   layers:
   - Default
   - TransparentFX

@@ -10,4 +10,5 @@ public class Save
     public int curAttack;
     public string curScene;
     public int storyProgress;
+    public Dictionary<string, int> spawnPoints;
 }

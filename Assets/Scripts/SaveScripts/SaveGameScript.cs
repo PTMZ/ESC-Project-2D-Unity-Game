@@ -35,6 +35,7 @@ public class SaveGameScript
         save.curAttack = OfflineGameManager.instance.curAttack;
         save.curScene = SceneManager.GetActiveScene().name;
         save.storyProgress = OfflineGameManager.instance.storyProgress;
+        save.spawnPoints = OfflineGameManager.instance.spawnPoints;
 
         return save;
     }
@@ -55,6 +56,7 @@ public class SaveGameScript
             OfflineGameManager.maxHealth = save.maxHealth;
             OfflineGameManager.instance.curAttack = save.curAttack;
             OfflineGameManager.instance.storyProgress = save.storyProgress;
+            OfflineGameManager.instance.spawnPoints = save.spawnPoints;
 
             AudioManager.instance.StopAll();
             SceneManager.LoadScene(save.curScene);

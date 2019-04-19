@@ -9,9 +9,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class OfflineGameManager : MonoBehaviour
 {
-
     public PlayerAvatar PlayerPrefab;
     public GameObject[] bulletPrefabs;
+    
 
     [HideInInspector]
     public PlayerAvatar LocalPlayer;
@@ -34,6 +34,14 @@ public class OfflineGameManager : MonoBehaviour
     public float dmgMult = 1;
 
     public int curAttack;
+    [HideInInspector]
+    public Dictionary<string, int> spawnPoints = new Dictionary<string, int>()
+    {
+        {"B2_AVHQ", -1}, {"L1_AVHQ", -1}, {"L2_AVHQ", -1}, {"L3_AVHQ", -1}, {"L4_AVHQ", -1}, {"L5_AVHQ", -1},
+        {"PW_01", -1}, {"PW_02", -1}, {"PW_03", -1}, {"PW_04", -1},
+        {"MSP_01", -1}, {"MSP_02", -1}, {"MSP_03", -1}, {"MSP_04", -1}
+    };
+    
 
     public static OfflineGameManager instance;
     public AudioManager AMPrefab;
@@ -95,8 +103,7 @@ public class OfflineGameManager : MonoBehaviour
 
     public void respawnPlayer(GameObject obj)
     {
-        Destroy(obj, 2);
-        
+        Destroy(obj, 3);
         StartCoroutine(DelayLoad(2));
     }
 
@@ -104,21 +111,30 @@ public class OfflineGameManager : MonoBehaviour
     {
         Destroy(obj, 0);
         //StartCoroutine(DelayLoad(2));
-    }
-
-    public void destroyBomb(GameObject obj)
+    } void destroyBomb(GameObject obj)
     {
         Destroy(obj, 0);
     }
 
-    public void loadScene()
+    public void loadSceneAtDeath(string scene)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SpawnManager spawnManager = GameObject.FindWithTag("SpawnManager");
+        SceneManager.LoadScene(scene);
+        //if (spawnPoints[SceneManager.GetActiveScene().name] == -1)
+        //{
+        //    SceneManager.LoadScene(scene);
+
+        //}
+        //else
+        //{
+            
+        //}
         //StartCoroutine(DelayLoad(2));
     }
 
     private IEnumerator DelayLoad(float timing)
     {
+        
         yield return new WaitForSeconds(timing);
 
         if (File.Exists(Application.persistentDataPath + "/gamesave.save"))
@@ -134,18 +150,16 @@ public class OfflineGameManager : MonoBehaviour
             OfflineGameManager.instance.curHealth = maxHealth;
             OfflineGameManager.instance.curAttack = save.curAttack;
             OfflineGameManager.instance.storyProgress = save.storyProgress;
-
+            
             AudioManager.instance.StopAll();
-            SceneManager.LoadScene(save.curScene);
+            loadSceneAtDeath(save.curScene);
             Debug.Log("Player Respawned.");
         }
         else
         {
             curHealth = maxHealth;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            loadSceneAtDeath(SceneManager.GetActiveScene().name);
         }
-
-
     }
 
 
