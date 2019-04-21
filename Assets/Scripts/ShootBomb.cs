@@ -47,7 +47,7 @@ public class ShootBomb : MonoBehaviour
     public void getHit(float damage)
     {
         health -= damage;
-        if (health <= 0)
+        if (health <= 0)  
         {
             exploded = true;
             animator.Play("bomb_explosion", -1);
@@ -65,8 +65,6 @@ public class ShootBomb : MonoBehaviour
             go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
         }
     }
-
-   
 
 
     
