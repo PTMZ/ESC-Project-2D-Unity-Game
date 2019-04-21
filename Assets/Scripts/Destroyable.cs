@@ -13,25 +13,32 @@ public class Destroyable : MonoBehaviour
     public Sprite[] spriteList;
     public int curSprite = 4;
     public bool isHPBox = false;
+    public bool isKeyBox = false;
 
     public void getHit(float damage)
     {
         health -= damage;
-        if (health <= 0 && SceneManager.GetActiveScene().name == "B4_AVHQ")
+        if (health <= 0)
         {
-            if(isHPBox){
-                Instantiate(HPPrefab, transform.position, Quaternion.identity);
-            }
             Destroy(gameObject);
-        }
 
-        if (health <= 0 && SceneManager.GetActiveScene().name == "L2_AVHQ")
-        {
-            if (isHPBox)
+            if (SceneManager.GetActiveScene().name == "B4_AVHQ")
             {
-                Instantiate(KeyPrefab, transform.position, Quaternion.identity);
+                if (isHPBox)
+                {
+                    Instantiate(HPPrefab, transform.position, Quaternion.identity);
+                }
             }
-            Destroy(gameObject);
+
+            if (SceneManager.GetActiveScene().name == "L2_AVHQ" || SceneManager.GetActiveScene().name == "L3_AVHQ")
+            {
+                if (isKeyBox)
+                {
+                    Instantiate(KeyPrefab, transform.position, Quaternion.identity);
+                }
+
+            }
+
         }
 
         if (FloatingTextPrefab)
@@ -39,11 +46,14 @@ public class Destroyable : MonoBehaviour
             ShowFloatingTextHealth();
         }
 
-        void ShowFloatingTextHealth()
-        {
-            var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
-            go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
-        }
+
+    }
+
+
+    void ShowFloatingTextHealth()
+    {
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TMPro.TextMeshPro>().text = health.ToString();
     }
 
     public void changeColour(int newColour){

@@ -8,7 +8,6 @@ public class SpawnPoint : MonoBehaviour
     public int pointIndex;
     public GameObject playerPrefab;
     public GameObject player;
-    public GameObject destructible;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,7 +20,7 @@ public class SpawnPoint : MonoBehaviour
 
     public void spawnPlayer()
     {
-        Debug.Log("Player spawn method called.");
+        //Debug.Log("Player spawn method called.");
         if (player == null)
         {
             Debug.Log("No player object");
@@ -29,5 +28,7 @@ public class SpawnPoint : MonoBehaviour
         }
         player.transform.position = transform.position;
     }
+
+
 
 }
