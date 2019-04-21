@@ -8,7 +8,6 @@ public class Destroyable : MonoBehaviour
     public GameObject FloatingTextPrefab;
     public GameObject HPPrefab;
     public GameObject KeyPrefab;
-    private bool keySpawned = false;
     public float health = 40;
 
     public Sprite[] spriteList;
@@ -30,8 +29,6 @@ public class Destroyable : MonoBehaviour
         {
             if (isHPBox)
             {
-                KeyPrefab.SetActive(true);
-                keySpawned = true;
                 Instantiate(KeyPrefab, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
