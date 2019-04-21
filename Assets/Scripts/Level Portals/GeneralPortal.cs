@@ -8,6 +8,7 @@ public class GeneralPortal : MonoBehaviour
     public string curSceneTheme;
     public string nextSceneTheme;
     public string nextSceneName;
+    public int spawnPoint;
 
     public AudioManager AMPrefab;
 
@@ -40,6 +41,7 @@ public class GeneralPortal : MonoBehaviour
             if(other.gameObject.GetComponent<PlayerAvatar>().getIsDead()){
                 return;
             }
+            OfflineGameManager.instance.spawnPoints[SceneManager.GetActiveScene().name] = spawnPoint;
             AudioManager.instance.Play("EnterPortal");
             if(string.Compare(AudioManager.instance.curTheme, nextSceneTheme) != 0){
                 AudioManager.instance.Stop(AudioManager.instance.curTheme);

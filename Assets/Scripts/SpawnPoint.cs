@@ -24,7 +24,8 @@ public class SpawnPoint : MonoBehaviour
         Debug.Log("Player spawn method called.");
         if (player == null)
         {
-            Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+            Debug.Log("No player object");
+            //Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
         }
         player.transform.position = transform.position;
     }

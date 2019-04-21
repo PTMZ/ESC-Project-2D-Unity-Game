@@ -13,6 +13,9 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
+        if (OfflineGameManager.instance.spawnPoints[SceneManager.GetActiveScene().name] == -1)
+            return;
+
         index = OfflineGameManager.instance.spawnPoints[SceneManager.GetActiveScene().name];
         spawnPoints[index].spawnPlayer();
     }
