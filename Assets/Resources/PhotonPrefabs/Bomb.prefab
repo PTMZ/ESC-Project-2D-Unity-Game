@@ -119,9 +119,9 @@ MonoBehaviour:
   bomb: {fileID: 0}
   bombDamage: 100
   impactRadius: 2
-  impactPower: 5
-  explosionForce: 1000
-  expRadius: 10
+  impactPower: 100
+  explosionForce: 100
+  expRadius: 2
   animator: {fileID: 0}
 --- !u!61 &3435537303821686656
 BoxCollider2D:

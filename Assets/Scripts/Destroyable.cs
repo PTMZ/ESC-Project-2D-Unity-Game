@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Destroyable : MonoBehaviour
 {
     public GameObject FloatingTextPrefab;
     public GameObject HPPrefab;
+    public GameObject KeyPrefab;
     public float health = 40;
 
     public Sprite[] spriteList;
@@ -15,10 +17,19 @@ public class Destroyable : MonoBehaviour
     public void getHit(float damage)
     {
         health -= damage;
-        if (health <= 0)
+        if (health <= 0 && SceneManager.GetActiveScene().name == "B4_AVHQ")
         {
             if(isHPBox){
                 Instantiate(HPPrefab, transform.position, Quaternion.identity);
+            }
+            Destroy(gameObject);
+        }
+
+        if (health <= 0 && SceneManager.GetActiveScene().name == "L2_AVHQ")
+        {
+            if (isHPBox)
+            {
+                Instantiate(KeyPrefab, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
         }

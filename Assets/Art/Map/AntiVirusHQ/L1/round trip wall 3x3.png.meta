@@ -130,11 +130,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 533.3334
-        width: 266.66666
-        height: 266.66666
+        y: 534
+        width: 267
+        height: 266
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,12 +149,12 @@ TextureImporter:
       name: round trip wall 3x3_1
       rect:
         serializedVersion: 2
-        x: 266
-        y: 533.3334
-        width: 266.66666
-        height: 266.66666
+        x: 267
+        y: 534
+        width: 267
+        height: 266
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: round trip wall 3x3_2
       rect:
         serializedVersion: 2
-        x: 532
-        y: 533.3334
-        width: 266.66666
-        height: 266.66666
+        x: 533
+        y: 533
+        width: 267
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,11 +190,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 267.33334
-        width: 266.66666
-        height: 266.66666
+        y: 266
+        width: 267
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,12 +209,12 @@ TextureImporter:
       name: round trip wall 3x3_4
       rect:
         serializedVersion: 2
-        x: 266
-        y: 267.33334
-        width: 266.66666
-        height: 266.66666
+        x: 267
+        y: 267
+        width: 267
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,12 +229,12 @@ TextureImporter:
       name: round trip wall 3x3_5
       rect:
         serializedVersion: 2
-        x: 532
-        y: 267.33334
-        width: 266.66666
-        height: 266.66666
+        x: 533
+        y: 267
+        width: 267
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,11 +250,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1.3333435
-        width: 266.66666
-        height: 266.66666
+        y: 0
+        width: 267
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,11 +270,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 266
-        y: 1.3333435
-        width: 266.66666
-        height: 266.66666
+        y: 0
+        width: 267
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -289,12 +289,12 @@ TextureImporter:
       name: round trip wall 3x3_8
       rect:
         serializedVersion: 2
-        x: 532
-        y: 1.3333435
-        width: 266.66666
-        height: 266.66666
+        x: 533
+        y: 0
+        width: 267
+        height: 267
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -13,9 +13,11 @@ public class Pickups : MonoBehaviour
     public GameObject[] toActivate;
     public GameObject[] toDeactivate;
     public DialogueTrigger dialogue;
+    public GameObject laser;
 
     public void Start(){
         offlineGM = FindObjectOfType<OfflineGameManager>();
+        laser.SetActive(true);
     }
 
     private void Update()
@@ -63,7 +65,12 @@ public class Pickups : MonoBehaviour
             if(AstarPath.active){
                 AstarPath.active.Scan();
             }
-            
+
+            if (SceneManager.GetActiveScene().name == "L2_AVHQ")
+            {
+                laser.SetActive(false);
+            }
+
             //SceneManager.LoadScene("ConstrictLevel");
         }
 
