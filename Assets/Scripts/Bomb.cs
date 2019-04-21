@@ -15,12 +15,14 @@ public class Bomb : MonoBehaviour
     public float bombDamage = 100;
     public float impactRadius = 2;
     public float impactPower = 5;
-    public float explosionForce = 1000f;
+    public float explosionForce = 100f;
     public float expRadius = 10f;       
     public Animator animator;
 
     bool exploded = false;
     BoxCollider2D explosionRadius;
+
+    private List<Collider2D> colliders = new List<Collider2D>();
 
     void Start()
     {
@@ -49,10 +51,14 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
-        
+        //Debug.Log(collision.gameObject.name);
+        if (!colliders.Contains(collision)) {
+            colliders.Add(collision);
+        }
+
         if (collision.gameObject.GetComponent<PlayerAvatar>() != null)
         {
+            ApplyForceToAll();
             exploded = true;
             animator.Play("bomb_explosion", -1);
             collision.gameObject.GetComponent<PlayerAvatar>().getHit(bombDamage);
@@ -84,17 +90,36 @@ public class Bomb : MonoBehaviour
             */
 
 
-            Rigidbody2D other = collision.gameObject.GetComponent<Rigidbody2D>();
-            AddExplosionForce(other, impactPower, gameObject.transform.position, impactRadius);
+            //Rigidbody2D other = collision.gameObject.GetComponent<Rigidbody2D>();
+            //AddExplosionForce(other, impactPower, gameObject.transform.position, impactRadius);
             //Destroy(gameObject);
-            GameObject exp = Instantiate(bomb, transform.position, transform.rotation);
-            Destroy(exp, 0.3f);
+            if(bomb){
+                GameObject exp = Instantiate(bomb, transform.position, transform.rotation);
+                Destroy(exp, 0.3f);
+            }
         }
 
     }
 
+     private void OnTriggerExit2D (Collider2D collision) {
+         //colliders.Remove(collision);
+     }
+
     
-        public static void AddExplosionForce(Rigidbody2D body, float expForce, Vector3 expPosition, float expRadius)
+    private void ApplyForceToAll(){
+        Debug.Log("EXPLODE");
+        foreach(Collider2D col in colliders){
+            if(col){
+                Rigidbody2D other = col.gameObject.GetComponent<Rigidbody2D>();
+                if(other){
+                    Debug.Log("EXPLODE: " + col.gameObject.name);
+                    AddExplosionForce(other, impactPower, gameObject.transform.position, impactRadius);
+                }
+            }
+        }
+    }
+
+    public static void AddExplosionForce(Rigidbody2D body, float expForce, Vector3 expPosition, float expRadius)
     {
         var dir = (body.transform.position - expPosition);
         float calc = 1 - (dir.magnitude / expRadius);
@@ -102,7 +127,8 @@ public class Bomb : MonoBehaviour
         {
             calc = 0;
         }
-        body.AddForce(dir.normalized * expForce * calc);
+        Debug.Log("EXP FORCE: " + dir.normalized * expForce * calc);
+        body.AddForce(dir.normalized * expForce * calc, ForceMode2D.Impulse);
     }
     
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MachineMove : MonoBehaviour
+public class AngelMove : MonoBehaviour
 {
     public Transform mypos;
     public GameObject target;
@@ -38,9 +38,9 @@ public class MachineMove : MonoBehaviour
         curStoryProg = OfflineGameManager.instance.storyProgress;
         if(OfflineGameManager.instance.storyProgress >= storyProgActivate){
             isActivated = true;
-            GetComponent<MachineAttack>().isActivated = true;
+            GetComponent<AngelAttack>().isActivated = true;
             levelSpecificTrigger = false;
-            //Debug.Log("attack activated.");
+            Debug.Log("attack activated.");
         }
         if(!isActivated){
             return;
@@ -52,8 +52,8 @@ public class MachineMove : MonoBehaviour
     
     void FixedUpdate(){
         if(myself.getDead()){
-            Debug.Log("Machine boss dead?.");
-            GetComponent<MachineAttack>().isActivated = false;
+            Debug.Log("Angel boss dead?.");
+            GetComponent<AngelAttack>().isActivated = false;
             isActivated = false;
             return;
         }
@@ -63,6 +63,4 @@ public class MachineMove : MonoBehaviour
         midPos = mypos.position;
         transform.position = midPos - offsetY;
     }
-
-
 }

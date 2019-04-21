@@ -10,7 +10,6 @@ public class BigLaserTrigger : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("LASER COLLIDE");
         if (other.CompareTag("Player")){
             other.gameObject.GetComponent<PlayerAvatar>().getHit(MachineAttack.damage);
             Destroy(gameObject);
