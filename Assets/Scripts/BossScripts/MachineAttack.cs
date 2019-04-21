@@ -26,6 +26,7 @@ public class MachineAttack : MonoBehaviour
     public float laserWidth;
     public float laserHeight;
     public float areaXoffset;
+    public float yOffset;
 
     public Animator machineAnim;
 
@@ -65,9 +66,9 @@ public class MachineAttack : MonoBehaviour
                 Debug.Log("START LASER SHOOT");
                 //machineAnim.Play("machineboss_attack", -1);
                 cooldownTimeStamp2 = Time.time + cooldown2;
-                Vector3 areaPos = transform.position + new Vector3(areaXoffset * (player.transform.position.x > transform.position.x ? -1 : 1), 0, 0);
+                Vector3 areaPos = transform.position + new Vector3(areaXoffset * (player.transform.position.x > transform.position.x ? 1 : -1), 0, 0);
                 SpawnLaserArea(areaPos);
-                DelayBigAttack(areaPos);
+                //DelayBigAttack(areaPos);
             }
         }
     }
@@ -115,25 +116,29 @@ public class MachineAttack : MonoBehaviour
 
 
     void SpawnLaserArea(Vector3 areaPos){
-        GameObject t = Instantiate(warningAreaPrefab, areaPos, Quaternion.identity);
-        Destroy(t, timeout2);
+        var v = transform.position + new Vector3(areaXoffset * (player.transform.position.x > transform.position.x ? 1 : -1), yOffset, 0);
+        GameObject t = Instantiate(warningAreaPrefab, v, Quaternion.identity);
+        t.transform.parent = transform;
+        //Destroy(t, timeout2);
+        DelayBigAttack(t);
     }
 
-    void DelayBigAttack(Vector3 areaPos){
-        StartCoroutine(WaitAndBigAttack(areaPos));
+    void DelayBigAttack(GameObject warnArea){
+        StartCoroutine(WaitAndBigAttack(warnArea));
     }
 
-    private IEnumerator WaitAndBigAttack(Vector3 areaPos)
+    private IEnumerator WaitAndBigAttack(GameObject warnArea)
     {
         yield return new WaitForSeconds(timeout2);
-        Instantiate(bigAreaAttackPrefab, areaPos, Quaternion.identity);
+        Instantiate(bigAreaAttackPrefab, warnArea.transform.position, Quaternion.identity);
+        Destroy(warnArea);
         //Destroy(go, 0.1f);
     }
 
 
     private bool inLaserRange(){
         return (Mathf.Abs(player.transform.position.x - transform.position.x) <= laserWidth && 
-                Mathf.Abs(player.transform.position.y - transform.position.y) <= laserHeight);
+                Mathf.Abs(player.transform.position.y - (transform.position.y+yOffset)) <= laserHeight);
     }
 
 }
