@@ -8200,7 +8200,7 @@ MonoBehaviour:
   columns: 16
   rows: 11
   tileWidth: 1
-  fileName: bombs
+  fileName: bomb
   TilePrefabs:
   - {fileID: 4748511869161183128, guid: 024d99b23225cd74493f1074c5fcd0a5, type: 3}
   - {fileID: 1228711734000234990, guid: c5be74e5909fe644fb4e45bae3251470, type: 3}

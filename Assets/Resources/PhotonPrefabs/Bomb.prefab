@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomb: {fileID: 0}
-  bombDamage: 10
+  bombDamage: 100
   explosionRate: 1
   explosionMaxSize: 1
   explosionSpeed: 10
