@@ -21,6 +21,8 @@ public class MachineMove : MonoBehaviour
     private Vector3 midPos;
     private Vector3 offsetY;
 
+    private Rigidbody2D rb2d;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,8 @@ public class MachineMove : MonoBehaviour
 
         offsetY = new Vector3(0, 1.5f, 0);
         midPos = transform.position + offsetY;
+
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -57,10 +61,14 @@ public class MachineMove : MonoBehaviour
             isActivated = false;
             return;
         }
+        Debug.Log("mypos: " + mypos.position);
+        Debug.Log("midPos: " + midPos);
         Vector3 updPos = mypos.position - midPos;
-        myself.change = midPos;
+        myself.change = updPos;
+        Debug.Log(myself.change);
 
-        midPos = mypos.position;
+        //midPos = mypos.position;
+        midPos += updPos / 2;
         transform.position = midPos - offsetY;
     }
 

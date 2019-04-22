@@ -35,6 +35,8 @@ public class EnemyMovement : MonoBehaviour
 
     public int enemyType = 0;
 
+    private Rigidbody2D rb2d;
+
 
 
     // Start is called before the first frame update
@@ -43,6 +45,7 @@ public class EnemyMovement : MonoBehaviour
         offset = new Vector3(0, -1.7f, 0);
         player = GameObject.FindWithTag("Player");
         myself = GetComponent<EnemyAvatar>();
+        rb2d = GetComponent<Rigidbody2D>();
         pAvatar = player.GetComponent<PlayerAvatar>();
         Debug.Log(pAvatar.points);
         weaponAnim = GetComponent<WeaponAnim>();
@@ -84,7 +87,8 @@ public class EnemyMovement : MonoBehaviour
         Vector3 updPos = mypos.position - midPos;
         myself.change = updPos;
         
-        midPos = mypos.position;
+        //midPos = mypos.position;
+        midPos += updPos/2;
         transform.position = midPos - new Vector3(0, 0.5f, 0);
         //transform.position = mypos.position - new Vector3(0, 0.5f, 0);
         //if(player != null){

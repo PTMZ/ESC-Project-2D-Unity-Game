@@ -117,6 +117,7 @@ public class MachineAttack : MonoBehaviour
 
     void SpawnLaserArea(Vector3 areaPos){
         var v = transform.position + new Vector3(areaXoffset * (player.transform.position.x > transform.position.x ? 1 : -1), yOffset, 0);
+        //var v = transform.position + new Vector3(areaXoffset, yOffset, 0);
         GameObject t = Instantiate(warningAreaPrefab, v, Quaternion.identity);
         t.transform.parent = transform;
         //Destroy(t, timeout2);
