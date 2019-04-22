@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This class activates or deactivates traps based on the story progress
 public class EventTrigger : MonoBehaviour
 {
-    //Condition for before and after storyprogress
-    //gameObjects to deactivate
-    //gameObject to activate
-    public int storyProgressToActivate;
-    public GameObject[] toActivate;
+    //Will not activate if -1
+    public int storyProgressToActivate = -1;
+    public GameObject[] onCollideActivate;
     
-    public int storyProgressToDeactivate;
-    public GameObject[] toDeactivate;
+    public int storyProgressToDeactivate = -1;
+    public GameObject[] onCollideDeactivate;
 
-    void OnTriggerEnter2D(Collider2D other)
+    public int onStartProgressActivate = -1;
+    public GameObject[] onStartToActivate;
+
+    public int onStartProgressDeactivate = -1;
+    public GameObject[] onStartToDeactivate;
+
+
+
+    void Start()
     {
-        if (other.CompareTag("Player"))
-        {
+        if(onStartProgressActivate != -1)
             if (OfflineGameManager.instance.storyProgress <= storyProgressToActivate)
             {
-                foreach (GameObject obj in toActivate)
+                foreach (GameObject obj in onStartToActivate)
                 {
                     if (obj == null)
                         continue;
@@ -28,13 +34,14 @@ public class EventTrigger : MonoBehaviour
                     {
                         obj.SetActive(true);
                     }
-                    
+
                 }
             }
-            //If story has already progress beyond the  
+
+        if (onStartProgressDeactivate != -1)
             if (OfflineGameManager.instance.storyProgress >= storyProgressToDeactivate)
             {
-                foreach (GameObject obj in toDeactivate)
+                foreach (GameObject obj in onStartToDeactivate)
                 {
                     if (obj == null)
                         continue;
@@ -45,7 +52,41 @@ public class EventTrigger : MonoBehaviour
 
                 }
             }
+    }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (storyProgressToActivate != -1)
+                if (OfflineGameManager.instance.storyProgress <= storyProgressToActivate)
+                {
+                    foreach (GameObject obj in onCollideActivate)
+                    {
+                        if (obj == null)
+                            continue;
+                        else
+                        {
+                            obj.SetActive(true);
+                        }
+                    
+                    }
+                }
+            //If story has already progress beyond the 
+            if (storyProgressToDeactivate != -1)
+                if (OfflineGameManager.instance.storyProgress >= storyProgressToDeactivate)
+                {
+                    foreach (GameObject obj in onCollideDeactivate)
+                    {
+                        if (obj == null)
+                            continue;
+                        else
+                        {
+                            Destroy(obj);
+                        }
+
+                    }
+                }
         }
     }
 

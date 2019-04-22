@@ -8,6 +8,8 @@ public class SpawnItem : MonoBehaviour
     public GameObject destructiblePrefab;
     public GameObject destructible;
 
+    public float spawnRate = 2f;
+
     private IEnumerator coroutine;
 
     void spawnDestructible()
@@ -15,7 +17,7 @@ public class SpawnItem : MonoBehaviour
         //Debug.Log("Destructible spawn method called.");
         //Debug.Log("No player object");
 
-        coroutine = DelaySeconds(2f);
+        coroutine = DelaySeconds(spawnRate);
         StartCoroutine(coroutine);
     }
 
