@@ -39,8 +39,9 @@ public class MachineMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         curStoryProg = OfflineGameManager.instance.storyProgress;
-        if(OfflineGameManager.instance.storyProgress >= storyProgActivate){
+        if(OfflineGameManager.instance.storyProgress >= storyProgActivate && !isActivated){
             isActivated = true;
             GetComponent<MachineAttack>().isActivated = true;
             levelSpecificTrigger = false;
@@ -56,16 +57,18 @@ public class MachineMove : MonoBehaviour
     
     void FixedUpdate(){
         if(myself.getDead()){
-            Debug.Log("Machine boss dead?.");
-            GetComponent<MachineAttack>().isActivated = false;
-            isActivated = false;
+            //Debug.Log("Machine boss dead?.");
+            if(isActivated){
+                GetComponent<MachineAttack>().isActivated = false;
+                isActivated = false;
+            }
             return;
         }
-        Debug.Log("mypos: " + mypos.position);
-        Debug.Log("midPos: " + midPos);
+        //Debug.Log("mypos: " + mypos.position);
+        //Debug.Log("midPos: " + midPos);
         Vector3 updPos = mypos.position - midPos;
         myself.change = updPos;
-        Debug.Log(myself.change);
+        //Debug.Log(myself.change);
 
         //midPos = mypos.position;
         midPos += updPos / 2;

@@ -4639,7 +4639,7 @@ ParticleSystem:
 --- !u!199 &1735118884
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9337,7 +9337,7 @@ ParticleSystem:
 --- !u!199 &2055687443
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9833,6 +9833,8 @@ GameObject:
   - component: {fileID: 4406531370502333388}
   - component: {fileID: 5618416744952944322}
   - component: {fileID: 1117608564969680750}
+  - component: {fileID: 494525991}
+  - component: {fileID: 494525992}
   m_Layer: 0
   m_Name: EnemyAvatar
   m_TagString: Untagged
@@ -9917,7 +9919,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4907059290283204353}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 832569d8875f26e499fe0b494db4f697, type: 3}
   m_Name: 
@@ -9926,7 +9928,6 @@ MonoBehaviour:
   target: {fileID: 6678420780880537352}
   weaponAnim: {fileID: 0}
   cooldown: 0.5
-  hitRadius: 2
   meleeDmg: 10
   patrolPoints:
   - {fileID: 4929594560929542006}
@@ -9935,6 +9936,7 @@ MonoBehaviour:
   inVisionRange: 0
   inHitRange: 0
   cd: 0
+  enemyType: 0
 --- !u!50 &2980626254544616483
 Rigidbody2D:
   serializedVersion: 4
@@ -10025,6 +10027,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponAnimator: {fileID: 0}
   mySpriteRenderer: {fileID: 0}
+--- !u!114 &494525991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907059290283204353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0459168fd49eaa49baa5f662bd62b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
+  player: {fileID: 0}
+  arrowPrefab: {fileID: 369, guid: f6411c2928a967a418979f53a5b48773, type: 3}
+  cooldown: 2
+  timeout: 1
+  randRadius: 1
+  angelAnim: {fileID: 0}
+--- !u!114 &494525992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907059290283204353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9edfb2346cb79c45834652e3cf20b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mypos: {fileID: 9052963211734853317}
+  target: {fileID: 6678420780880537352}
+  isActivated: 0
+  levelSpecificTrigger: 0
+  storyProgActivate: 0
+  curStoryProg: 0
 --- !u!1 &5390516539146220762
 GameObject:
   m_ObjectHideFlags: 0

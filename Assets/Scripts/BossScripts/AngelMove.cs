@@ -35,12 +35,13 @@ public class AngelMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         curStoryProg = OfflineGameManager.instance.storyProgress;
-        if(OfflineGameManager.instance.storyProgress >= storyProgActivate){
+        if(OfflineGameManager.instance.storyProgress >= storyProgActivate && !isActivated){
             isActivated = true;
             GetComponent<AngelAttack>().isActivated = true;
             levelSpecificTrigger = false;
-            Debug.Log("attack activated.");
+            //Debug.Log("attack activated.");
         }
         if(!isActivated){
             return;
@@ -52,9 +53,11 @@ public class AngelMove : MonoBehaviour
     
     void FixedUpdate(){
         if(myself.getDead()){
-            Debug.Log("Angel boss dead?.");
-            GetComponent<AngelAttack>().isActivated = false;
-            isActivated = false;
+            //Debug.Log("Angel boss dead?.");
+            if(isActivated){
+                GetComponent<AngelAttack>().isActivated = false;
+                isActivated = false;
+            }
             return;
         }
         Vector3 updPos = mypos.position - midPos;
