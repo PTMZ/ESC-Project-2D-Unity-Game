@@ -153,7 +153,7 @@ public class OfflineGameManager : MonoBehaviour
             OfflineGameManager.instance.curAttack = save.curAttack;
             OfflineGameManager.instance.storyProgress = save.storyProgress;
             
-            AudioManager.instance.StopAll();
+            //DO NOT UNCOMMENT THIS UNLESS ANOTHER BUG APPEARS. AudioManager.instance.StopAll();
             loadSceneAtDeath(save.curScene);
             Debug.Log("Player Respawned.");
         }

@@ -35,6 +35,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            //s.source.isPlaying = s.isPlaying;
         }
         foreach (Sound s in playerSounds)
         {
@@ -44,6 +45,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            //s.source.isPlaying = s.isPlaying;
         }
         foreach (Sound s in enemySounds)
         {
@@ -53,6 +55,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            //s.source.isPlaying = s.isPlaying;
         }
         foreach (Sound s in soundOnLoopButMustStop)
         {
@@ -62,6 +65,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            //s.source.isPlaying = s.isPlaying;
         }
     }
     
@@ -112,6 +116,8 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
+            if (s1.source.isPlaying)
+                return;
             s1.source.Play();
         }
 

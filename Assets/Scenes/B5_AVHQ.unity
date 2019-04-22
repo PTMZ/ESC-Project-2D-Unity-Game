@@ -3991,7 +3991,6 @@ MonoBehaviour:
   toActivate: []
   toDeactivate: []
   dialogue: {fileID: 0}
-  laser: {fileID: 0}
 --- !u!58 &508174608
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14499,7 +14498,6 @@ MonoBehaviour:
   toActivate: []
   toDeactivate: []
   dialogue: {fileID: 0}
-  laser: {fileID: 0}
 --- !u!58 &1847399517
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14637,7 +14635,7 @@ PrefabInstance:
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Swipe the left half of the screen to shoot.
+      value: Swipe the right half of the screen to shoot.
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -15838,7 +15836,7 @@ PrefabInstance:
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: nextSceneTheme
-      value: Tutorial Theme
+      value: TutorialTheme
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 911ae7e4e60f519449a75df4f9b943e7, type: 3}
