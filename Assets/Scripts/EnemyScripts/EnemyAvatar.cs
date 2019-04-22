@@ -101,6 +101,11 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             }
             
             
+        } else {
+            if(GetComponent<EnemyMovement>() != null){
+                Debug.Log("EnemyChange");
+                GetComponent<EnemyMovement>().changePatrol(false);
+            }
         }
 
         if (health < -30)

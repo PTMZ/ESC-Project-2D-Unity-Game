@@ -90,33 +90,8 @@ public class EnemyMovement : MonoBehaviour
         //midPos = mypos.position;
         midPos += updPos/2;
         transform.position = midPos - new Vector3(0, 0.5f, 0);
-        //transform.position = mypos.position - new Vector3(0, 0.5f, 0);
-        //if(player != null){
-            //target.transform.position = player.transform.position;
-            //target.transform.position = transform.position;  // Comment above line and uncomment this line to make enemy stationary
-        //}
-
-        //Vector3 midPos = transform.position + new Vector3(0, 0.5f, 0);
-        //Debug.Log((midPos - player.transform.position).magnitude);
-        if(player != null)
-        {
-            RaycastHit2D hitInfo = Physics2D.Raycast(midPos, player.transform.position - midPos, visionRadius, maskLayer);
-            isBlocked = (hitInfo.collider != null);
-        }
 
 
-        Debug.Log(pAvatar == null);
-        if(inVisionRange && !isBlocked){
-            if (triggerCount == 0)
-            {
-                myself.TriggerExclamationMark();
-                triggerCount++;
-            }
-            changePatrol(false);
-        }
-        if(!inVisionRange){
-            changePatrol(true);
-        }
         if (inHitRange){
             if(Time.time > cooldownTimeStamp){
                 cooldownTimeStamp = Time.time + cooldown;
@@ -143,6 +118,20 @@ public class EnemyMovement : MonoBehaviour
         patrolState = newState;
         if(patrolState == false){
             // Instantiate Exlamation mark here
+        }
+    }
+
+    public bool checkBlocked(){
+        RaycastHit2D hitInfo = Physics2D.Raycast(midPos, player.transform.position - midPos, visionRadius, maskLayer);
+        isBlocked = (hitInfo.collider != null);
+        return isBlocked;
+    }
+
+    public void TriggerExclamationMarkMethod(){
+        if (triggerCount == 0)
+        {
+            myself.TriggerExclamationMark();
+            triggerCount++;
         }
     }
 

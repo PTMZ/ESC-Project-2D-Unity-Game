@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8799092744962321293}
   - component: {fileID: 5519053154631054145}
   - component: {fileID: 5010911282544795708}
-  - component: {fileID: 1969661943}
   m_Layer: 0
   m_Name: DestroyablePlant
   m_TagString: Untagged
@@ -69,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1768501905
-  m_SortingLayer: 3
+  m_SortingLayerID: -479554973
+  m_SortingLayer: 4
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 665111a0f679e47138aa29a95e457c6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -111,13 +110,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969661942}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008118272, y: 0.018458754}
+  m_Offset: {x: 0.008118272, y: -0.2988716}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +127,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.67542434, y: 1.7987621}
+  m_Size: {x: 0.67542434, y: 1.1641014}
   m_EdgeRadius: 0
 --- !u!114 &5010911282544795708
 MonoBehaviour:
@@ -147,70 +146,3 @@ MonoBehaviour:
   health: 12
   spriteList: []
   curSprite: 4
---- !u!60 &1969661943
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969661942}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5805243, y: 1.6666666}
-    newSize: {x: 4.292135, y: 2.3520598}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.1928839, y: -0.5187266}
-      - {x: 0.1928839, y: -0.36516854}
-      - {x: 0.18539326, y: -0.3576779}
-      - {x: 0.08801498, y: -0.3576779}
-      - {x: 0.099250935, y: 0.5636704}
-      - {x: 0.1516854, y: 0.57490635}
-      - {x: 0.20786516, y: 0.60861427}
-      - {x: 0.27153558, y: 0.67228466}
-      - {x: 0.29026216, y: 0.73220974}
-      - {x: 0.29026216, y: 0.8333333}
-      - {x: 0.16666667, y: 0.8333333}
-      - {x: 0.06928839, y: 0.75842696}
-      - {x: 0.039325844, y: 0.747191}
-      - {x: -0.028089888, y: 0.8033708}
-      - {x: -0.08052435, y: 0.8333333}
-      - {x: -0.18913858, y: 0.8333333}
-      - {x: -0.18913858, y: 0.829588}
-      - {x: -0.1928839, y: 0.747191}
-      - {x: -0.16292135, y: 0.6797753}
-      - {x: -0.0917603, y: 0.60861427}
-      - {x: -0.043071162, y: 0.57490635}
-      - {x: 0.020599252, y: 0.5599251}
-      - {x: 0.020599252, y: -0.3576779}
-      - {x: -0.12172285, y: -0.3576779}
-      - {x: -0.08801498, y: 0.016853932}
-      - {x: -0.04681648, y: 0.02434457}
-      - {x: -0.0093632955, y: 0.08801498}
-      - {x: -0.0093632955, y: 0.18913858}
-      - {x: -0.12921348, y: 0.20037453}
-      - {x: -0.29026216, y: 0.19662921}
-      - {x: -0.29026216, y: 0.054307118}
-      - {x: -0.26404494, y: 0.016853932}
-      - {x: -0.1928839, y: 0.013108615}
-      - {x: -0.29026216, y: -0.3127341}
-      - {x: -0.29026216, y: -0.5374532}
-      - {x: -0.23033708, y: -0.57116103}
-      - {x: -0.1928839, y: -0.7284644}
-      - {x: -0.17790262, y: -0.7397004}
-      - {x: 0.084269665, y: -0.7397004}
-      - {x: 0.10299625, y: -0.69101125}
-      - {x: 0.13670412, y: -0.5262172}
-      - {x: 0.18539326, y: -0.5262172}
