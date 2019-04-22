@@ -9747,12 +9747,12 @@ PrefabInstance:
     - target: {fileID: 2093268930807199488, guid: ae8fb462b83c51949840b6b84dd32b5b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.006
+      value: 6.98
       objectReference: {fileID: 0}
     - target: {fileID: 2093268930807199488, guid: ae8fb462b83c51949840b6b84dd32b5b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.831
+      value: -6.83
       objectReference: {fileID: 0}
     - target: {fileID: 2093268930807199488, guid: ae8fb462b83c51949840b6b84dd32b5b,
         type: 3}
@@ -13430,12 +13430,12 @@ PrefabInstance:
     - target: {fileID: 8661001870505122745, guid: 6659bb3708aa85646b1549a2bcc52f6e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.84
+      value: -23.51
       objectReference: {fileID: 0}
     - target: {fileID: 8661001870505122745, guid: 6659bb3708aa85646b1549a2bcc52f6e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.94
+      value: -4.84
       objectReference: {fileID: 0}
     - target: {fileID: 8661001870505122745, guid: 6659bb3708aa85646b1549a2bcc52f6e,
         type: 3}
@@ -13618,7 +13618,7 @@ MonoBehaviour:
   bulletPrefabs:
   - {fileID: 7660789902638988858, guid: 4fa35d71fc6944f4fa6f8a663a5ca903, type: 3}
   - {fileID: 1840396686924460243, guid: 4497437b39074f2419f886a4a5567c98, type: 3}
-  LocalPlayer: {fileID: 0}
+  enemyBulletPrefab: {fileID: 0}
   curHealth: 100
   curDamage: 0
   curBulletSpeed: 0
@@ -22653,11 +22653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2366aabeab99b44b403bb13aa02af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 5
+  type: 4
   toActivate: []
-  toDeactivate: []
+  toDeactivate:
+  - {fileID: 267983555}
   dialogue: {fileID: 0}
-  laser: {fileID: 267983555}
 --- !u!4 &7605005856598652661 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7605005856598652661, guid: e174f60d130883443a33f3377da82731,

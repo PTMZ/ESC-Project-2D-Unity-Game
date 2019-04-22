@@ -22,7 +22,7 @@ public class Destroyable : MonoBehaviour
         {
             Destroy(gameObject);
 
-            if (SceneManager.GetActiveScene().name == "B4_AVHQ")
+            if (SceneManager.GetActiveScene().name == "B4_AVHQ" || SceneManager.GetActiveScene().name == "L3_AVHQ")
             {
                 if (isHPBox)
                 {

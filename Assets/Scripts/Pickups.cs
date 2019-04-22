@@ -13,11 +13,11 @@ public class Pickups : MonoBehaviour
     public GameObject[] toActivate;
     public GameObject[] toDeactivate;
     public DialogueTrigger dialogue;
-    public GameObject laser;
+    //public GameObject laser;
 
     public void Start(){
         offlineGM = FindObjectOfType<OfflineGameManager>();
-        laser.SetActive(true);
+        //laser.SetActive(true);
     }
 
     private void Update()
@@ -56,14 +56,20 @@ public class Pickups : MonoBehaviour
                 foreach(GameObject g in toDeactivate){
                     g.SetActive(false);
                 }
+                AudioManager.instance.Play("HPPickup");
                 Destroy(gameObject);
             }
+
+            /*
             if (type == 5)//key pickup
             {
                 //other.GetComponent<PlayerAvatar>().getPoints();
                 AudioManager.instance.Play("HPPickup");
                 Destroy(gameObject);
             }
+
+            */
+
             if (dialogue != null){
                 dialogue.TriggerDialogue();
             }
@@ -72,11 +78,13 @@ public class Pickups : MonoBehaviour
                 AstarPath.active.Scan();
             }
 
+            /*
             if (SceneManager.GetActiveScene().name == "L2_AVHQ")
             {
                 laser.SetActive(false);
             }
-
+            */
+            
             //SceneManager.LoadScene("ConstrictLevel");
         }
 

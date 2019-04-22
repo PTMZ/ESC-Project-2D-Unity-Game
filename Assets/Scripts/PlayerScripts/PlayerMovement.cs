@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb2d;
 
     private bool prevButton = false;
-    public float camSize = 4.0f;
+    public float camSize = 6.0f;
 
     public OfflineGameManager OGMPrefab;
     // Start is called before the first frame update
