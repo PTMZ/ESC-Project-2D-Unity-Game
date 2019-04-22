@@ -176,7 +176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &33069317
 GameObject:
@@ -1943,6 +1943,7 @@ MonoBehaviour:
   destructiblePrefab: {fileID: 2093268930807199741, guid: ae8fb462b83c51949840b6b84dd32b5b,
     type: 3}
   destructible: {fileID: 43892988}
+  spawnRate: 2
 --- !u!61 &247518785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3158,7 +3159,7 @@ PrefabInstance:
     - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -3227,7 +3228,7 @@ PrefabInstance:
     - target: {fileID: 9117138169387218340, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218340, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
@@ -3308,6 +3309,7 @@ MonoBehaviour:
   destructiblePrefab: {fileID: 2093268930807199741, guid: ae8fb462b83c51949840b6b84dd32b5b,
     type: 3}
   destructible: {fileID: 1437084755}
+  spawnRate: 2
 --- !u!61 &687865701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5072,6 +5074,7 @@ MonoBehaviour:
   destructiblePrefab: {fileID: 2093268930807199741, guid: ae8fb462b83c51949840b6b84dd32b5b,
     type: 3}
   destructible: {fileID: 1249251807}
+  spawnRate: 2
 --- !u!61 &1224188814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8709,7 +8712,7 @@ Transform:
   - {fileID: 1580649058}
   - {fileID: 745602549}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1790602881
 GameObject:

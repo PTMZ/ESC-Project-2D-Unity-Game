@@ -17,7 +17,6 @@ public class EnemyMovement : MonoBehaviour
 
     private float cooldownTimeStamp;
     public float cooldown = 0.5f;
-    public float hitRadius = 3;
     public float meleeDmg = 10;
 
     public Transform[] patrolPoints;
@@ -33,6 +32,8 @@ public class EnemyMovement : MonoBehaviour
 
     public bool cd;
     private Vector3 midPos;
+
+    public int enemyType = 0;
 
 
 
@@ -115,11 +116,20 @@ public class EnemyMovement : MonoBehaviour
         if (inHitRange){
             if(Time.time > cooldownTimeStamp){
                 cooldownTimeStamp = Time.time + cooldown;
-                pAvatar.getHit(meleeDmg);   // Comment this line out to stop enemy from attacking
                 Debug.Log("ENEMY ATTACK");
-                // Play attack animation here
-                AudioManager.instance.Play("GuardMelee");
-                weaponAnim.weaponAnimator.Play("attack", -1);
+                if(enemyType == 0){
+                    pAvatar.getHit(meleeDmg);   // Comment this line out to stop enemy from attacking
+                    // Play attack animation here
+                    AudioManager.instance.Play("GuardMelee");
+                    weaponAnim.weaponAnimator.Play("attack", -1);
+                }
+                else if(enemyType == 1){
+                    Vector3 playerMid = player.transform.position + new Vector3(0, 0.5f, 0);
+                    Vector3 bulletDir = (playerMid - midPos).normalized;
+                    OfflineGameManager.instance.SpawnEnemyBullet(midPos + bulletDir * 0.6f, transform.rotation, bulletDir);
+                    target.transform.position = transform.position;
+                    weaponAnim.weaponAnimator.Play("attack", -1);
+                }
             }
         }
         cd = (Time.time > cooldownTimeStamp);

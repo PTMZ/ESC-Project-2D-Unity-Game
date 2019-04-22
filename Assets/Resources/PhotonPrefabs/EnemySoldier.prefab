@@ -132,6 +132,7 @@ MonoBehaviour:
   change: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   weaponAnim: {fileID: 0}
+  isMachineBoss: 0
   exMarkAnim: {fileID: 0}
 --- !u!1 &928396710303046548
 GameObject:
@@ -716,7 +717,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1}
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 7
 --- !u!114 &3190573198725996199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,7 +763,7 @@ Transform:
   m_GameObject: {fileID: 7048318315132237791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
   - {fileID: 2813628722174610919}
   - {fileID: 7580601646059477292}
@@ -836,7 +837,6 @@ MonoBehaviour:
   target: {fileID: 5966481516016218581}
   weaponAnim: {fileID: 0}
   cooldown: 0.5
-  hitRadius: 2
   meleeDmg: 10
   patrolPoints:
   - {fileID: 863684345462245150}
@@ -845,6 +845,7 @@ MonoBehaviour:
   inVisionRange: 0
   inHitRange: 0
   cd: 0
+  enemyType: 1
 --- !u!50 &6116946916814061619
 Rigidbody2D:
   serializedVersion: 4
@@ -919,6 +920,7 @@ MonoBehaviour:
   change: {x: 0, y: 0, z: 0}
   animator: {fileID: 5864078929032505520}
   weaponAnim: {fileID: 2944556845813306814}
+  isMachineBoss: 0
   exMarkAnim: {fileID: 6238089569631296734}
 --- !u!114 &2684783115880544372
 MonoBehaviour:

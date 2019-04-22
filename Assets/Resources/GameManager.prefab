@@ -47,7 +47,7 @@ MonoBehaviour:
     type: 3}
   bulletPrefabs:
   - {fileID: 369, guid: f6411c2928a967a418979f53a5b48773, type: 3}
-  LocalPlayer: {fileID: 0}
+  enemyBulletPrefab: {fileID: 369, guid: f6411c2928a967a418979f53a5b48773, type: 3}
   curHealth: 100
   curDamage: 0
   curBulletSpeed: 0

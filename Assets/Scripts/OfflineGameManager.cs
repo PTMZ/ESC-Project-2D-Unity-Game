@@ -11,10 +11,9 @@ public class OfflineGameManager : MonoBehaviour
 {
     public PlayerAvatar PlayerPrefab;
     public GameObject[] bulletPrefabs;
+    public GameObject enemyBulletPrefab;
     
 
-    [HideInInspector]
-    public PlayerAvatar LocalPlayer;
     [HideInInspector]
     public float curHealth = 20;
     [HideInInspector]
@@ -98,6 +97,11 @@ public class OfflineGameManager : MonoBehaviour
             bulletInstance.GetComponent<BulletScript>().isOnline = false;
         if(curAttack == 1)
             bulletInstance.GetComponent<BouncyBullet>().isOnline = false;
+        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * curBulletSpeed;
+    }
+
+    public void SpawnEnemyBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
+        GameObject bulletInstance = Instantiate(enemyBulletPrefab, spawnPos, rotation);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * curBulletSpeed;
     }
 
