@@ -4639,7 +4639,7 @@ ParticleSystem:
 --- !u!199 &1735118884
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9337,7 +9337,7 @@ ParticleSystem:
 --- !u!199 &2055687443
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10041,7 +10041,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActivated: 0
   player: {fileID: 0}
-  arrowPrefab: {fileID: 369, guid: f6411c2928a967a418979f53a5b48773, type: 3}
+  arrowPrefab: {fileID: 4187703785448561877, guid: 4f3b8f5e478676e43ae5ee45cdf28ca2,
+    type: 3}
   cooldown: 2
   timeout: 1
   randRadius: 1
