@@ -3116,7 +3116,7 @@ MonoBehaviour:
   onCollideDeactivate: []
   onStartProgressActivate: -1
   onStartToActivate: []
-  onStartProgressDeactivate: 0
+  onStartProgressDeactivate: 50
   onStartToDeactivate:
   - {fileID: 1659118344}
   - {fileID: 2133351244}

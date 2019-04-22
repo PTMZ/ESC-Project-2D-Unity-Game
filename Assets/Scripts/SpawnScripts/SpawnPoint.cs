@@ -9,14 +9,14 @@ public class SpawnPoint : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject player;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            //sets the next spawn point to current point.
-            OfflineGameManager.instance.spawnPoints[SceneManager.GetActiveScene().name] = pointIndex;
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        //sets the next spawn point to current point.
+    //        //OfflineGameManager.instance.spawnPoints[SceneManager.GetActiveScene().name] = pointIndex;
+    //    }
+    //}
 
     public void spawnPlayer()
     {

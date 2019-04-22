@@ -23,8 +23,9 @@ public class EventTrigger : MonoBehaviour
 
     void Start()
     {
-        if(onStartProgressActivate != -1)
-            if (OfflineGameManager.instance.storyProgress <= storyProgressToActivate)
+        if (onStartProgressActivate != -1)
+        {
+            if (OfflineGameManager.instance.storyProgress <= onStartProgressActivate)
             {
                 foreach (GameObject obj in onStartToActivate)
                 {
@@ -37,9 +38,11 @@ public class EventTrigger : MonoBehaviour
 
                 }
             }
+        }
 
         if (onStartProgressDeactivate != -1)
-            if (OfflineGameManager.instance.storyProgress >= storyProgressToDeactivate)
+        {
+            if (OfflineGameManager.instance.storyProgress >= onStartProgressDeactivate)
             {
                 foreach (GameObject obj in onStartToDeactivate)
                 {
@@ -52,6 +55,7 @@ public class EventTrigger : MonoBehaviour
 
                 }
             }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -59,6 +63,7 @@ public class EventTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             if (storyProgressToActivate != -1)
+            {
                 if (OfflineGameManager.instance.storyProgress <= storyProgressToActivate)
                 {
                     foreach (GameObject obj in onCollideActivate)
@@ -69,11 +74,13 @@ public class EventTrigger : MonoBehaviour
                         {
                             obj.SetActive(true);
                         }
-                    
+
                     }
                 }
+            }
             //If story has already progress beyond the 
             if (storyProgressToDeactivate != -1)
+            {
                 if (OfflineGameManager.instance.storyProgress >= storyProgressToDeactivate)
                 {
                     foreach (GameObject obj in onCollideDeactivate)
@@ -87,6 +94,7 @@ public class EventTrigger : MonoBehaviour
 
                     }
                 }
+            }
         }
     }
 

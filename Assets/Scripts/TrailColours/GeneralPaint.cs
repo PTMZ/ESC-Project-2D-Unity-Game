@@ -13,7 +13,7 @@ public class GeneralPaint : MonoBehaviour
         }
 
         if(other.CompareTag("DestroyableBox")){
-            Debug.Log("Paint Box");
+            //Debug.Log("Paint Box");
             other.gameObject.GetComponent<Destroyable>().changeColour(colourNum);
         }
     }
