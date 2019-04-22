@@ -11,6 +11,11 @@ public class TriggerVision : MonoBehaviour
         if (other.CompareTag("Player")){
             //enemyMovement.changePatrol(false);
             enemyMovement.inVisionRange = true;
+            if(!enemyMovement.checkBlocked()){
+                Debug.Log("IN VISION");
+                enemyMovement.changePatrol(false);
+                enemyMovement.TriggerExclamationMarkMethod();
+            }
         }
     }
 }
