@@ -1274,8 +1274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  direction: right
   cooldown: 0.1
-  dmg: 100
 --- !u!61 &1203709291
 BoxCollider2D:
   m_ObjectHideFlags: 0

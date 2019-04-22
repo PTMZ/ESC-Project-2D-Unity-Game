@@ -90,7 +90,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 38f448c999e05b94db935d677a9cbaa5, type: 3}
     volume: 0.529
     pitch: 1
-    loop: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Constrictor
+    clip: {fileID: 8300000, guid: ee8d37675ef9cfa4197dfe86a990109d, type: 3}
+    volume: 0.539
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
   playerSounds:
   - name: CookieMelee

@@ -42,10 +42,15 @@ public class GeneralPortal : MonoBehaviour
             if(other.gameObject.GetComponent<PlayerAvatar>().getIsDead()){
                 return;
             }
+
+            //Sets spawn points
             OfflineGameManager.instance.spawnPoints[SceneManager.GetActiveScene().name] = spawnPoint;
             OfflineGameManager.instance.spawnPoints[nextSceneName] = nextSceneSpawnPoint;
+
             AudioManager.instance.Play("EnterPortal");
-            if(string.Compare(AudioManager.instance.curTheme, nextSceneTheme) != 0){
+            if(string.Equals(AudioManager.instance.curTheme, nextSceneTheme) == false){
+                //AudioManager.StopAll();
+                
                 AudioManager.instance.Stop(AudioManager.instance.curTheme);
                 AudioManager.instance.Play(nextSceneTheme);
             }
