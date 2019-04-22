@@ -69,7 +69,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         }
         else{
             animator.SetBool("moving", false);
-            weaponAnim.weaponAnimator.SetBool("weapmoving", false);
+            if(weaponAnim.weaponAnimator){
+                weaponAnim.weaponAnimator.SetBool("weapmoving", false);
+            }
         }
     }
     

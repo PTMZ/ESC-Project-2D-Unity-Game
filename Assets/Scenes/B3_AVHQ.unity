@@ -1854,6 +1854,11 @@ PrefabInstance:
       propertyPath: laser
       value: 
       objectReference: {fileID: 1509764038}
+    - target: {fileID: 7217674732844827128, guid: 934e92a09066337409c06c6933b01247,
+        type: 3}
+      propertyPath: colour
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 934e92a09066337409c06c6933b01247, type: 3}
 --- !u!4 &232542377 stripped
@@ -4783,6 +4788,11 @@ PrefabInstance:
       propertyPath: laser
       value: 
       objectReference: {fileID: 1225215058}
+    - target: {fileID: 7217674732844827128, guid: 934e92a09066337409c06c6933b01247,
+        type: 3}
+      propertyPath: colour
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 934e92a09066337409c06c6933b01247, type: 3}
 --- !u!4 &1139276871 stripped
@@ -5019,6 +5029,11 @@ PrefabInstance:
       propertyPath: laser
       value: 
       objectReference: {fileID: 1288928863}
+    - target: {fileID: 7217674732844827128, guid: 934e92a09066337409c06c6933b01247,
+        type: 3}
+      propertyPath: colour
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 934e92a09066337409c06c6933b01247, type: 3}
 --- !u!4 &1190327096 stripped
