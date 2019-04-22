@@ -16,9 +16,9 @@ public class OfflineGameManager : MonoBehaviour
     [HideInInspector]
     public PlayerAvatar LocalPlayer;
     [HideInInspector]
-    public float curHealth = maxHealth;
+    public float curHealth = 20;
     [HideInInspector]
-    public static float maxHealth = 1;
+    public static float maxHealth = 50;
     [HideInInspector]
     public float curDamage;
     [HideInInspector]
