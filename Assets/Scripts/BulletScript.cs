@@ -53,12 +53,19 @@ public class BulletScript : MonoBehaviourPunCallbacks
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            //col.gameObject.GetComponent<EnemyAvatar>().getHit(offlineGM.curDamage);
+            col.gameObject.GetComponent<EnemyAvatar>().getHit(offlineGM.curDamage);
         }
         if (col.gameObject.GetComponent<Destroyable>() != null)
         {
             //Debug.Log("Enemy hit is " + col.gameObject.name);
             col.gameObject.GetComponent<Destroyable>().getHit(offlineGM.curDamage);
+        }
+        if (col.gameObject.GetComponent<OnlineDestroyable>() != null)
+        {
+            //Debug.Log("Enemy hit is " + col.gameObject.name);
+            if(GetComponent<PhotonView>().IsMine){
+                col.gameObject.GetComponent<OnlineDestroyable>().reduceHealthRPC(1);
+            }
         }
         if (col.gameObject.GetComponent<DestroyableWall>() != null)
         {
@@ -74,14 +81,18 @@ public class BulletScript : MonoBehaviourPunCallbacks
         //Put Sound here
         Vector2 hitPoint = col.GetContact(0).point;
         Rigidbody2D other = col.otherRigidbody;
-        AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
+        if(!isOnline){
+            AddExplosionForce(other, impactPower, new Vector3(hitPoint.x, hitPoint.y, 0), impactRadius);
+        }
         //Destroy(gameObject);
         GameObject exp = Instantiate(explosion, transform.position, transform.rotation);
         Destroy(exp, 0.3f);
 
 
         if(isOnline){
-            PhotonNetwork.Destroy(gameObject);
+            if(GetComponent<PhotonView>().IsMine){
+                PhotonNetwork.Destroy(gameObject);
+            }
         }
         else{
             Destroy(gameObject);

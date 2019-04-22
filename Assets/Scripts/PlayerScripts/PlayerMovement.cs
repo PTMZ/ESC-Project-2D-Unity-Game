@@ -108,7 +108,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate(){
-        rb2d.AddForce(myself.change * speed * OfflineGameManager.instance.moveMult);
+        if(rb2d){
+            rb2d.AddForce(myself.change * speed * OfflineGameManager.instance.moveMult);
+        }
         //rb2d.velocity = myself.change * speed * offlineGM.moveMult;
         //rb2d.velocity *= 0.9f;
     }

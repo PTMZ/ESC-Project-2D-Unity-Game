@@ -95,6 +95,7 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
 
     public static void SpawnBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
         GameObject bulletInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "OnlineBullet"), spawnPos, rotation);
+        bulletInstance.GetComponent<BulletScript>().isOnline = true;
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * bulletInstance.GetComponent<AttackStats>().bulletSpeed;
         //Destroy(bulletInstance,DeathTime);
         //StartCoroutine(bulletInstance.GetComponent<BulletScript>().NetworkDestroyEnum(DeathTime));
