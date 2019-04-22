@@ -479,12 +479,12 @@ PrefabInstance:
     - target: {fileID: 9117138169387218340, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.18
+      value: 16.54
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218340, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.78
+      value: -1.93
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218340, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
@@ -1819,7 +1819,6 @@ MonoBehaviour:
   toActivate: []
   toDeactivate: []
   dialogue: {fileID: 515275865}
-  laser: {fileID: 0}
 --- !u!61 &793156814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8369,7 +8368,6 @@ MonoBehaviour:
   - {fileID: 1102945160}
   toDeactivate: []
   dialogue: {fileID: 1508039553}
-  laser: {fileID: 0}
 --- !u!61 &1621748244
 BoxCollider2D:
   m_ObjectHideFlags: 0
