@@ -23,7 +23,7 @@ public class Constrictor : MonoBehaviour
     void Start(){
         pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();
         cooldownTimeStamp = Time.time;
-        AudioManager.instance.Play("Constrictor");
+        AudioManager.instance.PlayLoopButMustStop("Constrictor");
     }
 
     void FixedUpdate()

@@ -15,20 +15,21 @@ public class GeneralPortal : MonoBehaviour
 
     void Start(){
         Debug.Log("Portal Start code");
-        if(AudioManager.instance == null){
+        if (AudioManager.instance == null)
+        {
             Instantiate(AMPrefab);
         }
-        Debug.Log(AudioManager.instance.curTheme);
-        Debug.Log(string.Compare(AudioManager.instance.curTheme, ""));
+        //Debug.Log(AudioManager.instance.curTheme);
+        //Debug.Log(string.Compare(AudioManager.instance.curTheme, ""));
 
         if (string.Compare(AudioManager.instance.curTheme, "") == 0)
         {
-            Debug.Log("Start Theme");
             AudioManager.instance.curTheme = curSceneTheme;
             AudioManager.instance.Play(curSceneTheme);
+            //Debug.LogWarning("Start Theme: " + curSceneTheme);
         }
 
-        Debug.Log("Start Theme");
+        //Debug.Log("Start Theme");
         AudioManager.instance.curTheme = curSceneTheme;
         AudioManager.instance.Play(curSceneTheme);
         SaveGameScript.SaveGame();
@@ -47,13 +48,14 @@ public class GeneralPortal : MonoBehaviour
             OfflineGameManager.instance.spawnPoints[SceneManager.GetActiveScene().name] = spawnPoint;
             OfflineGameManager.instance.spawnPoints[nextSceneName] = nextSceneSpawnPoint;
 
+            //SFX
             AudioManager.instance.Play("EnterPortal");
-            if(string.Equals(AudioManager.instance.curTheme, nextSceneTheme) == false){
-                //AudioManager.StopAll();
-                
+            AudioManager.instance.StopMustStopSFX();
+            if (string.Compare(AudioManager.instance.curTheme, nextSceneTheme) != 0){
                 AudioManager.instance.Stop(AudioManager.instance.curTheme);
                 AudioManager.instance.Play(nextSceneTheme);
             }
+
             SceneManager.LoadScene(nextSceneName);
         }
         

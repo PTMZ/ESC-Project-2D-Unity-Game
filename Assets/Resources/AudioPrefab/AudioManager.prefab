@@ -92,12 +92,6 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Constrictor
-    clip: {fileID: 8300000, guid: ee8d37675ef9cfa4197dfe86a990109d, type: 3}
-    volume: 0.539
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
   playerSounds:
   - name: CookieMelee
     clip: {fileID: 8300000, guid: f0edd02c8a7e99648aa7bcf8fd81089d, type: 3}
@@ -117,5 +111,12 @@ MonoBehaviour:
     volume: 0.6
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  soundOnLoopButMustStop:
+  - name: Constrictor
+    clip: {fileID: 8300000, guid: ee8d37675ef9cfa4197dfe86a990109d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
   curTheme: 
