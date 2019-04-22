@@ -58,7 +58,13 @@ public class Pickups : MonoBehaviour
                 }
                 Destroy(gameObject);
             }
-            if(dialogue != null){
+            if (type == 5)//key pickup
+            {
+                //other.GetComponent<PlayerAvatar>().getPoints();
+                AudioManager.instance.Play("HPPickup");
+                Destroy(gameObject);
+            }
+            if (dialogue != null){
                 dialogue.TriggerDialogue();
             }
             
