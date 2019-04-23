@@ -337,11 +337,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: dc70714ac390845c1bc1d279e0c84474,
+        type: 3}
     - target: {fileID: 9117138169387218341, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117138169387218341, guid: 911ae7e4e60f519449a75df4f9b943e7,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.5430712
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117138169387218341, guid: 911ae7e4e60f519449a75df4f9b943e7,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.2434456
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 911ae7e4e60f519449a75df4f9b943e7, type: 3}
@@ -6140,11 +6151,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4797326998770351243, guid: bf813b5922de7f749bcf803126c1c4f1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 4797326998526450257, guid: bf813b5922de7f749bcf803126c1c4f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6165,6 +6171,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 891818865}
+    - target: {fileID: 4797326998770351243, guid: bf813b5922de7f749bcf803126c1c4f1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf813b5922de7f749bcf803126c1c4f1, type: 3}
 --- !u!4 &1338953727 stripped
@@ -6289,6 +6300,7 @@ MonoBehaviour:
   - {fileID: 7660789902638988858, guid: 4fa35d71fc6944f4fa6f8a663a5ca903, type: 3}
   - {fileID: 1840396686924460243, guid: 4497437b39074f2419f886a4a5567c98, type: 3}
   enemyBulletPrefab: {fileID: 0}
+  arrowPrefab: {fileID: 0}
   curHealth: 100
   curDamage: 0
   curBulletSpeed: 0
