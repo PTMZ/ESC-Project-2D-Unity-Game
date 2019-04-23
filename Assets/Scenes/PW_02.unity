@@ -1688,6 +1688,11 @@ PrefabInstance:
       propertyPath: nextSceneTheme
       value: MinesweeperTheme
       objectReference: {fileID: 0}
+    - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
+        type: 3}
+      propertyPath: nextSceneSpawnPoint
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 911ae7e4e60f519449a75df4f9b943e7, type: 3}
 --- !u!1001 &181946826
@@ -3236,7 +3241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762859543d74ea646928b6c1c1de035b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyProgressToActivate: 0
+  storyProgressToActivate: 14
   onCollideActivate:
   - {fileID: 2057210582}
   - {fileID: 2133351244}
@@ -11012,7 +11017,7 @@ PrefabInstance:
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -11027,17 +11032,17 @@ PrefabInstance:
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: At most... I'll collect your leftover bytecodes. Haha.
+      value: I am confident you will be able to get there safely without me.
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: Dont get deleted, you hear?
+      value: At most...I'll collect your leftover bytecodes. Haha.
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: Oh my, you are a curious one.
+      value: Dont get deleted, you hear?
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -11063,7 +11068,8 @@ PrefabInstance:
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: This is as far as I can accompany you, I have a submission coming up.
+      value: This is as far as I can accompany you, I have other matters to attend
+        to.
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -14935,7 +14941,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6142322, y: 1.2059925}
+  m_Size: {x: 0.6142322, y: 1.161049}
   m_EdgeRadius: 0
 --- !u!212 &1533674562
 SpriteRenderer:
