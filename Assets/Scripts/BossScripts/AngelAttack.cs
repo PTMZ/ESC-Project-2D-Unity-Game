@@ -6,25 +6,28 @@ public class AngelAttack : MonoBehaviour
 {
 
     public bool isActivated = false;
-    public GameObject player;
-    private PlayerAvatar pAvatar;
+    private GameObject player;
+    public GameObject constrictorPrefab;
 
     public GameObject arrowPrefab;
-    public float cooldown;
-    public float timeout;
-    public float randRadius;
-    public static float damage = 10;
     private float cooldownTimeStamp;
+    public float cooldown;
+
+    private float cooldownTimeStamp2;
+    public float cooldown2;
 
     public Animator angelAnim;
     private Vector3 offsetY;
     private float curBulletSpeed;
+
+    private string[] directionNames = {"up", "down", "left", "right"};
 
     void Start()
     {
         angelAnim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         cooldownTimeStamp = Time.time;
+        cooldownTimeStamp2 = Time.time;
         Debug.Log(player.transform.position);
         offsetY = new Vector3(0, 0.5f, 0);
         curBulletSpeed = arrowPrefab.GetComponent<AttackStats>().bulletSpeed / 2;
@@ -36,8 +39,9 @@ public class AngelAttack : MonoBehaviour
         if(!isActivated){
             return;
         }
+        // Angel Arrows
         if(Time.time > cooldownTimeStamp){
-            Debug.Log("START SHOOT");
+            //Debug.Log("START SHOOT");
             //angelAnim.Play("machineboss_attack", -1);
             cooldownTimeStamp = Time.time + cooldown;
             //SpawnTargets();
@@ -55,7 +59,44 @@ public class AngelAttack : MonoBehaviour
             OfflineGameManager.instance.SpawnArrow(midPos + toPlayerDirA*2, Quaternion.identity, toPlayerDirA);
             OfflineGameManager.instance.SpawnArrow(midPos + toPlayerDirB*2, Quaternion.identity, toPlayerDirB);
         }
-        
+
+        if(Time.time > cooldownTimeStamp2){
+            cooldownTimeStamp2 = Time.time + cooldown2;
+            string dirName = directionNames[Random.Range(0, directionNames.Length)];
+            Vector3 xOff = new Vector3(Random.Range(-7.0f, 7.0f), 0, 0);
+            Vector3 yOff = new Vector3(Random.Range(-5.0f, 5.0f), 0, 0);
+            if(dirName == "up"){
+                var go = Instantiate(constrictorPrefab, xOff + new Vector3(0, -5, 0), Quaternion.identity);
+                go.transform.localScale = new Vector3(1,1,1);
+                go.GetComponent<Constrictor>().direction = dirName;
+                go.GetComponent<Constrictor>().isBoss = true;
+                Destroy(go, 10.0f);
+            }
+            if(dirName == "down"){
+                var go = Instantiate(constrictorPrefab, xOff + new Vector3(0, 8, 0), Quaternion.identity);
+                go.transform.localScale = new Vector3(1,1,1);
+                go.GetComponent<Constrictor>().direction = dirName;
+                go.GetComponent<Constrictor>().isBoss = true;
+                Destroy(go, 10.0f);
+            }
+            if(dirName == "left"){
+                var go = Instantiate(constrictorPrefab, yOff + new Vector3(7, 0, 0), Quaternion.identity);
+                go.transform.localScale = new Vector3(1,1,1);
+                go.GetComponent<Constrictor>().direction = dirName;
+                go.GetComponent<Constrictor>().isBoss = true;
+                Destroy(go, 10.0f);
+            }
+            if(dirName == "right"){
+                var go = Instantiate(constrictorPrefab, xOff + new Vector3(-7, 0, 0), Quaternion.identity);
+                go.transform.localScale = new Vector3(1,1,1);
+                go.GetComponent<Constrictor>().direction = dirName;
+                go.GetComponent<Constrictor>().isBoss = true;
+                Destroy(go, 10.0f);
+            }
+
+        }
+    
+
     }
 
     public static Vector3 Rotate(Vector3 v, float degrees) {

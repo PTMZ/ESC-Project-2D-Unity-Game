@@ -16,14 +16,18 @@ public class Constrictor : MonoBehaviour
     private float cooldownTimeStamp;
     public float cooldown = 0.1f;
 
-    private float dmg = 9999;
+    private float dmg = 1;
     private PlayerAvatar pAvatar;
+
+    public bool isBoss = false;
 
     // Start is called before the first frame update
     void Start(){
         pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();
         cooldownTimeStamp = Time.time;
-        AudioManager.instance.PlayLoopButMustStop("Constrictor");
+        if(!isBoss){
+            AudioManager.instance.PlayLoopButMustStop("Constrictor");
+        }
     }
 
     void FixedUpdate()
