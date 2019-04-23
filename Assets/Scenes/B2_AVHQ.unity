@@ -1516,7 +1516,7 @@ PrefabInstance:
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: Be careful of traps laid by the Anti-Virus Program.
+      value: Be careful of traps they laid for you.
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -8993,6 +8993,16 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 561949740635492642, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: isMachineBoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561949740635492642, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+        type: 3}
+      propertyPath: weaponAnim
+      value: 
+      objectReference: {fileID: 1487390209}
     - target: {fileID: 1882372341378953035, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
       propertyPath: player
@@ -9008,16 +9018,6 @@ PrefabInstance:
       propertyPath: levelSpecificTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 561949740635492642, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
-        type: 3}
-      propertyPath: isMachineBoss
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 561949740635492642, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
-        type: 3}
-      propertyPath: weaponAnim
-      value: 
-      objectReference: {fileID: 1487390209}
     - target: {fileID: 7190831062553862671, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
       propertyPath: m_IsActive
