@@ -69,24 +69,28 @@ public class AngelAttack : MonoBehaviour
                 var go = Instantiate(constrictorPrefab, xOff + new Vector3(0, -5, 0), Quaternion.identity);
                 go.transform.localScale = new Vector3(1,1,1);
                 go.GetComponent<Constrictor>().direction = dirName;
+                go.GetComponent<Constrictor>().isBoss = true;
                 Destroy(go, 10.0f);
             }
             if(dirName == "down"){
                 var go = Instantiate(constrictorPrefab, xOff + new Vector3(0, 8, 0), Quaternion.identity);
                 go.transform.localScale = new Vector3(1,1,1);
                 go.GetComponent<Constrictor>().direction = dirName;
+                go.GetComponent<Constrictor>().isBoss = true;
                 Destroy(go, 10.0f);
             }
             if(dirName == "left"){
                 var go = Instantiate(constrictorPrefab, yOff + new Vector3(7, 0, 0), Quaternion.identity);
                 go.transform.localScale = new Vector3(1,1,1);
                 go.GetComponent<Constrictor>().direction = dirName;
+                go.GetComponent<Constrictor>().isBoss = true;
                 Destroy(go, 10.0f);
             }
             if(dirName == "right"){
                 var go = Instantiate(constrictorPrefab, xOff + new Vector3(-7, 0, 0), Quaternion.identity);
                 go.transform.localScale = new Vector3(1,1,1);
                 go.GetComponent<Constrictor>().direction = dirName;
+                go.GetComponent<Constrictor>().isBoss = true;
                 Destroy(go, 10.0f);
             }
 
