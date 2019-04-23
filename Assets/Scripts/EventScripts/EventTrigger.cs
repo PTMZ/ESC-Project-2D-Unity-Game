@@ -22,10 +22,10 @@ public class EventTrigger : MonoBehaviour
 
 
     void Start()
-    {
+    {   //If story progressed beyond the point
         if (onStartProgressActivate != -1)
         {
-            if (OfflineGameManager.instance.storyProgress <= onStartProgressActivate)
+            if (OfflineGameManager.instance.storyProgress >= onStartProgressActivate)
             {
                 foreach (GameObject obj in onStartToActivate)
                 {
@@ -39,7 +39,7 @@ public class EventTrigger : MonoBehaviour
                 }
             }
         }
-
+        //If story progressed further or at this point.
         if (onStartProgressDeactivate != -1)
         {
             if (OfflineGameManager.instance.storyProgress >= onStartProgressDeactivate)
@@ -61,7 +61,7 @@ public class EventTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
+        {   //if story is not yet at this point
             if (storyProgressToActivate != -1)
             {
                 if (OfflineGameManager.instance.storyProgress <= storyProgressToActivate)
@@ -78,7 +78,7 @@ public class EventTrigger : MonoBehaviour
                     }
                 }
             }
-            //If story has already progress beyond the 
+            //If story has already progress beyond this point
             if (storyProgressToDeactivate != -1)
             {
                 if (OfflineGameManager.instance.storyProgress >= storyProgressToDeactivate)
