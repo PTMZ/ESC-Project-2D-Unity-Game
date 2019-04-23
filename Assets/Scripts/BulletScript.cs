@@ -49,7 +49,14 @@ public class BulletScript : MonoBehaviourPunCallbacks
         */
         if(col.gameObject.GetComponent<PlayerAvatar>() != null){
             //Debug.Log("I am hit, my name is " + col.gameObject.name);
-            col.gameObject.GetComponent<PlayerAvatar>().getHit(offlineGM.curDamage);
+            if(PhotonNetwork.IsConnected){
+                if(GetComponent<PhotonView>().IsMine){
+                    col.gameObject.GetComponent<PlayerAvatar>().reduceHealthRPC(1);
+                }
+            }
+            else{
+                col.gameObject.GetComponent<PlayerAvatar>().getHit(offlineGM.curDamage);
+            }
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
             //Debug.Log("Enemy hit is " + col.gameObject.name);

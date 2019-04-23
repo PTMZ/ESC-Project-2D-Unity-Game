@@ -905,6 +905,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5124912877195135947, guid: ac24cd021392a844ead5895b789da0c6,
+        type: 3}
+      propertyPath: bulletPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 369, guid: f6411c2928a967a418979f53a5b48773, type: 3}
     - target: {fileID: 5124912877195135946, guid: ac24cd021392a844ead5895b789da0c6,
         type: 3}
       propertyPath: m_LocalPosition.x

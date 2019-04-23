@@ -262,16 +262,33 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         }
         curTrail = trailNum;
     }
-    /*
-    public static void RefreshInstance(ref PlayerAvatar player, PlayerAvatar prefab){
-        var position = Vector3.zero;
-        var rotation = Quaternion.identity;
-        if(player != null){
-            position = player.transform.position;
-            rotation = player.transform.rotation;
-            PhotonNetwork.Destroy(player.gameObject);
-        }
-        player = PhotonNetwork.Instantiate(prefab.gameObject.name, position, rotation).GetComponent<PlayerAvatar>();
+    
+
+    public void reduceHealthRPC(int damage)    
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("reduceHealth", RpcTarget.All, damage);
+        Debug.Log("Reduce health Called");
+        
     }
-    */
+
+    [PunRPC]
+    public void reduceHealth(int damage, PhotonMessageInfo info)
+    {
+        PhotonView photonView = PhotonView.Get(this);
+        Debug.Log("RPC reduce health Called");
+        health -= damage;
+        //Debug.Log("CurrentHealth: " + currentHealth);
+        ShowFloatingTextHealth(health);
+
+        if(health <= 0){
+            isDead = true;
+            animator.SetBool("dead", true);
+            if (photonView.IsMine  && GetComponent<PlayerMovement>() != null)
+            {
+                Destroy(GetComponent<PlayerMovement>());
+            }
+        }
+        //Debug.Log("My life is: " + currentHealth);
+    }
 }

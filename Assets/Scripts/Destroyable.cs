@@ -22,21 +22,14 @@ public class Destroyable : MonoBehaviour
         {
             Destroy(gameObject);
 
-            if (SceneManager.GetActiveScene().name == "B4_AVHQ" || SceneManager.GetActiveScene().name == "L3_AVHQ")
+            if (isHPBox)
             {
-                if (isHPBox)
-                {
-                    Instantiate(HPPrefab, transform.position, Quaternion.identity);
-                }
+                Instantiate(HPPrefab, transform.position, Quaternion.identity);
             }
 
-            if (SceneManager.GetActiveScene().name == "L2_AVHQ" || SceneManager.GetActiveScene().name == "L3_AVHQ")
+            if (isKeyBox)
             {
-                if (isKeyBox)
-                {
-                    Instantiate(KeyPrefab, transform.position, Quaternion.identity);
-                }
-
+                Instantiate(KeyPrefab, transform.position, Quaternion.identity);
             }
 
         }
