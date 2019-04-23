@@ -56,7 +56,7 @@ public class Pickups : MonoBehaviour
                 foreach(GameObject g in toDeactivate){
                     g.SetActive(false);
                 }
-                //AudioManager.instance.Play("HPPickup");
+                AudioManager.instance.Play("HPPickup");
                 Destroy(gameObject);
             }
 
@@ -67,7 +67,6 @@ public class Pickups : MonoBehaviour
                 AudioManager.instance.Play("HPPickup");
                 Destroy(gameObject);
             }
-
             */
 
             if (dialogue != null){
