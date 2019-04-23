@@ -6,6 +6,16 @@ public class TriggerVision : MonoBehaviour
 {
 
     public EnemyMovement enemyMovement;
+    private bool inRange = false;
+    void FixedUpdate(){
+        if(inRange){
+            if(!enemyMovement.checkBlocked()){
+                Debug.Log("IN VISION");
+                enemyMovement.changePatrol(false);
+                enemyMovement.TriggerExclamationMarkMethod();
+            }
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
@@ -16,6 +26,14 @@ public class TriggerVision : MonoBehaviour
                 enemyMovement.changePatrol(false);
                 enemyMovement.TriggerExclamationMarkMethod();
             }
+
+            inRange = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other){
+        if (other.CompareTag("Player")){
+            inRange = false;
         }
     }
 }
