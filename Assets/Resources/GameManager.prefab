@@ -46,7 +46,7 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 3162012306475875567, guid: 6ccf10a20e24ba94b9e53a05c44c8dc9,
     type: 3}
   bulletPrefabs:
-  - {fileID: 7587101468705422489, guid: 90115eb83f4e75f47a00c2ee7acde8b9, type: 3}
+  - {fileID: 4187703785448561877, guid: 4f3b8f5e478676e43ae5ee45cdf28ca2, type: 3}
   enemyBulletPrefab: {fileID: 369, guid: f6411c2928a967a418979f53a5b48773, type: 3}
   curHealth: 100
   curDamage: 0

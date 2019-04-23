@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 323918972011903105}
   - component: {fileID: 854137353127730776}
   - component: {fileID: 4668641709751284494}
+  - component: {fileID: 2888332561910545204}
   m_Layer: 0
   m_Name: AngelArrow
   m_TagString: Untagged
@@ -93,7 +94,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4187703785448561877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -117,7 +118,8 @@ MonoBehaviour:
   impactRadius: 2
   impactPower: 5
   isOnline: 0
-  explosion: {fileID: 0}
+  explosion: {fileID: 557983851392824660, guid: 096de4e3bad56d841a61568d01af3e18,
+    type: 3}
 --- !u!114 &760765969307986361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +216,29 @@ MonoBehaviour:
   followMelee: {fileID: 0}
   dir: {x: 0, y: 0, z: 0}
   onDeathSpawn: {fileID: 0}
+--- !u!61 &2888332561910545204
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4187703785448561877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.024184823, y: 0.0024173856}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 0.7}
+    newSize: {x: 0.96, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.061629, y: 0.1633771}
+  m_EdgeRadius: 0
