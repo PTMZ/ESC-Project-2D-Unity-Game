@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Dialogue2Script : MonoBehaviour
 {
     private bool keySpawned = false;
-    private int sceneNum = 3;
+    public int sceneNum = 3;
     public GameObject key;
 
     void FixedUpdate()
