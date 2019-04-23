@@ -6,6 +6,7 @@ using Photon.Pun;
 public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 {
     public GameObject FloatingTextPrefab;
+    public RuntimeAnimatorController ninjaAnimController;
     public int points = 20;
 
     [HideInInspector]
@@ -27,6 +28,8 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     public GameObject[] trails;
     public int curTrail = -1;
 
+    private bool isNinja = false;
+    public bool tempNinja = false;
     private void Awake()
     {
         if (!PhotonNetwork.IsConnected)
@@ -64,6 +67,10 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     // Update is called once per frame
     void Update()
     {
+        if(!isNinja && tempNinja){
+            isNinja = true;
+            changeAnimNinja();
+        }
         UpdateAnimation();
     }
 
@@ -290,5 +297,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             }
         }
         //Debug.Log("My life is: " + currentHealth);
+    }
+
+    void changeAnimNinja(){
+        animator.runtimeAnimatorController = ninjaAnimController;
     }
 }
