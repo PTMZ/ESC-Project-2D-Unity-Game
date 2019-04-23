@@ -90,7 +90,8 @@ public class OfflineGameManager : MonoBehaviour
     }
 
     public void SpawnBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
-        GameObject bulletInstance = Instantiate(bulletPrefabs[curAttack], spawnPos, rotation);
+        var temp = Quaternion.FromToRotation(new Vector3(1,0,0), bulletVector);
+        GameObject bulletInstance = Instantiate(bulletPrefabs[curAttack], spawnPos, temp);
         if(curAttack == 0)
             bulletInstance.GetComponent<BulletScript>().isOnline = false;
         if(curAttack == 1)
@@ -99,7 +100,8 @@ public class OfflineGameManager : MonoBehaviour
     }
 
     public void SpawnEnemyBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
-        GameObject bulletInstance = Instantiate(enemyBulletPrefab, spawnPos, rotation);
+        var temp = Quaternion.FromToRotation(new Vector3(1,0,0), bulletVector);
+        GameObject bulletInstance = Instantiate(enemyBulletPrefab, spawnPos, temp);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * curBulletSpeed;
     }
 
