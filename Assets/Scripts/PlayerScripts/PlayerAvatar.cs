@@ -6,6 +6,7 @@ using Photon.Pun;
 public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 {
     public GameObject FloatingTextPrefab;
+    public RuntimeAnimatorController ninjaAnimController;
     public int points = 20;
 
     [HideInInspector]
@@ -27,6 +28,8 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
     public GameObject[] trails;
     public int curTrail = -1;
 
+    private bool isNinja = false;
+    public bool tempNinja = false;
     private void Awake()
     {
         if (!PhotonNetwork.IsConnected)
@@ -59,11 +62,19 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         foreach(GameObject t in trails){
             t.SetActive(false);
         }
+
+        if(OfflineGameManager.instance.curAttack == 1){
+            changeAnimNinja();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!isNinja && tempNinja){
+            isNinja = true;
+            changeAnimNinja();
+        }
         UpdateAnimation();
     }
 
@@ -290,5 +301,11 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             }
         }
         //Debug.Log("My life is: " + currentHealth);
+    }
+
+    void changeAnimNinja(){
+        animator.runtimeAnimatorController = ninjaAnimController;
+        OfflineGameManager.instance.UpdateWeapon(1);
+        OfflineGameManager.instance.UpdatePlayerStats(1.1f, 1);
     }
 }

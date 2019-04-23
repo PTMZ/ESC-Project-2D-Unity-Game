@@ -44,7 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MSP_01.unity
     guid: d9f2deb42f77b4568b90611e6d28b516
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MSP_02 BossFight.unity
     guid: f416dd93aaf3d4466a4fb25f150c9c45
   - enabled: 1
@@ -74,4 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/L1_AVHQ.unity
     guid: 31a4077a9496d42a5b3bdc08367315b8
+  - enabled: 1
+    path: Assets/Scenes/MSP_02.unity
+    guid: 6ff162cdd9e57df45b62eec89282075e
   m_configObjects: {}

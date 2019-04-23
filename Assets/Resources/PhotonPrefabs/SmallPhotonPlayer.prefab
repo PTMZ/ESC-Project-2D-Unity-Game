@@ -976,6 +976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloatingTextPrefab: {fileID: 3807610573064024986, guid: b11404f2b66e07143b968fe74b4156c1,
     type: 3}
+  ninjaAnimController: {fileID: 9100000, guid: f5f80693e0397214e9801ec812a11bc6, type: 2}
   points: 20
   health: 0
   change: {x: 0, y: 0, z: 0}
@@ -989,6 +990,7 @@ MonoBehaviour:
   - {fileID: 2747283292375902644}
   - {fileID: 7314351307502017696}
   curTrail: -1
+  tempNinja: 0
 --- !u!114 &674883789843068287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,8 +1012,8 @@ MonoBehaviour:
   - {fileID: 2484095788178376113}
   - {fileID: 6278481612881911552}
   - {fileID: 6806275629946510465}
-  viewIdField: 0
-  InstantiationId: 2
+  viewIdField: 1
+  InstantiationId: 1
   isRuntimeInstantiated: 0
 --- !u!50 &7681946498128574647
 Rigidbody2D:

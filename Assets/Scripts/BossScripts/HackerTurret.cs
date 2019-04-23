@@ -28,11 +28,13 @@ public class HackerTurret : MonoBehaviour
         Vector3 playerMid = nearestPlayerPos + new Vector3(0, 0.5f, 0);
         Vector3 midPos = transform.position + new Vector3(0, 0.5f, 0);
         Vector3 bulletDir = (playerMid - midPos).normalized;
-        if(PhotonNetwork.IsConnected){
+        if(!PhotonNetwork.IsConnected){
             OfflineGameManager.instance.SpawnEnemyBullet(midPos + bulletDir * 0.6f, transform.rotation, bulletDir);
+            
         }
         else{
             OnlineGameManager.SpawnBullet(midPos + bulletDir * 0.6f, transform.rotation, bulletDir);
+            Debug.Log("turret shoot");
         }
         //weaponAnim.weaponAnimator.Play("attack", -1);
     }
