@@ -10,27 +10,30 @@ public class HackerAttack : MonoBehaviour
     private PlayerAvatar pAvatar;
 
     public GameObject turretPrefab;
-    public float cooldown;
+    public float cooldown = 5;
     public float timeout;
     public float randRadius;
     public static float damage = 10;
     private float cooldownTimeStamp;
 
-    public Animator angelAnim;
+    public Animator hackerAnim;
     private Vector3 offsetY;
 
     private GameObject[] turretList;
+    private LayerMask maskLayer;
     public int numTurrets;
 
     void Start()
     {
-        angelAnim = GetComponent<Animator>();
+        hackerAnim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         cooldownTimeStamp = Time.time;
         Debug.Log(player.transform.position);
         offsetY = new Vector3(0, 0.5f, 0);
 
         turretList = new GameObject[3];
+
+        maskLayer = LayerMask.GetMask("TransparentFX");
     }
 
     // Update is called once per frame
@@ -69,7 +72,17 @@ public class HackerAttack : MonoBehaviour
             }
         }
         for(int i=0; i<numTurrets; i++){
-            Vector3 randPos = new Vector3(0,0,0);
+            Vector3 randPos = Vector3.zero;
+            while(true){
+                float angle = Random.Range(-Mathf.PI, Mathf.PI);
+                float dist = Random.Range(1, randRadius);
+                randPos = new Vector3(Mathf.Cos(angle) * dist, Mathf.Sin(angle) * dist, 0);
+                RaycastHit2D hitInfo = Physics2D.Raycast(player.transform.position, randPos, (player.transform.position-randPos).magnitude, maskLayer);
+                if(hitInfo.collider == null){
+                    break;
+                }
+            }
+            
             turretList[i] = Instantiate(turretPrefab, randPos, Quaternion.identity);
         }
     }

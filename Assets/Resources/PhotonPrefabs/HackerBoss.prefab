@@ -4697,7 +4697,7 @@ ParticleSystem:
 --- !u!199 &1695205578
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4981,7 +4981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5134c08b57830e64796a60349589242f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovement: {fileID: 5667266045981682907}
+  enemyMovement: {fileID: 0}
 --- !u!1 &3374929971133307567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5213,12 +5213,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8945151626864601519}
   - component: {fileID: 1558530685594311231}
-  - component: {fileID: 5667266045981682907}
   - component: {fileID: 2556182312627413239}
   - component: {fileID: 6517066599411765802}
   - component: {fileID: 8900081898629605962}
   - component: {fileID: 6322748394171200501}
   - component: {fileID: 2798753722923758788}
+  - component: {fileID: 8026224738919734557}
+  - component: {fileID: 6839416364223326596}
   m_Layer: 0
   m_Name: EnemyAvatar
   m_TagString: Untagged
@@ -5292,31 +5293,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5667266045981682907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8595117126134479897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832569d8875f26e499fe0b494db4f697, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mypos: {fileID: 1439493313525814544}
-  target: {fileID: 3374929971133307567}
-  weaponAnim: {fileID: 0}
-  cooldown: 0.5
-  meleeDmg: 10
-  patrolPoints:
-  - {fileID: 2013542030222526666}
-  visionRadius: 0
-  isBlocked: 1
-  inVisionRange: 0
-  inHitRange: 0
-  cd: 0
-  enemyType: 0
 --- !u!50 &2556182312627413239
 Rigidbody2D:
   serializedVersion: 4
@@ -5407,6 +5383,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponAnimator: {fileID: 0}
   mySpriteRenderer: {fileID: 0}
+--- !u!114 &8026224738919734557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595117126134479897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c96a3149c19dc47b299f6dc3e6c261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
+  player: {fileID: 0}
+  turretPrefab: {fileID: 6632705783636494519, guid: eca964bb8aa96f24097347b4cf3e5ea9,
+    type: 3}
+  cooldown: 5
+  timeout: 0
+  randRadius: 5
+  hackerAnim: {fileID: 0}
+  numTurrets: 3
+--- !u!114 &6839416364223326596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595117126134479897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2fb007a99389464cad23cb80f314933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mypos: {fileID: 1439493313525814544}
+  target: {fileID: 3374929971133307567}
+  isActivated: 0
+  levelSpecificTrigger: 0
+  storyProgActivate: 0
+  curStoryProg: 0
 --- !u!1 &9000218630713204227
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,4 +5482,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f05e6cf45df437498f126dc08f77935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovement: {fileID: 5667266045981682907}
+  enemyMovement: {fileID: 0}

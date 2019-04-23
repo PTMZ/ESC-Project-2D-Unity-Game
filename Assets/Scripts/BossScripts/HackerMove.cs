@@ -55,7 +55,7 @@ public class HackerMove : MonoBehaviour
         if(myself.getDead()){
             //Debug.Log("Angel boss dead?.");
             if(isActivated){
-                GetComponent<AngelAttack>().isActivated = false;
+                GetComponent<HackerAttack>().isActivated = false;
                 isActivated = false;
             }
             return;
