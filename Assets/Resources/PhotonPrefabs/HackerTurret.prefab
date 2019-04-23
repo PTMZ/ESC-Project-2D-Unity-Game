@@ -4666,7 +4666,7 @@ MonoBehaviour:
 --- !u!199 &6632705782524765840
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4735,6 +4735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6632705783636494505}
   - component: {fileID: 6632705783636494504}
+  - component: {fileID: 9106868555805465089}
   m_Layer: 0
   m_Name: HackerTurret
   m_TagString: Untagged
@@ -4805,3 +4806,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9106868555805465089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632705783636494519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516ca3f32fef56044b6899a4551fa3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0.7
