@@ -16,7 +16,7 @@ public class Constrictor : MonoBehaviour
     private float cooldownTimeStamp;
     public float cooldown = 0.1f;
 
-    private float dmg = 9999;
+    private float dmg = 1;
     private PlayerAvatar pAvatar;
 
     // Start is called before the first frame update
