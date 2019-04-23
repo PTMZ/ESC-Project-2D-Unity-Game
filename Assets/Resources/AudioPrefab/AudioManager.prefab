@@ -104,6 +104,24 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: AVHQTheme
+    clip: {fileID: 8300000, guid: 606d737c14c2e214b92ad074794abd2e, type: 3}
+    volume: 0.588
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: AngelTheme
+    clip: {fileID: 8300000, guid: 71d8ffa9b56dfbc4db31f60e69844e5d, type: 3}
+    volume: 0.673
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: HackerFightTheme
+    clip: {fileID: 8300000, guid: e89ed919199084846a756140673e3b15, type: 3}
+    volume: 0.673
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   playerSounds:
   - name: CookieMelee
     clip: {fileID: 8300000, guid: f0edd02c8a7e99648aa7bcf8fd81089d, type: 3}
@@ -120,6 +138,12 @@ MonoBehaviour:
   enemySounds:
   - name: GuardMelee
     clip: {fileID: 8300000, guid: 7c71f04e7dc73db478ad77845598fca7, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SoldierRanged
+    clip: {fileID: 8300000, guid: 2dbb867855030224199b1db67bd596cb, type: 3}
     volume: 0.6
     pitch: 1
     loop: 0
