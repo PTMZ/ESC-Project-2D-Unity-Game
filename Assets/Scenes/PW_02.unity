@@ -1681,12 +1681,12 @@ PrefabInstance:
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: curSceneTheme
-      value: MinesweeperTheme
+      value: PW02Theme
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: nextSceneTheme
-      value: MinesweeperTheme
+      value: PW02Theme
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
@@ -2740,12 +2740,12 @@ PrefabInstance:
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: curSceneTheme
-      value: MinesweeperTheme
+      value: PW02Theme
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: nextSceneTheme
-      value: MinesweeperTheme
+      value: PW02Theme
       objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218342, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
@@ -11375,7 +11375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1229592277
 Transform:
   m_ObjectHideFlags: 0
