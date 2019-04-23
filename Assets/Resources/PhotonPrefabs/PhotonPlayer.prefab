@@ -185,7 +185,7 @@ MonoBehaviour:
   dashCooldown: 0.5
   meleeObject: {fileID: 0}
   dashObject: {fileID: 0}
-  camSize: 3.5
+  camSize: 3.2
   OGMPrefab: {fileID: 0}
 --- !u!114 &3162012306475875567
 MonoBehaviour:
