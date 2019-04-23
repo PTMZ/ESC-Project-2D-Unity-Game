@@ -36,7 +36,7 @@ public class Pickups : MonoBehaviour
             }
             if(type == 1){
                 AudioManager.instance.Play("FormPickup");
-                offlineGM.UpdateWeapon(1);
+                other.GetComponent<PlayerAvatar>().changeAnimNinja();
                 Destroy(gameObject);
             }
             if(type == 2){
