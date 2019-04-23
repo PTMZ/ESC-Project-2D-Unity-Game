@@ -50,17 +50,10 @@ public class HackerAttack : MonoBehaviour
             //DelayLaserAttack();
 
             //Shoot here
-            Vector3 midPos = transform.position + offsetY;
-            Vector3 playerMidPos = player.transform.position + offsetY;
-            
-            if(Time.time > cooldownTimeStamp){
-                //Debug.Log("START SHOOT");
-                //machineAnim.Play("machineboss_attack", -1);
-                cooldownTimeStamp = Time.time + cooldown;
-                //SpawnTargets();
-                //DelayLaserAttack();
-                SpawnTurrets();
-            }
+            //Vector3 midPos = transform.position + offsetY;
+            //Vector3 playerMidPos = player.transform.position + offsetY;
+            SpawnTurrets();
+
         }
         
     }
@@ -73,15 +66,10 @@ public class HackerAttack : MonoBehaviour
         }
         for(int i=0; i<numTurrets; i++){
             Vector3 randPos = Vector3.zero;
-            while(true){
-                float angle = Random.Range(-Mathf.PI, Mathf.PI);
-                float dist = Random.Range(1, randRadius);
-                randPos = new Vector3(Mathf.Cos(angle) * dist, Mathf.Sin(angle) * dist, 0);
-                RaycastHit2D hitInfo = Physics2D.Raycast(player.transform.position, randPos, (player.transform.position-randPos).magnitude, maskLayer);
-                if(hitInfo.collider == null){
-                    break;
-                }
-            }
+            float angle = Random.Range(-Mathf.PI, Mathf.PI);
+            float dist = Random.Range(3, randRadius);
+            randPos = player.transform.position + new Vector3(Mathf.Cos(angle) * dist, Mathf.Sin(angle) * dist, 0);
+            //RaycastHit2D hitInfo = Physics2D.Raycast(player.transform.position, randPos, (player.transform.position-randPos).magnitude, maskLayer);
             
             turretList[i] = Instantiate(turretPrefab, randPos, Quaternion.identity);
         }
