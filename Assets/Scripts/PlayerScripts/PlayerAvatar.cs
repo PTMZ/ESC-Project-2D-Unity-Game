@@ -62,6 +62,10 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         foreach(GameObject t in trails){
             t.SetActive(false);
         }
+
+        if(OfflineGameManager.instance.curAttack == 1){
+            changeAnimNinja();
+        }
     }
 
     // Update is called once per frame
@@ -301,5 +305,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
     void changeAnimNinja(){
         animator.runtimeAnimatorController = ninjaAnimController;
+        OfflineGameManager.instance.UpdateWeapon(1);
+        OfflineGameManager.instance.UpdatePlayerStats(1.1f, 1);
     }
 }
