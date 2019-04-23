@@ -1265,31 +1265,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 024d99b23225cd74493f1074c5fcd0a5, type: 3}
---- !u!1 &596042242 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6632705783636494519, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 6632705783442123096}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &596042246
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596042242}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a584803918c42b34d8bcec5321224389, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &744768164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6782,71 +6757,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705783636494504, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.6509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705783636494504, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.11974903
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705783636494504, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.11974903
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705783636494504, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.46226418
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.09376113
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.09376113
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.r
-      value: 0.8490566
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.g
-      value: 0.11614456
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.b
-      value: 0.17652416
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.r
-      value: 0.99215686
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.54315805
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632705782524765842, guid: eca964bb8aa96f24097347b4cf3e5ea9,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0.50980395
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca964bb8aa96f24097347b4cf3e5ea9, type: 3}
