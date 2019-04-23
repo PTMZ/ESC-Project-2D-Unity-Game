@@ -303,7 +303,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         //Debug.Log("My life is: " + currentHealth);
     }
 
-    void changeAnimNinja(){
+    public void changeAnimNinja(){
         animator.runtimeAnimatorController = ninjaAnimController;
         OfflineGameManager.instance.UpdateWeapon(1);
         OfflineGameManager.instance.UpdatePlayerStats(1.1f, 1);
