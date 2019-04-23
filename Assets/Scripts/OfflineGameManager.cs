@@ -12,6 +12,7 @@ public class OfflineGameManager : MonoBehaviour
     public PlayerAvatar PlayerPrefab;
     public GameObject[] bulletPrefabs;
     public GameObject enemyBulletPrefab;
+    public GameObject arrowPrefab;
     
 
     [HideInInspector]
@@ -102,6 +103,12 @@ public class OfflineGameManager : MonoBehaviour
     public void SpawnEnemyBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
         var temp = Quaternion.FromToRotation(new Vector3(1,0,0), bulletVector);
         GameObject bulletInstance = Instantiate(enemyBulletPrefab, spawnPos, temp);
+        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * curBulletSpeed;
+    }
+
+    public void SpawnArrow(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
+        var temp = Quaternion.FromToRotation(new Vector3(1,0,0), bulletVector);
+        GameObject bulletInstance = Instantiate(arrowPrefab, spawnPos, temp);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * curBulletSpeed;
     }
 

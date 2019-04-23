@@ -51,14 +51,9 @@ public class AngelAttack : MonoBehaviour
             Vector3 toPlayerDirB = Rotate(toPlayerDir, -20);
             Vector3 upV = new Vector3(1, 0, 0);
 
-            GameObject bulletInstance = Instantiate(arrowPrefab, midPos + toPlayerDir, Quaternion.identity);
-            bulletInstance.GetComponent<Rigidbody2D>().velocity = toPlayerDir * curBulletSpeed;
-
-            GameObject bulletInstance2 = Instantiate(arrowPrefab, midPos + toPlayerDirA, Quaternion.identity);
-            bulletInstance2.GetComponent<Rigidbody2D>().velocity = toPlayerDirA * curBulletSpeed;
-
-            GameObject bulletInstance3 = Instantiate(arrowPrefab, midPos + toPlayerDirB, Quaternion.identity);
-            bulletInstance3.GetComponent<Rigidbody2D>().velocity = toPlayerDirB * curBulletSpeed;
+            OfflineGameManager.instance.SpawnArrow(midPos + toPlayerDir*2, Quaternion.identity, toPlayerDir);
+            OfflineGameManager.instance.SpawnArrow(midPos + toPlayerDirA*2, Quaternion.identity, toPlayerDirA);
+            OfflineGameManager.instance.SpawnArrow(midPos + toPlayerDirB*2, Quaternion.identity, toPlayerDirB);
         }
         
     }

@@ -60,7 +60,7 @@ public class BulletScript : MonoBehaviourPunCallbacks
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<EnemyAvatar>().getHit(offlineGM.curDamage);
+            col.gameObject.GetComponent<EnemyAvatar>().getHit(OfflineGameManager.instance.curDamage);
         }
         if (col.gameObject.GetComponent<Destroyable>() != null)
         {
