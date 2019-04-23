@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 649472322207879999}
   - component: {fileID: 649472322207879996}
   - component: {fileID: 649472322207879997}
-  - component: {fileID: 649472322207879994}
+  - component: {fileID: 9167165669604913035}
   m_Layer: 0
   m_Name: DestroyableWall
   m_TagString: Untagged
@@ -129,7 +129,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.013264, y: 2.0174146}
   m_EdgeRadius: 0
---- !u!114 &649472322207879994
+--- !u!114 &9167165669604913035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,8 +138,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 649472322207879995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ee820fbbc9cfa2429f2b46ebf748c33, type: 3}
+  m_Script: {fileID: 11500000, guid: a013c951498efcc46bc3f8e303722115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FloatingTextPrefab: {fileID: 0}
+  FloatingTextPrefab: {fileID: 179312774393334755, guid: f193c1bf0d0ad3a47bfb03fc0014d108,
+    type: 3}
+  HPPrefab: {fileID: 0}
+  KeyPrefab: {fileID: 0}
   health: 40
+  spriteList: []
+  curSprite: 4
+  isHPBox: 0
+  isKeyBox: 0

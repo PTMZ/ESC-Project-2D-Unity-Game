@@ -9,6 +9,7 @@ public class Destroyable : MonoBehaviour
 
     public void getHit(float damage)
     {
+        Debug.Log("Object hit");
         health -= damage;
         if (health <= 0)
         {
