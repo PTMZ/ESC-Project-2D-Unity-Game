@@ -1874,6 +1874,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AngelBoss (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5390516539146220762, guid: fb314e04fc37f6a4bab1c9413898dde0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6989884733949264544, guid: fb314e04fc37f6a4bab1c9413898dde0,
         type: 3}
       propertyPath: m_LocalPosition.x
