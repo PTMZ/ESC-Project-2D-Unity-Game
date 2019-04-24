@@ -14,10 +14,10 @@ public class Destroyable : MonoBehaviour
     public int curSprite = 4;
     public bool isHPBox = false;
     public bool isKeyBox = false;
-
+    public int defence = 0;
     public void getHit(float damage)
     {
-        health -= damage;
+        health -= damage - defence;
         if (health <= 0)
         {
             Destroy(gameObject);
