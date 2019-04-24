@@ -70,6 +70,10 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
         {
             Debug.LogFormat( "OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient ); // called before OnPlayerLeftRoom
             LoadArena(); 
+
+            if (PhotonNetwork.CurrentRoom.PlayerCount == 1){
+                Debug.Log("WIN");
+            }
         }
     }
 
