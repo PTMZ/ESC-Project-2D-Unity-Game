@@ -11,9 +11,14 @@ public class TriggerBoss : MonoBehaviour
     public GeneralPortal generalPortal;
     public string ThisBossTheme;
     public string AfterBossTheme;
-    public GameObject Boss;
+    public EnemyAvatar Boss;
     public bool progressStoryAfterFight = true;
-    public DialogueTrigger dialogueBeforeBossFight; //after boss fight use a seperate dialoguetrigger. 
+    public bool bossDropsPickUp = false;
+    public GameObject pickUpPrefab;
+    public DialogueTrigger dialogueBeforeBossFight;
+    public DialogueTrigger dialogueAfterBossFight;
+    public bool TransitsToPhaseTwo = false;
+    //private Transform pickupSpawnLocation;
 
     //private string songNameHolder;
     private int BossThemePlayCount = 0;
@@ -53,9 +58,14 @@ public class TriggerBoss : MonoBehaviour
     }
 
     private int progressStoryCount = 0;
+    private GameObject instantiatedpickup;
+    private int dialogueTriggerCount = 0;
+
     void Update()
     {
-        if(Boss == null && progressStoryCount == 0)
+
+
+        if (Boss == null && progressStoryCount == 0)
         {
             if (progressStoryAfterFight)
             {
@@ -64,7 +74,25 @@ public class TriggerBoss : MonoBehaviour
             progressStoryCount++;
             AudioManager.instance.Stop(ThisBossTheme);
             AudioManager.instance.PlayTheme(AfterBossTheme);
+
+            //drop pickup
+            if (pickUpPrefab != null && bossDropsPickUp)
+            {
+                instantiatedpickup = Instantiate(pickUpPrefab, Vector3.zero, Quaternion.identity);
+                //instantiatedpickup.transform.position = pickupSpawnLocation.transform.position;
+            }
+
         }
+
+        if (instantiatedpickup == null && progressStoryCount == 1 && dialogueAfterBossFight != null && TransitsToPhaseTwo && dialogueTriggerCount == 0)
+        {
+            OfflineGameManager.instance.storyProgress = 50;
+            dialogueAfterBossFight.TriggerDialogue();
+            dialogueTriggerCount++;
+        }
+        //to track where the boss is and to drop pickup. NOT IMPLEMENTED YET
+        
+
             
     }
 
