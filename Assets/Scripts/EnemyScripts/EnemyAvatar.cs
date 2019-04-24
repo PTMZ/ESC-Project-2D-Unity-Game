@@ -19,6 +19,7 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     private bool isDead = false;
     private bool facingLeft = false;
     public bool isMachineBoss = false;
+    public bool isHackerBoss = false;
     public bool isKeyBox = false; //this
     public Animator exMarkAnim;
 
