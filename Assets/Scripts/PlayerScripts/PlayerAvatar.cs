@@ -298,6 +298,7 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
             if (photonView.IsMine  && GetComponent<PlayerMovement>() != null)
             {
                 Destroy(GetComponent<PlayerMovement>());
+                loseDisconnect();
             }
         }
         //Debug.Log("My life is: " + currentHealth);
@@ -307,5 +308,17 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         animator.runtimeAnimatorController = ninjaAnimController;
         OfflineGameManager.instance.UpdateWeapon(1);
         OfflineGameManager.instance.UpdatePlayerStats(1.1f, 1);
+    }
+
+    public void loseDisconnect(){
+        StartCoroutine (loseDisconnectEnum());
+    }
+    IEnumerator loseDisconnectEnum(){
+        yield return new WaitForSeconds(3);
+
+        PhotonNetwork.Disconnect ();
+        while (PhotonNetwork.IsConnected)
+            yield return null;
+        Application.LoadLevel("TitleScreen");
     }
 }
