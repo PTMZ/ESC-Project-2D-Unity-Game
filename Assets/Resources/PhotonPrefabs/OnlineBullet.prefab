@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 476}
   - component: {fileID: 684}
   - component: {fileID: 778}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: OnlineBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

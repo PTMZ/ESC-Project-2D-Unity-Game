@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 854137353127730776}
   - component: {fileID: 4668641709751284494}
   - component: {fileID: 2888332561910545204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AngelArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

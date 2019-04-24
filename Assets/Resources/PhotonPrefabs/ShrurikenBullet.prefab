@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5501922177586674448}
   - component: {fileID: 3860938521253747674}
   - component: {fileID: 1746130964089378288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShrurikenBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

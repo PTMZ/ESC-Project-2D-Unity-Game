@@ -55,7 +55,7 @@ public class BulletScript : MonoBehaviourPunCallbacks
                 }
             }
             else{
-                col.gameObject.GetComponent<PlayerAvatar>().getHit(offlineGM.curDamage);
+                col.gameObject.GetComponent<PlayerAvatar>().getHit(bulletDmg);
             }
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
