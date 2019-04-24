@@ -49,6 +49,6 @@ public class InGameUIManager : MonoBehaviour
     PhotonNetwork.Disconnect ();
     while (PhotonNetwork.IsConnected)
         yield return null;
-    Application.LoadLevel("TitleScreen");
+    SceneManager.LoadScene("TitleScreen");
     }
 }

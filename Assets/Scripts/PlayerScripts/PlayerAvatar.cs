@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 {
@@ -329,6 +330,6 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         PhotonNetwork.Disconnect ();
         while (PhotonNetwork.IsConnected)
             yield return null;
-        Application.LoadLevel("TitleScreen");
+        SceneManager.LoadScene("TitleScreen");
     }
 }

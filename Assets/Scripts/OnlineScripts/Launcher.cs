@@ -33,8 +33,6 @@ namespace Photon.Pun.Demo.PunBasics
         [SerializeField]
         private string gameSceneName = "GameLevel";
 
-        private int failCount = 0;
-
 		#endregion
 
 		#region Private Fields
