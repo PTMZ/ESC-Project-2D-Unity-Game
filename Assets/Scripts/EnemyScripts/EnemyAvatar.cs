@@ -18,14 +18,16 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     private bool isDead = false;
     private bool facingLeft = false;
     public bool isMachineBoss = false;
+    public bool isHackerBoss = false;
     public Animator exMarkAnim;
 
     private OfflineGameManager offlineGM;
 
-    private bool hasParamWeapMoving;
-    private bool hasParamMoving;
+    private bool hasParamWeapMoving = false;
+    private bool hasParamMoving = false;
+    private bool hasParamDead = false;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updates
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -37,7 +39,11 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         offlineGM = OfflineGameManager.instance;
 
         hasParamMoving = HasParameter(animator, "moving");
-        hasParamWeapMoving = HasParameter(weaponAnim.weaponAnimator, "weapmoving");
+        hasParamDead = HasParameter(animator, "dead");
+        if (weaponAnim.weaponAnimator)
+        {
+            hasParamWeapMoving = HasParameter(weaponAnim.weaponAnimator, "weapmoving");
+        }
     }
 
     // Update is called once per frame

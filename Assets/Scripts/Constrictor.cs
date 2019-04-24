@@ -14,10 +14,11 @@ public class Constrictor : MonoBehaviour
     Vector3 moveDown = new Vector3(0, -100, 0);
 
     private bool isHit = false;
+    private bool isOnlineHit = false;
     private float cooldownTimeStamp;
-    public float cooldown = 0.1f;
+    public float cooldown = 0.3f;
 
-    private float dmg = 1;
+    private float dmg = 2;
     private PlayerAvatar pAvatar;
 
     public bool isBoss = false;
@@ -32,7 +33,12 @@ public class Constrictor : MonoBehaviour
         if(!isBoss && OfflineGameManager.instance.storyProgress < 50){
             AudioManager.instance.PlayLoopButMustStop("Constrictor");
         }
-        pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();
+        if(PhotonNetwork.IsConnected){
+            pAvatar = PlayerManager.LocalPlayerInstance.GetComponent<PlayerAvatar>();
+        }
+        else{
+            pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();
+        }
     }
 
     void FixedUpdate()
@@ -59,6 +65,7 @@ public class Constrictor : MonoBehaviour
     void ConstrictorAction(Vector3 dir)
     {
         transform.position = Vector2.MoveTowards(transform.position, transform.position + dir, Time.deltaTime * speed);
+        /*
         if (isHit && Time.time > cooldownTimeStamp)
         {
             cooldownTimeStamp = Time.time + cooldown;
@@ -67,27 +74,61 @@ public class Constrictor : MonoBehaviour
             }
             else{
                 pAvatar.getHit(dmg);
+                Debug.Log("testing2");
+            }
+        }
+        */
+        if(PhotonNetwork.IsConnected){
+            if(isOnlineHit && Time.time > cooldownTimeStamp){
+                cooldownTimeStamp = Time.time + cooldown;
+                //Debug.Log("HIT ONLINE PLAYER CD");
+                if(pAvatar){
+                    pAvatar.reduceHealthRPC(2);
+                    //Debug.Log("HIT ONLINE PLAYER");
+                }
+            }
+        }
+        else{
+            if(isHit && Time.time > cooldownTimeStamp){
+                cooldownTimeStamp = Time.time + cooldown;
+                if(pAvatar){
+                    pAvatar.getHit(dmg);
+                }
             }
         }
 
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player")){
             isHit = true;
+            if(PhotonNetwork.IsConnected && PhotonView.Get(other.gameObject).IsMine){
+                pAvatar = other.gameObject.GetComponent<PlayerAvatar>();
+                isOnlineHit = true;
+                //Debug.Log("ONLINE HIT");
+            }
+        }
     }
     void OnTriggerExit2D(Collider2D other){
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player")){
             isHit = false;
+            if(PhotonNetwork.IsConnected && PhotonView.Get(other.gameObject).IsMine){
+                isOnlineHit = false;
+                //Debug.Log("ONLINE OUT OF HIT");
+            }
+        }
     }
 
     void OnTriggerStay2D(Collider2D other){
         
+        /*
         if(other.CompareTag("Player")){
             if(PhotonNetwork.IsConnected && PhotonView.Get(other.gameObject).IsMine){
                 other.gameObject.GetComponent<PlayerAvatar>().reduceHealthRPC(1);
+
             }
         }
+        */
     }
 }
 
