@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 239408034}
   - component: {fileID: 239408033}
   m_Layer: 5
-  m_Name: 'B3_AVHQ '
+  m_Name: B3_AVHQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1140,7 +1140,7 @@ GameObject:
   - component: {fileID: 347333265}
   - component: {fileID: 347333264}
   m_Layer: 5
-  m_Name: 'L4_AVHQ '
+  m_Name: L4_AVHQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2144,7 +2144,7 @@ GameObject:
   - component: {fileID: 525692489}
   - component: {fileID: 525692488}
   m_Layer: 5
-  m_Name: 'B2_AVHQ '
+  m_Name: B2_AVHQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2286,7 +2286,7 @@ GameObject:
   - component: {fileID: 547605459}
   - component: {fileID: 547605458}
   m_Layer: 5
-  m_Name: 'L3_AVHQ '
+  m_Name: L3_AVHQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4627,7 +4627,7 @@ GameObject:
   - component: {fileID: 1420128475}
   - component: {fileID: 1420128474}
   m_Layer: 5
-  m_Name: 'L2_AVHQ '
+  m_Name: L2_AVHQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

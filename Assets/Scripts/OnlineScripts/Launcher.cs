@@ -188,7 +188,7 @@ namespace Photon.Pun.Demo.PunBasics
 			Debug.Log("PUN Basics Tutorial/Launcher: OnJoinedRoom() called by PUN. Now this client is in a room.\nFrom here on, your game would be running.");
 		
 			// #Critical: We only load if we are the first player, else we rely on  PhotonNetwork.AutomaticallySyncScene to sync our instance scene.
-			if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+			if (PhotonNetwork.CurrentRoom.PlayerCount < maxPlayersPerRoom)
 			{
 				Debug.Log("We load the 'Room for 1' ");
 
@@ -207,7 +207,9 @@ namespace Photon.Pun.Demo.PunBasics
 			{
 				Debug.LogFormat( "OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient ); // called before OnPlayerLeftRoom
 				//LoadArena();
-				PhotonNetwork.LoadLevel(gameSceneName);
+				if(PhotonNetwork.CurrentRoom.PlayerCount == maxPlayersPerRoom){
+					PhotonNetwork.LoadLevel(gameSceneName);
+				}
 			}
 		}
     }
