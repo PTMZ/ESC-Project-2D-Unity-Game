@@ -37,14 +37,15 @@ public class Pickups : MonoBehaviour
             if(type == 1){
                 AudioManager.instance.Play("FormPickup");
                 other.GetComponent<PlayerAvatar>().changeAnimNinja();
-                if (offlineGM.instance.storyProgress < 50)
+                if (OfflineGameManager.instance.storyProgress < 50)
                     OfflineGameManager.maxHealth += 50;
                 OfflineGameManager.instance.curHealth = OfflineGameManager.maxHealth;
                 Destroy(gameObject);
             }
             if(type == 2){
                 AudioManager.instance.Play("FormPickup");
-                offlineGM.UpdateWeapon(0);
+                other.GetComponent<PlayerAvatar>().changeAnimBomber();
+                OfflineGameManager.instance.curHealth = OfflineGameManager.maxHealth;
                 Destroy(gameObject);
             }
             if(type == 3){

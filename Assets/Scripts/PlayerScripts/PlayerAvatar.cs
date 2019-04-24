@@ -7,6 +7,8 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 {
     public GameObject FloatingTextPrefab;
     public RuntimeAnimatorController ninjaAnimController;
+
+    public RuntimeAnimatorController bomberAnimController;
     public int points = 20;
 
     [HideInInspector]
@@ -65,6 +67,9 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
 
         if(OfflineGameManager.instance.curAttack == 1){
             changeAnimNinja();
+        }
+        if(OfflineGameManager.instance.curAttack == 2){
+            changeAnimBomber();
         }
     }
 
@@ -308,6 +313,11 @@ public class PlayerAvatar : MonoBehaviourPun, IPunObservable
         animator.runtimeAnimatorController = ninjaAnimController;
         OfflineGameManager.instance.UpdateWeapon(1);
         OfflineGameManager.instance.UpdatePlayerStats(1.1f, 1);
+    }
+    public void changeAnimBomber(){
+        animator.runtimeAnimatorController = bomberAnimController;
+        OfflineGameManager.instance.UpdateWeapon(2);
+        OfflineGameManager.instance.UpdatePlayerStats(1, 1);
     }
 
     public void loseDisconnect(){

@@ -977,6 +977,8 @@ MonoBehaviour:
   FloatingTextPrefab: {fileID: 3807610573064024986, guid: b11404f2b66e07143b968fe74b4156c1,
     type: 3}
   ninjaAnimController: {fileID: 9100000, guid: f5f80693e0397214e9801ec812a11bc6, type: 2}
+  bomberAnimController: {fileID: 9100000, guid: 79e786d2690dc174a80b3b9b221b810a,
+    type: 2}
   points: 20
   health: 0
   change: {x: 0, y: 0, z: 0}
