@@ -4889,6 +4889,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   weaponAnim: {fileID: 0}
   isMachineBoss: 0
+  isHackerBoss: 0
   exMarkAnim: {fileID: 0}
 --- !u!1 &831227682388596510
 GameObject:
@@ -5305,6 +5306,7 @@ MonoBehaviour:
   animator: {fileID: 8900081898629605962}
   weaponAnim: {fileID: 0}
   isMachineBoss: 0
+  isHackerBoss: 1
   exMarkAnim: {fileID: 0}
 --- !u!114 &2798753722923758788
 MonoBehaviour:

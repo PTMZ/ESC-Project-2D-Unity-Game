@@ -119,6 +119,7 @@ MonoBehaviour:
   isOnline: 0
   explosion: {fileID: 3710356387055254257, guid: 614aef71b1054a644a8645a92d73aa3f,
     type: 3}
+  isTurretBullet: 1
 --- !u!114 &3962857098211976790
 MonoBehaviour:
   m_ObjectHideFlags: 0

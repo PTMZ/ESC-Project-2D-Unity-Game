@@ -14,6 +14,8 @@ public class BulletScript : MonoBehaviourPunCallbacks
     public bool isOnline = true;
     public GameObject explosion;
 
+    public bool isTurretBullet = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,8 +53,12 @@ public class BulletScript : MonoBehaviourPunCallbacks
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
             //Debug.Log("Enemy hit is " + col.gameObject.name);
             var temp = col.gameObject.GetComponent<EnemyAvatar>();
+            if(isTurretBullet && temp.isHackerBoss){
+                
+            } else {
+                temp.getHit(bulletDmg);
+            }
             
-            temp.getHit(bulletDmg);
         }
         if (col.gameObject.GetComponent<Destroyable>() != null)
         {
