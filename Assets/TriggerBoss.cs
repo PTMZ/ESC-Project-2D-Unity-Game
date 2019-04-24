@@ -96,5 +96,9 @@ public class TriggerBoss : MonoBehaviour
             
     }
 
+    void OnDestroy()
+    {
+        //AudioManager.instance.Stop(ThisBossTheme);
+    }
 
 }

@@ -29,7 +29,7 @@ public class Constrictor : MonoBehaviour
         if(PhotonNetwork.IsConnected){
             return;
         }
-        if(!isBoss){
+        if(!isBoss && OfflineGameManager.instance.storyProgress < 50){
             AudioManager.instance.PlayLoopButMustStop("Constrictor");
         }
         pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();

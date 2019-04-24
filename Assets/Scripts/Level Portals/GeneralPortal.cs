@@ -60,4 +60,10 @@ public class GeneralPortal : MonoBehaviour
         }
         
     }
+
+    void OnDestroy()
+    {
+        if(SceneManager.GetActiveScene().name == "PW_04")
+            AudioManager.instance.Stop("MachinaTheme");
+    }
 }
