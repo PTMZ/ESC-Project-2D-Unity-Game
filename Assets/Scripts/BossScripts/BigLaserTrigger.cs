@@ -6,7 +6,7 @@ public class BigLaserTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start(){
-        Destroy(gameObject, 0.1f);
+        Destroy(gameObject, 0.5f);
     }
 
     void OnTriggerEnter2D(Collider2D other){
