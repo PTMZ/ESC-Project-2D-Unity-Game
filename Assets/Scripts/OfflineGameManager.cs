@@ -22,9 +22,9 @@ public class OfflineGameManager : MonoBehaviour
     [HideInInspector]
     public float curDamage;
     [HideInInspector]
-    public bool firstTimeNinja;
+    public bool firstTimeNinja = true;
     [HideInInspector]
-    public bool firstTimeBomber;
+    public bool firstTimeBomber = true;
     [HideInInspector]
     public float curBulletSpeed;
     [HideInInspector]
@@ -162,6 +162,8 @@ public class OfflineGameManager : MonoBehaviour
             OfflineGameManager.instance.curHealth = maxHealth;
             OfflineGameManager.instance.curAttack = save.curAttack;
             OfflineGameManager.instance.storyProgress = save.storyProgress;
+            OfflineGameManager.instance.firstTimeNinja = save.firstTimeNinja;
+            OfflineGameManager.instance.firstTimeBomber = save.firstTimeBomber;
 
             //DO NOT UNCOMMENT THIS UNLESS ANOTHER BUG APPEARS. AudioManager.instance.StopAll();
             AudioManager.instance.StopMustStopSFX();

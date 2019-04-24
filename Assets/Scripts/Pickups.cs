@@ -37,15 +37,23 @@ public class Pickups : MonoBehaviour
             if(type == 1){
                 AudioManager.instance.Play("FormPickup");
                 other.GetComponent<PlayerAvatar>().changeAnimNinja();
-                if (OfflineGameManager.instance.storyProgress < 50)
+                if (OfflineGameManager.instance.firstTimeNinja)
+                {
                     OfflineGameManager.maxHealth += 50;
+                    OfflineGameManager.instance.firstTimeNinja = false;
+                } 
                 OfflineGameManager.instance.curHealth = OfflineGameManager.maxHealth;
                 Destroy(gameObject);
             }
             if(type == 2){
                 AudioManager.instance.Play("FormPickup");
                 other.GetComponent<PlayerAvatar>().changeAnimBomber();
-                OfflineGameManager.instance.curHealth = OfflineGameManager.maxHealth;
+                if (OfflineGameManager.instance.firstTimeBomber)
+                {
+                    OfflineGameManager.maxHealth += 50;
+                    OfflineGameManager.instance.firstTimeBomber = false;
+                }
+                    OfflineGameManager.instance.curHealth = OfflineGameManager.maxHealth;
                 Destroy(gameObject);
             }
             if(type == 3){
@@ -62,6 +70,11 @@ public class Pickups : MonoBehaviour
                 }
                 //AudioManager.instance.Play("HPPickup");
                 Destroy(gameObject);
+            }
+            if(type == 5)
+            {
+                OfflineGameManager.instance.curHealth += 5;
+                OfflineGameManager.maxHealth += 5;
             }
 
             /*

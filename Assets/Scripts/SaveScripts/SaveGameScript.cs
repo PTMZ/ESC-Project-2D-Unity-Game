@@ -36,6 +36,9 @@ public class SaveGameScript
         save.curScene = SceneManager.GetActiveScene().name;
         save.storyProgress = OfflineGameManager.instance.storyProgress;
         save.spawnPoints = OfflineGameManager.instance.spawnPoints;
+        save.firstTimeNinja = OfflineGameManager.instance.firstTimeNinja;
+        save.firstTimeBomber = OfflineGameManager.instance.firstTimeBomber;
+
 
         return save;
     }
@@ -57,6 +60,8 @@ public class SaveGameScript
             OfflineGameManager.instance.curAttack = save.curAttack;
             OfflineGameManager.instance.storyProgress = save.storyProgress;
             OfflineGameManager.instance.spawnPoints = save.spawnPoints;
+            OfflineGameManager.instance.firstTimeNinja = save.firstTimeNinja;
+            OfflineGameManager.instance.firstTimeBomber = save.firstTimeBomber;
 
             AudioManager.instance.StopAll();
             SceneManager.LoadScene(save.curScene);
