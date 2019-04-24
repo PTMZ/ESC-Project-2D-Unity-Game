@@ -30,10 +30,11 @@ public class BoxButton : MonoBehaviour
                 objRef = other.gameObject;
                 count ++;
             }
-        }
-        if(getPressed()){
-            mySpriteRenderer.sprite = pressSprite;
-            setTrailState(true);
+
+            if(getPressed()){
+                mySpriteRenderer.sprite = pressSprite;
+                setTrailState(true);
+            }
         }
     }
 
@@ -42,10 +43,11 @@ public class BoxButton : MonoBehaviour
             if(other.gameObject.GetComponent<Destroyable>().curSprite == colour){
                 count --;
             }
-        }
-        if(!getPressed()){
-            mySpriteRenderer.sprite = normSprite;
-            setTrailState(false);
+
+            if(!getPressed()){
+                mySpriteRenderer.sprite = normSprite;
+                setTrailState(false);
+            }
         }
     }
 
