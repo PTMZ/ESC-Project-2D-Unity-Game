@@ -48,7 +48,7 @@ MonoBehaviour:
   bulletPrefabs:
   - {fileID: 369, guid: f6411c2928a967a418979f53a5b48773, type: 3}
   - {fileID: 7587101468705422489, guid: 90115eb83f4e75f47a00c2ee7acde8b9, type: 3}
-  enemyBulletPrefab: {fileID: 3985543157290118157, guid: c585306c76310b44fb1e5729933558e1,
+  enemyBulletPrefab: {fileID: 3985543157290118157, guid: 5b6021a777677fb4392585e1f1c81ac5,
     type: 3}
   turretBulletPrefab: {fileID: 5478190695141602960, guid: 1839313862447624a915abf3861c7b90,
     type: 3}
