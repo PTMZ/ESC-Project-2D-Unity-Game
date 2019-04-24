@@ -62,6 +62,7 @@ public class Bomb : MonoBehaviour
             exploded = true;
             animator.Play("bomb_explosion", -1);
             collision.gameObject.GetComponent<PlayerAvatar>().getHit(bombDamage);
+            AudioManager.instance.Play("BombExplosion");
             Destroy(gameObject, 0.3f);
         }
 
@@ -69,6 +70,7 @@ public class Bomb : MonoBehaviour
         {
             collision.gameObject.GetComponent<EnemyAvatar>().getHit(25);
             animator.Play("bomb_explosion", -1);
+            AudioManager.instance.Play("BombExplosion");
             Destroy(gameObject, 0.3f);
         }
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null && exploded == true)
