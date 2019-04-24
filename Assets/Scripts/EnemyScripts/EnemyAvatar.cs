@@ -103,11 +103,6 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             //transform.Rotate(0, 0, 90, Space.Self);
             animator.SetBool("dead", true);
 
-            if (isKeyBox)
-            {
-                Instantiate(KeyPrefab, transform.position, Quaternion.identity);
-            }
-
             if (isMachineBoss)
             {
                 Debug.Log("MACHINE IS DEAD");
@@ -133,6 +128,11 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 
         if (health < -30)
         {
+            if (isKeyBox)
+            {
+                Instantiate(KeyPrefab, transform.position, Quaternion.identity);
+            }
+
             offlineGM.respawnEnemy(gameObject);
         }
         
