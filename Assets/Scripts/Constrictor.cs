@@ -15,9 +15,9 @@ public class Constrictor : MonoBehaviour
 
     private bool isHit = false;
     private float cooldownTimeStamp;
-    public float cooldown = 0.1f;
+    public float cooldown = 0.3f;
 
-    private float dmg = 1;
+    private float dmg = 2;
     private PlayerAvatar pAvatar;
 
     public bool isBoss = false;

@@ -14,22 +14,12 @@ public class BulletScript : MonoBehaviourPunCallbacks
     public bool isOnline = true;
     public GameObject explosion;
 
-    private OfflineGameManager offlineGM;
-
     // Start is called before the first frame update
     void Start()
     {
-        offlineGM = FindObjectOfType<OfflineGameManager>();
         DeathTime = GetComponent<AttackStats>().deathTime;
         bulletDmg = GetComponent<AttackStats>().damage;
-        /* 
-        if(PhotonNetwork.IsConnected && PhotonNetwork.IsMasterClient){
-            StartCoroutine(NetworkDestroyEnum(DeathTime));
-        }
-        else{
-            Destroy(gameObject, DeathTime);
-        }
-        */
+        
         Destroy(gameObject, DeathTime);
         
     }
@@ -60,7 +50,9 @@ public class BulletScript : MonoBehaviourPunCallbacks
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<EnemyAvatar>().getHit(bulletDmg);
+            var temp = col.gameObject.GetComponent<EnemyAvatar>();
+            
+            temp.getHit(bulletDmg);
         }
         if (col.gameObject.GetComponent<Destroyable>() != null)
         {
