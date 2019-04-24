@@ -21,7 +21,7 @@ public class MachineAttack : MonoBehaviour
     public GameObject bigAreaAttackPrefab;
     public float cooldown2;
     public float timeout2;
-    public static float damage2 = 10;
+    public static float damage2 = 20;
     private float cooldownTimeStamp2;
     public float laserWidth;
     public float laserHeight;

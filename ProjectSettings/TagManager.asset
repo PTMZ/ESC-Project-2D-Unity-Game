@@ -18,6 +18,7 @@ TagManager:
   - DestroyableBoxOrange
   - SpawnManager
   - PiecePuzzle
+  - Destroyable
   layers:
   - Default
   - TransparentFX

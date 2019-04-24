@@ -11,7 +11,11 @@ public class LaserHitPointTrigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
             other.gameObject.GetComponent<PlayerAvatar>().getHit(MachineAttack.damage);
-            Destroy(gameObject);
         }
+        if (other.CompareTag("Destroyable"))
+        {
+            other.gameObject.GetComponent<Destroyable>().getHit(MachineAttack.damage);
+        }
+        Destroy(gameObject);
     }
 }

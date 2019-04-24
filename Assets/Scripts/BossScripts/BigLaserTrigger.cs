@@ -11,8 +11,13 @@ public class BigLaserTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("Player")){
-            other.gameObject.GetComponent<PlayerAvatar>().getHit(MachineAttack.damage);
-            Destroy(gameObject);
+            other.gameObject.GetComponent<PlayerAvatar>().getHit(MachineAttack.damage2);
+            
         }
+        if (other.CompareTag("Destroyable"))
+        {
+            other.gameObject.GetComponent<Destroyable>().getHit(MachineAttack.damage2);
+        }
+        Destroy(gameObject);
     }
 }
