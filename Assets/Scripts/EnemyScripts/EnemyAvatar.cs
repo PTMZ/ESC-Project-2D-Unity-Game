@@ -6,6 +6,7 @@ using Photon.Pun;
 public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 {
     public GameObject FloatingTextPrefab;
+    public GameObject KeyPrefab; //this
     public float health;
 
 
@@ -18,16 +19,15 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     private bool isDead = false;
     private bool facingLeft = false;
     public bool isMachineBoss = false;
-    public bool isHackerBoss = false;
+    public bool isKeyBox = false; //this
     public Animator exMarkAnim;
 
     private OfflineGameManager offlineGM;
 
     private bool hasParamWeapMoving = false;
     private bool hasParamMoving = false;
-    private bool hasParamDead = false;
 
-    // Start is called before the first frame updates
+    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -39,7 +39,6 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         offlineGM = OfflineGameManager.instance;
 
         hasParamMoving = HasParameter(animator, "moving");
-        hasParamDead = HasParameter(animator, "dead");
         if (weaponAnim.weaponAnimator)
         {
             hasParamWeapMoving = HasParameter(weaponAnim.weaponAnimator, "weapmoving");
@@ -102,7 +101,12 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             isDead = true;
             //transform.Rotate(0, 0, 90, Space.Self);
             animator.SetBool("dead", true);
-            
+
+            if (isKeyBox)
+            {
+                Instantiate(KeyPrefab, transform.position, Quaternion.identity);
+            }
+
             if (isMachineBoss)
             {
                 Debug.Log("MACHINE IS DEAD");
