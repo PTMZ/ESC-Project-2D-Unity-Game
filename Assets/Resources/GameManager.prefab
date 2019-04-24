@@ -54,6 +54,8 @@ MonoBehaviour:
     type: 3}
   curHealth: 100
   curDamage: 0
+  firstTimeNinja: 1
+  firstTimeBomber: 1
   curBulletSpeed: 0
   curCooldown: 0
   storyProgress: 0

@@ -105,7 +105,7 @@ public class EnemyMovement : MonoBehaviour
                 else if(enemyType == 1){
                     Vector3 playerMid = player.transform.position + new Vector3(0, 0.5f, 0);
                     Vector3 bulletDir = (playerMid - midPos).normalized;
-                    OfflineGameManager.instance.SpawnEnemyBullet(midPos + bulletDir * 0.6f, transform.rotation, bulletDir);
+                    OfflineGameManager.instance.SpawnEnemyBullet(midPos + bulletDir * 1.0f, transform.rotation, bulletDir);
                     target.transform.position = transform.position;
                     weaponAnim.weaponAnimator.Play("attack", -1);
                 }

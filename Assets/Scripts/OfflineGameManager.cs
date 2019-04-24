@@ -104,8 +104,8 @@ public class OfflineGameManager : MonoBehaviour
     }
 
     public void SpawnEnemyBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
-        var temp = Quaternion.FromToRotation(new Vector3(1,0,0), bulletVector);
-        GameObject bulletInstance = Instantiate(enemyBulletPrefab, spawnPos, temp);
+        //var temp = Quaternion.FromToRotation(new Vector3(1,0,0), bulletVector);
+        GameObject bulletInstance = Instantiate(enemyBulletPrefab, spawnPos, rotation);
         bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * curBulletSpeed;
     }
 
