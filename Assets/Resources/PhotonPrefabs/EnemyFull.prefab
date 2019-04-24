@@ -45,9 +45,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1}
+  m_Offset: {x: 0, y: -0.55}
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 3.2
 --- !u!114 &4797326996892036783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +246,6 @@ MonoBehaviour:
   target: {fileID: 4797326997724605171}
   weaponAnim: {fileID: 0}
   cooldown: 0.5
-  hitRadius: 2
   meleeDmg: 10
   patrolPoints:
   - {fileID: 4797326998526450257}
@@ -255,6 +254,7 @@ MonoBehaviour:
   inVisionRange: 0
   inHitRange: 0
   cd: 0
+  enemyType: 0
 --- !u!50 &4797326997600734224
 Rigidbody2D:
   serializedVersion: 4
@@ -325,10 +325,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FloatingTextPrefab: {fileID: 3807610573064024986, guid: b11404f2b66e07143b968fe74b4156c1,
     type: 3}
+  KeyPrefab: {fileID: 0}
   health: 100
   change: {x: 0, y: 0, z: 0}
   animator: {fileID: 4797326997600734238}
   weaponAnim: {fileID: 4797326998138851309}
+  isMachineBoss: 0
+  isHackerBoss: 0
+  isKeyBox: 0
   exMarkAnim: {fileID: 3083485545852072797}
 --- !u!114 &4797326997600734236
 MonoBehaviour:
@@ -533,10 +537,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FloatingTextPrefab: {fileID: 0}
+  KeyPrefab: {fileID: 0}
   health: 100
   change: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   weaponAnim: {fileID: 0}
+  isMachineBoss: 0
+  isHackerBoss: 0
+  isKeyBox: 0
   exMarkAnim: {fileID: 0}
 --- !u!1 &4797326998526450256
 GameObject:
