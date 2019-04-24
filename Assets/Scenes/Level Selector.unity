@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 205116719}
   - component: {fileID: 205116718}
   m_Layer: 5
-  m_Name: 'L5_HackerBoss '
+  m_Name: L5_HackerBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
