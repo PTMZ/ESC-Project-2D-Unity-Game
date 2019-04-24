@@ -100,6 +100,14 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
         //Destroy(bulletInstance,DeathTime);
         //StartCoroutine(bulletInstance.GetComponent<BulletScript>().NetworkDestroyEnum(DeathTime));
     }
+
+    public static void SpawnTurretBullet(Vector3 spawnPos, Quaternion rotation, Vector3 bulletVector){
+        GameObject bulletInstance = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "TurretBullet"), spawnPos, rotation);
+        bulletInstance.GetComponent<BulletScript>().isOnline = true;
+        bulletInstance.GetComponent<Rigidbody2D>().velocity = bulletVector * bulletInstance.GetComponent<AttackStats>().bulletSpeed;
+        //Destroy(bulletInstance,DeathTime);
+        //StartCoroutine(bulletInstance.GetComponent<BulletScript>().NetworkDestroyEnum(DeathTime));
+    }
     /*
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer){
         base.OnPlayerEnteredRoom(newPlayer);

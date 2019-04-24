@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Constrictor : MonoBehaviour
 {
@@ -23,11 +24,15 @@ public class Constrictor : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-        pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();
+        
         cooldownTimeStamp = Time.time;
+        if(PhotonNetwork.IsConnected){
+            return;
+        }
         if(!isBoss){
             AudioManager.instance.PlayLoopButMustStop("Constrictor");
         }
+        pAvatar = GameObject.FindWithTag("Player").GetComponent<PlayerAvatar>();
     }
 
     void FixedUpdate()
@@ -57,7 +62,12 @@ public class Constrictor : MonoBehaviour
         if (isHit && Time.time > cooldownTimeStamp)
         {
             cooldownTimeStamp = Time.time + cooldown;
-            pAvatar.getHit(dmg);
+            if(PhotonNetwork.IsConnected){
+                
+            }
+            else{
+                pAvatar.getHit(dmg);
+            }
         }
 
     }
@@ -69,6 +79,15 @@ public class Constrictor : MonoBehaviour
     void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player"))
             isHit = false;
+    }
+
+    void OnTriggerStay2D(Collider2D other){
+        
+        if(other.CompareTag("Player")){
+            if(PhotonNetwork.IsConnected && PhotonView.Get(other.gameObject).IsMine){
+                other.gameObject.GetComponent<PlayerAvatar>().reduceHealthRPC(1);
+            }
+        }
     }
 }
 

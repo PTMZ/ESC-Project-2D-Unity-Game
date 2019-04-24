@@ -66,6 +66,12 @@ EditorBuildSettings:
     path: Assets/Scenes/PW_04.unity
     guid: 8f45fa9b3acbf4f88afd5995483aa713
   - enabled: 1
+    path: Assets/Scenes/L5_AngBoss.unity
+    guid: d7e43427c16314f8582688d5092e5c09
+  - enabled: 1
+    path: Assets/Scenes/L4_AVHQ.unity
+    guid: 42f65a88e5f6d40ecae47e2e4a6aa1d1
+  - enabled: 1
     path: Assets/Scenes/L2_AVHQ.unity
     guid: ef98985cc2966416bae1d3ddc9bacabc
   - enabled: 1

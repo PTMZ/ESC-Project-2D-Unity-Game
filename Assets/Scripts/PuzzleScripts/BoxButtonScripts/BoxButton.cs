@@ -16,6 +16,8 @@ public class BoxButton : MonoBehaviour
     private int count = 0;
     private SpriteRenderer mySpriteRenderer;
 
+    private GameObject objRef = null;
+
     void Start(){
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         mySpriteRenderer.sprite = normSprite;
@@ -25,6 +27,7 @@ public class BoxButton : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("DestroyableBox")){
             if(other.gameObject.GetComponent<Destroyable>().curSprite == colour){
+                objRef = other.gameObject;
                 count ++;
             }
         }
@@ -39,6 +42,16 @@ public class BoxButton : MonoBehaviour
             if(other.gameObject.GetComponent<Destroyable>().curSprite == colour){
                 count --;
             }
+        }
+        if(!getPressed()){
+            mySpriteRenderer.sprite = normSprite;
+            setTrailState(false);
+        }
+    }
+
+    void FixedUpdate(){
+        if(objRef == null && getPressed()){
+            count --;
         }
         if(!getPressed()){
             mySpriteRenderer.sprite = normSprite;

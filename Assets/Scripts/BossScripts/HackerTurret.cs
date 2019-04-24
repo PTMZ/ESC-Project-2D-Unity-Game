@@ -33,8 +33,8 @@ public class HackerTurret : MonoBehaviour
             
         }
         else{
-            OnlineGameManager.SpawnBullet(midPos + bulletDir * 0.6f, transform.rotation, bulletDir);
-            Debug.Log("turret shoot");
+            OnlineGameManager.SpawnTurretBullet(midPos + bulletDir * 0.6f, transform.rotation, bulletDir);
+            //Debug.Log("turret shoot");
         }
         //weaponAnim.weaponAnimator.Play("attack", -1);
     }
