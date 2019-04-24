@@ -8,6 +8,7 @@ public class MachineMove : MonoBehaviour
     public GameObject target;
     private GameObject player;
     private EnemyAvatar myself;
+    public Animator anim;
 
     public bool isActivated = false;
 
@@ -34,6 +35,7 @@ public class MachineMove : MonoBehaviour
         midPos = transform.position + offsetY;
 
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -58,9 +60,11 @@ public class MachineMove : MonoBehaviour
     void FixedUpdate(){
         if(myself.getDead()){
             //Debug.Log("Machine boss dead?.");
+            anim.SetBool("dead", true);
             if(isActivated){
                 GetComponent<MachineAttack>().isActivated = false;
                 isActivated = false;
+
             }
             return;
         }
