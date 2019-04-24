@@ -11,4 +11,6 @@ public class Save
     public string curScene;
     public int storyProgress;
     public Dictionary<string, int> spawnPoints;
+    public bool firstTimeNinja;
+    public bool firstTimeBomber;
 }
