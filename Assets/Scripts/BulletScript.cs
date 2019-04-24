@@ -60,12 +60,12 @@ public class BulletScript : MonoBehaviourPunCallbacks
         }
         if(col.gameObject.GetComponent<EnemyAvatar>() != null){
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<EnemyAvatar>().getHit(OfflineGameManager.instance.curDamage);
+            col.gameObject.GetComponent<EnemyAvatar>().getHit(bulletDmg);
         }
         if (col.gameObject.GetComponent<Destroyable>() != null)
         {
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<Destroyable>().getHit(offlineGM.curDamage);
+            col.gameObject.GetComponent<Destroyable>().getHit(bulletDmg);
         }
         if (col.gameObject.GetComponent<OnlineDestroyable>() != null)
         {
@@ -77,12 +77,12 @@ public class BulletScript : MonoBehaviourPunCallbacks
         if (col.gameObject.GetComponent<DestroyableWall>() != null)
         {
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<DestroyableWall>().getHit(offlineGM.curDamage);
+            col.gameObject.GetComponent<DestroyableWall>().getHit(bulletDmg);
         }
         if (col.gameObject.GetComponent<ShootBomb>() != null)
         {
             //Debug.Log("Enemy hit is " + col.gameObject.name);
-            col.gameObject.GetComponent<ShootBomb>().getHit(offlineGM.curDamage);
+            col.gameObject.GetComponent<ShootBomb>().getHit(bulletDmg);
         }
         //Debug.Log("OnCollisionEnter2D");
         //Put Sound here

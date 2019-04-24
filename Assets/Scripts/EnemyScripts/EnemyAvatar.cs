@@ -97,7 +97,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             }
             else
             {
-                weaponAnim.mySpriteRenderer.enabled = false;
+                if(weaponAnim.mySpriteRenderer){
+                    weaponAnim.mySpriteRenderer.enabled = false;
+                }
             }
             
             
