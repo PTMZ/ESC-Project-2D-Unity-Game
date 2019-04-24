@@ -116,8 +116,14 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: HackerFightTheme
+  - name: HackerTheme
     clip: {fileID: 8300000, guid: e89ed919199084846a756140673e3b15, type: 3}
+    volume: 0.673
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MachinaTheme
+    clip: {fileID: 8300000, guid: 76ad239cb8c504840ba2b60ab84b420c, type: 3}
     volume: 0.673
     pitch: 1
     loop: 1

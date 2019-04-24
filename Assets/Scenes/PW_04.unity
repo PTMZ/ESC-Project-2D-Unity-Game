@@ -11062,6 +11062,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 45, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &166705715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2498775608128102367, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
+    type: 3}
+  m_PrefabInstance: {fileID: 464034366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &187258323
 GameObject:
   m_ObjectHideFlags: 0
@@ -12699,7 +12705,7 @@ PrefabInstance:
     - target: {fileID: 2498775608128102362, guid: 5d3a7b0bf1403dd4c984d0d1799dc281,
         type: 3}
       propertyPath: storyProgActivate
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3a7b0bf1403dd4c984d0d1799dc281, type: 3}
@@ -22015,12 +22021,12 @@ PrefabInstance:
     - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2444067
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.4094305
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}
@@ -22066,6 +22072,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: ThisBossTheme
+      value: MachinaTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: Boss
+      value: 
+      objectReference: {fileID: 166705715}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: AfterBossTheme
+      value: PW01Theme
       objectReference: {fileID: 0}
     - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}

@@ -10,13 +10,16 @@ public class TriggerBoss : MonoBehaviour
     //Only  triggers pre-boss fight dialogue if any. 
     public GeneralPortal generalPortal;
     public string ThisBossTheme;
+    public string AfterBossTheme;
     public GameObject Boss;
     public DialogueTrigger dialogueBeforeBossFight; //after boss fight use a seperate dialoguetrigger. 
 
+    //private string songNameHolder;
+    private int BossThemePlayCount = 0;
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && BossThemePlayCount == 0)
         {
             if (other.gameObject.GetComponent<PlayerAvatar>().getIsDead())
             {
@@ -28,11 +31,11 @@ public class TriggerBoss : MonoBehaviour
                 Debug.Log("Triggering Dialogue " + dialogueBeforeBossFight.SceneNumber);
                 dialogueBeforeBossFight.TriggerDialogue();
             }
-            else
+            else 
             {
                 OfflineGameManager.instance.storyProgress++;
             }
-            if(generalPortal != null)
+            if(generalPortal != null )
             {
                 AudioManager.instance.Stop(generalPortal.curSceneTheme);
             }
@@ -40,8 +43,9 @@ public class TriggerBoss : MonoBehaviour
             {
                 AudioManager.instance.StopAll();
             }
-            
+
             AudioManager.instance.PlayTheme(ThisBossTheme);
+            BossThemePlayCount++;
 
         }
 
@@ -54,6 +58,8 @@ public class TriggerBoss : MonoBehaviour
         {
             OfflineGameManager.instance.storyProgress++; //story progress added to trigger the next dialogue.
             progressStoryCount++;
+            AudioManager.instance.Stop(ThisBossTheme);
+            AudioManager.instance.PlayTheme(AfterBossTheme);
         }
             
     }
