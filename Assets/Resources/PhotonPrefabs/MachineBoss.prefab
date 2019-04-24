@@ -359,7 +359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2498775608128102367}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61531599745b71c4faef8ce6223e2455, type: 3}
   m_Name: 
@@ -387,13 +387,16 @@ MonoBehaviour:
   cooldown: 2
   timeout: 1
   randRadius: 3
-  warningAreaPrefab: {fileID: 0}
-  bigAreaAttackPrefab: {fileID: 0}
-  cooldown2: 0
-  timeout2: 0
-  laserWidth: 0
-  laserHeight: 0
-  areaXoffset: 0
+  warningAreaPrefab: {fileID: 6336310121082621183, guid: acd305502b721d04193d7c6aacb65501,
+    type: 3}
+  bigAreaAttackPrefab: {fileID: 4137539582977364155, guid: 4606b936ba4ecaf45bd8004436cc641e,
+    type: 3}
+  cooldown2: 4
+  timeout2: 2
+  laserWidth: 3.5
+  laserHeight: 2
+  areaXoffset: 2
+  yOffset: 1.5
   machineAnim: {fileID: 0}
   lineRenderers:
   - {fileID: 3600304445512546871}

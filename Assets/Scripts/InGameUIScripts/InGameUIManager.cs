@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 [System.Serializable]
 public class InGameUIManager : MonoBehaviour
@@ -31,6 +32,23 @@ public class InGameUIManager : MonoBehaviour
         //Destroy(AudioManager.instance);
         //Destroy(OfflineGameManager.instance);
         Time.timeScale = 1.0f;
+        if(PhotonNetwork.IsConnected){
+            DisconnectToTitle();
+        }
         SceneManager.LoadScene("TitleScreen");
+
+    }
+
+    public void DisconnectToTitle ()
+    {
+        StartCoroutine (DoSwitchLevel());
+    }
+
+    IEnumerator DoSwitchLevel ()
+    {
+    PhotonNetwork.Disconnect ();
+    while (PhotonNetwork.IsConnected)
+        yield return null;
+    Application.LoadLevel("TitleScreen");
     }
 }

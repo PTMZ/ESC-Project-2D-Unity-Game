@@ -20,6 +20,9 @@ namespace Photon.Pun.Demo.PunBasics
 	public class Launcher : MonoBehaviourPunCallbacks
     {
 
+		public GameObject playBtn;
+		public GameObject waitBtn;
+
 		#region Private Serializable Fields
 
 
@@ -120,6 +123,7 @@ namespace Photon.Pun.Demo.PunBasics
             // we don't want to do anything if we are not attempting to join a room. 
 			// this case where isConnecting is false is typically when you lost or quit the game, when this level is loaded, OnConnectedToMaster will be called, in that case
 			// we don't want to do anything.
+			PhotonNetwork.AutomaticallySyncScene = true;
 			if (isConnecting)
 			{
 				LogFeedback("OnConnectedToMaster: Next -> try to Join Random Room");
@@ -192,12 +196,24 @@ namespace Photon.Pun.Demo.PunBasics
 
 				// #Critical
 				// Load the Room Level. 
-				PhotonNetwork.LoadLevel(gameSceneName);
+				//PhotonNetwork.LoadLevel(gameSceneName);
+				playBtn.SetActive(false);
+				waitBtn.SetActive(true);
 
 			}
 		}
 
+		public override void OnPlayerEnteredRoom( Player other  ) {
+			Debug.Log( "OnPlayerEnteredRoom() " + other.NickName); // not seen if you're the player connecting
+			if ( PhotonNetwork.IsMasterClient )
+			{
+				Debug.LogFormat( "OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient ); // called before OnPlayerLeftRoom
+				//LoadArena();
+				PhotonNetwork.LoadLevel(gameSceneName);
+			}
+		}
+    }
+
 		#endregion
-		
-	}
+	
 }
