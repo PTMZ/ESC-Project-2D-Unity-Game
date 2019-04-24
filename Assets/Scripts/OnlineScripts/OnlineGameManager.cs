@@ -11,6 +11,8 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
     static public OnlineGameManager Instance;
     public float curCooldown;
 
+    public GameObject winText;
+
     [SerializeField]
     private PlayerAvatar playerPrefab;
 
@@ -73,6 +75,7 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
 
             if (PhotonNetwork.CurrentRoom.PlayerCount == 1){
                 Debug.Log("WIN");
+                showWin();
             }
         }
     }
@@ -112,6 +115,21 @@ public class OnlineGameManager : MonoBehaviourPunCallbacks
         //Destroy(bulletInstance,DeathTime);
         //StartCoroutine(bulletInstance.GetComponent<BulletScript>().NetworkDestroyEnum(DeathTime));
     }
+
+    public void showWin(){
+        StartCoroutine (showWinEnum());
+    }
+
+    IEnumerator showWinEnum(){
+        winText.SetActive(true);
+        yield return new WaitForSeconds(3);
+
+        PhotonNetwork.Disconnect ();
+        while (PhotonNetwork.IsConnected)
+            yield return null;
+        Application.LoadLevel("TitleScreen");
+    }
+
     /*
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer){
         base.OnPlayerEnteredRoom(newPlayer);
