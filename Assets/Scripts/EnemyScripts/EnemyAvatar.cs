@@ -90,8 +90,8 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
             if (isMachineBoss)
             {
                 Debug.Log("MACHINE IS DEAD");
-                weaponAnim.weaponAnimator.SetBool("explode", true);
-                //weaponAnim.weaponAnimator.Play("machine_explosion", -1);
+                //weaponAnim.weaponAnimator.SetBool("explode", true);
+                weaponAnim.weaponAnimator.Play("machine_explosion", -1);
                 //weaponAnim.weaponAnimator.SetBool("hide", true);
                 Destroy(gameObject, 1.3f);
             }
