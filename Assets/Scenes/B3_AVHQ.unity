@@ -3199,51 +3199,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue8
       objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: SceneNumber
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[0]
-      value: Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: Wow, you actually solved it!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[1]
-      value: Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: You are really one smart cookie.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[2]
-      value: I wonder why, hmmm...
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[2]
-      value: Guide
-      objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3303,6 +3258,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: SceneNumber
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[0]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Wow, you actually solved it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[1]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: You are really one smart cookie.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: I wonder why, hmmm...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[2]
+      value: Guide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78d7652378dd6643b1fe245e7530baf, type: 3}
@@ -4283,50 +4283,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue7
       objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: SceneNumber
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[0]
-      value: Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: They seem to have set up some layers of defence to prevent your escape.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: Remove the encrpytion to get to the portal!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
-        type: 3}
-      propertyPath: dialogue.name.Array.data[1]
-      value: Guide
-      objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.92
+      value: -21.2
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -4372,6 +4337,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: SceneNumber
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[0]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: They seem to have set up some layers of defence to prevent your escape.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Remove the encrpytion to get to the portal!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[1]
+      value: Guide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78d7652378dd6643b1fe245e7530baf, type: 3}
@@ -5243,6 +5243,194 @@ Transform:
   m_Father: {fileID: 872468423}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &914949379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4576321564071608248, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_Name
+      value: Pacing Dialogue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608245, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608247, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608247, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608247, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[0]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[1]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[2]
+      value: ??
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Try destroying that box.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: Are you alright? You must be terrified.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Don't worry, everything will be fine now that I found you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: You can think of me as your guide. I am here to get you out of this quarantine
+        zone.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[3]
+      value: ??
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[4]
+      value: ??
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[5]
+      value: Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[6]
+      value: ' ??'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[7]
+      value: ' ??'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: For now, try moving around. Drag and hold the left side of the screen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: You can think of me as your guide. I am here to get you out of the quarantine
+        zone.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: You can think of me as your guide. I am here to get you out of the quarantine
+        zone.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: SceneNumber
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Sometimes, when boxes are destroyed, they will be re-initialised in a
+        different position.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e78d7652378dd6643b1fe245e7530baf, type: 3}
 --- !u!1 &931940376
 GameObject:
   m_ObjectHideFlags: 0
