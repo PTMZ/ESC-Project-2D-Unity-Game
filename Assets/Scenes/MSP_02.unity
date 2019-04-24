@@ -224,6 +224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9117138169387218337, guid: 911ae7e4e60f519449a75df4f9b943e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9117138169387218340, guid: 911ae7e4e60f519449a75df4f9b943e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -307,12 +312,18 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 108644449}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 108644451}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f8d19c860193de48bf44422573d9819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &108644451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9117138169387218337, guid: 911ae7e4e60f519449a75df4f9b943e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 108644449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168503339 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8661001870505122628, guid: 6659bb3708aa85646b1549a2bcc52f6e,
@@ -844,6 +855,7 @@ MonoBehaviour:
   onStartToActivate:
   - {fileID: 1879474315}
   - {fileID: 79967440}
+  - {fileID: 108644451}
   onStartProgressDeactivate: 50
   onStartToDeactivate:
   - {fileID: 630685104}
