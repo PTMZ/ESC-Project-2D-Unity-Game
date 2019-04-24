@@ -10728,6 +10728,11 @@ PrefabInstance:
       propertyPath: generalPortal
       value: 
       objectReference: {fileID: 696097487}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: progressStoryAfterFight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}
       propertyPath: m_Enabled

@@ -12,6 +12,7 @@ public class TriggerBoss : MonoBehaviour
     public string ThisBossTheme;
     public string AfterBossTheme;
     public GameObject Boss;
+    public bool progressStoryAfterFight = true;
     public DialogueTrigger dialogueBeforeBossFight; //after boss fight use a seperate dialoguetrigger. 
 
     //private string songNameHolder;
@@ -56,7 +57,10 @@ public class TriggerBoss : MonoBehaviour
     {
         if(Boss == null && progressStoryCount == 0)
         {
-            OfflineGameManager.instance.storyProgress++; //story progress added to trigger the next dialogue.
+            if (progressStoryAfterFight)
+            {
+                OfflineGameManager.instance.storyProgress++; //story progress added to trigger the next dialogue.
+            }
             progressStoryCount++;
             AudioManager.instance.Stop(ThisBossTheme);
             AudioManager.instance.PlayTheme(AfterBossTheme);
