@@ -69,6 +69,8 @@ public class OfflineGameManager : MonoBehaviour
 
         //Instantiate(PlayerPrefab, Vector3.zero, Quaternion.identity);
         UpdateWeapon(curAttack);
+
+        Physics2D.IgnoreLayerCollision(9, 10);
     }
 
     void Start(){
