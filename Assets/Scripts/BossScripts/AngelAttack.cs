@@ -19,28 +19,37 @@ public class AngelAttack : MonoBehaviour
     public Animator angelAnim;
     private Vector3 offsetY;
     private float curBulletSpeed;
+    public ParticleSystem particle;
+    private bool particlePlaying = false;
 
     private string[] directionNames = {"up", "down", "left", "right"};
 
     void Start()
     {
-        angelAnim = GetComponent<Animator>();
+        angelAnim = this.transform.Find("Staff").GetComponent<Animator>();
+        particle = this.transform.Find("ConstrictingEffect").GetComponent<ParticleSystem>();
         player = GameObject.FindWithTag("Player");
         cooldownTimeStamp = Time.time;
         cooldownTimeStamp2 = Time.time;
         Debug.Log(player.transform.position);
         offsetY = new Vector3(0, 0.5f, 0);
         curBulletSpeed = arrowPrefab.GetComponent<AttackStats>().bulletSpeed / 2;
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
+
         if(!isActivated){
             return;
         }
         // Angel Arrows
         if(Time.time > cooldownTimeStamp){
+
+            
+
             //Debug.Log("START SHOOT");
             //angelAnim.Play("machineboss_attack", -1);
             cooldownTimeStamp = Time.time + cooldown;
@@ -61,10 +70,23 @@ public class AngelAttack : MonoBehaviour
         }
 
         if(Time.time > cooldownTimeStamp2){
+
+            particlePlaying = true;
+            angelAnim.Play("staff_red", -1);
+            if (particlePlaying) {
+                particle.Play();
+                particlePlaying = false;
+            }
+
+
+
             cooldownTimeStamp2 = Time.time + cooldown2;
             string dirName = directionNames[Random.Range(0, directionNames.Length)];
             Vector3 xOff = new Vector3(Random.Range(-7.0f, 7.0f), 0, 0);
             Vector3 yOff = new Vector3(Random.Range(-5.0f, 5.0f), 0, 0);
+
+
+
             if(dirName == "up"){
                 var go = Instantiate(constrictorPrefab, xOff + new Vector3(0, -5, 0), Quaternion.identity);
                 go.transform.localScale = new Vector3(1,1,1);

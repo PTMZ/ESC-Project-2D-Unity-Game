@@ -5343,26 +5343,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3527020532268786217, guid: fb314e04fc37f6a4bab1c9413898dde0,
+    - target: {fileID: 8104856559952953664, guid: fb314e04fc37f6a4bab1c9413898dde0,
         type: 3}
-      propertyPath: maxSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 494525991, guid: fb314e04fc37f6a4bab1c9413898dde0, type: 3}
-      propertyPath: constrictorPrefab
-      value: 
-      objectReference: {fileID: 1823553264299844295, guid: 0a8bc5b386dd11f4cb5d079cce5fb308,
-        type: 3}
-    - target: {fileID: 494525991, guid: fb314e04fc37f6a4bab1c9413898dde0, type: 3}
-      propertyPath: cooldown2
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 494525991, guid: fb314e04fc37f6a4bab1c9413898dde0, type: 3}
-      propertyPath: isActivated
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 494525992, guid: fb314e04fc37f6a4bab1c9413898dde0, type: 3}
-      propertyPath: isActivated
+      propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

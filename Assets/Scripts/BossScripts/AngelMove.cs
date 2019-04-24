@@ -54,7 +54,16 @@ public class AngelMove : MonoBehaviour
     void FixedUpdate(){
         if(myself.getDead()){
             //Debug.Log("Angel boss dead?.");
-            if(isActivated){
+
+            //deactivates crown and wings
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                var child = transform.GetChild(i).gameObject;
+                if (child != null)
+                    child.SetActive(false);
+            }
+
+            if (isActivated){
                 GetComponent<AngelAttack>().isActivated = false;
                 isActivated = false;
             }

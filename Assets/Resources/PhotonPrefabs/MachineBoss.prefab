@@ -359,7 +359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2498775608128102367}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61531599745b71c4faef8ce6223e2455, type: 3}
   m_Name: 
@@ -416,6 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mypos: {fileID: 2498775608128102365}
   target: {fileID: 2498775608128102364}
+  anim: {fileID: 4926626398530865049}
   isActivated: 0
   levelSpecificTrigger: 0
   storyProgActivate: -1
@@ -671,7 +672,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 6062daddf7e75684f993a924191b80f1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
