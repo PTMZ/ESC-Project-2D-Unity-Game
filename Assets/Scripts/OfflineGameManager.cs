@@ -18,9 +18,13 @@ public class OfflineGameManager : MonoBehaviour
     [HideInInspector]
     public float curHealth = 20;
     [HideInInspector]
-    public static float maxHealth = 50;
+    public static float maxHealth = 20;
     [HideInInspector]
     public float curDamage;
+    [HideInInspector]
+    public bool firstTimeNinja;
+    [HideInInspector]
+    public bool firstTimeBomber;
     [HideInInspector]
     public float curBulletSpeed;
     [HideInInspector]

@@ -141,6 +141,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: FormPickup
+    clip: {fileID: 8300000, guid: 350ff7acfd2bedc4f95060639e07e464, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   enemySounds:
   - name: GuardMelee
     clip: {fileID: 8300000, guid: 7c71f04e7dc73db478ad77845598fca7, type: 3}
