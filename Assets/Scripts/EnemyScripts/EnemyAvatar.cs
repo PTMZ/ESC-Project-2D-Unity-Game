@@ -22,6 +22,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 
     private OfflineGameManager offlineGM;
 
+    private bool hasParamWeapMoving;
+    private bool hasParamMoving;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,9 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
         change = Vector3.zero;
         //offlineGM = FindObjectOfType<OfflineGameManager>();
         offlineGM = OfflineGameManager.instance;
+
+        hasParamMoving = HasParameter(animator, "moving");
+        hasParamWeapMoving = HasParameter(weaponAnim.weaponAnimator, "weapmoving");
     }
 
     // Update is called once per frame
@@ -59,8 +65,10 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 
             //mySpriteRenderer.flipX = (change.x < 0);
             //weaponAnim.mySpriteRenderer.flipX = (change.x < 0);
-            animator.SetBool("moving", true);
-            if(weaponAnim.weaponAnimator){
+            if(hasParamMoving){
+                animator.SetBool("moving", true);
+            }
+            if(weaponAnim.weaponAnimator && hasParamWeapMoving){
                 weaponAnim.weaponAnimator.SetBool("weapmoving", true);
             }
             
@@ -68,8 +76,10 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
 
         }
         else{
-            animator.SetBool("moving", false);
-            if(weaponAnim.weaponAnimator){
+            if(hasParamMoving){
+                animator.SetBool("moving", false);
+            }
+            if(weaponAnim.weaponAnimator && hasParamWeapMoving){
                 weaponAnim.weaponAnimator.SetBool("weapmoving", false);
             }
         }
@@ -163,5 +173,14 @@ public class EnemyAvatar : MonoBehaviourPun, IPunObservable
     public void TriggerExclamationMark()
     {
         exMarkAnim.Play("exmark", -1, 1.0f);
+    }
+
+    private bool HasParameter(Animator animator, string paramName)
+    {
+        foreach (AnimatorControllerParameter param in animator.parameters)
+        {
+            if (param.name == paramName) return true;
+        }
+        return false;
     }
 }
