@@ -95,7 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   direction: down
-  cooldown: 0.1
+  cooldown: 0.25
+  isBoss: 0
 --- !u!61 &1823553264299844294
 BoxCollider2D:
   m_ObjectHideFlags: 0
