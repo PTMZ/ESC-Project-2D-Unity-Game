@@ -34,7 +34,7 @@ public class SpawnItem : MonoBehaviour
 
 
 
-        }
+      }
 
     void Update()
     {

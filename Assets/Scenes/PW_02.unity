@@ -4134,6 +4134,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1360990076}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &761138986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761138989}
+  - component: {fileID: 761138988}
+  - component: {fileID: 761138987}
+  m_Layer: 0
+  m_Name: SpawnPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &761138987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761138986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24f54846615a36429518e59b54f6da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointIndex: 2
+  playerPrefab: {fileID: 8661001870505122628, guid: 6659bb3708aa85646b1549a2bcc52f6e,
+    type: 3}
+  player: {fileID: 1093756673}
+  onCollide: 1
+--- !u!61 &761138988
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761138986}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &761138989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761138986}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.84, y: -1.49, z: 0.022122102}
+  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2031439321}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &764523988
 GameObject:
   m_ObjectHideFlags: 0
@@ -11017,12 +11092,12 @@ PrefabInstance:
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.name.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -11037,18 +11112,17 @@ PrefabInstance:
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: At most...I'll collect your leftover bytecodes. Haha.
+      value: If you ever get stuck, just destroy the boxes or restart the game.
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: Don't get deleted, you hear?
+      value: At most...I'll collect your leftover bytecodes. Haha.
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[6]
-      value: The answer is simple. Because they killed your brothers, therefore they
-        are evil.
+      value: Don't get deleted, you hear?
       objectReference: {fileID: 0}
     - target: {fileID: 4576321564071608244, guid: e78d7652378dd6643b1fe245e7530baf,
         type: 3}
@@ -11384,7 +11458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229592276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.92135, y: -4.91397, z: 0.3257595}
+  m_LocalPosition: {x: 9.92135, y: -3.94, z: 0.3257595}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1234833429}
@@ -18259,6 +18333,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2022206408}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2031439321 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4874152257104321205, guid: 32e721485dcad8b4198f223d36fc1599,
+    type: 3}
+  m_PrefabInstance: {fileID: 4874152256962445320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2037349548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19143,5 +19223,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 16.08
       objectReference: {fileID: 0}
+    - target: {fileID: 4874152257104321204, guid: 32e721485dcad8b4198f223d36fc1599,
+        type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874152257104321204, guid: 32e721485dcad8b4198f223d36fc1599,
+        type: 3}
+      propertyPath: spawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 761138987}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32e721485dcad8b4198f223d36fc1599, type: 3}

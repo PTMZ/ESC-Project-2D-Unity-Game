@@ -158,14 +158,16 @@ public class OfflineGameManager : MonoBehaviour
             OfflineGameManager.instance.curHealth = maxHealth;
             OfflineGameManager.instance.curAttack = save.curAttack;
             OfflineGameManager.instance.storyProgress = save.storyProgress;
-            
+
             //DO NOT UNCOMMENT THIS UNLESS ANOTHER BUG APPEARS. AudioManager.instance.StopAll();
+            AudioManager.instance.StopMustStopSFX();
             loadSceneAtDeath(save.curScene);
             Debug.Log("Player Respawned.");
         }
         else
         {
             curHealth = maxHealth;
+            AudioManager.instance.StopMustStopSFX();
             loadSceneAtDeath(SceneManager.GetActiveScene().name);
         }
     }
