@@ -90,6 +90,12 @@ public class TriggerBoss : MonoBehaviour
             dialogueAfterBossFight.TriggerDialogue();
             dialogueTriggerCount++;
         }
+
+        if (progressStoryCount == 1 && dialogueTriggerCount == 0 && OfflineGameManager.instance.storyProgress == 1)
+        {
+            dialogueAfterBossFight.TriggerDialogue();
+            dialogueTriggerCount++;
+        }
         //to track where the boss is and to drop pickup. NOT IMPLEMENTED YET
         
 

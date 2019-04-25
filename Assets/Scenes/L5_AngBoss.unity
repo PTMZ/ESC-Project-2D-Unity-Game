@@ -149,7 +149,7 @@ Transform:
   - {fileID: 1526368305}
   - {fileID: 152486328}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &33105840
 GameObject:
@@ -2486,12 +2486,12 @@ PrefabInstance:
     - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2444067
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.4094305
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}
@@ -2563,6 +2563,11 @@ PrefabInstance:
       propertyPath: dialogueAfterBossFight
       value: 
       objectReference: {fileID: 202598704}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: bossDropsPickUp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -2671,6 +2676,15 @@ MonoBehaviour:
     - Seraphim
     - Seraphim
     - Seraphim
+    - Guide
+    - Guide
+    - Hacker
+    - Hacker
+    - Hacker
+    - Hacker
+    - Hacker
+    - Hacker
+    - Hacker
     sentences:
     - Young one, tell me. Why do you seek destruction?
     - What is it that you wish for?
@@ -2678,6 +2692,19 @@ MonoBehaviour:
     - Life and death befalls all equally.
     - If fortune be with us, may we meet again once more, albeit in slightly different
       forms.
+    - Wow, you really are one amazing little cookie! A super virus that has the capabilities
+      to shutdown top-end industrial anti-virus software.
+    - I am sure countries and criminal organisations our there will pay top bucks
+      for your source code.
+    - "Hmm? That\u2019s is right. I am a hacker. I created you and countless of you
+      just to get that granny\u2019s bank account information."
+    - I lied to you? No, i never once told you a single lie. The Anti-Viruses would
+      have long deleted you like the others before you had i not saved you.
+    - If anything, I am your lord savior!
+    - ..You are trying to locate my network address?
+    - 'Ha! Be my guest! I am not afraid of a little cookie virus I created. '
+    - "Y\u2019know what, let me give you a hand."
+    - "I\u2019ll be waiting to analyse your bytecode. Do not disappoint me."
   triggerLimit: 1
   storyProgress: 0
 --- !u!1 &221782406
@@ -3704,7 +3731,7 @@ RectTransform:
   m_Children:
   - {fileID: 1441322268}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6629,12 +6656,12 @@ PrefabInstance:
     - target: {fileID: 8661001870505122745, guid: 6659bb3708aa85646b1549a2bcc52f6e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -1.48
       objectReference: {fileID: 0}
     - target: {fileID: 8661001870505122745, guid: 6659bb3708aa85646b1549a2bcc52f6e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: 8661001870505122745, guid: 6659bb3708aa85646b1549a2bcc52f6e,
         type: 3}
@@ -6664,7 +6691,7 @@ PrefabInstance:
     - target: {fileID: 8661001870505122745, guid: 6659bb3708aa85646b1549a2bcc52f6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8661001870505122745, guid: 6659bb3708aa85646b1549a2bcc52f6e,
         type: 3}
@@ -6920,12 +6947,12 @@ PrefabInstance:
     - target: {fileID: 6989884733949264544, guid: fb314e04fc37f6a4bab1c9413898dde0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.57
+      value: 2.24
       objectReference: {fileID: 0}
     - target: {fileID: 6989884733949264544, guid: fb314e04fc37f6a4bab1c9413898dde0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 6989884733949264544, guid: fb314e04fc37f6a4bab1c9413898dde0,
         type: 3}
@@ -6955,7 +6982,7 @@ PrefabInstance:
     - target: {fileID: 6989884733949264544, guid: fb314e04fc37f6a4bab1c9413898dde0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6989884733949264544, guid: fb314e04fc37f6a4bab1c9413898dde0,
         type: 3}
@@ -9503,7 +9530,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1489125232
 GameObject:
@@ -9886,7 +9913,7 @@ Transform:
   m_LocalScale: {x: 5.636142, y: 8.168269, z: 5.0695934}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1526368302
 GameObject:
@@ -10839,7 +10866,7 @@ Transform:
   - {fileID: 2011503970}
   - {fileID: 1789589681}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1956456201
 GameObject:
@@ -10908,7 +10935,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 164.855, y: 11.103989, z: 2.1629944}
 --- !u!1 &1993311121
 GameObject:
