@@ -2471,6 +2471,215 @@ Transform:
   m_Father: {fileID: 1526501591}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &202598701
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1240162186274360041, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_Name
+      value: TriggerBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.2444067
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.4094305
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.094460286
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159069837723719178, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogueBeforeBossFight
+      value: 
+      objectReference: {fileID: 202598703}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: ThisBossTheme
+      value: AngelTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: AfterBossTheme
+      value: HackerTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: Boss
+      value: 
+      objectReference: {fileID: 1148229171}
+    - target: {fileID: 5077962051338635184, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogueAfterBossFight
+      value: 
+      objectReference: {fileID: 202598704}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.name.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: SceneNumber
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Well done young cookie, though it seems there is not much of a cookie
+        left in you at this point. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: 'Like me you are an intelligent sentient being, but different from me,
+        you have freedom in your actions. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "so why do you follow the wishes of the one you call the \u201CGuide\u201D?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: With so many of him around, the world beyond ours is in tribulations.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: However fleeting your life might have been, I will put an end to your
+        evil deeds.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[0]
+      value: Seraphim
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[1]
+      value: Seraphim
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[2]
+      value: Seraphim
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[3]
+      value: Seraphim
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+        type: 3}
+      propertyPath: dialogue.name.Array.data[4]
+      value: Seraphim
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3a00e89af42230439567dc080530e8c, type: 3}
+--- !u!1 &202598702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1240162186274360041, guid: d3a00e89af42230439567dc080530e8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 202598701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &202598703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6844296341370538641, guid: d3a00e89af42230439567dc080530e8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 202598701}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202598702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ba7baa6bedad44ea48761b59833cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &202598704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202598702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ba7baa6bedad44ea48761b59833cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneNumber: 54
+  dialogue:
+    name:
+    - Seraphim
+    - Seraphim
+    - Seraphim
+    - Seraphim
+    - Seraphim
+    sentences:
+    - Young one, tell me. Why do you seek destruction?
+    - What is it that you wish for?
+    - I see. May the bits ever be in your favour.
+    - Life and death befalls all equally.
+    - If fortune be with us, may we meet again once more, albeit in slightly different
+      forms.
+  triggerLimit: 1
+  storyProgress: 0
 --- !u!1 &221782406
 GameObject:
   m_ObjectHideFlags: 0
@@ -6780,6 +6989,18 @@ PrefabInstance:
       objectReference: {fileID: 527185703}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb314e04fc37f6a4bab1c9413898dde0, type: 3}
+--- !u!114 &1148229171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5618416744952944322, guid: fb314e04fc37f6a4bab1c9413898dde0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1148229170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afdb677c6cce53418d6ae062517ce75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1236862605
 GameObject:
   m_ObjectHideFlags: 0
