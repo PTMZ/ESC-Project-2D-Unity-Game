@@ -21954,6 +21954,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5116223701759157942, guid: 8d41d1472bbda0f41999efc21af214de,
+        type: 3}
+      propertyPath: PuzzlePiecesPrefabs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116223701759157942, guid: 8d41d1472bbda0f41999efc21af214de,
+        type: 3}
+      propertyPath: PuzzlePiecesPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5805515968715006348, guid: b8fc8bf08870786479c1dd05846e4ffd,
+        type: 3}
+    - target: {fileID: 5116223701759157942, guid: 8d41d1472bbda0f41999efc21af214de,
+        type: 3}
+      propertyPath: PuzzlePiecesPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8033230219496681960, guid: 29a8e78913f4bad42b3d67c6c4aacfe9,
+        type: 3}
+    - target: {fileID: 5116223701759157942, guid: 8d41d1472bbda0f41999efc21af214de,
+        type: 3}
+      propertyPath: PuzzlePiecesPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 5146163206386824693, guid: 43a13290be37bf4478e137a4023fa894,
+        type: 3}
+    - target: {fileID: 5116223701759157942, guid: 8d41d1472bbda0f41999efc21af214de,
+        type: 3}
+      propertyPath: PuzzlePiecesPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2880140347282759112, guid: 76dc56be1a3801f48885b7afedb4add0,
+        type: 3}
+    - target: {fileID: 5116223701759157942, guid: 8d41d1472bbda0f41999efc21af214de,
+        type: 3}
+      propertyPath: PuzzlePiecesPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 7742701709549538215, guid: ea6bad73ca686d34dac8fd6b54298bd8,
+        type: 3}
+    - target: {fileID: 5116223701759157942, guid: 8d41d1472bbda0f41999efc21af214de,
+        type: 3}
+      propertyPath: PuzzlePiecesPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 6895689389505817895, guid: a44eeb78a17f2094bb3008288aa54859,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d41d1472bbda0f41999efc21af214de, type: 3}
 --- !u!1 &2021352745 stripped
