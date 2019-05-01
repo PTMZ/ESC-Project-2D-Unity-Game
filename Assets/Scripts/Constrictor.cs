@@ -130,6 +130,11 @@ public class Constrictor : MonoBehaviour
         }
         */
     }
+
+    void onDestroy()
+    {
+        AudioManager.instance.StopMustStopSFX();
+    }
 }
 
 
