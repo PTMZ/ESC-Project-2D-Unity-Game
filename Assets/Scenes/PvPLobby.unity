@@ -820,7 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playBtn: {fileID: 1650418515}
   waitBtn: {fileID: 1138552341}
-  maxPlayersPerRoom: 4
+  maxPlayersPerRoom: 2
   gameSceneName: MultiPlayer
 --- !u!4 &1655554763
 Transform:

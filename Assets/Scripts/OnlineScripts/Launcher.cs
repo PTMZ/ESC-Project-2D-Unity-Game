@@ -28,7 +28,7 @@ namespace Photon.Pun.Demo.PunBasics
 
 		[Tooltip("The maximum number of players per room")]
 		[SerializeField]
-		private byte maxPlayersPerRoom = 4;
+		private byte maxPlayersPerRoom = 2;
 
         [SerializeField]
         private string gameSceneName = "GameLevel";
