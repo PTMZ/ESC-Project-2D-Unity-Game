@@ -1,2 +1,2 @@
-# ESC-Project
-ESC Project
+# 2D Unity Game: Rookie Cookie
+
